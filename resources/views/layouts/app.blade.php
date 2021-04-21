@@ -57,7 +57,10 @@
 
         <main class="py-4">
             @yield('content')
+
         </main>
+
+    @include('components.footer')
         <!-- GO TO TOP  -->
         <a href="#" class="cd-top"><i class="fa fa-angle-up"></i></a>
         <!-- GO TO TOP End -->
@@ -65,7 +68,7 @@
 
 <script src="/js/jquery-1.12.4.min.js"></script>
 <script src="/js/popper.min.js"></script>
-<script src="/js/bootstrap.min.js" ></script>
+<script src="/js/bootstrap.min.js"></script>
 <script src="/js/own-menu.js"></script>
 <script src="/js/jquery.lighter.js"></script>
 <script src="/js/jquery.magnific-popup.min.js"></script>
