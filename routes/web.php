@@ -23,3 +23,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('/item',App\Http\Controllers\ItemController::class);
 Route::resource('/cat',App\Http\Controllers\ItemCategoryController::class);
+Route::get('/about', function(){
+   return view('about');
+});
+
+Route::get('/contact', function(){
+    return view('contact');
+});

@@ -1296,6 +1296,8 @@
     <!-- GO TO TOP End -->
 </div>
 
+<script src="/js/jquery-1.12.4.min.js"></script>
+<script src="/js/popper.min.js"></script>
 <script src="/js/own-menu.js"></script>
 <script src="/js/jquery.lighter.js"></script>
 <script src="/js/jquery.magnific-popup.min.js"></script>
