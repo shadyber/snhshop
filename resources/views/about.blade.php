@@ -29,7 +29,7 @@
                     <div class="offset-1 margin-top-50">
                         <h6>1950 <span></span> 1999</h6>
                         <p>Lorem ipsum dolor sit amet, efficitur eget pharetra ac, cursus sed sapien. Cras posuere ligula ut blandit varius. Nunc consectetur scelerisque felis. consectetur adipiscing elit. Maecenas nibh dolor</p>
-                        <h6>2000 <span></span> 2018</h6>
+                        <h6>2000 <span></span> 2021</h6>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nibh dolor, efficitur eget pharetra ac, cursus sed sapien. Cras posuere ligula ut blandit varius. Nunc consectetur scelerisque felis, et volutpat massa aliquam in. Curabitur sodales porttitor tortor sit amet malesuada.</p>
                     </div>
                 </div>
@@ -197,7 +197,7 @@
 
                 <!-- HEADING -->
                 <div class="heading text-center">
-                    <h4>Few Facts About BoShop</h4>
+                    <h4>Few Facts About SandHShop</h4>
                     <hr>
                 </div>
 

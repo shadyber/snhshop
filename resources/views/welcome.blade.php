@@ -29,9 +29,7 @@
     <script src="/js/modernizr.js"></script>
 
     <!-- Online Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900|Poppins:300,400,500,600,700|Montserrat:300,400,500,600,700,800"
-        rel="stylesheet">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,9 +37,6 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
 
 </head>
 <body id="app">
@@ -845,7 +840,7 @@
                         <!-- Right Content -->
                         <div class="main-half-layout-container half_left_layout">
                             <div class="about-us-con">
-                                <h3>A Brief History of the BoShop</h3>
+                                <h3>A Brief History of the SandHShop</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nibh dolor,
                                     efficitur eget pharetra ac, cursus sed sapien. Cras posuere ligula ut blandit
                                     varius. Nunc consectetur scelerisque felis, et volutpat massa aliquam in.<br>
@@ -856,7 +851,7 @@
                                 <p>Lorem ipsum dolor sit amet, efficitur eget pharetra ac, cursus sed sapien. Cras
                                     posuere ligula ut blandit varius. Nunc consectetur scelerisque felis. consectetur
                                     adipiscing elit. Maecenas nibh dolor</p>
-                                <h6>2000 <span></span> 2018</h6>
+                                <h6>2000 <span></span> 2021</h6>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nibh dolor,
                                     efficitur eget pharetra ac, cursus sed sapien.</p>
                             </div>
@@ -874,7 +869,7 @@
                     <!-- Left Content -->
                     <div class="main-half-layout-container half_right_layout">
                         <div class="about-us-con">
-                            <h3>Fully Customizability Options Look Beautiful in 2018</h3>
+                            <h3>Fully Customizability Options Look Beautiful in 2021</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nibh dolor, efficitur
                                 eget pharetra ac, cursus sed sapien. Cras posuere ligula ut blandit varius. </p>
                             <ul class="order-info">

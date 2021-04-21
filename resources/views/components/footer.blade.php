@@ -25,8 +25,8 @@
                         MD - 123, USA.</p>
                     <p><i class="icon-call-end"></i> 1.800.123.456789 <br>
                         1.800.123.456789</p>
-                    <p><i class="icon-envelope"></i> info@BoShop.com <br>
-                        contact@BoShop.com</p>
+                    <p><i class="icon-envelope"></i> info@SandHShop.com <br>
+                        contact@SandHShop.com</p>
                 </div>
             </div>
 
@@ -68,7 +68,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p>© 2021 BoShop All right reserved. <a href="https://rootsystem.info">root system</a></p>
+                    <p>© 2021 SandHShop All right reserved. <a href="https://rootsystem.info">root system</a></p>
                 </div>
                 <div class="col-md-6 text-right"><img src="/images/card-icon.png" alt=""></div>
             </div>
