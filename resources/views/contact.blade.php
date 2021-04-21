@@ -86,7 +86,10 @@
         </section>
 
         <!--======= MAP =========-->
-        <div id="map"></div>
+        <div id="map2">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1119.9691570616972!2d38.78658401909604!3d8.99795323619889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2set!4v1619017982230!5m2!1sen!2set" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
 
         <!-- About -->
         <section class="small-about">
