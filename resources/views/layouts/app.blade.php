@@ -6,8 +6,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'S&H Shop') }}</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+
+
     <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
-    <link rel="stylesheet" type="text/css" href="/rs-plugin/css/settings.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/rs-plugin/css/settings.css" media="screen"/>
 
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -23,18 +28,16 @@
     <!-- JavaScripts -->
     <script src="/js/modernizr.js"></script>
 
+    <!-- Online Fonts -->
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
- 
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
-    <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 <body >
 
