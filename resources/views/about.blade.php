@@ -13,7 +13,7 @@
                 </ol>
             </div>
         </div>
-    </section>
+    </section> 
 
     <!-- Content -->
     <div id="content">
