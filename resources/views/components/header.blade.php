@@ -3,7 +3,7 @@
     <div class="container-full">
 
         <!-- Logo -->
-        <div class="logo"><a href="index.html"><img class="img-responsive" src="/images/logo.png" alt=""></a></div>
+        <div class="logo"><a href="/"><img class="img-responsive" src="/images/logo.png" alt=""></a></div>
         <nav class="navbar ownmenu navbar-expand-lg">
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span></span>
@@ -28,19 +28,19 @@
                                     <ul class="col-2-li">
                                         <li><a href="/cat/1">Category 1</a></li>
                                         <li><a href="/cat/2">Category 2 </a></li>
-                                        <li><a href="shop_04.html">Cateory 3 </a></li>
+                                        <li><a href="/cat/3">Cateory 3 </a></li>
 
                                         <li><a href="/cat/1">Category 1</a></li>
                                         <li><a href="/cat/2">Category 2 </a></li>
-                                        <li><a href="shop_04.html">Cateory 3 </a></li>
+                                        <li><a href="/cat/3">Cateory 3 </a></li>
 
                                         <li><a href="/cat/1">Category 1</a></li>
                                         <li><a href="/cat/2">Category 2 </a></li>
-                                        <li><a href="shop_04.html">Cateory 3 </a></li>
+                                        <li><a href="/cat/4">Cateory 3 </a></li>
 
                                         <li><a href="/cat/1">Category 1</a></li>
                                         <li><a href="/cat/2">Category 2 </a></li>
-                                        <li><a href="shop_04.html">Cateory 3 </a></li>
+                                        <li><a href="/cat/5">Cateory 3 </a></li>
 
                                     </ul>
                                 </div>

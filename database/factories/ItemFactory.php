@@ -27,6 +27,7 @@ class ItemFactory extends Factory
        'color'=>$this->faker->colorName,
        'measurement'=>$this->faker->word,
        'weight'=>$this->faker->word,
+       'price'=>$this->faker->numberBetween(20,4000),
        'category_id'=>$this->faker->numberBetween(1,2),
         ];
     }

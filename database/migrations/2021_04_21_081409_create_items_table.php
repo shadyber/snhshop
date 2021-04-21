@@ -18,10 +18,13 @@ class CreateItemsTable extends Migration
             $table->string('name');
             $table->string('photo');
             $table->string('color');
+            $table->double('price');
             $table->string('measurement');
             $table->string('weight');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('item_categories');
+            $table->unsignedInteger('init_qnt')->default(1);
+            $table->string('status')->default('available');
             $table->timestamps();
         });
     }

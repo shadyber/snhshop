@@ -101,7 +101,7 @@
                     <!-- Content Info -->
                     <div class="col-sm-6">
                         <div class="contnt-info">
-                            <h3>Mid Rise Skinny Jeans</h3>
+                            <h3>Mid Rise Lether Bag</h3>
                             <p>This is dummy copy. It is not meant to be read. It has been placed here solely to
                                 demonstrate the look and feel of finished, typeset text. Only for show. He who searches
                                 for meaning here will be sorely disappointed. <br>
@@ -367,7 +367,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Child White Skinny Jeans</a>
+                                    <div class="item-name"><a href="#." class="i-tittle">Child White Lether Bag</a>
                                         <span class="price"><small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
                                 </div>
@@ -391,7 +391,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small>299.00</span></div>
                                 </div>
 
@@ -414,7 +414,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small><span
                                                 class="line-through">299.00</span> <small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
@@ -438,7 +438,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small><span
                                                 class="line-through">299.00</span> <small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
@@ -462,7 +462,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small><span
                                                 class="line-through">299.00</span> <small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
@@ -486,7 +486,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small><span
                                                 class="line-through">299.00</span> <small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
@@ -509,7 +509,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small><span
                                                 class="line-through">299.00</span> <small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
@@ -531,7 +531,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small><span
                                                 class="line-through">299.00</span> <small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
@@ -555,7 +555,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small><span
                                                 class="line-through">299.00</span> <small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
@@ -577,7 +577,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small><span
                                                 class="line-through">299.00</span> <small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
@@ -601,7 +601,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small><span
                                                 class="line-through">299.00</span> <small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
@@ -627,7 +627,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small><span
                                                 class="line-through">299.00</span> <small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
@@ -649,7 +649,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small><span
                                                 class="line-through">299.00</span> <small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
@@ -671,7 +671,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small><span
                                                 class="line-through">299.00</span> <small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
@@ -693,7 +693,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small><span
                                                 class="line-through">299.00</span> <small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
@@ -715,7 +715,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small><span
                                                 class="line-through">299.00</span> <small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
@@ -736,7 +736,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small><span
                                                 class="line-through">299.00</span> <small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
@@ -758,7 +758,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small><span
                                                 class="line-through">299.00</span> <small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
@@ -780,7 +780,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small><span
                                                 class="line-through">299.00</span> <small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
@@ -802,7 +802,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small><span
                                                 class="line-through">299.00</span> <small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
@@ -824,7 +824,7 @@
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span
+                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
                                             class="price"><small>$</small><span
                                                 class="line-through">299.00</span> <small>$</small>199.00</span> <a
                                             class="deta animated fadeInRight" href="#.">View Detail</a></div>
@@ -926,7 +926,7 @@
                                 </div>
                             </div>
                             <!-- Item Name -->
-                            <div class="item-name"><a href="#.">Mid Rise Skinny Jeans </a>
+                            <div class="item-name"><a href="#.">Mid Rise Lether Bag </a>
                                 <p>Lorem ipsum dolor sit amet</p>
                             </div>
                             <!-- Price -->
@@ -952,7 +952,7 @@
                                 </div>
                             </div>
                             <!-- Item Name -->
-                            <div class="item-name"><a href="#.">Mid Rise Skinny Jeans </a>
+                            <div class="item-name"><a href="#.">Mid Rise Lether Bag </a>
                                 <p>Lorem ipsum dolor sit amet</p>
                             </div>
                             <!-- Price -->
@@ -978,7 +978,7 @@
                                 </div>
                             </div>
                             <!-- Item Name -->
-                            <div class="item-name"><a href="#.">Mid Rise Skinny Jeans </a>
+                            <div class="item-name"><a href="#.">Mid Rise Lether Bag </a>
                                 <p>Lorem ipsum dolor sit amet</p>
                             </div>
                             <!-- Price -->
@@ -1007,7 +1007,7 @@
                             </div>
 
                             <!-- Item Name -->
-                            <div class="item-name"><a href="#.">Mid Rise Skinny Jeans </a>
+                            <div class="item-name"><a href="#.">Mid Rise Lether Bag </a>
                                 <p>Lorem ipsum dolor sit amet</p>
                             </div>
                             <!-- Price -->
@@ -1033,7 +1033,7 @@
                                 </div>
                             </div>
                             <!-- Item Name -->
-                            <div class="item-name"><a href="#.">Mid Rise Skinny Jeans </a>
+                            <div class="item-name"><a href="#.">Mid Rise Lether Bag </a>
                                 <p>Lorem ipsum dolor sit amet</p>
                             </div>
                             <!-- Price -->
@@ -1059,7 +1059,7 @@
                                 </div>
                             </div>
                             <!-- Item Name -->
-                            <div class="item-name"><a href="#.">Mid Rise Skinny Jeans </a>
+                            <div class="item-name"><a href="#.">Mid Rise Lether Bag </a>
                                 <p>Lorem ipsum dolor sit amet</p>
                             </div>
                             <!-- Price -->
@@ -1085,7 +1085,7 @@
                                 </div>
                             </div>
                             <!-- Item Name -->
-                            <div class="item-name"><a href="#.">Mid Rise Skinny Jeans </a>
+                            <div class="item-name"><a href="#.">Mid Rise Lether Bag </a>
                                 <p>Lorem ipsum dolor sit amet</p>
                             </div>
                             <!-- Price -->
@@ -1111,7 +1111,7 @@
                                 </div>
                             </div>
                             <!-- Item Name -->
-                            <div class="item-name"><a href="#.">Mid Rise Skinny Jeans </a>
+                            <div class="item-name"><a href="#.">Mid Rise Lether Bag </a>
                                 <p>Lorem ipsum dolor sit amet</p>
                             </div>
                             <!-- Price -->
