@@ -22,7 +22,12 @@ class ItemFactory extends Factory
     public function definition()
     {
         return [
-            //
+       'name'=>$this->faker->word,
+       'photo'=>$this->faker->imageUrl('640','480','fashion'),
+       'color'=>$this->faker->colorName,
+       'measurement'=>$this->faker->word,
+       'weight'=>$this->faker->word,
+       'category_id'=>$this->faker->numberBetween(1,2),
         ];
     }
 }
