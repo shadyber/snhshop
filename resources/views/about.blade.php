@@ -6,14 +6,14 @@
     <section class="sub-bnr" data-stellar-background-ratio="0.5">
         <div class="position-center-center">
             <div class="container">
-                <h4>About S&H Shop - The Best Collection</h4>
+                <h4>About SANDSHOP - The Best Collection</h4>
                 <ol class="breadcrumb">
                     <li><a href="#">Home</a></li>
                     <li class="active">About</li>
                 </ol>
             </div>
         </div>
-    </section> 
+    </section>
 
     <!-- Content -->
     <div id="content">
@@ -22,7 +22,7 @@
         <section class="history-block padding-top-100 padding-bottom-100">
             <div class="container">
                 <div class="about-us-con">
-                    <h3>A Brief History of the S&H Shop</h3>
+                    <h3>A Brief History of the SANDSHOP</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nibh dolor, efficitur eget pharetra ac, cursus sed sapien. Cras posuere ligula ut blandit varius. Nunc consectetur scelerisque felis, et volutpat massa aliquam in. Curabitur sodales porttitor tortor sit amet malesuada. <br>
                         <br>
                         Consectetur adipiscing elit. Maecenas nibh dolor, efficitur eget pharetra ac, cursus sed sapien. Cras posuere ligula ut blandit varius. Nunc consectetur scelerisque felis, et volutpat massa aliquam in. Curabitur sodales porttitor tortor sit amet malesuada </p>
