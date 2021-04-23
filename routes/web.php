@@ -28,5 +28,5 @@ Route::get('/about', function(){
 });
 
 Route::get('/contact', function(){
-    return view('contact');
+    return view('contact')->with('address',\App\Models\Address::all()->last());
 });

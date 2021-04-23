@@ -15,6 +15,8 @@ class BlogController extends Controller
     public function index()
     {
         //
+        $blogs=Blog::all();
+        return view('blog.index')->with('blogs',$blogs);
     }
 
     /**
@@ -25,6 +27,7 @@ class BlogController extends Controller
     public function create()
     {
         //
+        return view('blog.create');
     }
 
     /**
@@ -47,6 +50,7 @@ class BlogController extends Controller
     public function show(Blog $blog)
     {
         //
+        return  view('blog.show')->with('blog',$blog);
     }
 
     /**
@@ -58,6 +62,7 @@ class BlogController extends Controller
     public function edit(Blog $blog)
     {
         //
+        return view('blog.edit')->with('blog',$blog);
     }
 
     /**

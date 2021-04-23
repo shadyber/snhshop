@@ -15,6 +15,8 @@ class ItemCategoryController extends Controller
     public function index()
     {
         //
+        $categories=ItemCategory::all();
+        return view('category.index')->with('categories',$categories);
     }
 
     /**

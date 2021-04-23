@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Item;
 use App\Models\ItemPhotos;
 use Illuminate\Http\Request;
 
@@ -15,6 +16,7 @@ class ItemPhotosController extends Controller
     public function index()
     {
         //
+        $photos=ItemPhotos::all();
     }
 
     /**
@@ -25,6 +27,7 @@ class ItemPhotosController extends Controller
     public function create()
     {
         //
+
     }
 
     /**

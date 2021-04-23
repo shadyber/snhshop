@@ -32,6 +32,7 @@ class ItemController extends Controller
     public function create()
     {
         //
+        return view('item.create');
     }
 
     /**
@@ -54,7 +55,7 @@ class ItemController extends Controller
     public function show(Item $item)
     {
         //
-        return $item;
+       return view('item.show')->with('item',$item);
     }
 
     /**
@@ -66,6 +67,7 @@ class ItemController extends Controller
     public function edit(Item $item)
     {
         //
+        return view('item.edit')->with('item.edit')->with('item',$item);
     }
 
     /**
