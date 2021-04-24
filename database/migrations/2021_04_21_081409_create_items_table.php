@@ -25,6 +25,7 @@ class CreateItemsTable extends Migration
             $table->foreign('category_id')->references('id')->on('item_categories');
             $table->unsignedInteger('init_qnt')->default(1);
             $table->string('status')->default('available');
+            $table->string('badge')->default('NEW');
             $table->timestamps();
         });
     }
