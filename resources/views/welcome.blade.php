@@ -1,18 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'SANDSHOP') }}</title>
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
-
     <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
-    <link rel="stylesheet" type="text/css" href="/rs-plugin/css/settings.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="/rs-plugin/css/settings.css" media="screen" />
 
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -29,7 +19,7 @@
     <script src="/js/modernizr.js"></script>
 
     <!-- Online Fonts -->
-
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900|Poppins:300,400,500,600,700|Montserrat:300,400,500,600,700,800" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,7 +27,6 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 <body id="app">
 
@@ -117,26 +106,20 @@
                 </div>
             </div>
 
-            <!-- New Arrival -->
             <section class="padding-top-100 padding-bottom-100">
                 <div class="container-full">
 
                     <!-- Main Heading -->
                     <div class="heading text-center">
                         <h4>Best Collection Arrived</h4>
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula. </span>
-                    </div>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula. </span> </div>
 
                     <!-- New Arrival -->
                     <div class="arrival-block">
                         <ul class="nav nav-tabs" role="tablist">
-                            <li class="nav-item"><a class="active" id="Best-tab" data-toggle="tab" href="#bst-sell"
-                                                    role="tab" aria-selected="true">Best Selling</a></li>
-                            <li class="nav-item"><a id="Papular-tab" data-toggle="tab" href="#pap" role="tab"
-                                                    aria-selected="false">Hand Made Items</a></li>
-                            <li class="nav-item"><a id="Top-tab" data-toggle="tab" href="#top-10" role="tab"
-                                                    aria-selected="false">Top 10 Items <span
-                                        class="top-tgs">Specials</span></a></li>
+                            <li class="nav-item"> <a class="active" id="Best-tab" data-toggle="tab" href="#bst-sell" role="tab" aria-selected="true">Best Selling</a> </li>
+                            <li class="nav-item"> <a id="Papular-tab" data-toggle="tab" href="#pap" role="tab" aria-selected="false">Hand Made Items</a> </li>
+                            <li class="nav-item"> <a id="Top-tab" data-toggle="tab" href="#top-10" role="tab" aria-selected="false">Top 10 Items <span class="top-tgs">Specials</span></a> </li>
                         </ul>
 
                         <!-- Tab Content -->
@@ -148,223 +131,159 @@
                                 <!-- Item -->
                                 <div class="item">
                                     <!-- Sale -->
-                                    <div class="on-sale"> Sale</div>
-                                    <div class="img-ser"><img class="img-1 lazyload" src="/images/item-img-1-1.jpg"
-                                                              alt=""> <img class="img-2 lazyload"
-                                                                           src="/images/item-img-1-1-1.jpg" alt="">
+                                    <div class="on-sale"> Sale </div>
+                                    <div class="img-ser"> <img class="img-1 lazyloaded" src="images/item-img-1-1.jpg" alt=""> <img class="img-2 lazyloaded" src="images/item-img-1-1-1.jpg" alt="">
 
                                         <!-- Images
-                                        <img class="img-1 lazyload" src="/images/item-img-1-1.jpg" alt=""> <img class="img-2 lazyload" src="/images/item-img-1-1-1.jpg" alt=""> -->
+                                        <img class="img-1 lazyload" src="images/item-img-1-1.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-1-1.jpg" alt=""> -->
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">The Child Special T-Shirts</a>
-                                        <span class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">The Child Special T-Shirts</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-2.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-2-1.jpg" alt="">
+                                        <img class="img-1 lazyloaded" src="images/item-img-1-2.jpg" alt=""> <img class="img-2 lazyloaded" src="images/item-img-1-2-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Ladies Sandle Clean</a> <span
-                                            class="price"><small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Ladies Sandle Clean</a> <span class="price"><small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-3.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-3-1.jpg" alt="">
+                                        <img class="img-1 lazyloaded" src="images/item-img-1-3.jpg" alt=""> <img class="img-2 lazyloaded" src="images/item-img-1-3-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Lather Bags Inside and
-                                            outside</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span>
-                                        <a class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Lather Bags Inside and outside</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <!-- Sale -->
-                                    <div class="on-sale"> Sale</div>
+                                    <div class="on-sale"> Sale </div>
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-4.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-4-1.jpg" alt="">
+                                        <img class="img-1 lazyloaded" src="images/item-img-1-4.jpg" alt=""> <img class="img-2 lazyloaded" src="images/item-img-1-4-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Neck Skaff Full </a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Neck Skaff Full </a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-5.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-5-1.jpg" alt="">
+                                        <img class="img-1 lazyloaded" src="images/item-img-1-5.jpg" alt=""> <img class="img-2 lazyloaded" src="images/item-img-1-5-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Men's Fashion Winter Blue</a>
-                                        <span class="price"><small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Men's Fashion Winter Blue</a> <span class="price"><small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
 
                                     <!-- Sale -->
-                                    <div class="on-sale"> Sale</div>
+                                    <div class="on-sale"> Sale </div>
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-6.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-6-1.jpg" alt="">
+                                        <img class="img-1 lazyloaded" src="images/item-img-1-6.jpg" alt=""> <img class="img-2 lazyloaded" src="images/item-img-1-6-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Angry T-Shirts White</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Angry T-Shirts White</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-7.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-7-1.jpg" alt="">
+                                        <img class="img-1 lazyloaded" src="images/item-img-1-7.jpg" alt=""> <img class="img-2 lazyloaded" src="images/item-img-1-7-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Angry T-shites</a> <span
-                                            class="price"> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Angry T-shites</a> <span class="price"> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-8.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-8-1.jpg" alt="">
+                                        <img class="img-1 lazyloaded" src="images/item-img-1-8.jpg" alt=""> <img class="img-2 lazyloaded" src="images/item-img-1-8-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Child Dressing Shorts Jeans</a>
-                                        <span class="price"> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Child Dressing Shorts Jeans</a> <span class="price"> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-9.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-9-1.jpg" alt="">
+                                        <img class="img-1 lazyloaded" src="images/item-img-1-9.jpg" alt=""> <img class="img-2 lazyloaded" src="images/item-img-1-9-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">The Best Hand Back Small</a>
-                                        <span class="price"> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">The Best Hand Back Small</a> <span class="price"> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-10.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-10-1.jpg" alt="">
+                                        <img class="img-1 lazyloaded" src="images/item-img-1-10.jpg" alt=""> <img class="img-2 lazyloaded" src="images/item-img-1-10-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Child White Lether Bag</a>
-                                        <span class="price"><small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Child White Skinny Jeans</a> <span class="price"><small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
                             </div>
 
@@ -374,232 +293,164 @@
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-5.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-5-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-5.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-5-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop">Quick View</a>
-                                                <a href="#."><i class="icon-magnifier"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop">Quick View</a> <a href="#."><i class="icon-magnifier"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small>299.00</span></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>299.00</span> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
 
                                     <!-- Sale -->
-                                    <div class="on-sale"> Sale</div>
+                                    <div class="on-sale"> Sale </div>
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-4.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-4-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-4.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-4-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <!-- Sale -->
-                                    <div class="on-sale"> Sale</div>
+                                    <div class="on-sale"> Sale </div>
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-3.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-3-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-3.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-3-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <!-- Sale -->
-                                    <div class="on-sale"> Sale</div>
+                                    <div class="on-sale"> Sale </div>
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-2.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-2-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-2.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-2-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <!-- Sale -->
-                                    <div class="on-sale"> Sale</div>
+                                    <div class="on-sale"> Sale </div>
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-1.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-1-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-1.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-1-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
                                 <!-- Item -->
                                 <div class="item">
                                     <!-- Sale -->
-                                    <div class="on-sale"> Sale</div>
+                                    <div class="on-sale"> Sale </div>
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-10.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-10-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-10.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-10-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-9.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-9-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-9.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-9-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <!-- Sale -->
-                                    <div class="on-sale"> Sale</div>
+                                    <div class="on-sale"> Sale </div>
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-8.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-8-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-8.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-8-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-7.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-7-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-7.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-7-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <!-- Sale -->
-                                    <div class="on-sale"> Sale</div>
+                                    <div class="on-sale"> Sale </div>
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-6.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-6-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-6.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-6-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
                             </div>
 
@@ -610,219 +461,149 @@
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-10.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-10-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-10.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-10-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-9.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-9-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-9.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-9-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-8.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-8-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-8.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-8-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-7.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-7-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-7.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-7-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-6.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-6-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-6.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-6-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
                                 <!-- Item -->
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-5.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-5-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-5.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-5-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-4.jpg" alt=""> <img
-                                            class="img-2" src="/images/item-img-1-4-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-4.jpg" alt=""> <img class="img-2" src="images/item-img-1-4-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-3.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-3-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-3.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-3-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-2.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-2-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-2.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-2-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
 
                                 <!-- Item -->
                                 <div class="item">
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="/images/item-img-1-1.jpg" alt=""> <img
-                                            class="img-2 lazyload" src="/images/item-img-1-1-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-1.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-1-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
-                                            <div class="position-center-center"><a class="popup-with-move-anim"
-                                                                                   href="#qck-view-shop"><i
-                                                        class="icon-eye"></i></a></div>
-                                            <div class="add-crt"><a href="#."><i
-                                                        class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
-                                    <div class="item-name"><a href="#." class="i-tittle">Mid Rise Lether Bag</a> <span
-                                            class="price"><small>$</small><span
-                                                class="line-through">299.00</span> <small>$</small>199.00</span> <a
-                                            class="deta animated fadeInRight" href="#.">View Detail</a></div>
+                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                 </div>
                             </div>
                         </div>
@@ -830,7 +611,8 @@
                 </div>
             </section>
 
-            <!-- ABOUT -->
+
+    <!-- ABOUT -->
             <section class="about">
                 <div class="light-gray-bg">
                     <div class="main-page-section half_left_layout">
@@ -901,216 +683,39 @@
                     <!-- Popular Item Slide -->
                     <div class="papular-block block-slide">
 
+                        @foreach(\App\Models\Item::popularN(10) as $item)
                         <!-- Item -->
                         <div class="item">
                             <!-- Item img -->
-                            <div class="item-img"><img class="img-1" src="/images/item-img-1-1.jpg" alt=""> <img
-                                    class="img-2" src="/images/item-img-1-1-1.jpg" alt="">
+                            <div class="item-img"><img class="img-1" src="{{$item->photo}}" alt="{{$item->name}}">
+                                <img
+                                    class="img-2" src="{{$item->photo}}" alt="{{$item->name}}">
                                 <!-- Overlay -->
                                 <div class="overlay">
                                     <div class="position-bottom">
-                                        <div class="inn"><a href="images/item-img-1-1.jpg" data-lighter><i
-                                                    class="icon-magnifier"></i></a> <a href="#." data-toggle="tooltip"
+                                        <div class="inn"><a href="{{$item->photo}}" data-lighter><i
+                                                    class="icon-magnifier"></i></a>
+                                            <a href="#." data-toggle="tooltip"
                                                                                        data-placement="top"
                                                                                        title="Add To Cart"><i
-                                                    class="icon-basket"></i></a> <a href="#." data-toggle="tooltip"
+                                                    class="icon-basket"></i></a>
+                                            <a href="#." data-toggle="tooltip"
                                                                                     data-placement="top"
                                                                                     title="Add To WishList"><i
-                                                    class="icon-heart"></i></a></div>
+                                                    class="icon-heart"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Item Name -->
-                            <div class="item-name"><a href="#.">Mid Rise Lether Bag </a>
-                                <p>Lorem ipsum dolor sit amet</p>
+                            <div class="item-name"><a href="/item/{{$item->slug}}">{{$item->title}} </a>
+                                <p>{{$item->detail}}</p>
                             </div>
                             <!-- Price -->
-                            <span class="price"><small>$</small>299</span></div>
+                            <span class="price"><small>$ETB </small> {{$item->price}}</span></div>
+                            @endforeach
 
-                        <!-- Item -->
-                        <div class="item">
-                            <!-- Item img -->
-                            <div class="item-img"><img class="img-1" src="/images/item-img-1-2.jpg" alt=""> <img
-                                    class="img-2" src="/images/item-img-1-2-1.jpg" alt="">
-                                <!-- Overlay -->
-                                <div class="overlay">
-                                    <div class="position-bottom">
-                                        <div class="inn"><a href="images/item-img-1-2.jpg" data-lighter><i
-                                                    class="icon-magnifier"></i></a> <a href="#." data-toggle="tooltip"
-                                                                                       data-placement="top"
-                                                                                       title="Add To Cart"><i
-                                                    class="icon-basket"></i></a> <a href="#." data-toggle="tooltip"
-                                                                                    data-placement="top"
-                                                                                    title="Add To WishList"><i
-                                                    class="icon-heart"></i></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Item Name -->
-                            <div class="item-name"><a href="#.">Mid Rise Lether Bag </a>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <!-- Price -->
-                            <span class="price"><small>$</small>299</span></div>
 
-                        <!-- Item -->
-                        <div class="item">
-                            <!-- Item img -->
-                            <div class="item-img"><img class="img-1" src="/images/item-img-1-3.jpg" alt=""> <img
-                                    class="img-2" src="/images/item-img-1-3-1.jpg" alt="">
-                                <!-- Overlay -->
-                                <div class="overlay">
-                                    <div class="position-bottom">
-                                        <div class="inn"><a href="images/item-img-1-3.jpg" data-lighter><i
-                                                    class="icon-magnifier"></i></a> <a href="#." data-toggle="tooltip"
-                                                                                       data-placement="top"
-                                                                                       title="Add To Cart"><i
-                                                    class="icon-basket"></i></a> <a href="#." data-toggle="tooltip"
-                                                                                    data-placement="top"
-                                                                                    title="Add To WishList"><i
-                                                    class="icon-heart"></i></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Item Name -->
-                            <div class="item-name"><a href="#.">Mid Rise Lether Bag </a>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <!-- Price -->
-                            <span class="price"><small>$</small>299</span></div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <!-- Sale -->
-                            <div class="on-sale"> Sale</div>
-                            <!-- Item img -->
-                            <div class="item-img"><img class="img-1" src="/images/item-img-1-4.jpg" alt=""> <img
-                                    class="img-2" src="/images/item-img-1-4-1.jpg" alt="">
-                                <!-- Overlay -->
-                                <div class="overlay">
-                                    <div class="position-bottom">
-                                        <div class="inn"><a href="images/item-img-1-4.jpg" data-lighter><i
-                                                    class="icon-magnifier"></i></a> <a href="#." data-toggle="tooltip"
-                                                                                       data-placement="top"
-                                                                                       title="Add To Cart"><i
-                                                    class="icon-basket"></i></a> <a href="#." data-toggle="tooltip"
-                                                                                    data-placement="top"
-                                                                                    title="Add To WishList"><i
-                                                    class="icon-heart"></i></a></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Item Name -->
-                            <div class="item-name"><a href="#.">Mid Rise Lether Bag </a>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <!-- Price -->
-                            <span class="price"><small>$</small><span
-                                    class="line-through">299.00</span> <small>$</small>199.00</span></div>
-                        <!-- Item -->
-                        <div class="item">
-                            <!-- Item img -->
-                            <div class="item-img"><img class="img-1" src="/images/item-img-1-5.jpg" alt=""> <img
-                                    class="img-2" src="/images/item-img-1-5-1.jpg" alt="">
-                                <!-- Overlay -->
-                                <div class="overlay">
-                                    <div class="position-bottom">
-                                        <div class="inn"><a href="images/item-img-1-5.jpg" data-lighter><i
-                                                    class="icon-magnifier"></i></a> <a href="#." data-toggle="tooltip"
-                                                                                       data-placement="top"
-                                                                                       title="Add To Cart"><i
-                                                    class="icon-basket"></i></a> <a href="#." data-toggle="tooltip"
-                                                                                    data-placement="top"
-                                                                                    title="Add To WishList"><i
-                                                    class="icon-heart"></i></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Item Name -->
-                            <div class="item-name"><a href="#.">Mid Rise Lether Bag </a>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <!-- Price -->
-                            <span class="price"><small>$</small>299</span></div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <!-- Item img -->
-                            <div class="item-img"><img class="img-1" src="/images/item-img-1-6.jpg" alt=""> <img
-                                    class="img-2" src="/images/item-img-1-6-1.jpg" alt="">
-                                <!-- Overlay -->
-                                <div class="overlay">
-                                    <div class="position-bottom">
-                                        <div class="inn"><a href="images/item-img-1-6.jpg" data-lighter><i
-                                                    class="icon-magnifier"></i></a> <a href="#." data-toggle="tooltip"
-                                                                                       data-placement="top"
-                                                                                       title="Add To Cart"><i
-                                                    class="icon-basket"></i></a> <a href="#." data-toggle="tooltip"
-                                                                                    data-placement="top"
-                                                                                    title="Add To WishList"><i
-                                                    class="icon-heart"></i></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Item Name -->
-                            <div class="item-name"><a href="#.">Mid Rise Lether Bag </a>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <!-- Price -->
-                            <span class="price"><small>$</small>299</span></div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <!-- Item img -->
-                            <div class="item-img"><img class="img-1" src="/images/item-img-1-7.jpg" alt=""> <img
-                                    class="img-2" src="/images/item-img-1-7-1.jpg" alt="">
-                                <!-- Overlay -->
-                                <div class="overlay">
-                                    <div class="position-bottom">
-                                        <div class="inn"><a href="images/item-img-1-7.jpg" data-lighter><i
-                                                    class="icon-magnifier"></i></a> <a href="#." data-toggle="tooltip"
-                                                                                       data-placement="top"
-                                                                                       title="Add To Cart"><i
-                                                    class="icon-basket"></i></a> <a href="#." data-toggle="tooltip"
-                                                                                    data-placement="top"
-                                                                                    title="Add To WishList"><i
-                                                    class="icon-heart"></i></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Item Name -->
-                            <div class="item-name"><a href="#.">Mid Rise Lether Bag </a>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <!-- Price -->
-                            <span class="price"><small>$</small>299</span></div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <!-- Item img -->
-                            <div class="item-img"><img class="img-1" src="/images/item-img-1-8.jpg" alt=""> <img
-                                    class="img-2" src="/images/item-img-1-8-1.jpg" alt="">
-                                <!-- Overlay -->
-                                <div class="overlay">
-                                    <div class="position-bottom">
-                                        <div class="inn"><a href="images/item-img-1-8.jpg" data-lighter><i
-                                                    class="icon-magnifier"></i></a> <a href="#." data-toggle="tooltip"
-                                                                                       data-placement="top"
-                                                                                       title="Add To Cart"><i
-                                                    class="icon-basket"></i></a> <a href="#." data-toggle="tooltip"
-                                                                                    data-placement="top"
-                                                                                    title="Add To WishList"><i
-                                                    class="icon-heart"></i></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Item Name -->
-                            <div class="item-name"><a href="#.">Mid Rise Lether Bag </a>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <!-- Price -->
-                            <span class="price"><small>$</small>299</span></div>
                     </div>
                 </div>
             </section>
@@ -1146,57 +751,28 @@
               Sed feugiat, tellus vel tristique posuere,</span></div>
                     <div class="knowledge-share">
                         <ul class="row">
-
+                        @foreach(\App\Models\Blog::lastN(3) as $blog)
                             <!-- Post 1 -->
                             <li class="col-md-4">
 
                                 <!-- Post Img -->
-                                <div class="img-por"><img src="/images/history-img.jpg" alt=""></div>
+                                <div class="img-por"><img src="{{$blog->photo}}" alt="{{$blog->title}}"></div>
                                 <article>
                                     <!-- Date And comment -->
-                                    <div class="date"><span class="huge">10</span> <span>January</span></div>
-                                    <div class="com-sec"><span>By: <strong><a href="#.">Admin</a></strong></span> <span>Comments: <strong><a
-                                                    href="#.">32</a></strong></span></div>
+                                    <div class="date"><span class="huge">{{$blog->created_at->format('d')}}</span>
+                                        <span>{{$blog->created_at->format('M - Y')}}</span></div>
+                                    <div class="com-sec">
+                                        <span>By: <strong><a href="#">{{$blog->user->name}}</a></strong></span>
+                                        <span>Comments: <strong><a href="/blog/{{$blog->slug}}">32</a></strong></span>
+                                    </div>
                                     <div class="clearfix"></div>
-                                    <a href="#." class="b-tittle">Donec commo is vulputate</a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus
-                                        vehicula. tellus vel tristique posuere, <a href="#.">Read more</a></p>
+                                    <a href="/blog/{{$blog->slug}}" class="b-tittle">{{$blog->title}}</a>
+                                    <p>{{\Illuminate\Support\Str::substr($blog->detail,0,255)}} <a href="/blog/{{$blog->slug}}">Read more</a></p>
                                 </article>
                             </li>
+                            @endforeach
 
-                            <!-- Post 2 -->
-                            <li class="col-md-4">
 
-                                <!-- Post Img -->
-                                <div class="img-por"><img src="/images/about-img.jpg" alt=""></div>
-                                <article>
-                                    <!-- Date And comment -->
-                                    <div class="date"><span class="huge">25</span> <span>February</span></div>
-                                    <div class="com-sec"><span>By: <strong><a href="#.">Admin</a></strong></span> <span>Comments: <strong><a
-                                                    href="#.">32</a></strong></span></div>
-                                    <div class="clearfix"></div>
-                                    <a href="#." class="b-tittle">Donec commo is vulputate</a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus.
-                                        Sed feugiat, tellus vel tristique posuere, <a href="#.">Read more</a></p>
-                                </article>
-                            </li>
-
-                            <!-- Post 2 -->
-                            <li class="col-md-4">
-                                <!-- Post Img -->
-                                <div class="img-por"><img src="/images/custom-img.jpg" alt=""></div>
-                                <article>
-                                    <!-- Date And comment -->
-                                    <div class="date"><span class="huge">25</span> <span>February</span></div>
-                                    <div class="com-sec"><span>By: <strong><a href="#.">Admin</a></strong></span> <span>Comments: <strong><a
-                                                    href="#.">32</a></strong></span></div>
-                                    <div class="clearfix"></div>
-                                    <a href="#." class="b-tittle">Donec commo is vulputate</a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus
-                                        vehicula. Sed feugiat, tellus vel tristique posuere, <a href="#.">Read more</a>
-                                    </p>
-                                </article>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -1293,6 +869,7 @@
 
 <script src="/js/jquery-1.12.4.min.js"></script>
 <script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js" ></script>
 <script src="/js/own-menu.js"></script>
 <script src="/js/jquery.lighter.js"></script>
 <script src="/js/jquery.magnific-popup.min.js"></script>

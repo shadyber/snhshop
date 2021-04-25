@@ -10,7 +10,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="nav">
-                    <li class="dropdown active"><a href="/" class="dropdown-toggle" data-toggle="dropdown">Home</a>
+                    <li class="dropdown active"><a href="/"   data-toggle="dropdown">Home</a>
 
                     </li>
 
@@ -26,22 +26,9 @@
                                 <div class="col-md-5">
                                     <h6>Categories</h6>
                                     <ul class="col-2-li">
-                                        <li><a href="/cat/1">Category 1</a></li>
-                                        <li><a href="/cat/2">Category 2 </a></li>
-                                        <li><a href="/cat/3">Cateory 3 </a></li>
-
-                                        <li><a href="/cat/1">Category 1</a></li>
-                                        <li><a href="/cat/2">Category 2 </a></li>
-                                        <li><a href="/cat/3">Cateory 3 </a></li>
-
-                                        <li><a href="/cat/1">Category 1</a></li>
-                                        <li><a href="/cat/2">Category 2 </a></li>
-                                        <li><a href="/cat/4">Cateory 3 </a></li>
-
-                                        <li><a href="/cat/1">Category 1</a></li>
-                                        <li><a href="/cat/2">Category 2 </a></li>
-                                        <li><a href="/cat/5">Cateory 3 </a></li>
-
+                                       @foreach(\App\Models\ItemCategory::allCategories() as $cat)
+                                        <li><a href="/cat/1">{{$cat->title}}</a></li>
+                                     @endforeach
                                     </ul>
                                 </div>
 
@@ -119,6 +106,7 @@
                         </div>
                     </li>
                     <li><a href="/contact"> contact</a></li>
+                    <li><a href="/blog"> Blog</a></li>
                 </ul>
             </div>
 
@@ -144,6 +132,7 @@
                             </div>
                         </div>
                     </li>
+
                 </ul>
             </div>
         </nav>

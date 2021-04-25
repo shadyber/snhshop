@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\ItemCategory;
+use App\Models\BlogCategory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ItemCategoryFactory extends Factory
+class BlogCategoryFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = ItemCategory::class;
+    protected $model=BlogCategory::class;
 
     /**
      * Define the model's default state.
@@ -22,9 +22,9 @@ class ItemCategoryFactory extends Factory
     public function definition()
     {
         return [
-            //
             'title'=>$this->faker->word,
-            'detail'=>$this->faker->sentence
+        'photo'=>$this->faker->imageUrl(640,480,'fashion'),
+        'detail'=>$this->faker->sentence,
         ];
     }
 }

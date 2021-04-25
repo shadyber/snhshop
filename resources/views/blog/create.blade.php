@@ -23,23 +23,34 @@
             <form action="/blog" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <input type="text" class="form-control form-control" id="title" placeholder="Post Title" required>
+                    <input type="text" class="form-control form-control" name="title" placeholder="Post Title" required>
                 </div>
 
 
 
                 <div class="form-group">
-                    <input type="file" class="form-control form-control" id="photo" placeholder="Post Photo" required>
+                    <input type="file" class="form-control form-control" name="photo" placeholder="Post Photo" required>
+                </div>
+                <div class="form-group">
+                    <select class="form-control form-control" name="blog_category_id" placeholder="Post Category' required>
+                        @foreach(\App\Models\BlogCategory::allCategories() as $category)
+                            <option value="{{$category->id}}">{{$category->title}}</option>
+                        @endforeach
+                    </select>
                 </div>
 
 
 
                 <div class="form-group">
-                    <textarea class="form-control form-control" id="photo" placeholder="Post Photo" required   rows="5">
+                    <textarea class="form-control form-control" name="detail" placeholder="Post Photo" required   rows="5">
                     </textarea>
                 </div>
 
 
+
+                <div class="form-group">
+                    <input type="text" class="form-control form-control" name="tags" placeholder="Post Tags" >
+                </div>
 
 
 

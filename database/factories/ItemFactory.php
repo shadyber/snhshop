@@ -23,12 +23,14 @@ class ItemFactory extends Factory
     {
         return [
        'name'=>$this->faker->word,
-       'photo'=>$this->faker->imageUrl('640','480','fashion'),
+       'slug'=>$this->faker->word,
+       'photo'=>$this->faker->imageUrl('640','480',),
        'color'=>$this->faker->colorName,
        'measurement'=>$this->faker->word,
        'weight'=>$this->faker->word,
        'price'=>$this->faker->numberBetween(20,4000),
        'category_id'=>$this->faker->numberBetween(1,2),
+       'visit'=>$this->faker->numberBetween(1,300),
         ];
     }
 }

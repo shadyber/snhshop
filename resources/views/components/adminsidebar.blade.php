@@ -44,6 +44,14 @@
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item">
+        <a class="nav-link" href="/about/edit">
+            <i class="fas fa-fw fa-location-arrow"></i>
+            <span>About</span></a>
+
+    </li>
+
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">

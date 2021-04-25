@@ -15,6 +15,15 @@ class CreateAboutsTable extends Migration
     {
         Schema::create('abouts', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->longText('detail');
+            $table->longText('mission')->nullable();
+            $table->longText('vision')->nullable();
+            $table->longText('goal')->nullable();
+            $table->longText('values')->nullable();
+            $table->longText('history')->nullable();
+            $table->longText('photo')->nullable();
+            $table->longText('logo')->default('/images/logo.png');
             $table->timestamps();
         });
     }

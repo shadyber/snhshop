@@ -16,6 +16,7 @@ class CreateItemsTable extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('slug');
             $table->string('photo');
             $table->string('color');
             $table->double('price');
@@ -26,6 +27,8 @@ class CreateItemsTable extends Migration
             $table->unsignedInteger('init_qnt')->default(1);
             $table->string('status')->default('available');
             $table->string('badge')->default('NEW');
+            $table->string('tags')->nullable();
+            $table->integer('visit')->default(0);
             $table->timestamps();
         });
     }

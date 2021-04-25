@@ -3,10 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index','show');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -39,51 +46,75 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         //
+
+       $request->validate([
+           'title'=>'required',
+           'detail'=>'required',
+           'photo'=>'required|mimes:jpg,png,jpeg|max:5048',
+       ]);
+
+       $newImageName=uniqid().'_'. $request->title.'.'.$request->photo->extension();
+    $request->photo->move(public_path('images'),$newImageName);
+       Blog::create([
+                'title'=>$request->input('title'),
+                'detail'=>$request->input('detail'),
+                'slug'=>SlugService::createSlug(Blog::class,'slug',$request->title),
+               'photo'=>'/images/'.$newImageName,
+               'tags'=>$request->input('tags'),
+               'user_id'=>auth()->user()->id,
+               'blog_category_id'=>$request->input('blog_category_id'),
+               ]
+       );
+
+       return redirect()->back()->with('message','Blog Created Succusfully!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Blog  $blog
+     * @param  string  $slug
      * @return \Illuminate\Http\Response
      */
-    public function show(Blog $blog)
+    public function show($slug)
     {
         //
-        return  view('blog.show')->with('blog',$blog);
+
+        return view('blog.show')->with('blog',Blog::where('slug',$slug)->first());
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Blog  $blog
+     * @param  string $slug
      * @return \Illuminate\Http\Response
      */
-    public function edit(Blog $blog)
+    public function edit(String $slug)
     {
         //
-        return view('blog.edit')->with('blog',$blog);
+        return view('blog.edit')->with('blog',Blog::where('slug',$slug));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Blog  $blog
+     * @param  string $slug
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Blog $blog)
+    public function update(Request $request, string $slug)
     {
         //
+
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Blog  $blog
+     * @param  string $slug
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Blog $blog)
+    public function destroy(string $slug)
     {
         //
     }
