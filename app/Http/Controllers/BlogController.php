@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
-
+use Image;
 class BlogController extends Controller
 {
 
@@ -53,13 +53,28 @@ class BlogController extends Controller
            'photo'=>'required|mimes:jpg,png,jpeg|max:5048',
        ]);
 
-       $newImageName=uniqid().'_'. $request->title.'.'.$request->photo->extension();
-    $request->photo->move(public_path('images/blogs'),$newImageName);
-       Blog::create([
+
+        if($request->hasFile('photo')) {
+
+            $newImageName=uniqid().'_'. $request->title.'.'.$request->photo->extension();
+
+
+            $file = $request->file('photo');
+            $file_name =$newImageName;
+            $destinationPath = 'images/blogs/thumbnile/';
+            $new_img = Image::make($file->getRealPath())->resize(400, 300);
+
+// save file with medium quality
+            $new_img->save($destinationPath . $file_name, 80);
+            $request->photo->move(public_path('images/blogs'),$newImageName);
+
+        }
+        Blog::create([
                 'title'=>$request->input('title'),
                 'detail'=>$request->input('detail'),
                 'slug'=>SlugService::createSlug(Blog::class,'slug',$request->title),
                'photo'=>'/images/blogs/'.$newImageName,
+               'thumb'=>'/images/blogs/thumbnile/'.$newImageName,
                'tags'=>$request->input('tags'),
                'user_id'=>auth()->user()->id,
                'blog_category_id'=>$request->input('blog_category_id'),

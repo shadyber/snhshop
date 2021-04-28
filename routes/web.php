@@ -27,8 +27,9 @@ Route::resource('/blog',App\Http\Controllers\BlogController::class);
 Route::get('/about', function(){
    return view('about');
 });
-Route::get('about/create',[\App\Http\Controllers\AboutController::class,'create']);
-Route::get('about/edit',[\App\Http\Controllers\AboutController::class,'create']);
+Route::get('/about/create',[\App\Http\Controllers\AboutController::class,'create']);
+Route::get('/about/edit',[\App\Http\Controllers\AboutController::class,'create']);
+Route::post('/about',[\App\Http\Controllers\AboutController::class,'store']);
 
 Route::get('/contact', function(){
     return view('contact')->with('address',\App\Models\Address::all()->last());

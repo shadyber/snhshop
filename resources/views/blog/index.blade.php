@@ -26,7 +26,7 @@
                             <div class="row">
                                 <div class="col-sm-5">
                                     <!-- Post Img -->
-                                    <img class="img-responsive" src="{{$blog->photo}}" alt="{{$blog->title}}"> </div>
+                                    <img class="img-responsive" src="{{$blog->thumb}}" alt="{{$blog->title}}"> </div>
                                 <div class="col-sm-7">
                                     <!-- Tittle -->
                                     <div class="post-tittle left"> <a href="/blog/{{$blog->slug}}" class="tittle">{{$blog->title}}</a>

@@ -36,16 +36,13 @@
                                 <div class="col-md-3">
                                     <h6>Latest items</h6>
                                     <ul>
-                                        <li><a href="/item/1"> Bags</a></li>
-                                        <li><a href="/itme/2"> Shoe</a></li>
-                                        <li><a href="/item/3"> COat</a></li>
-                                        <li><a href="/item/1"> Bags</a></li>
-                                        <li><a href="/itme/2"> Shoe</a></li>
-                                        <li><a href="/item/3"> COat</a></li>
-                                        <li><a href="/item/1"> Bags</a></li>
-                                        <li><a href="/itme/2"> Shoe</a></li>
-                                        <li><a href="/item/3"> COat</a></li>
+                                        <li><a href="/item">All Items</a> </li>
+                                        @foreach(\App\Models\Item::lastN(8) as $item)
 
+
+                                        <li> <a href="/item/{{$item->slug}}"> {{$item->name}}</a>
+                                        </li>
+                                        @endforeach
 
                                     </ul>
                                 </div>

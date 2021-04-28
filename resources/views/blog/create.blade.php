@@ -42,7 +42,7 @@
 
 
                 <div class="form-group">
-                    <textarea class="form-control form-control" name="detail" placeholder="Post Photo" required   rows="5">
+                    <textarea class="form-control form-control" name="detail" placeholder="Post Detail" required   rows="5">
                     </textarea>
                 </div>
 
