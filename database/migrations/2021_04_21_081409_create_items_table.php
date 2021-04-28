@@ -17,16 +17,23 @@ class CreateItemsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug');
+            $table->longText('detail');
             $table->string('photo');
+            $table->string('thumb');
             $table->string('color');
             $table->double('price');
             $table->string('measurement');
             $table->string('weight');
-            $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('item_categories');
+
+            $table->unsignedBigInteger('item_category_id');
+            $table->foreign('item_category_id')->references('id')->on('item_categories');
+
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+
             $table->unsignedInteger('init_qnt')->default(1);
             $table->string('status')->default('available');
-            $table->string('badge')->default('NEW');
+            $table->string('badge')->nullable()->default('NEW');
             $table->string('tags')->nullable();
             $table->integer('visit')->default(0);
             $table->timestamps();

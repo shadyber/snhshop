@@ -10,7 +10,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="nav">
-                    <li class="dropdown active"><a href="/"   data-toggle="dropdown">Home</a>
+                    <li class="dropdown active"><a href="/" >Home</a>
 
                     </li>
 

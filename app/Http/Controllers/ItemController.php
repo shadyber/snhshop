@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Item;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
+
+use Image;
 
 class ItemController extends Controller
 {
@@ -43,19 +46,67 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            'name'=>'required',
+            'detail'=>'required',
+            'price'=>'required',
+            'init_qnt'=>'required',
+            'photo'=>'required|mimes:jpg,png,jpeg|max:5048',
+        ]);
+
+        if($request->hasFile('photo')) {
+
+            $newImageName=uniqid().'_'. $request->title.'.'.$request->photo->extension();
+
+
+            $file = $request->file('photo');
+            $file_name =$newImageName;
+            $destinationPath = 'images/items/thumbnile/';
+            $new_img = Image::make($file->getRealPath())->resize(400, 300);
+
+// save file with medium quality
+            $new_img->save($destinationPath . $file_name, 80);
+            $request->photo->move(public_path('images/items'),$newImageName);
+
+        }
+        $measurement=[
+            'w'=>$request->input('width'),
+            'h'=>$request->input('height'),
+            'd'=>$request->input('diameter'),
+        ];
+        Item::create([
+                'name'=>$request->input('name'),
+                'detail'=>$request->input('detail'),
+                'slug'=>SlugService::createSlug(Item::class,'slug',$request->name),
+                'photo'=>'/images/items/'.$newImageName,
+                'thumb'=>'/images/items/thumbnile/'.$newImageName,
+                'tags'=>$request->input('tags'),
+                'color'=>$request->input('color'),
+                'price'=>$request->input('price'),
+                'weight'=>$request->input('weight'),
+                'init_qnt'=>$request->input('init_qnt'),
+                'badge'=>$request->input('badge'),
+                'user_id'=>auth()->user()->id,
+                'measurement'=>json_encode($measurement),
+                'item_category_id'=>$request->input('item_category_id'),
+            ]
+        );
+
+        return redirect()->back()->with('message','Item Created Succusfully!');
+
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Item  $item
+     * @param  string $slug
      * @return \Illuminate\Http\Response
      */
-    public function show(Item $item)
+    public function show($slug)
     {
-        //
-       return view('item.show')->with('item',$item);
+        return view('item.show')->with('item',Item::where('slug',$slug)->first());
     }
 
     /**
@@ -91,5 +142,19 @@ class ItemController extends Controller
     public function destroy(Item $item)
     {
         //
+    }
+    /**
+     * Create a thumbnail of specified size
+     *
+     * @param string $path path of thumbnail
+     * @param int $width
+     * @param int $height
+     */
+    public function createThumbnail($path, $width, $height)
+    {
+        $img = Image::make($path)->resize($width, $height, function ($constraint) {
+            $constraint->aspectRatio();
+        });
+        $img->save($path);
     }
 }

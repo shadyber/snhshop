@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Item extends Model
 {
     use HasFactory;    use Sluggable;
-    protected $fillable=['name','slug','detail','photo','color','price','user_id','tags','measurement','weight','category_id ','init_qnt','status','badge'];
+    protected $fillable=['name','slug','detail','item_category_id','thumb', 'photo','color','price','user_id','tags','measurement','weight','init_qnt','status','badge'];
 
     public function user(){
         return $this->belongsTo(User::class);

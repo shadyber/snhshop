@@ -23,42 +23,47 @@
             <form action="/item" method="post" enctype="multipart/form-data">
 @csrf
                 <div class="form-group">
-                    <input type="text" class="form-control form-control" id="title" placeholder="Item Name" required>
+                    <input type="text" class="form-control form-control" name="name" placeholder="Item Name" required>
                 </div>
 
 
 
                 <div class="form-group">
-                    <input type="file" class="form-control form-control" id="photo" placeholder="Item Photo" required>
+                    <input type="file" class="form-control form-control" name="photo" placeholder="Item Photo" required>
+                </div>
+
+                <div class="form-group">
+                    <textarea class="form-control form-control" name="detail" placeholder="Item Photo" required>
+                    </textarea>
                 </div>
 
 
                 <div class="form-group">
-                    <select class="form-control form-control" id="category_id" placeholder="Item Category" required>
-                        <option value="">Select Category</option>
-                        <option value="">Male</option>
-                        <option value="">Female</option>
-                        <option value="">Universal</option>
+                    <select class="form-control form-control" name="item_category_id" placeholder="Item Category" required>
+
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                        <option value="3">Universal</option>
                     </select>
                 </div>
 
 
                 <div class="form-group row">
                     <div class="col-sm-6 mb-3 mb-sm-0">
-                        <input type="number" class="form-control form-control" id="price" placeholder="Item Price" required>
+                        <input type="number" class="form-control form-control" name="price" placeholder="Item Price" required>
                     </div>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control form-control-user" id="weight" placeholder="Item Weight">
+                        <input type="text" class="form-control form-control-user" name="weight" placeholder="Item Weight">
                     </div>
                 </div>
 
 
                 <div class="form-group row">
                     <div class="col-sm-6 mb-3 mb-sm-0">
-                        <input type="color" class="form-control form-control" id="color" placeholder="Item Color" value="black">
+                        <input type="color" class="form-control form-control" name="color" placeholder="Item Color" value="black">
                     </div>
                     <div class="col-sm-6">
-                        <input type="number" class="form-control form-control" id="init_qnt" placeholder="Stock Balance">
+                        <input type="number" class="form-control form-control" name="init_qnt" placeholder="Stock Balance">
                     </div>
                 </div>
 
@@ -67,20 +72,20 @@
 
                 <div class="form-group row">
                     <div class="col-sm-4 mb-3 mb-sm-0">
-                        <input type="number" class="form-control form-control" id="height" placeholder="Height"  >
+                        <input type="number" class="form-control form-control" name="height" placeholder="Height"  >
                     </div>
                     <div class="col-sm-4">
-                        <input type="number" class="form-control form-control" id="width" placeholder="Width">
+                        <input type="number" class="form-control form-control" name="width" placeholder="Width">
                     </div>
 
                     <div class="col-sm-4">
-                        <input type="number" class="form-control form-control" id="Diameter" placeholder="Diameter">
+                        <input type="number" class="form-control form-control" name="Diameter" placeholder="Diameter">
                     </div>
                 </div>
 
 
                 <div class="form-group">
-                    <select class="form-control form-control" id="category_id" placeholder="Item Badge" >
+                    <select class="form-control form-control" name="badge" placeholder="Item Badge" >
                         <option value="">Select Category</option>
                         <option value="">NEW</option>
                         <option value="">HOT</option>

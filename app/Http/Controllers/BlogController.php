@@ -54,12 +54,12 @@ class BlogController extends Controller
        ]);
 
        $newImageName=uniqid().'_'. $request->title.'.'.$request->photo->extension();
-    $request->photo->move(public_path('images'),$newImageName);
+    $request->photo->move(public_path('images/blogs'),$newImageName);
        Blog::create([
                 'title'=>$request->input('title'),
                 'detail'=>$request->input('detail'),
                 'slug'=>SlugService::createSlug(Blog::class,'slug',$request->title),
-               'photo'=>'/images/'.$newImageName,
+               'photo'=>'/images/blogs/'.$newImageName,
                'tags'=>$request->input('tags'),
                'user_id'=>auth()->user()->id,
                'blog_category_id'=>$request->input('blog_category_id'),
