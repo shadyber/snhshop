@@ -13,7 +13,8 @@ $itemss =(object) array_merge_recursive(\App\Models\Item::popularN(12)->toArray(
             <!-- Images Slider -->
             <div class="images-slider">
                 <ul class="slides">
-                    <li data-thumb="{{$item['photo']}}"><img src="{{$item['photo']}}" alt="{{$item['name']}}">
+                    <li data-thumb="{{$item['thumb']}}">
+                        <img src="{{$item['photo']}}" alt="{{$item['name']}}">
                     </li>
 
                     <li data-thumb="images/item-img-1-1-1.jpg"><img src="/images/item-img-1-1-1.jpg" alt="">

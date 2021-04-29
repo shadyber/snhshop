@@ -20,7 +20,7 @@ class CreateBlogsTable extends Migration
             $table->string('tags');
             $table->longText('detail');
             $table->string('photo');
-            $table->string('thumb')->nullable()->default('/images/blog/thumbnile/placeholder.png');
+            $table->string('thumb')->nullable()->default('/images/blogs/thumbnile/placeholder.png');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('blog_category_id');

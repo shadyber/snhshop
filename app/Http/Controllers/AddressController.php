@@ -27,7 +27,14 @@ class AddressController extends Controller
     public function create()
     {
         //
-        return view('address.create');
+        if(Address::all()->last()){
+
+            return view('address.edit')->with(['address'=>Address::all()->last()]);
+        }else{
+            return view('address.create');
+        }
+
+
     }
 
     /**
@@ -39,6 +46,27 @@ class AddressController extends Controller
     public function store(Request $request)
     {
         //
+
+        $request->validate([
+            'tel'=>'required',
+             'email'=>'required',
+            'email2'=>'required',
+            'address1'=>'required',
+
+        ]);
+
+
+        Address::create([
+                'tel'=>$request->input('tel'),
+                'tel2'=>$request->input('tel2'),
+                'email'=>$request->input('email'),
+                'email2'=>$request->input('email2'),
+                'address1'=>$request->input('address1'),
+                'address2'=>$request->input('address2'),
+
+            ]
+        );
+        return redirect()->back()->with(['succuss'=>'Address Added Sucusfully!']);
     }
 
     /**

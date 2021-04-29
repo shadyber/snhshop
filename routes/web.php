@@ -31,6 +31,9 @@ Route::get('/about/create',[\App\Http\Controllers\AboutController::class,'create
 Route::get('/about/edit',[\App\Http\Controllers\AboutController::class,'create']);
 Route::post('/about',[\App\Http\Controllers\AboutController::class,'store']);
 
+Route::post('/address',[\App\Http\Controllers\AddressController::class,'store']);
+Route::get('/address',[\App\Http\Controllers\AddressController::class,'create']);
+
 Route::get('/contact', function(){
     return view('contact')->with('address',\App\Models\Address::all()->last());
 });

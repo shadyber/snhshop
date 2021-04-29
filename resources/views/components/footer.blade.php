@@ -3,7 +3,7 @@
     <div class="container-full">
         <div class="insta-g">
             <div class="position-center-center">
-                <h3>From The @instgram</h3>
+                <h3>From The @gallery</h3>
             </div>
             <ul>
                 <li><img src="/images/insta-post-1.jpg" alt=""></li>
@@ -21,12 +21,14 @@
             <!-- ABOUT Location -->
             <div class="col-md-4">
                 <div class="about-footer"><img class="margin-bottom-30" src="/images/logo-foot.png" alt="">
-                    <p><i class="icon-pointer"></i> Street No. 12, Newyork 12, <br>
-                        MD - 123, USA.</p>
-                    <p><i class="icon-call-end"></i> 1.800.123.456789 <br>
-                        1.800.123.456789</p>
-                    <p><i class="icon-envelope"></i> info@SandHShop.com <br>
-                        contact@SandHShop.com</p>
+
+                    <p><i class="icon-pointer"></i> {{\App\Models\Address::myAddress()->address1}}, <br>
+                        {{\App\Models\Address::myAddress()->address2}}</p>
+                    <p><i class="icon-call-end"></i> <br>
+                        {{\App\Models\Address::myAddress()->tel}}<br>
+                        {{\App\Models\Address::myAddress()->tel2}}</p>
+                    <p><i class="icon-envelope"></i>{{\App\Models\Address::myAddress()->email}}<br>
+                        {{\App\Models\Address::myAddress()->email2}}</p>
                 </div>
             </div>
 

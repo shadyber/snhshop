@@ -70,12 +70,13 @@
                             <div class="contact-info">
                                 <h6>OUR ADDRESS</h6>
                                 <ul>
-                                    <li> <i class="icon-map-pin"></i> Street No. 12, Addis Ababa 12,<br>
-                                        MD - 123, Ethiopia.</li>
-                                    <li> <i class="icon-call-end"></i> 1.800.123.456789</li>
-                                    <li> <i class="icon-envelope"></i> <a href="mailto:someone@example.com" target="_top">info@sandshop.com</a> </li>
+                                    <li> <i class="icon-map-pin"></i>{{\App\Models\Address::myAddress()->address1}},<br>
+                                        {{\App\Models\Address::myAddress()->address2}}</li>
+                                    <li> <i class="icon-call-end"></i>{{\App\Models\Address::myAddress()->tel}}</li>
+                                    <li> <i class="icon-envelope"></i>
+                                        <a href="mailto:{{\App\Models\Address::myAddress()->email}}" target="_top">{{\App\Models\Address::myAddress()->email}}</a> </li>
                                     <li>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam erat turpis, pellentesque non leo eget.</p>
+                                        <p>about us.</p>
                                     </li>
                                 </ul>
                             </div>

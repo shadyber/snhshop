@@ -90,7 +90,7 @@
                                     <div class="item">
                                         <!-- Sale -->
                                         <div class="on-sale">{{$item->badge}}</div>
-                                        <div class="img-ser"> <img class="img-1 lazyloaded" src="{{$item->photo}}" alt="{{$item->name}}">
+                                        <div class="img-ser"> <img class="img-1 lazyloaded" src="{{$item->thumb}}" alt="{{$item->name}}">
                                             <img class="img-2 lazyloaded" src="{{$item->photo}}" alt="{{$item->name}}">
 
                                             <!-- Images
@@ -263,7 +263,8 @@
                                     <div class="on-sale"> Sale </div>
                                     <div class="img-ser">
                                         <!-- Images -->
-                                        <img class="img-1 lazyload" src="images/item-img-1-6.jpg" alt=""> <img class="img-2 lazyload" src="images/item-img-1-6-1.jpg" alt="">
+                                        <img class="img-1 lazyload" src="images/item-img-1-6.jpg" alt="">
+                                        <img class="img-2 lazyload" src="images/item-img-1-6-1.jpg" alt="">
                                         <!-- Overlay  -->
                                         <div class="overlay">
                                             <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
@@ -284,7 +285,7 @@
                                     <div class="item">
                                         <div class="img-ser">
                                             <!-- Images -->
-                                            <img class="img-1 lazyload" src="{{$item->photo}}" alt="">
+                                            <img class="img-1 lazyload" src="{{$item->thumb}}" alt="">
                                             <img class="img-2 lazyload" src="{{$item->photo}}" alt="{{$item->name}}">
                                             <!-- Overlay  -->
                                             <div class="overlay">
@@ -452,7 +453,7 @@
                                 <li class="col-md-4">
 
                                     <!-- Post Img -->
-                                    <div class="img-por"><img src="{{$blog->photo}}" alt="{{$blog->title}}"></div>
+                                    <div class="img-por"><img src="{{$blog->thumb}}" alt="{{$blog->title}}"></div>
                                     <article>
                                         <!-- Date And comment -->
                                         <div class="date"><span class="huge">{{$blog->created_at->format('d')}}</span>
