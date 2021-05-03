@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class UserSeeder extends Seeder
 {
@@ -14,6 +15,10 @@ class UserSeeder extends Seeder
     public function run()
     {
         //
-
+        DB::table('users')->insert([
+            'name' => 'Super User',
+            'email' =>'admin@sandhshop.com',
+            'password' => Hash::make('password'),
+        ]);
     }
 }
