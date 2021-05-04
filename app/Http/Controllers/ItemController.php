@@ -63,7 +63,7 @@ class ItemController extends Controller
             $file = $request->file('photo');
             $file_name =$newImageName;
             $destinationPath = 'images/items/thumbnile/';
-            $new_img = Image::make($file->getRealPath())->resize(400, 300);
+            $new_img = Image::make($file->getRealPath())->resize(530, 694);
 
 // save file with medium quality
             $new_img->save($destinationPath . $file_name, 80);
