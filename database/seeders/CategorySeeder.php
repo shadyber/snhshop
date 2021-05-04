@@ -21,13 +21,13 @@ class CategorySeeder extends Seeder
 
         ]);
    //
-        DB::table('item_categories')->insert([
+        \DB::table('item_categories')->insert([
             'title' => 'FeMale',
             'detail' => 'Products made for FeMales',
 
         ]);
 
-          DB::table('item_categories')->insert([
+          \DB::table('item_categories')->insert([
             'title' => 'Universal',
             'detail' => 'Products made for All',
 
