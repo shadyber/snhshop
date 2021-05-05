@@ -17,9 +17,13 @@ class CreateItemPhotosTable extends Migration
             $table->id();
             $table->unsignedBigInteger('item_id');
             $table->foreign('item_id')->references('id')->on('items');
+
             $table->string('photo');
-            $table->string('title');
-            $table->string('detail');
+            $table->string('thumb');
+
+            $table->string('title')->default('item photo');
+
+
             $table->timestamps();
         });
     }

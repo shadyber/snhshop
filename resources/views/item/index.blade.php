@@ -26,27 +26,43 @@
                 <!-- Item -->
                 <div id="products" class="arrival-block col-item-4 list-group">
                     <div class="row">
+                        @foreach($items as $item)
                         <!-- Item -->
                         <div class="item">
                             <div class="img-ser">
                                 <!-- Sale -->
-                                <div class="on-sale"> Sale </div>
+                                <div class="on-sale"> {{$item->badge}} </div>
                                 <!-- Images -->
-                                <div class="thumb"> <img class="img-1" src="images/item-img-1-1.jpg" alt=""><img class="img-2" src="images/item-img-1-1-1.jpg" alt="">
+                                <div class="thumb">
+                                    <img class="img-1" src="{{$item->thumb}}" alt="{{$item->name}}">
+                                    <img class="img-2" src="{{$item->photo}}" alt="{{$item->name}}">
                                     <!-- Overlay  -->
                                     <div class="overlay">
-                                        <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
-                                        <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                        <div class="position-center-center">
+                                            <a class="popup-with-move-anim" href="#qck-view-shop">
+                                                <i class="icon-eye"></i></a>
+                                        </div>
+                                        <div class="add-crt">
+                                            <a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <!-- Item Name -->
-                                <div class="item-name fr-grd"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
+                                <div class="item-name fr-grd"> <a href="/item/{{$item->slug}}" class="i-tittle"> {{$item->name}}</a>
+                                    <span class="price"><small>$</small><span class="line-through">{{$item->prices}}</span> <small>$USD</small>{{$item->price}}</span>
+                                    <a class="deta animated fadeInRight" href="/item/{{$item->slug}}">View Detail</a> </div>
                                 <!-- Item Details -->
                                 <div class="cap-text">
-                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span>
+                                    <div class="item-name"> <a href="/item/{{$item->slug}}" class="i-tittle">{{$item->name}}</a>
+                                        <span class="price"><small>$USD </small><span class="line-through">{{$item->price}}</span> <small>$ETB</small>{{$item->price}}</span>
                                         <!-- Stars -->
-                                        <div class="stras"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> <a href="#." class="wsh-list"><i class="icon-heart"></i> ADD TO WISHLIST</a> </div>
+                                        <div class="stras">
+                                            <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-o"></i>
+
+                                            <a href="#." class="wsh-list"><i class="icon-heart"></i> ADD TO WISHLIST</a> </div>
                                         <!-- Details -->
                                         <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
 
@@ -63,452 +79,8 @@
                                 </div>
                             </div>
                         </div>
+                            @endforeach
 
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="img-ser">
-                                <!-- Sale -->
-                                <div class="on-sale"> Sale </div>
-                                <!-- Images -->
-                                <div class="thumb"> <img class="img-1" src="images/item-img-1-2.jpg" alt=""><img class="img-2" src="images/item-img-1-2-1.jpg" alt="">
-                                    <!-- Overlay  -->
-                                    <div class="overlay">
-                                        <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
-                                        <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
-                                    </div>
-                                </div>
-
-                                <!-- Item Name -->
-                                <div class="item-name fr-grd"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
-                                <!-- Item Details -->
-                                <div class="cap-text">
-                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span>
-                                        <!-- Stars -->
-                                        <span class="stras"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> </span>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed ullamcorper sapien lacus, eu luctus non. Nulla lacinia, eros vel fermentum consectetur,</p>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="img-ser">
-                                <!-- Images -->
-                                <div class="thumb"> <img class="img-1" src="images/item-img-1-3.jpg" alt=""><img class="img-2" src="images/item-img-1-3-1.jpg" alt="">
-                                    <!-- Overlay  -->
-                                    <div class="overlay">
-                                        <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
-                                        <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
-                                    </div>
-                                </div>
-
-                                <!-- Item Name -->
-                                <div class="item-name fr-grd"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
-                                <!-- Item Details -->
-                                <div class="cap-text">
-                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span>
-                                        <!-- Stars -->
-                                        <span class="stras"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> </span>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed ullamcorper sapien lacus, eu luctus non. Nulla lacinia, eros vel fermentum consectetur,</p>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="img-ser">
-                                <!-- Images -->
-                                <div class="thumb"> <img class="img-1" src="images/item-img-1-4.jpg" alt=""><img class="img-2" src="images/item-img-1-4-1.jpg" alt="">
-                                    <!-- Overlay  -->
-                                    <div class="overlay">
-                                        <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
-                                        <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
-                                    </div>
-                                </div>
-
-                                <!-- Item Name -->
-                                <div class="item-name fr-grd"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
-                                <!-- Item Details -->
-                                <div class="cap-text">
-                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span>
-                                        <!-- Stars -->
-                                        <div class="stras"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> <a href="#." class="wsh-list"><i class="icon-heart"></i> ADD TO WISHLIST</a> </div>
-                                        <!-- Details -->
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-
-                                        <!-- List Style -->
-                                        <ul class="list-style">
-                                            <li> Best Shop Products </li>
-                                            <li> Color Option </li>
-                                            <li> All Sizes </li>
-                                            <li> Discounted Prices </li>
-                                            <li> Refund Poloicy </li>
-                                            <li> New Arrival </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="img-ser">
-                                <!-- Sale -->
-                                <div class="on-sale"> Sale </div>
-                                <!-- Images -->
-                                <div class="thumb"> <img class="img-1" src="images/item-img-1-5.jpg" alt=""><img class="img-2" src="images/item-img-1-5-1.jpg" alt="">
-                                    <!-- Overlay  -->
-                                    <div class="overlay">
-                                        <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
-                                        <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
-                                    </div>
-                                </div>
-
-                                <!-- Item Name -->
-                                <div class="item-name fr-grd"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
-                                <!-- Item Details -->
-                                <div class="cap-text">
-                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span>
-                                        <!-- Stars -->
-                                        <span class="stras"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> </span>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed ullamcorper sapien lacus, eu luctus non. Nulla lacinia, eros vel fermentum consectetur,</p>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="img-ser">
-                                <!-- Images -->
-                                <div class="thumb"> <img class="img-1" src="images/item-img-1-6.jpg" alt=""><img class="img-2" src="images/item-img-1-6-1.jpg" alt="">
-                                    <!-- Overlay  -->
-                                    <div class="overlay">
-                                        <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
-                                        <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
-                                    </div>
-                                </div>
-
-                                <!-- Item Name -->
-                                <div class="item-name fr-grd"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
-                                <!-- Item Details -->
-                                <div class="cap-text">
-                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span>
-                                        <!-- Stars -->
-                                        <div class="stras"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> <a href="#." class="wsh-list"><i class="icon-heart"></i> ADD TO WISHLIST</a> </div>
-                                        <!-- Details -->
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-
-                                        <!-- List Style -->
-                                        <ul class="list-style">
-                                            <li> Best Shop Products </li>
-                                            <li> Color Option </li>
-                                            <li> All Sizes </li>
-                                            <li> Discounted Prices </li>
-                                            <li> Refund Poloicy </li>
-                                            <li> New Arrival </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="img-ser">
-                                <!-- Images -->
-                                <div class="thumb"> <img class="img-1" src="images/item-img-1-7.jpg" alt=""><img class="img-2" src="images/item-img-1-7-1.jpg" alt="">
-                                    <!-- Overlay  -->
-                                    <div class="overlay">
-                                        <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
-                                        <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
-                                    </div>
-                                </div>
-
-                                <!-- Item Name -->
-                                <div class="item-name fr-grd"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
-                                <!-- Item Details -->
-                                <div class="cap-text">
-                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span>
-                                        <!-- Stars -->
-                                        <span class="stras"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> </span>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed ullamcorper sapien lacus, eu luctus non. Nulla lacinia, eros vel fermentum consectetur,</p>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="img-ser">
-                                <!-- Images -->
-                                <div class="thumb"> <img class="img-1" src="images/item-img-1-8.jpg" alt=""><img class="img-2" src="images/item-img-1-8-1.jpg" alt="">
-                                    <!-- Overlay  -->
-                                    <div class="overlay">
-                                        <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
-                                        <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
-                                    </div>
-                                </div>
-
-                                <!-- Item Name -->
-                                <div class="item-name fr-grd"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
-                                <!-- Item Details -->
-                                <div class="cap-text">
-                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span>
-                                        <!-- Stars -->
-                                        <div class="stras"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> <a href="#." class="wsh-list"><i class="icon-heart"></i> ADD TO WISHLIST</a> </div>
-                                        <!-- Details -->
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-
-                                        <!-- List Style -->
-                                        <ul class="list-style">
-                                            <li> Best Shop Products </li>
-                                            <li> Color Option </li>
-                                            <li> All Sizes </li>
-                                            <li> Discounted Prices </li>
-                                            <li> Refund Poloicy </li>
-                                            <li> New Arrival </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="img-ser">
-                                <!-- Sale -->
-                                <div class="on-sale"> Sale </div>
-                                <!-- Images -->
-                                <div class="thumb"> <img class="img-1" src="images/item-img-1-9.jpg" alt=""><img class="img-2" src="images/item-img-1-9-1.jpg" alt="">
-                                    <!-- Overlay  -->
-                                    <div class="overlay">
-                                        <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
-                                        <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
-                                    </div>
-                                </div>
-
-                                <!-- Item Name -->
-                                <div class="item-name fr-grd"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
-                                <!-- Item Details -->
-                                <div class="cap-text">
-                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span>
-                                        <!-- Stars -->
-                                        <span class="stras"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> </span>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed ullamcorper sapien lacus, eu luctus non. Nulla lacinia, eros vel fermentum consectetur,</p>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="img-ser">
-                                <!-- Images -->
-                                <div class="thumb"> <img class="img-1" src="images/item-img-1-10.jpg" alt=""><img class="img-2" src="images/item-img-1-10-1.jpg" alt="">
-                                    <!-- Overlay  -->
-                                    <div class="overlay">
-                                        <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
-                                        <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
-                                    </div>
-                                </div>
-
-                                <!-- Item Name -->
-                                <div class="item-name fr-grd"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
-                                <!-- Item Details -->
-                                <div class="cap-text">
-                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span>
-                                        <!-- Stars -->
-                                        <span class="stras"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> </span>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed ullamcorper sapien lacus, eu luctus non. Nulla lacinia, eros vel fermentum consectetur,</p>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="img-ser">
-                                <!-- Images -->
-                                <div class="thumb"> <img class="img-1" src="images/item-img-1-11.jpg" alt=""><img class="img-2" src="images/item-img-1-11-1.jpg" alt="">
-                                    <!-- Overlay  -->
-                                    <div class="overlay">
-                                        <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
-                                        <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
-                                    </div>
-                                </div>
-
-                                <!-- Item Name -->
-                                <div class="item-name fr-grd"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
-                                <!-- Item Details -->
-                                <div class="cap-text">
-                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span>
-                                        <!-- Stars -->
-                                        <span class="stras"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> </span>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed ullamcorper sapien lacus, eu luctus non. Nulla lacinia, eros vel fermentum consectetur,</p>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="img-ser">
-                                <!-- Images -->
-                                <div class="thumb"> <img class="img-1" src="images/item-img-1-12.jpg" alt=""><img class="img-2" src="images/item-img-1-12-1.jpg" alt="">
-                                    <!-- Overlay  -->
-                                    <div class="overlay">
-                                        <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
-                                        <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
-                                    </div>
-                                </div>
-
-                                <!-- Item Name -->
-                                <div class="item-name fr-grd"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
-                                <!-- Item Details -->
-                                <div class="cap-text">
-                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span>
-                                        <!-- Stars -->
-                                        <div class="stras"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> <a href="#." class="wsh-list"><i class="icon-heart"></i> ADD TO WISHLIST</a> </div>
-                                        <!-- Details -->
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-
-                                        <!-- List Style -->
-                                        <ul class="list-style">
-                                            <li> Best Shop Products </li>
-                                            <li> Color Option </li>
-                                            <li> All Sizes </li>
-                                            <li> Discounted Prices </li>
-                                            <li> Refund Poloicy </li>
-                                            <li> New Arrival </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="img-ser">
-                                <!-- Images -->
-                                <div class="thumb"> <img class="img-1" src="images/item-img-1-13.jpg" alt=""><img class="img-2" src="images/item-img-1-13-1.jpg" alt="">
-                                    <!-- Overlay  -->
-                                    <div class="overlay">
-                                        <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
-                                        <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
-                                    </div>
-                                </div>
-
-                                <!-- Item Name -->
-                                <div class="item-name fr-grd"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
-                                <!-- Item Details -->
-                                <div class="cap-text">
-                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span>
-                                        <!-- Stars -->
-                                        <span class="stras"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> </span>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed ullamcorper sapien lacus, eu luctus non. Nulla lacinia, eros vel fermentum consectetur,</p>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="img-ser">
-                                <!-- Images -->
-                                <div class="thumb"> <img class="img-1" src="images/item-img-1-14.jpg" alt=""><img class="img-2" src="images/item-img-1-14-1.jpg" alt="">
-                                    <!-- Overlay  -->
-                                    <div class="overlay">
-                                        <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
-                                        <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
-                                    </div>
-                                </div>
-
-                                <!-- Item Name -->
-                                <div class="item-name fr-grd"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
-                                <!-- Item Details -->
-                                <div class="cap-text">
-                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span>
-                                        <!-- Stars -->
-                                        <span class="stras"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> </span>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed ullamcorper sapien lacus, eu luctus non. Nulla lacinia, eros vel fermentum consectetur,</p>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="img-ser">
-                                <!-- Images -->
-                                <div class="thumb"> <img class="img-1" src="images/item-img-1-15.jpg" alt=""><img class="img-2" src="images/item-img-1-15-1.jpg" alt="">
-                                    <!-- Overlay  -->
-                                    <div class="overlay">
-                                        <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
-                                        <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
-                                    </div>
-                                </div>
-
-                                <!-- Item Name -->
-                                <div class="item-name fr-grd"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
-                                <!-- Item Details -->
-                                <div class="cap-text">
-                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span>
-                                        <!-- Stars -->
-                                        <div class="stras"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> <a href="#." class="wsh-list"><i class="icon-heart"></i> ADD TO WISHLIST</a> </div>
-                                        <!-- Details -->
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-
-                                        <!-- List Style -->
-                                        <ul class="list-style">
-                                            <li> Best Shop Products </li>
-                                            <li> Color Option </li>
-                                            <li> All Sizes </li>
-                                            <li> Discounted Prices </li>
-                                            <li> Refund Poloicy </li>
-                                            <li> New Arrival </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="img-ser">
-                                <!-- Images -->
-                                <div class="thumb"> <img class="img-1" src="images/item-img-1-16.jpg" alt=""><img class="img-2" src="images/item-img-1-16-1.jpg" alt="">
-                                    <!-- Overlay  -->
-                                    <div class="overlay">
-                                        <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
-                                        <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
-                                    </div>
-                                </div>
-
-                                <!-- Item Name -->
-                                <div class="item-name fr-grd"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
-                                <!-- Item Details -->
-                                <div class="cap-text">
-                                    <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small>199.00</span>
-                                        <!-- Stars -->
-                                        <span class="stras"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> </span>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed ullamcorper sapien lacus, eu luctus non. Nulla lacinia, eros vel fermentum consectetur,</p>
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 

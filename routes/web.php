@@ -23,6 +23,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('/item',App\Http\Controllers\ItemController::class);
 Route::resource('/items',App\Http\Controllers\AdminItemController::class);
+Route::resource('/itemsphoto',App\Http\Controllers\ItemPhotosController::class);
+
+Route::post('/photoupdate', [App\Http\Controllers\AdminItemController::class, 'photoupdate'])->name('photoupdate');
+
 Route::resource('/cat',App\Http\Controllers\ItemCategoryController::class);
 Route::resource('/blog',App\Http\Controllers\BlogController::class);
 Route::get('/about', function(){

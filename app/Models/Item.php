@@ -20,6 +20,10 @@ class Item extends Model
         return $this->belongsTo(ItemCategory::class);
     }
 
+    public function itemPhotos(){
+        return $this->hasMany(ItemPhotos::class);
+    }
+
     public function sluggable(): array
     {
         // TODO: Implement sluggable() method.

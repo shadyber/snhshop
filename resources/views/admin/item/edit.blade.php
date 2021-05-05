@@ -13,7 +13,7 @@
                                 <a class="nav-link"  href="#history" role="tab" aria-controls="history" aria-selected="false">Photo</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#deals" role="tab" aria-controls="deals" aria-selected="false">More</a>
+                                <a class="nav-link" href="#deals" role="tab" aria-controls="deals" aria-selected="false">More Photo</a>
                             </li>
                         </ul>
                     </div>
@@ -54,10 +54,6 @@
                                         </div>
 
 
-
-                                        <div class="form-group">
-                                            <input type="file" class="form-control form-control" name="photo" placeholder="Item Photo" value="{{$item->photo? $item->photo : ''}}">
-                                        </div>
 
                                         <div class="form-group">
                     <textarea class="form-control form-control" name="detail" placeholder="Item Detail" required>
@@ -121,8 +117,10 @@
                                             </select>
                                         </div>
 
+
+
                                         <button class="btn btn-primary btn-user btn-block" type="submit">
-                                            Post Product
+                                            Update Product
                                         </button>
 
                                         {{Form::close()}}
@@ -134,13 +132,68 @@
                             </div>
 
                             <div class="tab-pane" id="history" role="tabpanel" aria-labelledby="history-tab">
-                                <p class="card-text">First settled around 1000 BCE and then founded as the Etruscan Felsina about 500 BCE, it was occupied by the Boii in the 4th century BCE and became a Roman colony and municipium with the name of Bononia in 196 BCE. </p>
-                                <a href="#" class="card-link text-danger">Read more</a>
+                             <div class="row">
+                                 <div class="col-md-3">
+                                     <img src="{{$item->thumb}}" alt="{{$item->name}}" class="img img-fluid">
+
+                                 </div>
+                                 <div class="col-md-6">
+
+                                     {{ Form::model($item, array('route' => array('photoupdate'), 'method' => 'POST','enctype'=>'multipart/form-data')) }}
+
+                                     @csrf
+                                     <input type="hidden" value="{{$item->id}}" name="id">
+
+                                     <div class="form-group">
+                                         <input type="file" class="form-control form-control" name="photo" placeholder="Item Photo" value="{{$item->photo? $item->photo : ''}}" required>
+                                     </div>
+                                     <button class="btn btn-primary btn-user btn-block" type="submit">
+                                         Update Main Photo
+                                     </button>
+                                     {{Form::close()}}
+
+                                 </div>
+
+                             </div>
+
+
                             </div>
 
                             <div class="tab-pane" id="deals" role="tabpanel" aria-labelledby="deals-tab">
-                                <p class="card-text">Immerse yourself in the colours, aromas and traditions of Emilia-Romagna with a holiday in Bologna, and discover the city's rich artistic heritage.</p>
-                                <a href="#" class="btn btn-danger btn-sm">Get Deals</a>
+                             <div class="row">
+                                    <div class="col-md-12">
+
+                                        <form action="/itemsphoto" method="post" enctype="multipart/form-data">
+                                            @csrf
+                                            <input type="hidden" name="id" value="{{$item->id}}">
+
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control" name="title" placeholder="Photo Title">
+                                            </div>
+
+
+
+                                            <div class="form-group">
+                                                <input type="file" class="form-control form-control" name="photo[]" placeholder="More Photo" multiple required>
+                                            </div>
+
+
+                                            <button class="btn btn-primary btn-user btn-block" type="submit">
+                                              Add Photo
+                                            </button>
+                                            {{Form::close()}}
+                                    </div>
+                                 <div class="row">
+                                     <div class="col-sm-3">
+                                        @foreach($item->itemPhotos as $photo)
+                                             <img src="{{$photo->thumb}}" alt="{{$photo->title}}">
+                                            @endforeach
+
+                                     </div>
+                                 </div>
+
+                             </div>
+
                             </div>
                         </div>
                     </div>

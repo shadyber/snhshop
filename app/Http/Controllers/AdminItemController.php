@@ -152,6 +152,47 @@ class AdminItemController extends Controller
 
     }
 
+     /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+
+     * @return \Illuminate\Http\Response
+     */
+    public function photoupdate(Request $request)
+    {
+
+        $request->validate([
+
+            'id'=>'required',
+            'photo'=>'required|mimes:jpg,png,jpeg|max:5048',
+        ]);
+        $item = Item::findOrFail($request->input('id'));
+
+        if($request->hasFile('photo')) {
+
+            $newImageName=uniqid().'_'. $request->title.'.'.$request->photo->extension();
+
+
+            $file = $request->file('photo');
+            $file_name =$newImageName;
+            $destinationPath = 'images/items/thumbnile/';
+            $new_img = Image::make($file->getRealPath())->resize(530, 694);
+
+// save file with medium quality
+            $new_img->save($destinationPath . $file_name, 80);
+            $request->photo->move(public_path('images/items'),$newImageName);
+
+        }
+                $item->photo='/images/items/'.$newImageName;
+                $item->thumb='/images/items/thumbnile/'.$newImageName;
+                $item->save();
+        Session::flash('message', 'Task successfully Updated!');
+
+        return redirect()->back();
+
+    }
+
     /**
      * Remove the specified resource from storage.
      *
