@@ -6,9 +6,13 @@ use App\Models\Item;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 use Image;
+use Symfony\Component\Console\Input\Input;
 
-class ItemController extends Controller
+class AdminItemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,13 +22,13 @@ class ItemController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth')->except('index','show');
+        $this->middleware('auth');
     }
 
     public function index()
     {
         $items=Item::all();
-     return view('item.index')->with(['items'=>$items]);
+        return view('admin.item.index')->with(['items'=>$items]);
     }
 
     /**
@@ -106,19 +110,19 @@ class ItemController extends Controller
      */
     public function show($slug)
     {
-        return view('item.show')->with('item',Item::where('slug',$slug)->first());
+        return view('admin.item.show')->with('item',Item::where('slug',$slug)->first());
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Item  $item
+     * @param  string $slug
      * @return \Illuminate\Http\Response
      */
-    public function edit(Item $item)
+    public function edit($slug)
     {
         //
-        return view('admin.item.edit')->with('item.edit')->with('item',$item);
+        return view('admin.item.edit')->with('item',Item::where('slug',$slug)->first());
     }
 
     /**
@@ -130,7 +134,22 @@ class ItemController extends Controller
      */
     public function update(Request $request, Item $item)
     {
-        //
+
+        $item = Item::findOrFail($item->id);
+
+        $this->validate($request, [
+            'name' => 'required',
+            'detail' => 'required',
+            'price' => 'required'
+        ]);
+
+        $input = $request->except('photo');
+        $item->fill($input)->save();
+
+        Session::flash('message', 'Task successfully Updated!');
+
+        return redirect()->back();
+
     }
 
     /**

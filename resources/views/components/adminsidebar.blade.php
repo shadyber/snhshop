@@ -25,6 +25,13 @@
         <a class="nav-link" href="/item/create">
             <i class="fas fa-fw fa-shopping-bag"></i>
             <span>Add Items</span></a>
+
+    </li>
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item">
+        <a class="nav-link" href="/items">
+            <i class="fas fa-fw fa-shopping-bag"></i>
+            <span>List Items</span></a>
     </li>
     <!-- Divider -->
     <hr class="sidebar-divider">

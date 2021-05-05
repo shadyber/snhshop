@@ -11,7 +11,7 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'SANDSHOP') }} | Admin</title>
+    <title>{{ config('app.name', 'SANDSHOP') }} | @yield('title') Admin</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
@@ -83,7 +83,7 @@
 
 <!-- Custom scripts for all pages-->
 <script src="/admin/js/sb-admin-2.min.js"></script>
-
+@yield('js')
 </body>
 
 </html>

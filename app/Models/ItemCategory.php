@@ -12,4 +12,7 @@ class ItemCategory extends Model
     public static function allCategories(){
         return ItemCategory::all();
     }
+    public function  items(){
+        return $this->hasMany(Item::class);
+}
 }
