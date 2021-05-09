@@ -5,10 +5,14 @@ namespace App\Models;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Item extends Model
 {
-    use HasFactory;    use Sluggable;
+    use HasFactory;
+    use Sluggable;
+    use SoftDeletes;
+
     protected $fillable=['name','slug','detail','item_category_id','thumb', 'photo','color','price','user_id','tags','measurement','weight','init_qnt','status','badge'];
 
     public function user(){

@@ -33,7 +33,6 @@
                                 <tfoot>
                                 <tr>
                                     <th rowspan="1" colspan="1">Name</th>
-                                    <th rowspan="1" colspan="1">Category</th>
                                     <th rowspan="1" colspan="1">Size</th>
                                     <th rowspan="1" colspan="1">Price</th>
                                     <th rowspan="1" colspan="1">Stock Qnt</th>
@@ -43,11 +42,18 @@
                                 @foreach($items as $item)
                                <tr role="row" class="odd">
                                     <td class="sorting_1">{{$item->name}}</td>
-                                    <td>{{$item->Category}}</td>
+
                                     <td>{{$item->measurement}}</td>
                                     <td>{{$item->price}}</td>
                                     <td>{{$item->init_qnt}}</td>
-                                    <td> edit , Delete , show</td>
+                                    <td><a href="/items/{{$item->slug}}/edit" class="btn btn-default"><i class="fa fa-pen"></i></a>
+                                        <a href="/items/{{$item->slug}}" class="btn btn-primary"><i class="fa fa-eye"></i></a>
+                                        <form action="/item" method="delete" class="form-inline">
+                                            @csrf
+                                            <button type="submit" class="btn btn-dnager"><i class="fa fa-trash"></i></button>
+                                        </form>
+
+                                    </td>
                                 </tr>
                                 @endforeach
                                 </tbody>

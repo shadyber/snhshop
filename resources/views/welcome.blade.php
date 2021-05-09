@@ -62,7 +62,8 @@
         </section>
         <!-- Content -->
         <div id="content">
-@include('components.quickview')
+
+
             <section class="padding-top-100 padding-bottom-100">
                 <div class="container-full">
 
@@ -104,6 +105,48 @@
                                         <!-- Item Name -->
                                         <div class="item-name"> <a href="/item/{{$item->slug}}" class="i-tittle">{{$item->name}}</a> <span class="price"><small>$USD</small><span class="line-through">{{$item->price}}</span> <small>$USD</small>{{$item->price}}</span> <a class="deta animated fadeInRight" href="/item/{{$item->slug}}">View Detail</a> </div>
                                     </div>
+
+                                    <!-- Quick View -->
+                                    <div id="qck-view-shop{{$item->id}}" class="zoom-anim-dialog qck-inside mfp-hide">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+
+                                                <!-- Images Slider -->
+                                                <div class="images-slider">
+                                                    <ul class="slides">
+                                                        <li data-thumb="{{$item->thumb}}" class="overflow-auto">
+                                                            <img src="{{$item->photo}}" alt="{{$item->name}}">
+                                                        </li>
+                                                        @foreach($item->itemPhotos as $photo)
+                                                            <li data-thumb="{{$photo->thumb}}">
+                                                                <img src="{{$photo->photo}}" alt="{{$item->name}}">
+                                                            </li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <!-- Content Info -->
+                                            <div class="col-sm-6">
+                                                <div class="contnt-info">
+                                                    <h3>{{$item->name}}</h3>
+
+                                                {{$item->detail}}
+
+                                                <!-- Btn  -->
+                                                    <div class="add-info">
+                                                        <div class="quantity">
+                                                            <input type="number" min="1" max="{{$item->init_qnt}}" step="1" value="1" class="form-control qty">
+                                                        </div>
+                                                        <a href="#." class="btn btn-inverse"><i class="icon-heart"></i></a> <a href="#."
+                                                                                                                               class="btn">ADD
+                                                            TO CART </a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
                                 @endforeach
 
                             </div>
@@ -289,13 +332,54 @@
                                             <img class="img-2 lazyload" src="{{$item->photo}}" alt="{{$item->name}}">
                                             <!-- Overlay  -->
                                             <div class="overlay">
-                                                <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
+                                                <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop{{$item->id}}"><i class="icon-eye"></i></a> </div>
                                                 <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                             </div>
                                         </div>
                                         <!-- Item Name -->
                                         <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                     </div>
+
+                                    <!-- Quick View -->
+                                    <div id="qck-view-shop{{$item->id}}" class="zoom-anim-dialog qck-inside mfp-hide">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                             <!-- Images Slider -->
+                                                <div class="images-slider">
+                                                    <ul class="slides">
+                                                        <li data-thumb="{{$item->thumb}}" class="overflow-auto">
+                                                            <img src="{{$item->photo}}" alt="{{$item->name}}">
+                                                        </li>
+                                                        @foreach($item->itemPhotos as $photo)
+
+                                                     <li data-thumb="{{$photo->thumb}}">
+                                                            <img src="{{$photo->photo}}" alt="{{$item->name}}">
+                                                        </li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <!-- Content Info -->
+                                            <div class="col-sm-6">
+                                                <div class="contnt-info">
+                                                    <h3>{{$item->name}}</h3>
+
+                                                {{$item->detail}}
+
+                                                <!-- Btn  -->
+                                                    <div class="add-info">
+                                                        <div class="quantity">
+                                                            <input type="number" min="1" max="{{$item->init_qnt}}" step="1" value="1" class="form-control qty">
+                                                        </div>
+                                                        <a href="#." class="btn btn-inverse"><i class="icon-heart"></i></a> <a href="#."
+                                                                                                                               class="btn">ADD
+                                                            TO CART </a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
 
                                 @endforeach
 
@@ -410,6 +494,50 @@
                                 </div>
                                 <!-- Price -->
                                 <span class="price"><small>$USD </small> {{$item->price}}</span></div>
+
+                        <!-- Quick VIew -->
+
+
+                            <!-- Quick View -->
+                            <div id="qck-view-shop{{$item->id}}" class="zoom-anim-dialog qck-inside mfp-hide">
+                                <div class="row">
+                                    <div class="col-sm-6">
+
+                                        <!-- Images Slider -->
+                                        <div class="images-slider">
+                                            <ul class="slides">
+                                                <li data-thumb="{{$item->thumb}}">
+                                                    <img src="{{$item->photo}}" alt="{{$item->name}}">
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Content Info -->
+                                    <div class="col-sm-6">
+                                        <div class="contnt-info">
+                                            <h3>{{$item->name}}</h3>
+
+                                        {{$item->detail}}
+
+                                        <!-- Btn  -->
+                                            <div class="add-info">
+                                                <div class="quantity">
+                                                    <input type="number" min="1" max="{{$item->init_qnt}}" step="1" value="1" class="form-control qty">
+                                                </div>
+                                                <a href="#." class="btn btn-inverse"><i class="icon-heart"></i></a> <a href="#."
+                                                                                                                       class="btn">ADD
+                                                    TO CART </a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
                         @endforeach
 
 

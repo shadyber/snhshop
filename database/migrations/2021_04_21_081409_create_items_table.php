@@ -36,6 +36,7 @@ class CreateItemsTable extends Migration
             $table->string('badge')->nullable()->default('NEW');
             $table->string('tags')->nullable();
             $table->integer('visit')->default(0);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

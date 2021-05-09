@@ -16,10 +16,12 @@
                                 <li data-thumb="{{$item->thumb}}" class="" data-thumb-alt="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
                                     <img class="img-responsive" src="{{$item->photo}}" alt="" draggable="false">
                                 </li>
-
-                                <li data-thumb="/images/item-img-1-5.jpg" data-thumb-alt="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
-                                    <img class="img-responsive" src="/images/item-img-1-5.jpg" alt="" draggable="false">
+                                @foreach($item->itemPhotos as $photo)
+                                <li data-thumb="{{$photo->thumb}}" data-thumb-alt="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
+                                    <img class="img-responsive" src="{{$photo->photo}}" alt="" draggable="false">
                                 </li>
+                                @endforeach
+
                             </ul>
 
                             <ul class="flex-direction-nav">
