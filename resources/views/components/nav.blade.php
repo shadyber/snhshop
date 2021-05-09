@@ -6,29 +6,26 @@
             <div class="position-center-center">
                 <h5>Shopping Cart</h5>
                 <ul>
+
+                    @foreach(\App\Models\Cart::myCart() as $cart)
                     <li>
                         <div class="media-left">
-                            <div class="cart-img"> <a href="#"> <img class="media-object img-responsive" src="/images/cart-img-1.jpg" alt="..."> </a> </div>
+                            <div class="cart-img">
+                                <a href="#">
+                                    <img class="media-object img-responsive" src="{{$cart['photo']}}" alt="{{$cart['name']}}">
+                                </a>
+                            </div>
                         </div>
                         <div class="media-body">
-                            <h6 class="media-heading">Bag </h6>
-                            <span class="price">129.00 USD</span> <br>
-                            <span class="qty">QTY: 01</span> </div>
+                            <h6 class="media-heading">{{$cart['name']}} </h6>
+                            <span class="price">{{$cart['price']}} $USD</span> <br>
+                            <span class="qty">QTY: {{$cart['quantity']}}</span> </div>
                     </li>
-                    <li>
-                        <div class="media-left">
-                            <div class="cart-img"> <a href="#"> <img class="media-object img-responsive" src="/images/cart-img-2.jpg" alt="..."> </a> </div>
-                        </div>
-                        <div class="media-body">
-                            <h6 class="media-heading">Mid Purse</h6>
-                            <span class="price">129.00 USD</span> <br>
-                            <span class="qty">QTY: 01</span> </div>
-                    </li>
-                    <li class="totl">
-                        <h5 class="text-left">SUBTOTAL: <small> 258.00 USD </small></h5>
-                    </li>
+                    @endforeach
+
                 </ul>
-                <a href="shopping-cart.html" class="btn">VIEW CART</a> <a href="checkout.html" class="btn">CHECK OUT</a> </div>
+                <a href="/mycart" class="btn">VIEW CART</a>
+                <a href="/checkout" class="btn">CHECK OUT</a> </div>
         </div>
     </div>
 </nav>

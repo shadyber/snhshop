@@ -136,7 +136,7 @@ $(".single-slide").owlCarousel({
 $('.item-slide').owlCarousel({
     loop:true,
     margin:30,
-    nav:false,
+    nav:true,
 	navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
     responsive:{
         0:{

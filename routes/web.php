@@ -42,3 +42,5 @@ Route::get('/address',[\App\Http\Controllers\AddressController::class,'create'])
 Route::get('/contact', function(){
     return view('contact')->with('address',\App\Models\Address::all()->last());
 });
+
+Route::get('/addtocart/{id}',[\App\Http\Controllers\CartController::class,'addToCart'])->name('addtocart');

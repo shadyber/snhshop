@@ -43,7 +43,7 @@
                                                 <i class="icon-eye"></i></a>
                                         </div>
                                         <div class="add-crt">
-                                            <a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a>
+                                            <a href="/addtocart/{{$item->id}}"><i class="icon-basket margin-right-10"></i> Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -115,7 +115,8 @@
                                     <div class="quantity">
                                         <input type="number" min="1" max="100" step="1" value="1" class="form-control qty">
                                     </div>
-                                    <a href="#." class="btn btn-inverse"><i class="icon-heart"></i></a> <a href="#." class="btn">ADD TO CART </a> </div>
+                                    <a href="#." class="btn btn-inverse"><i class="icon-heart"></i></a>
+                                    <a href="/addtocart/{{$item->id}}" class="btn">ADD TO CART </a> </div>
                             </div>
                         </div>
                     </div>

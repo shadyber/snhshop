@@ -44,7 +44,7 @@
 
 @include('components.header')
 <!-- Main Layout -->
-    <main class="cd-main-content">
+    <div class="cd-main-content">
 
         <!-- HOME MAIN  -->
         <section class="simple-head" data-stellar-background-ratio="0.5">
@@ -99,7 +99,7 @@
                                             <!-- Overlay  -->
                                             <div class="overlay">
                                                 <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop{{$item->id}}"><i class="icon-eye"></i></a> </div>
-                                                <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                                <div class="add-crt"><a href="/addtocart/{{$item->id}}"><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                             </div>
                                         </div>
                                         <!-- Item Name -->
@@ -161,7 +161,7 @@
                                         <!-- Overlay  -->
                                         <div class="overlay">
                                             <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop">Quick View</a> <a href="#."><i class="icon-magnifier"></i></a> </div>
-                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="add-crt"><a href="/addtocart/{{$item->id}}"><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
@@ -179,7 +179,7 @@
                                         <!-- Overlay  -->
                                         <div class="overlay">
                                             <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop"><i class="icon-eye"></i></a> </div>
-                                            <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                            <div class="add-crt"><a href="/addtocart/0"><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                         </div>
                                     </div>
                                     <!-- Item Name -->
@@ -333,11 +333,11 @@
                                             <!-- Overlay  -->
                                             <div class="overlay">
                                                 <div class="position-center-center"> <a class="popup-with-move-anim" href="#qck-view-shop{{$item->id}}"><i class="icon-eye"></i></a> </div>
-                                                <div class="add-crt"><a href="#."><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
+                                                <div class="add-crt"><a href="/addtocart/{{$item->id}}"><i class="icon-basket margin-right-10"></i> Add To Cart</a></div>
                                             </div>
                                         </div>
                                         <!-- Item Name -->
-                                        <div class="item-name"> <a href="#." class="i-tittle">Mid Rise Skinny Jeans</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
+                                        <div class="item-name"> <a href="#." class="i-tittle">{{$item->name}}</a> <span class="price"><small>$</small><span class="line-through">299.00</span> <small>$</small>199.00</span> <a class="deta animated fadeInRight" href="#.">View Detail</a> </div>
                                     </div>
 
                                     <!-- Quick View -->
@@ -372,7 +372,7 @@
                                                         <div class="quantity">
                                                             <input type="number" min="1" max="{{$item->init_qnt}}" step="1" value="1" class="form-control qty">
                                                         </div>
-                                                        <a href="#." class="btn btn-inverse"><i class="icon-heart"></i></a> <a href="#."
+                                                        <a href="/addtocart/{{$item->id}}" class="btn btn-inverse"><i class="icon-heart"></i></a> <a href="#."
                                                                                                                                class="btn">ADD
                                                             TO CART </a></div>
                                                 </div>
@@ -476,7 +476,7 @@
                                         <div class="position-bottom">
                                             <div class="inn"><a href="{{$item->photo}}" data-lighter><i
                                                         class="icon-magnifier"></i></a>
-                                                <a href="#." data-toggle="tooltip"
+                                                <a href="/addtocart/{{$item->id}}" data-toggle="tooltip"
                                                    data-placement="top"
                                                    title="Add To Cart"><i
                                                         class="icon-basket"></i></a>
@@ -526,7 +526,7 @@
                                                 <div class="quantity">
                                                     <input type="number" min="1" max="{{$item->init_qnt}}" step="1" value="1" class="form-control qty">
                                                 </div>
-                                                <a href="#." class="btn btn-inverse"><i class="icon-heart"></i></a> <a href="#."
+                                                <a href="/addtocart/{{$item->id}}" class="btn btn-inverse"><i class="icon-heart"></i></a> <a href="#."
                                                                                                                        class="btn">ADD
                                                     TO CART </a></div>
                                         </div>
@@ -686,7 +686,7 @@
         </div>
 
     @include('components.footer')
-    </main>
+    </div>
     <!-- GO TO TOP  -->
     <a href="#" class="cd-top"><i class="fa fa-angle-up"></i></a>
     <!-- GO TO TOP End -->

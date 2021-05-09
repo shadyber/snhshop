@@ -113,7 +113,9 @@
                     <!-- USER INFO -->
                     <li><a href="/home"><i class="lnr lnr-user"></i> </a></li>
                     <!-- USER BASKET -->
-                    <li><a id="cd-menu-trigger" href="#0"><i class="lnr lnr-cart"></i><span class="c-no">2</span> </a>
+                    <li>
+                        <a id="cd-menu-trigger" href="#"><i class="lnr lnr-cart"></i><span class="c-no">{{count(\App\Models\Cart::myCart()
+)}} </span> </a>
                     </li>
                     <!-- SEARCH BAR -->
                     <li><a href="javascript:void(0);" class="search-open"><i class="lnr lnr-magnifier"></i></a>

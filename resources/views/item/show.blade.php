@@ -60,7 +60,7 @@
                                 </li>
 
                                 <!-- ADD TO CART -->
-                                <li class="col-md-6"> <a href="#." class="btn">ADD TO CART</a> </li>
+                                <li class="col-md-6"> <a href="/addtocart/{{$item->id}}" class="btn">ADD TO CART</a> </li>
 
                                 <!-- LIKE -->
                                 <li class="col-md-6"> <a href="#." class="like-us"><i class="icon-heart"></i> ADD TO WISHLIST </a> </li>
