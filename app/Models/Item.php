@@ -14,6 +14,7 @@ class Item extends Model
     use SoftDeletes;
 
     protected $fillable=['name','slug','detail','item_category_id','thumb', 'photo','color','price','user_id','tags','measurement','weight','init_qnt','status','badge'];
+    protected $dates = [ 'deleted_at' ];
 
     public function user(){
         return $this->belongsTo(User::class);
