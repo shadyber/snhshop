@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ItemCategory;
 use Illuminate\Http\Request;
+use Ramsey\Uuid\Type\Integer;
 
 class ItemCategoryController extends Controller
 {
@@ -40,15 +41,14 @@ class ItemCategoryController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\ItemCategory  $itemCategory
-     * @return \Illuminate\Http\Response
-     */
-    public function show(ItemCategory $itemCategory)
+
+    public function show($id)
     {
-        //
+
+        $itemCategory=ItemCategory::find($id);
+
+        $items=$itemCategory->items;
+        return view('category.show')->with(['category'=>$itemCategory,'items'=>$items]);
     }
 
     /**

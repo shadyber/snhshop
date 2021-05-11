@@ -28,6 +28,7 @@ Route::resource('/itemsphoto',App\Http\Controllers\ItemPhotosController::class);
 Route::post('/photoupdate', [App\Http\Controllers\AdminItemController::class, 'photoupdate'])->name('photoupdate');
 
 Route::resource('/cat',App\Http\Controllers\ItemCategoryController::class);
+
 Route::resource('/blog',App\Http\Controllers\BlogController::class);
 Route::get('/about', function(){
    return view('about');
@@ -44,3 +45,4 @@ Route::get('/contact', function(){
 });
 
 Route::get('/addtocart/{id}',[\App\Http\Controllers\CartController::class,'addToCart'])->name('addtocart');
+Route::get('/mycart',[\App\Http\Controllers\CartController::class,'myCart'])->name('mycart');

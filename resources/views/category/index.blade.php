@@ -1,1 +1,1 @@
-all categories
+index

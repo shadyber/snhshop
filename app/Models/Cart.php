@@ -9,7 +9,12 @@ class Cart extends Model
 {
     use HasFactory;
     public static function myCart(){
-        return session()->get('cart');
+        if(session()->get('cart')){
+
+            return session()->get('cart');
+        }else{
+            return [];
+        }
 
     }
 }
