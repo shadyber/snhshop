@@ -10,28 +10,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Add site Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" type="image/png">
+    <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" type="image/png">
 
 
     <!-- vendor css (Icon Font) -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/vendor/pe-icon-7-stroke.css" />
-    <link rel="stylesheet" href="assets/css/vendor/font.awesome.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/font.awesome.css" />
 
     <!-- plugins css (All Plugins Files) -->
-    <link rel="stylesheet" href="assets/css/plugins/animate.css" />
-    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="assets/css/plugins/jquery-ui.min.css" />
-    <link rel="stylesheet" href="assets/css/plugins/nice-select.css" />
-    <link rel="stylesheet" href="assets/css/plugins/venobox.css" />
+    <link rel="stylesheet" href="/assets/css/plugins/animate.css" />
+    <link rel="stylesheet" href="/assets/css/plugins/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/assets/css/plugins/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/assets/css/plugins/nice-select.css" />
+    <link rel="stylesheet" href="/assets/css/plugins/venobox.css" />
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
-    <!-- <link rel="stylesheet" href="assets/css/vendor/vendor.min.css" />
-    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css" />
-    <link rel="stylesheet" href="assets/css/style.min.css"> -->
+    <!-- <link rel="stylesheet" href="/assets/css/vendor/vendor.min.css" />
+    <link rel="stylesheet" href="/assets/css/plugins/plugins.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.min.css"> -->
 
     <!-- Main Style -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
 </head>
 
@@ -63,7 +63,7 @@
                             class="col-xl-6 col-lg-7 col-md-7 col-sm-7 d-flex justify-content-center position-relative">
                             <div class="show-case">
                                 <div class="hero-slide-image">
-                                    <img src="assets/images/slider-image/slider-2-1.png" alt="" />
+                                    <img src="/assets/images/slider-image/slider-2-1.png" alt="" />
                                 </div>
                             </div>
                         </div>
@@ -86,7 +86,7 @@
                             class="col-xl-6 col-lg-7 col-md-7 col-sm-7 d-flex justify-content-center position-relative">
                             <div class="show-case">
                                 <div class="hero-slide-image">
-                                    <img src="assets/images/slider-image/slider-2-2.png" alt="" />
+                                    <img src="/assets/images/slider-image/slider-2-2.png" alt="" />
                                 </div>
                             </div>
                         </div>
@@ -114,7 +114,7 @@
                 <!-- single item -->
                 <div class="single-feature">
                     <div class="feature-icon">
-                        <img src="assets/images/icons/1.png" alt="">
+                        <img src="/assets/images/icons/1.png" alt="">
                     </div>
                     <div class="feature-content">
                         <h4 class="title">Free Shipping</h4>
@@ -126,7 +126,7 @@
             <div class="col-lg-4 col-md-6 mb-md-30px mb-lm-30px mt-lm-30px">
                 <div class="single-feature">
                     <div class="feature-icon">
-                        <img src="assets/images/icons/2.png" alt="">
+                        <img src="/assets/images/icons/2.png" alt="">
                     </div>
                     <div class="feature-content">
                         <h4 class="title">Card Payments</h4>
@@ -138,7 +138,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single-feature">
                     <div class="feature-icon">
-                        <img src="assets/images/icons/3.png" alt="">
+                        <img src="/assets/images/icons/3.png" alt="">
                     </div>
                     <div class="feature-content">
                         <h4 class="title">Easy Returns</h4>
@@ -196,8 +196,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/1.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/2.jpg"
+                                            <img src="/assets/images/product-image/1.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/2.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -212,7 +212,8 @@
                                             <a href="compare.html" class="action compare" title="Compare"><i
                                                     class="pe-7s-refresh-2"></i></a>
                                         </div>
-                                        <button title="Add To Cart" class=" add-to-cart">Add
+
+                                        <button type="submit" title="Add To Cart" class=" add-to-cart" itemid="1">Add
                                             To Cart</button>
                                     </div>
                                     <div class="content">
@@ -237,8 +238,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/3.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/4.jpg"
+                                            <img src="/assets/images/product-image/3.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/4.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -254,7 +255,7 @@
                                             <a href="compare.html" class="action compare" title="Compare"><i
                                                     class="pe-7s-refresh-2"></i></a>
                                         </div>
-                                        <button title="Add To Cart" class=" add-to-cart">Add
+                                        <button title="Add To Cart" class=" add-to-cart" itemid="4">Add
                                             To Cart</button>
                                     </div>
                                     <div class="content">
@@ -281,8 +282,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/5.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/6.jpg"
+                                            <img src="/assets/images/product-image/5.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/6.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -297,7 +298,7 @@
                                             <a href="compare.html" class="action compare" title="Compare"><i
                                                     class="pe-7s-refresh-2"></i></a>
                                         </div>
-                                        <button title="Add To Cart" class=" add-to-cart">Add
+                                        <button title="Add To Cart" class=" add-to-cart"  itemid="5">Add
                                             To Cart</button>
                                     </div>
                                     <div class="content">
@@ -322,8 +323,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/7.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/8.jpg"
+                                            <img src="/assets/images/product-image/7.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/8.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -338,7 +339,7 @@
                                             <a href="compare.html" class="action compare" title="Compare"><i
                                                     class="pe-7s-refresh-2"></i></a>
                                         </div>
-                                        <button title="Add To Cart" class=" add-to-cart">Add
+                                        <button title="Add To Cart" class=" add-to-cart"  itemid="6">Add
                                             To Cart</button>
                                     </div>
                                     <div class="content">
@@ -363,8 +364,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/2.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/10.jpg"
+                                            <img src="/assets/images/product-image/2.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/10.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -380,7 +381,7 @@
                                             <a href="compare.html" class="action compare" title="Compare"><i
                                                     class="pe-7s-refresh-2"></i></a>
                                         </div>
-                                        <button title="Add To Cart" class=" add-to-cart">Add
+                                        <button title="Add To Cart" class=" add-to-cart"  itemid="7">Add
                                             To Cart</button>
                                     </div>
                                     <div class="content">
@@ -405,8 +406,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/4.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/12.jpg"
+                                            <img src="/assets/images/product-image/4.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/12.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -420,7 +421,7 @@
                                             <a href="compare.html" class="action compare" title="Compare"><i
                                                     class="pe-7s-refresh-2"></i></a>
                                         </div>
-                                        <button title="Add To Cart" class=" add-to-cart">Add
+                                        <button title="Add To Cart" class=" add-to-cart"  itemid="2">Add
                                             To Cart</button>
                                     </div>
                                     <div class="content">
@@ -446,8 +447,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/6.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/14.jpg"
+                                            <img src="/assets/images/product-image/6.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/14.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -461,7 +462,7 @@
                                             <a href="compare.html" class="action compare" title="Compare"><i
                                                     class="pe-7s-refresh-2"></i></a>
                                         </div>
-                                        <button title="Add To Cart" class=" add-to-cart">Add
+                                        <button title="Add To Cart" class=" add-to-cart"  itemid="1">Add
                                             To Cart</button>
                                     </div>
                                     <div class="content">
@@ -485,8 +486,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/8.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/16.jpg"
+                                            <img src="/assets/images/product-image/8.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/16.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -532,8 +533,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/1.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/2.jpg"
+                                            <img src="/assets/images/product-image/1.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/2.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -573,8 +574,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/3.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/4.jpg"
+                                            <img src="/assets/images/product-image/3.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/4.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -617,8 +618,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/5.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/6.jpg"
+                                            <img src="/assets/images/product-image/5.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/6.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -658,8 +659,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/7.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/8.jpg"
+                                            <img src="/assets/images/product-image/7.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/8.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -699,8 +700,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/2.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/10.jpg"
+                                            <img src="/assets/images/product-image/2.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/10.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -741,8 +742,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/4.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/12.jpg"
+                                            <img src="/assets/images/product-image/4.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/12.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -782,8 +783,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/6.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/14.jpg"
+                                            <img src="/assets/images/product-image/6.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/14.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -821,8 +822,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/8.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/16.jpg"
+                                            <img src="/assets/images/product-image/8.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/16.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -868,8 +869,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/1.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/2.jpg"
+                                            <img src="/assets/images/product-image/1.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/2.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -909,8 +910,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/3.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/4.jpg"
+                                            <img src="/assets/images/product-image/3.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/4.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -953,8 +954,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/5.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/6.jpg"
+                                            <img src="/assets/images/product-image/5.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/6.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -994,8 +995,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/7.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/8.jpg"
+                                            <img src="/assets/images/product-image/7.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/8.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1035,8 +1036,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/2.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/10.jpg"
+                                            <img src="/assets/images/product-image/2.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/10.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1077,8 +1078,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/4.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/12.jpg"
+                                            <img src="/assets/images/product-image/4.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/12.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1118,8 +1119,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/6.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/14.jpg"
+                                            <img src="/assets/images/product-image/6.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/14.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1157,8 +1158,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/8.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/16.jpg"
+                                            <img src="/assets/images/product-image/8.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/16.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1204,8 +1205,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/1.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/2.jpg"
+                                            <img src="/assets/images/product-image/1.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/2.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1245,8 +1246,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/3.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/4.jpg"
+                                            <img src="/assets/images/product-image/3.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/4.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1289,8 +1290,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/5.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/6.jpg"
+                                            <img src="/assets/images/product-image/5.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/6.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1330,8 +1331,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/7.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/8.jpg"
+                                            <img src="/assets/images/product-image/7.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/8.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1371,8 +1372,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/2.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/10.jpg"
+                                            <img src="/assets/images/product-image/2.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/10.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1413,8 +1414,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/4.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/12.jpg"
+                                            <img src="/assets/images/product-image/4.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/12.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1454,8 +1455,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/6.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/14.jpg"
+                                            <img src="/assets/images/product-image/6.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/14.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1493,8 +1494,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/8.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/16.jpg"
+                                            <img src="/assets/images/product-image/8.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/16.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1540,8 +1541,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/1.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/2.jpg"
+                                            <img src="/assets/images/product-image/1.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/2.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1581,8 +1582,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/3.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/4.jpg"
+                                            <img src="/assets/images/product-image/3.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/4.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1625,8 +1626,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/5.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/6.jpg"
+                                            <img src="/assets/images/product-image/5.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/6.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1666,8 +1667,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/7.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/8.jpg"
+                                            <img src="/assets/images/product-image/7.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/8.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1707,8 +1708,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/2.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/10.jpg"
+                                            <img src="/assets/images/product-image/2.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/10.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1749,8 +1750,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/4.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/12.jpg"
+                                            <img src="/assets/images/product-image/4.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/12.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1790,8 +1791,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/6.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/14.jpg"
+                                            <img src="/assets/images/product-image/6.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/14.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1829,8 +1830,8 @@
                                 <div class="product">
                                     <div class="thumb">
                                         <a href="single-product.html" class="image">
-                                            <img src="assets/images/product-image/8.jpg" alt="Product" />
-                                            <img class="hover-image" src="assets/images/product-image/16.jpg"
+                                            <img src="/assets/images/product-image/8.jpg" alt="Product" />
+                                            <img class="hover-image" src="/assets/images/product-image/16.jpg"
                                                  alt="Product" />
                                         </a>
                                         <span class="badges">
@@ -1881,7 +1882,7 @@
     <div class="row m-0">
         <div class="col-12 col-lg-4 mb-md-30px mb-lm-30px">
             <div class="single-banner-2">
-                <img src="assets/images/banner/4.jpg" alt="">
+                <img src="/assets/images/banner/4.jpg" alt="">
                 <div class="item-disc">
                     <h4 class="title">Best Collection <br>
                         For Women</h4>
@@ -1892,7 +1893,7 @@
         </div>
         <div class="col-12 col-lg-4 center-col mb-md-30px mb-lm-30px">
             <div class="single-banner-2">
-                <img src="assets/images/banner/5.jpg" alt="">
+                <img src="/assets/images/banner/5.jpg" alt="">
                 <div class="item-disc">
                     <h4 class="title">Best Collection <br>
                         For Men</h4>
@@ -1903,7 +1904,7 @@
         </div>
         <div class="col-12 col-lg-4">
             <div class="single-banner-2">
-                <img src="assets/images/banner/6.jpg" alt="">
+                <img src="/assets/images/banner/6.jpg" alt="">
                 <div class="item-disc">
                     <h4 class="title">New Collection <br>
                         For Kids</h4>
@@ -1959,8 +1960,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/8.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/6.jpg"
+                                                <img src="/assets/images/product-image/8.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/6.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2000,8 +2001,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/9.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/5.jpg"
+                                                <img src="/assets/images/product-image/9.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/5.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2043,8 +2044,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/10.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/2.jpg"
+                                                <img src="/assets/images/product-image/10.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/2.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2084,8 +2085,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/11.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/11.jpg"
+                                                <img src="/assets/images/product-image/11.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/11.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2125,8 +2126,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/3.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/4.jpg"
+                                                <img src="/assets/images/product-image/3.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/4.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2168,8 +2169,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/1.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/2.jpg"
+                                                <img src="/assets/images/product-image/1.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/2.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2223,8 +2224,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/8.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/6.jpg"
+                                                <img src="/assets/images/product-image/8.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/6.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2264,8 +2265,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/9.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/5.jpg"
+                                                <img src="/assets/images/product-image/9.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/5.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2307,8 +2308,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/10.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/2.jpg"
+                                                <img src="/assets/images/product-image/10.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/2.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2348,8 +2349,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/11.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/11.jpg"
+                                                <img src="/assets/images/product-image/11.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/11.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2389,8 +2390,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/3.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/4.jpg"
+                                                <img src="/assets/images/product-image/3.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/4.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2432,8 +2433,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/1.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/2.jpg"
+                                                <img src="/assets/images/product-image/1.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/2.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2487,8 +2488,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/8.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/6.jpg"
+                                                <img src="/assets/images/product-image/8.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/6.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2528,8 +2529,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/9.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/5.jpg"
+                                                <img src="/assets/images/product-image/9.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/5.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2571,8 +2572,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/10.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/2.jpg"
+                                                <img src="/assets/images/product-image/10.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/2.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2612,8 +2613,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/11.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/11.jpg"
+                                                <img src="/assets/images/product-image/11.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/11.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2653,8 +2654,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/3.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/4.jpg"
+                                                <img src="/assets/images/product-image/3.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/4.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2696,8 +2697,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/1.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/2.jpg"
+                                                <img src="/assets/images/product-image/1.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/2.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2751,8 +2752,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/8.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/6.jpg"
+                                                <img src="/assets/images/product-image/8.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/6.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2792,8 +2793,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/9.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/5.jpg"
+                                                <img src="/assets/images/product-image/9.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/5.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2835,8 +2836,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/10.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/2.jpg"
+                                                <img src="/assets/images/product-image/10.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/2.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2876,8 +2877,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/11.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/11.jpg"
+                                                <img src="/assets/images/product-image/11.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/11.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2917,8 +2918,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/3.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/4.jpg"
+                                                <img src="/assets/images/product-image/3.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/4.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -2960,8 +2961,8 @@
                                     <div class="product">
                                         <div class="thumb">
                                             <a href="single-product.html" class="image">
-                                                <img src="assets/images/product-image/1.jpg" alt="Product" />
-                                                <img class="hover-image" src="assets/images/product-image/2.jpg"
+                                                <img src="/assets/images/product-image/1.jpg" alt="Product" />
+                                                <img class="hover-image" src="/assets/images/product-image/2.jpg"
                                                      alt="Product" />
                                             </a>
                                             <span class="badges">
@@ -3029,7 +3030,7 @@
                             Now <i class="fa fa-shopping-basket ml-15px" aria-hidden="true"></i></a>
                     </div>
                     <div class="deal-image">
-                        <img class="img-fluid" src="assets/images/deal-img/woman.png" alt="">
+                        <img class="img-fluid" src="/assets/images/deal-img/woman.png" alt="">
                     </div>
                 </div>
             </div>
@@ -3056,7 +3057,7 @@
             <div class="col-lg-4 mb-md-30px mb-lm-30px">
                 <div class="single-blog">
                     <div class="blog-image">
-                        <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/1.jpg"
+                        <a href="blog-single-left-sidebar.html"><img src="/assets/images/blog-image/1.jpg"
                                                                      class="img-responsive w-100" alt=""></a>
                     </div>
                     <div class="blog-text">
@@ -3079,7 +3080,7 @@
             <div class="col-lg-4 mb-md-30px mb-lm-30px">
                 <div class="single-blog ">
                     <div class="blog-image">
-                        <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/2.jpg"
+                        <a href="blog-single-left-sidebar.html"><img src="/assets/images/blog-image/2.jpg"
                                                                      class="img-responsive w-100" alt=""></a>
                     </div>
                     <div class="blog-text">
@@ -3102,7 +3103,7 @@
             <div class="col-lg-4">
                 <div class="single-blog">
                     <div class="blog-image">
-                        <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/3.jpg"
+                        <a href="blog-single-left-sidebar.html"><img src="/assets/images/blog-image/3.jpg"
                                                                      class="img-responsive w-100" alt=""></a>
                     </div>
                     <div class="blog-text">
@@ -3138,7 +3139,7 @@
                     <div class="col-md-6 col-lg-3 mb-md-30px mb-lm-30px">
                         <div class="single-wedge">
                             <div class="footer-logo">
-                                <a href="index.html"><img src="assets/images/logo/logo-white.png" alt=""></a>
+                                <a href="index.html"><img src="/assets/images/logo/logo-white.png" alt=""></a>
                             </div>
                             <p class="about-text">Lorem ipsum dolor sit amet consectet adipisicing elit, sed do
                                 eiusmod templ incididunt ut labore et dolore magnaol aliqua Ut enim ad minim.
@@ -3235,7 +3236,7 @@
                                     896, Address 10010, HGJ</p>
                                 <p class="phone">Phone/Fax:<a href="tel:0123456789">0123456789</a></p>
                                 <p class="mail">Email:<a href="mailto:demo@example.com">demo@example.com</a></p>
-                                <img src="assets/images/icons/payment.png" alt="" class="payment-img img-fulid">
+                                <img src="/assets/images/icons/payment.png" alt="" class="payment-img img-fulid">
 
                                 <!-- News letter area  End -->
                             </div>
@@ -3328,19 +3329,19 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <img class="img-responsive m-auto"
-                                         src="assets/images/product-image/zoom-image/1.jpg" alt="">
+                                         src="/assets/images/product-image/zoom-image/1.jpg" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img class="img-responsive m-auto"
-                                         src="assets/images/product-image/zoom-image/2.jpg" alt="">
+                                         src="/assets/images/product-image/zoom-image/2.jpg" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img class="img-responsive m-auto"
-                                         src="assets/images/product-image/zoom-image/3.jpg" alt="">
+                                         src="/assets/images/product-image/zoom-image/3.jpg" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img class="img-responsive m-auto"
-                                         src="assets/images/product-image/zoom-image/4.jpg" alt="">
+                                         src="/assets/images/product-image/zoom-image/4.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -3348,19 +3349,19 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <img class="img-responsive m-auto"
-                                         src="assets/images/product-image/small-image/1.jpg" alt="">
+                                         src="/assets/images/product-image/small-image/1.jpg" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img class="img-responsive m-auto"
-                                         src="assets/images/product-image/small-image/2.jpg" alt="">
+                                         src="/assets/images/product-image/small-image/2.jpg" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img class="img-responsive m-auto"
-                                         src="assets/images/product-image/small-image/3.jpg" alt="">
+                                         src="/assets/images/product-image/small-image/3.jpg" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img class="img-responsive m-auto"
-                                         src="assets/images/product-image/small-image/4.jpg" alt="">
+                                         src="/assets/images/product-image/small-image/4.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -3455,28 +3456,37 @@
 <!-- Global Vendor, plugins JS -->
 
 <!-- Vendor JS -->
-<script src="assets/js/vendor/jquery-3.5.1.min.js"></script>
+<script src="/assets/js/vendor/jquery-3.5.1.min.js"></script>
 
-<script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
-<script src="assets/js/vendor/jquery-migrate-3.3.0.min.js"></script>
-<script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/vendor/jquery-migrate-3.3.0.min.js"></script>
+<script src="/assets/js/vendor/modernizr-3.11.2.min.js"></script>
 
 <!--Plugins JS-->
-<script src="assets/js/plugins/swiper-bundle.min.js"></script>
-<script src="assets/js/plugins/jquery-ui.min.js"></script>
-<script src="assets/js/plugins/jquery.nice-select.min.js"></script>
-<script src="assets/js/plugins/countdown.js"></script>
-<script src="assets/js/plugins/scrollup.js"></script>
-<script src="assets/js/plugins/jquery.zoom.min.js"></script>
-<script src="assets/js/plugins/venobox.min.js"></script>
-<script src="assets/js/plugins/ajax-mail.js"></script>
+<script src="/assets/js/plugins/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins/jquery-ui.min.js"></script>
+<script src="/assets/js/plugins/jquery.nice-select.min.js"></script>
+<script src="/assets/js/plugins/countdown.js"></script>
+<script src="/assets/js/plugins/scrollup.js"></script>
+<script src="/assets/js/plugins/jquery.zoom.min.js"></script>
+<script src="/assets/js/plugins/venobox.min.js"></script>
+<script src="/assets/js/plugins/ajax-mail.js"></script>
 
 <!-- Use the minified version files listed below for better performance and remove the files listed above -->
-<!-- <script src="assets/js/vendor/vendor.min.js"></script>
-    <script src="assets/js/plugins/plugins.min.js"></script> -->
+<!-- <script src="/assets/js/vendor/vendor.min.js"></script>
+    <script src="/assets/js/plugins/plugins.min.js"></script> -->
 
 <!-- Main Js -->
-<script src="assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
+<script>
+    $( ".add-to-cart" ).click(function() {
+var itemid=$(this).attr("itemid")
+        $.get("/addtocart/"+$itemid, function(data){
+            // Display the returned data in browser
+                alert(data);
+        });
+    });
+</script>
 </body>
 
 </html>
