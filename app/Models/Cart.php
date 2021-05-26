@@ -12,9 +12,8 @@ class Cart extends Model
         if(session()->get('cart')){
 
             return session()->get('cart');
-        }else{
+        }else {
             return [];
         }
-
     }
 }

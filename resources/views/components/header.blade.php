@@ -182,33 +182,20 @@
         </div>
         <div class="body customScroll">
             <ul class="minicart-product-list">
+               @foreach(\App\Models\Cart::myCart() as $cart)
+
                 <li>
-                    <a href="single-product.html" class="image"><img src="/assets/images/product-image/1.jpg"
-                                                                     alt="Cart product Image"></a>
+                    <a href="/item/{{$cart['slug']}}" class="image"><img src="{{$cart['thumb']}}"
+                                                                     alt="{{$cart['name']}}"></a>
                     <div class="content">
                         <a href="single-product.html" class="title">Women's Elizabeth Coat</a>
                         <span class="quantity-price">1 x <span class="amount">$18.86</span></span>
                         <a href="#" class="remove">×</a>
                     </div>
                 </li>
-                <li>
-                    <a href="single-product.html" class="image"><img src="/assets/images/product-image/2.jpg"
-                                                                     alt="Cart product Image"></a>
-                    <div class="content">
-                        <a href="single-product.html" class="title">Long sleeve knee length</a>
-                        <span class="quantity-price">1 x <span class="amount">$43.28</span></span>
-                        <a href="#" class="remove">×</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="single-product.html" class="image"><img src="/assets/images/product-image/3.jpg"
-                                                                     alt="Cart product Image"></a>
-                    <div class="content">
-                        <a href="single-product.html" class="title">Cool Man Wearing Leather</a>
-                        <span class="quantity-price">1 x <span class="amount">$37.34</span></span>
-                        <a href="#" class="remove">×</a>
-                    </div>
-                </li>
+
+                @endforeach
+
             </ul>
         </div>
         <div class="foot">
