@@ -1,110 +1,147 @@
 @extends('layouts.app')
+@section('title','My Cart')
 @section('content')
-    <section class="sub-bnr" data-stellar-background-ratio="0.5" style="background-position: 0% -70.5px;">
-        <div class="position-center-center">
-            <div class="container">
-                <h4>Shopping Cart</h4>
-                <ol class="breadcrumb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li class="active">Shopping Cart</li>
-                </ol>
-            </div>
-        </div>
-    </section>
 
 
-
-    <div id="content">
-
-        <!-- PAGES INNER -->
-        <section class="padding-top-100 padding-bottom-100 pages-in chart-page">
-            <div class="container">
-
-                <!-- Payments Steps -->
-                <div class="shopping-cart text-center">
-                    <table class="table">
-                        <thead class="thead-dark">
-                        <tr>
-                            <th scope="col" class="text-left">Items</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Qty</th>
-                            <th scope="col">Total</th>
-                            <th scope="col">&nbsp;</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                      @foreach(\App\Models\Cart::myCart() as $cart)
-                        <tr>
-                            <th class="text-left"> <!-- Media Image -->
-                                <a href="/item/{{$cart['slug']}}" class="item-img">
-                                    <img class="media-object" src="{{$cart['photo']}}" alt="{{$cart['name']}}"> </a>
-                                <!-- Item Name -->
-                                <div class="media-body">
-                                    <span>{{$cart['name']}}</span>
-                                    <p>{{$cart['name']}}</p>
-                                </div>
-                            </th>
-                            <td><span class="price"><small>$USD </small>{{$cart['price']}}</span></td>
-                            <td>
-                                <div class="quantity">
-                                    <input type="number" min="1" max="100" step="1" value="{{$cart['quantity']}}" class="form-control qty"><div class="quantity-nav"><div class="quantity-button quantity-up"><i class="fa fa-caret-up"></i></div><div class="quantity-button quantity-down"><i class="fa fa-caret-down"></i></div></div>
-                                </div>
-                            </td>
-                            <td><span class="price"><small>$USD</small> {{$cart['price'] * $cart['quantity']}}</span></td>
-                            <td><a href="#."><i class="icon-close"></i></a></td>
-                        </tr>
-                      @endforeach
+    <!-- Cart Area Start -->
+    <div class="cart-main-area pb-100px">
+        <div class="container">
+            <h3 class="cart-page-title">Your cart items</h3>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <form action="#">
+                        <div class="table-content table-responsive cart-table-content">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Product Name</th>
+                                    <th>Until Price</th>
+                                    <th>Qty</th>
+                                    <th>Subtotal</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach(\App\Models\Cart::myCart() as $cart)
 
 
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- PAGES INNER -->
-        <section class="padding-top-100 padding-bottom-100 light-gray-bg shopping-cart small-cart">
-            <div class="container">
-
-                <!-- SHOPPING INFORMATION -->
-                <div class="cart-ship-info margin-top-0">
-                    <div class="row">
-
-                        <!-- DISCOUNT CODE -->
-                        <div class="col-sm-7">
-                            <h6>Discound Code</h6>
-                            <form>
-                                <input type="text" value="" placeholder="ENTER YOUR CODE IF YOU HAVE ONE">
-                                <button type="submit" class="btn btn-small btn-dark">APPLY CODE</button>
-                            </form>
-                            <div class="coupn-btn"> <a href="#." class="btn">continue shopping</a> <a href="#." class="btn">update cart</a> </div>
+                                    <tr>
+                                    <td class="product-thumbnail">
+                                        <a href="/item/{{$cart['slug']}}"><img class="img-responsive ml-15px"
+                                                         src="{{$cart['thumb']}}" alt="{{$cart['name']}}" /></a>
+                                    </td>
+                                    <td class="product-name"><a href="/item/{{$cart['slug']}}">{{$cart['name']}}</a></td>
+                                    <td class="product-price-cart"><span class="amount">${{$cart['price']}}</span></td>
+                                    <td class="product-quantity">
+                                        <div class="cart-plus-minus">
+                                            <input class="cart-plus-minus-box" type="text" name="qtybutton"
+                                                   value="{{$cart['quantity']}}" />
+                                        </div>
+                                    </td>
+                                    <td class="product-subtotal">${{$cart['price'] * $cart['quantity']}}</td>
+                                    <td class="product-remove">
+                                        <a href="#"><i class="fa fa-pencil"></i></a>
+                                        <a href="#"><i class="fa fa-times"></i></a>
+                                    </td>
+                                </tr>
+                           @endforeach
+                                </tbody>
+                            </table>
                         </div>
-
-                        <!-- SUB TOTAL -->
-                        <div class="col-sm-5">
-                            <h6>Grand Total</h6>
-                            <div class="grand-total">
-                                <div class="order-detail">
-                                    @php
-                                    $subtotal=0;
-                                    @endphp
-                                    @foreach(\App\Models\Cart::myCart() as $cart)
-                                    <p>{{$cart['name']}}<span>$USD  {{$subtotal += $cart['price'] * $cart['quantity']}} </span></p>
-
-                                    @endforeach
-
-                                    <!-- SUB TOTAL -->
-                                    <p class="sub-total">SUB TOTAL COST <span>$USD {{$subtotal}}</span></p>
-
-                                    <!--  TOTAL -->
-                                    <p class="all-total">TOTAL COST(With 15%) <span> $USD {{$subtotal * 1.15}}</span></p>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="cart-shiping-update-wrapper">
+                                    <div class="cart-shiping-update">
+                                        <a href="#">Continue Shopping</a>
+                                    </div>
+                                    <div class="cart-clear">
+                                        <button>Update Shopping Cart</button>
+                                        <a href="#">Clear Shopping Cart</a>
+                                    </div>
                                 </div>
-                                <a href="#." class="btn margin-top-20">Proceed to checkout</a> </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 mb-lm-30px">
+                            <div class="cart-tax">
+                                <div class="title-wrap">
+                                    <h4 class="cart-bottom-title section-bg-gray">Estimate Shipping And Tax</h4>
+                                </div>
+                                <div class="tax-wrapper">
+                                    <p>Enter your destination to get a shipping estimate.</p>
+                                    <div class="tax-select-wrapper">
+                                        <div class="tax-select">
+                                            <label>
+                                                * Country
+                                            </label>
+                                            <select class="email s-email s-wid">
+                                                <option>Bangladesh</option>
+                                                <option>Albania</option>
+                                                <option>Åland Islands</option>
+                                                <option>Afghanistan</option>
+                                                <option>Belgium</option>
+                                            </select>
+                                        </div>
+                                        <div class="tax-select">
+                                            <label>
+                                                * Region / State
+                                            </label>
+                                            <select class="email s-email s-wid">
+                                                <option>Bangladesh</option>
+                                                <option>Albania</option>
+                                                <option>Åland Islands</option>
+                                                <option>Afghanistan</option>
+                                                <option>Belgium</option>
+                                            </select>
+                                        </div>
+                                        <div class="tax-select mb-25px">
+                                            <label>
+                                                * Zip/Postal Code
+                                            </label>
+                                            <input type="text" />
+                                        </div>
+                                        <button class="cart-btn-2" type="submit">Get A Quote</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-lm-30px">
+                            <div class="discount-code-wrapper">
+                                <div class="title-wrap">
+                                    <h4 class="cart-bottom-title section-bg-gray">Use Coupon Code</h4>
+                                </div>
+                                <div class="discount-code">
+                                    <p>Enter your coupon code if you have one.</p>
+                                    <form>
+                                        <input type="text" required="" name="name" />
+                                        <button class="cart-btn-2" type="submit">Apply Coupon</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 mt-md-30px">
+                            <div class="grand-totall">
+                                <div class="title-wrap">
+                                    <h4 class="cart-bottom-title section-bg-gary-cart">Cart Total</h4>
+                                </div>
+                                <h5>Total products <span>$260.00</span></h5>
+                                <div class="total-shipping">
+                                    <h5>Total shipping</h5>
+                                    <ul>
+                                        <li><input type="checkbox" /> Standard <span>$20.00</span></li>
+                                        <li><input type="checkbox" /> Express <span>$30.00</span></li>
+                                    </ul>
+                                </div>
+                                <h4 class="grand-totall-title">Grand Total <span>$260.00</span></h4>
+                                <a href="/checkout">Proceed to Checkout</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
+    <!-- Cart Area End -->
 @endsection

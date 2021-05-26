@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Image;
 class BlogController extends Controller
 {
@@ -17,7 +18,7 @@ class BlogController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -29,7 +30,7 @@ class BlogController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -40,8 +41,8 @@ class BlogController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
     public function store(Request $request)
     {
@@ -88,7 +89,7 @@ class BlogController extends Controller
      * Display the specified resource.
      *
      * @param  string  $slug
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show($slug)
     {
@@ -101,7 +102,7 @@ class BlogController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  string $slug
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function edit(String $slug)
     {
@@ -112,9 +113,9 @@ class BlogController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @param  string $slug
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update(Request $request, string $slug)
     {
@@ -127,7 +128,7 @@ class BlogController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  string $slug
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy(string $slug)
     {

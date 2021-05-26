@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('title','Contact Us')
 @section('content')
 <section>
     <div class="contact-area pt-100px pb-100px">

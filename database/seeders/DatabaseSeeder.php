@@ -3,6 +3,11 @@
 namespace Database\Seeders;
 
 use App\Models\Address;
+use App\Models\Blog;
+use App\Models\BlogCategory;
+use App\Models\Item;
+use App\Models\ItemCategory;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,10 +25,10 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
           ]);
 
-          \App\Models\User::factory(10)->create();
-       \App\Models\ItemCategory::factory(10)->create();
-       \App\Models\Item::factory(10)->create();
-       \App\Models\BlogCategory::factory(10)->create();
-       \App\Models\Blog::factory(10)->create();
+          User::factory(10)->create();
+       ItemCategory::factory(10)->create();
+       Item::factory(10)->create();
+       BlogCategory::factory(10)->create();
+       Blog::factory(10)->create();
     }
 }

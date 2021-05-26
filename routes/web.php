@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AddressController;
+use App\Http\Controllers\CartController;
+use App\Models\Address;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,16 +38,16 @@ Route::resource('/blog',App\Http\Controllers\BlogController::class);
 Route::get('/about', function(){
    return view('about');
 });
-Route::get('/about/create',[\App\Http\Controllers\AboutController::class,'create']);
-Route::get('/about/edit',[\App\Http\Controllers\AboutController::class,'create']);
-Route::post('/about',[\App\Http\Controllers\AboutController::class,'store']);
+Route::get('/about/create',[AboutController::class,'create']);
+Route::get('/about/edit',[AboutController::class,'create']);
+Route::post('/about',[AboutController::class,'store']);
 
-Route::post('/address',[\App\Http\Controllers\AddressController::class,'store']);
-Route::get('/address',[\App\Http\Controllers\AddressController::class,'create']);
+Route::post('/address',[AddressController::class,'store']);
+Route::get('/address',[AddressController::class,'create']);
 
 Route::get('/contact', function(){
-    return view('contact')->with('address',\App\Models\Address::all()->last());
+    return view('contact')->with('address', Address::all()->last());
 });
 
-Route::get('/addtocart/{id}',[\App\Http\Controllers\CartController::class,'addToCart'])->name('addtocart');
-Route::get('/mycart',[\App\Http\Controllers\CartController::class,'myCart'])->name('mycart');
+Route::get('/addtocart/{id}',[CartController::class,'addToCart'])->name('addtocart');
+Route::get('/mycart',[CartController::class,'myCart'])->name('mycart');

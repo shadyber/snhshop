@@ -3,27 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="robots" content="index, follow" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="robots" content="index, follow"/>
     <title>SandHshop ! @yield('title')</title>
-    <meta name="description" content="SandHshop" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="SandHshop"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
     <!-- Add site Favicon -->
     <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" type="image/png">
 
 
     <!-- vendor css (Icon Font) -->
-    <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/css/vendor/pe-icon-7-stroke.css" />
-    <link rel="stylesheet" href="/assets/css/vendor/font.awesome.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/assets/css/vendor/pe-icon-7-stroke.css"/>
+    <link rel="stylesheet" href="/assets/css/vendor/font.awesome.css"/>
 
     <!-- plugins css (All Plugins Files) -->
-    <link rel="stylesheet" href="/assets/css/plugins/animate.css" />
-    <link rel="stylesheet" href="/assets/css/plugins/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="/assets/css/plugins/jquery-ui.min.css" />
-    <link rel="stylesheet" href="/assets/css/plugins/nice-select.css" />
-    <link rel="stylesheet" href="/assets/css/plugins/venobox.css" />
+    <link rel="stylesheet" href="/assets/css/plugins/animate.css"/>
+    <link rel="stylesheet" href="/assets/css/plugins/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/assets/css/plugins/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="/assets/css/plugins/nice-select.css"/>
+    <link rel="stylesheet" href="/assets/css/plugins/venobox.css"/>
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
     <!-- <link rel="stylesheet" href="/assets/css/vendor/vendor.min.css" />
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="/assets/css/style.min.css"> -->
 
     <!-- Main Style -->
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css"/>
 
 </head>
 
@@ -39,16 +39,16 @@
 
 <!-- Top Bar -->
 
-<div class="header-to-bar" style="display: none;"> HELLO EVERYONE! 25% Off All Products </div>
+<div class="header-to-bar" style="display: none;"> HELLO EVERYONE! 25% Off All Products</div>
 
 <!-- Top Bar -->
- @include('components.header')
+@include('components.header')
 <!-- breadcrumb-area start -->
 <div class="breadcrumb-area">
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-12 text-center">
-                <h2 class="breadcrumb-title">Shop</h2>
+                <h2 class="breadcrumb-title">@yield('title')</h2>
                 <!-- breadcrumb-list start -->
                 <ul class="breadcrumb-list">
                     <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -67,7 +67,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-            @yield('content')
+                @yield('content')
 
             </div>
         </div>
@@ -105,7 +105,7 @@
                                 </li>
                                 <li>
                                     <a title="Instagram" href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
-                                        </i>
+
                                     </a>
                                 </li>
                             </ul>
@@ -159,7 +159,8 @@
                                     <ul class="align-items-center">
                                         <li class="li"><a class="single-link" href="index.html">Jesco</a>
                                         </li>
-                                        <li class="li"><a class="single-link" href="shop-left-sidebar.html">Shop</a></li>
+                                        <li class="li"><a class="single-link" href="shop-left-sidebar.html">Shop</a>
+                                        </li>
                                         <li class="li"><a class="single-link" href="contact.html">Contact us</a></li>
                                         <li class="li"><a class="single-link" href="login.html">Log in</a></li>
                                         <li class="li"><a class="single-link" href="#">Help</a></li>
@@ -195,7 +196,8 @@
                 <div class="row">
                     <div class="col-12 text-center">
                         <p class="copy-text"> © 2021 <strong>Jesco</strong> Made With <i class="fa fa-heart"
-                                                                                         aria-hidden="true"></i> By <a class="company-name" href="https://hasthemes.com/">
+                                                                                         aria-hidden="true"></i> By <a
+                                class="company-name" href="https://hasthemes.com/">
                                 <strong> HasThemes</strong></a>.</p>
                     </div>
                 </div>
@@ -273,19 +275,23 @@
                         <div class="swiper-container zoom-top">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img class="img-responsive m-auto" src="/assets/images/product-image/zoom-image/1.jpg"
+                                    <img class="img-responsive m-auto"
+                                         src="/assets/images/product-image/zoom-image/1.jpg"
                                          alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img class="img-responsive m-auto" src="/assets/images/product-image/zoom-image/2.jpg"
+                                    <img class="img-responsive m-auto"
+                                         src="/assets/images/product-image/zoom-image/2.jpg"
                                          alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img class="img-responsive m-auto" src="/assets/images/product-image/zoom-image/3.jpg"
+                                    <img class="img-responsive m-auto"
+                                         src="/assets/images/product-image/zoom-image/3.jpg"
                                          alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img class="img-responsive m-auto" src="/assets/images/product-image/zoom-image/4.jpg"
+                                    <img class="img-responsive m-auto"
+                                         src="/assets/images/product-image/zoom-image/4.jpg"
                                          alt="">
                                 </div>
                             </div>
@@ -293,19 +299,23 @@
                         <div class="swiper-container zoom-thumbs mt-3 mb-3">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img class="img-responsive m-auto" src="/assets/images/product-image/small-image/1.jpg"
+                                    <img class="img-responsive m-auto"
+                                         src="/assets/images/product-image/small-image/1.jpg"
                                          alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img class="img-responsive m-auto" src="/assets/images/product-image/small-image/2.jpg"
+                                    <img class="img-responsive m-auto"
+                                         src="/assets/images/product-image/small-image/2.jpg"
                                          alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img class="img-responsive m-auto" src="/assets/images/product-image/small-image/3.jpg"
+                                    <img class="img-responsive m-auto"
+                                         src="/assets/images/product-image/small-image/3.jpg"
                                          alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img class="img-responsive m-auto" src="/assets/images/product-image/small-image/4.jpg"
+                                    <img class="img-responsive m-auto"
+                                         src="/assets/images/product-image/small-image/4.jpg"
                                          alt="">
                                 </div>
                             </div>
@@ -329,16 +339,19 @@
                                 </div>
                                 <span class="read-review"><a class="reviews" href="#">( 5 Customer Review )</a></span>
                             </div>
-                            <p class="mt-30px mb-0">Lorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod tempor incidi ut labore
-                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita ullamco laboris nisi
+                            <p class="mt-30px mb-0">Lorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod
+                                tempor incidi ut labore
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita ullamco laboris
+                                nisi
                                 ut aliquip ex ea commodo </p>
                             <div class="pro-details-quality">
                                 <div class="cart-plus-minus">
-                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="1" />
+                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="1"/>
                                 </div>
                                 <div class="pro-details-cart">
                                     <button class="add-cart" href="#"> Add To
-                                        Cart</button>
+                                        Cart
+                                    </button>
                                 </div>
                                 <div class="pro-details-compare-wishlist pro-details-wishlist ">
                                     <a href="wishlist.html"><i class="pe-7s-like"></i></a>

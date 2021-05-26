@@ -1,6 +1,6 @@
 @php
-$itemss =(object) array_merge_recursive(\App\Models\Item::popularN(12)->toArray(),
-\App\Models\Item::lastN(12)->toArray());
+use App\Models\Item;$itemss =(object) array_merge_recursive(Item::popularN(12)->toArray(),
+Item::lastN(12)->toArray())
 
 @endphp
 

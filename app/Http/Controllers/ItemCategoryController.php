@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ItemCategory;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Ramsey\Uuid\Type\Integer;
 
 class ItemCategoryController extends Controller
@@ -11,7 +12,7 @@ class ItemCategoryController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -23,7 +24,7 @@ class ItemCategoryController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -33,8 +34,8 @@ class ItemCategoryController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
     public function store(Request $request)
     {
@@ -54,8 +55,8 @@ class ItemCategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\ItemCategory  $itemCategory
-     * @return \Illuminate\Http\Response
+     * @param ItemCategory $itemCategory
+     * @return Response
      */
     public function edit(ItemCategory $itemCategory)
     {
@@ -65,9 +66,9 @@ class ItemCategoryController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\ItemCategory  $itemCategory
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param ItemCategory $itemCategory
+     * @return Response
      */
     public function update(Request $request, ItemCategory $itemCategory)
     {
@@ -77,8 +78,8 @@ class ItemCategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\ItemCategory  $itemCategory
-     * @return \Illuminate\Http\Response
+     * @param ItemCategory $itemCategory
+     * @return Response
      */
     public function destroy(ItemCategory $itemCategory)
     {
