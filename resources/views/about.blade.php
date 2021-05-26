@@ -2,238 +2,461 @@
 
 @section('content')
 
-    <!--======= SUB BANNER =========-->
-    <section class="sub-bnr" data-stellar-background-ratio="0.5">
-        <div class="position-center-center">
-            <div class="container">
-                <h4>About SANDSHOP - The Best Collection</h4>
-                <ol class="breadcrumb">
-                    <li><a href="#">Home</a></li>
-                    <li class="active">About</li>
-                </ol>
+    <section>
+        <div class="about-intro-area">
+            <div class="container position-relative h-100 d-flex align-items-center">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-intro-content">
+                            <h2 class="title">About Us</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius modjior tem incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniamyl quinol exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duisau irure dolor in reprehenderit in
+                                voluptate velit esse cillum dolore euhti fugiat nulla pariatur. Excepteur sint occaecat
+                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-left">
+                    <img src="/assets/images/about-image/intro-left.png" alt="" class="intro-left-image">
+                </div>
+                <div class="intro-right">
+                    <img src="/assets/images/about-image/intro-right.png" alt="" class="intro-right-image">
+                </div>
             </div>
         </div>
+
+
+
+        <div class="service-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 d-flex">
+                        <div class="service-left align-self-center align-items-center">
+                            <img src="assets/images/about-image/srevice-left-img.png" alt="" class="service-left-image">
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-center">
+                        <div class="service-right-content align-self-center align-items-center">
+                            <span class="sami-title">100% Guaranteed Pure Cotton</span>
+                            <h2 class="title">Best Products Here
+                                Every Day</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius modjior tem incididunt
+                                ut labore et dolore magna aliqua.</p>
+                            <a href="shop-left-sidebar.html" class="btn btn-primary service-btn"> Shop Now <i class="fa fa-shopping-basket ml-10px" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="team-area pt-100px pb-100px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title text-center mb-30px0px">
+                            <h2 class="title line-height-1">#ourteam</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-lm-30px">
+                        <!-- Single Team -->
+                        <div class="team-wrapper">
+                            <div class="team-image overflow-hidden">
+                                <img src="assets/images/team/1.jpg" alt="">
+                            </div>
+                            <div class="team-content">
+                                <h6 class="title">Howard Burns</h6>
+                                <span class="sub-title">Our Team</span>
+                            </div>
+                            <ul class="team-social d-flex">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- Single Team -->
+                    </div>
+                    <div class="col-md-4 mb-lm-30px">
+                        <!-- Single Team -->
+                        <div class="team-wrapper">
+                            <div class="team-image overflow-hidden">
+                                <img src="assets/images/team/2.jpg" alt="">
+                            </div>
+                            <div class="team-content">
+                                <h6 class="title">Lester Houser</h6>
+                                <span class="sub-title">Our Team</span>
+                            </div>
+                            <ul class="team-social d-flex">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- Single Team -->
+                    </div>
+                    <div class="col-md-4">
+                        <!-- Single Team -->
+                        <div class="team-wrapper">
+                            <div class="team-image overflow-hidden">
+                                <img src="assets/images/team/3.jpg" alt="">
+                            </div>
+                            <div class="team-content">
+                                <h6 class="title">Craig Chaney</h6>
+                                <span class="sub-title">Our Team</span>
+                            </div>
+                            <ul class="team-social d-flex">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- Single Team -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="feature-area pb-100px pt-100px bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <!-- single item -->
+                        <div class="single-feature border-0">
+                            <div class="feature-icon">
+                                <img src="assets/images/icons/1.png" alt="">
+                            </div>
+                            <div class="feature-content">
+                                <h4 class="title">Free Shipping</h4>
+                                <span class="sub-title">Capped at $39 per order</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single item -->
+                    <div class="col-lg-4 col-md-6 mb-md-30px mb-lm-30px mt-lm-30px">
+                        <div class="single-feature border-0">
+                            <div class="feature-icon">
+                                <img src="assets/images/icons/2.png" alt="">
+                            </div>
+                            <div class="feature-content">
+                                <h4 class="title">Card Payments</h4>
+                                <span class="sub-title">12 Months Installments</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single item -->
+                    <div class="col-lg-4 col-md-6 ">
+                        <div class="single-feature border-0">
+                            <div class="feature-icon">
+                                <img src="assets/images/icons/3.png" alt="">
+                            </div>
+                            <div class="feature-content">
+                                <h4 class="title">Easy Returns</h4>
+                                <span class="sub-title">Shop With Confidence</span>
+                            </div>
+                        </div>
+                        <!-- single item -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="testimonial-area pb-40px pt-100px ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title text-center mb-0">
+                            <h2 class="title line-height-1">#testimonials</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider Start -->
+                <div class="testimonial-wrapper swiper-container swiper-container-initialized swiper-container-horizontal">
+                    <div class="swiper-wrapper" id="swiper-wrapper-d8a3c46d0d2d974c" aria-live="polite" style="transform: translate3d(-966px, 0px, 0px); transition: all 0ms ease 0s;"><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" role="group" aria-label="1 / 9" style="width: 453px; margin-right: 30px;">
+                            <div class="testi-inner">
+                                <div class="reating-wrap">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="testi-content">
+                                    <p>Lorem ipsum dolor sit amet, consect adipisici elit, sed do eiusmod tempol incididunt
+                                        ut labore et dolore magna aliqua. Ut enim ad minim veniamfhq nostrud exercitation.
+                                    </p>
+                                </div>
+                                <div class="testi-author">
+                                    <div class="author-img">
+                                        <img src="assets/images/testimonial-image/1.png" alt="">
+                                    </div>
+                                    <div class="author-name">
+                                        <h4 class="name">Daisy Morgan</h4>
+                                        <span class="title">Happy Customer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="4" role="group" aria-label="2 / 9" style="width: 453px; margin-right: 30px;">
+                            <div class="testi-inner">
+                                <div class="reating-wrap">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="testi-content">
+                                    <p>Lorem ipsum dolor sit amet, consect adipisici elit, sed do eiusmod tempol incididunt
+                                        ut labore et dolore magna aliqua. Ut enim ad minim veniamfhq nostrud exercitation.
+                                    </p>
+                                </div>
+                                <div class="testi-author">
+                                    <div class="author-img">
+                                        <img src="assets/images/testimonial-image/2.png" alt="">
+                                    </div>
+                                    <div class="author-name">
+                                        <h4 class="name">Reyna Chung</h4>
+                                        <span class="title">Happy Customer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slider Single Item -->
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="3 / 9" style="width: 453px; margin-right: 30px;">
+                            <div class="testi-inner">
+                                <div class="reating-wrap">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="testi-content">
+                                    <p>Lorem ipsum dolor sit amet, consect adipisici elit, sed do eiusmod tempol incididunt
+                                        ut labore et dolore magna aliqua. Ut enim ad minim veniamfhq nostrud exercitation.
+                                    </p>
+                                </div>
+                                <div class="testi-author">
+                                    <div class="author-img">
+                                        <img src="assets/images/testimonial-image/1.png" alt="">
+                                    </div>
+                                    <div class="author-name">
+                                        <h4 class="name">Daisy Morgan</h4>
+                                        <span class="title">Happy Customer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slider Single Item -->
+                        <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="4 / 9" style="width: 453px; margin-right: 30px;">
+                            <div class="testi-inner">
+                                <div class="reating-wrap">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="testi-content">
+                                    <p>Lorem ipsum dolor sit amet, consect adipisici elit, sed do eiusmod tempol incididunt
+                                        ut labore et dolore magna aliqua. Ut enim ad minim veniamfhq nostrud exercitation.
+                                    </p>
+                                </div>
+                                <div class="testi-author">
+                                    <div class="author-img">
+                                        <img src="assets/images/testimonial-image/2.png" alt="">
+                                    </div>
+                                    <div class="author-name">
+                                        <h4 class="name">Leah Chatman</h4>
+                                        <span class="title">Happy Customer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slider Single Item -->
+                        <div class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="5 / 9" style="width: 453px; margin-right: 30px;">
+                            <div class="testi-inner">
+                                <div class="reating-wrap">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="testi-content">
+                                    <p>Lorem ipsum dolor sit amet, consect adipisici elit, sed do eiusmod tempol incididunt
+                                        ut labore et dolore magna aliqua. Ut enim ad minim veniamfhq nostrud exercitation.
+                                    </p>
+                                </div>
+                                <div class="testi-author">
+                                    <div class="author-img">
+                                        <img src="assets/images/testimonial-image/3.png" alt="">
+                                    </div>
+                                    <div class="author-name">
+                                        <h4 class="name">Reyna Chung</h4>
+                                        <span class="title">Happy Customer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slider Single Item -->
+                        <div class="swiper-slide" data-swiper-slide-index="3" role="group" aria-label="6 / 9" style="width: 453px; margin-right: 30px;">
+                            <div class="testi-inner">
+                                <div class="reating-wrap">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="testi-content">
+                                    <p>Lorem ipsum dolor sit amet, consect adipisici elit, sed do eiusmod tempol incididunt
+                                        ut labore et dolore magna aliqua. Ut enim ad minim veniamfhq nostrud exercitation.
+                                    </p>
+                                </div>
+                                <div class="testi-author">
+                                    <div class="author-img">
+                                        <img src="assets/images/testimonial-image/1.png" alt="">
+                                    </div>
+                                    <div class="author-name">
+                                        <h4 class="name">Daisy Morgan</h4>
+                                        <span class="title">Happy Customer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slider Single Item -->
+                        <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="4" role="group" aria-label="7 / 9" style="width: 453px; margin-right: 30px;">
+                            <div class="testi-inner">
+                                <div class="reating-wrap">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="testi-content">
+                                    <p>Lorem ipsum dolor sit amet, consect adipisici elit, sed do eiusmod tempol incididunt
+                                        ut labore et dolore magna aliqua. Ut enim ad minim veniamfhq nostrud exercitation.
+                                    </p>
+                                </div>
+                                <div class="testi-author">
+                                    <div class="author-img">
+                                        <img src="assets/images/testimonial-image/2.png" alt="">
+                                    </div>
+                                    <div class="author-name">
+                                        <h4 class="name">Reyna Chung</h4>
+                                        <span class="title">Happy Customer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slider Single Item -->
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="8 / 9" style="width: 453px; margin-right: 30px;">
+                            <div class="testi-inner">
+                                <div class="reating-wrap">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="testi-content">
+                                    <p>Lorem ipsum dolor sit amet, consect adipisici elit, sed do eiusmod tempol incididunt
+                                        ut labore et dolore magna aliqua. Ut enim ad minim veniamfhq nostrud exercitation.
+                                    </p>
+                                </div>
+                                <div class="testi-author">
+                                    <div class="author-img">
+                                        <img src="assets/images/testimonial-image/1.png" alt="">
+                                    </div>
+                                    <div class="author-name">
+                                        <h4 class="name">Daisy Morgan</h4>
+                                        <span class="title">Happy Customer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="9 / 9" style="width: 453px; margin-right: 30px;">
+                            <div class="testi-inner">
+                                <div class="reating-wrap">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="testi-content">
+                                    <p>Lorem ipsum dolor sit amet, consect adipisici elit, sed do eiusmod tempol incididunt
+                                        ut labore et dolore magna aliqua. Ut enim ad minim veniamfhq nostrud exercitation.
+                                    </p>
+                                </div>
+                                <div class="testi-author">
+                                    <div class="author-img">
+                                        <img src="assets/images/testimonial-image/2.png" alt="">
+                                    </div>
+                                    <div class="author-name">
+                                        <h4 class="name">Leah Chatman</h4>
+                                        <span class="title">Happy Customer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                <!-- Slider Start -->
+            </div>
+        </div>
+
+
+
+        <div class="brand-area pb-100px">
+            <div class="container">
+                <div class="brand-slider swiper-container swiper-container-initialized swiper-container-horizontal">
+                    <div class="swiper-wrapper" id="swiper-wrapper-061de5a77ef82ff1" aria-live="off" style="transform: translate3d(-1872px, 0px, 0px); transition: all 1500ms ease 0s;"><div class="swiper-slide brand-slider-item text-center swiper-slide-duplicate" data-swiper-slide-index="1" role="group" aria-label="1 / 13" style="width: 234px;">
+                            <a href="#"><img class=" img-fluid" src="assets/images/brand-logo/2.png" alt=""></a>
+                        </div><div class="swiper-slide brand-slider-item text-center swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="2 / 13" style="width: 234px;">
+                            <a href="#"><img class=" img-fluid" src="assets/images/brand-logo/3.png" alt=""></a>
+                        </div><div class="swiper-slide brand-slider-item text-center swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="3" role="group" aria-label="3 / 13" style="width: 234px;">
+                            <a href="#"><img class=" img-fluid" src="assets/images/brand-logo/4.png" alt=""></a>
+                        </div><div class="swiper-slide brand-slider-item text-center swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="4" role="group" aria-label="4 / 13" style="width: 234px;">
+                            <a href="#"><img class=" img-fluid" src="assets/images/brand-logo/5.png" alt=""></a>
+                        </div>
+                        <div class="swiper-slide brand-slider-item text-center swiper-slide-duplicate-next" data-swiper-slide-index="0" role="group" aria-label="5 / 13" style="width: 234px;">
+                            <a href="#"><img class=" img-fluid" src="assets/images/brand-logo/1.png" alt=""></a>
+                        </div>
+                        <div class="swiper-slide brand-slider-item text-center" data-swiper-slide-index="1" role="group" aria-label="6 / 13" style="width: 234px;">
+                            <a href="#"><img class=" img-fluid" src="assets/images/brand-logo/2.png" alt=""></a>
+                        </div>
+                        <div class="swiper-slide brand-slider-item text-center" data-swiper-slide-index="2" role="group" aria-label="7 / 13" style="width: 234px;">
+                            <a href="#"><img class=" img-fluid" src="assets/images/brand-logo/3.png" alt=""></a>
+                        </div>
+                        <div class="swiper-slide brand-slider-item text-center swiper-slide-prev" data-swiper-slide-index="3" role="group" aria-label="8 / 13" style="width: 234px;">
+                            <a href="#"><img class=" img-fluid" src="assets/images/brand-logo/4.png" alt=""></a>
+                        </div>
+                        <div class="swiper-slide brand-slider-item text-center swiper-slide-active" data-swiper-slide-index="4" role="group" aria-label="9 / 13" style="width: 234px;">
+                            <a href="#"><img class=" img-fluid" src="assets/images/brand-logo/5.png" alt=""></a>
+                        </div>
+                        <div class="swiper-slide brand-slider-item text-center swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0" role="group" aria-label="10 / 13" style="width: 234px;">
+                            <a href="#"><img class=" img-fluid" src="assets/images/brand-logo/1.png" alt=""></a>
+                        </div><div class="swiper-slide brand-slider-item text-center swiper-slide-duplicate" data-swiper-slide-index="1" role="group" aria-label="11 / 13" style="width: 234px;">
+                            <a href="#"><img class=" img-fluid" src="assets/images/brand-logo/2.png" alt=""></a>
+                        </div><div class="swiper-slide brand-slider-item text-center swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="12 / 13" style="width: 234px;">
+                            <a href="#"><img class=" img-fluid" src="assets/images/brand-logo/3.png" alt=""></a>
+                        </div><div class="swiper-slide brand-slider-item text-center swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="3" role="group" aria-label="13 / 13" style="width: 234px;">
+                            <a href="#"><img class=" img-fluid" src="assets/images/brand-logo/4.png" alt=""></a>
+                        </div></div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+            </div>
+        </div>
+
+
+
     </section>
-
-    <!-- Content -->
-    <div id="content">
-
-        <!-- History -->
-        <section class="history-block padding-top-100 padding-bottom-100">
-            <div class="container">
-                <div class="about-us-con">
-                    <h3>A Brief History of the SANDSHOP</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nibh dolor, efficitur eget pharetra ac, cursus sed sapien. Cras posuere ligula ut blandit varius. Nunc consectetur scelerisque felis, et volutpat massa aliquam in. Curabitur sodales porttitor tortor sit amet malesuada. <br>
-                        <br>
-                        Consectetur adipiscing elit. Maecenas nibh dolor, efficitur eget pharetra ac, cursus sed sapien. Cras posuere ligula ut blandit varius. Nunc consectetur scelerisque felis, et volutpat massa aliquam in. Curabitur sodales porttitor tortor sit amet malesuada </p>
-                    <div class="offset-1 margin-top-50">
-                        <h6>1950 <span></span> 1999</h6>
-                        <p>Lorem ipsum dolor sit amet, efficitur eget pharetra ac, cursus sed sapien. Cras posuere ligula ut blandit varius. Nunc consectetur scelerisque felis. consectetur adipiscing elit. Maecenas nibh dolor</p>
-                        <h6>2000 <span></span> 2021</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nibh dolor, efficitur eget pharetra ac, cursus sed sapien. Cras posuere ligula ut blandit varius. Nunc consectetur scelerisque felis, et volutpat massa aliquam in. Curabitur sodales porttitor tortor sit amet malesuada.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Culture BLOCK -->
-        <section class="cultur-block">
-            <ul>
-                <li> <img src="/images/cultur-img-1.jpg" alt="" > </li>
-                <li> <img src="/images/cultur-img-2.jpg" alt="" > </li>
-                <li> <img src="/images/cultur-img-3.jpg" alt="" > </li>
-                <li> <img src="/images/cultur-img-4.jpg" alt="" > </li>
-            </ul>
-
-            <!-- Culture Text -->
-            <div class="position-center-center">
-                <div class="container">
-                    <div class="col-sm-6 center-block">
-                        <h4>Awesome Work Culture</h4>
-                        <p>Phasellus lacinia fermentutm bibendum. Interdum et malante ipuctus non. Nulla lacinia,
-                            eros vel fermentum consectetur, ris dolor in ex. </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- OUR TEAM -->
-        <section class="our-team light-gray-bg padding-top-100 padding-bottom-100">
-            <div class="container">
-                <div class="heading text-center">
-                    <h4>Our Team</h4>
-                    <hr>
-                </div>
-
-                <!-- TEAM -->
-                <ul class="row">
-
-                    <!-- Member -->
-                    <li class="col-md-4 text-center animate fadeInUp" data-wow-delay="0.4s">
-                        <article>
-                            <!-- abatar -->
-                            <div class="avatar"> <img class="img-circle" src="images/team-1.jpg" alt="" >
-                                <!-- Team hover -->
-                                <div class="team-hover">
-                                    <div class="position-center-center">
-                                        <div class="social-icons"> <a href="#."><i class="icon-social-facebook"></i></a> <a href="#."><i class="icon-social-twitter"></i></a> <a href="#."><i class="icon-social-dribbble"></i></a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Team Detail -->
-                            <div class="team-names">
-                                <h6>Mark Adnan</h6>
-                                <p>CEO & FOUNDER</p>
-                            </div>
-                        </article>
-                    </li>
-
-                    <!-- Member -->
-                    <li class="col-md-4 text-center animate fadeInUp" data-wow-delay="0.6s">
-                        <article>
-                            <!-- abatar -->
-                            <div class="avatar"> <img class="img-circle" src="images/team-2.jpg" alt="" >
-                                <!-- Team hover -->
-                                <div class="team-hover">
-                                    <div class="position-center-center">
-                                        <div class="social-icons"> <a href="#."><i class="icon-social-facebook"></i></a> <a href="#."><i class="icon-social-twitter"></i></a> <a href="#."><i class="icon-social-dribbble"></i></a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Team Detail -->
-                            <div class="team-names">
-                                <h6>jennifer rod</h6>
-                                <p>DESIGNER</p>
-                            </div>
-                        </article>
-                    </li>
-
-                    <!-- Member -->
-                    <li class="col-md-4 text-center animate fadeInUp" data-wow-delay="0.8s">
-                        <article>
-                            <!-- abatar -->
-                            <div class="avatar"> <img class="img-circle" src="images/team-3.jpg" alt="" >
-                                <!-- Team hover -->
-                                <div class="team-hover">
-                                    <div class="position-center-center">
-                                        <div class="social-icons"> <a href="#."><i class="icon-social-facebook"></i></a> <a href="#."><i class="icon-social-twitter"></i></a> <a href="#."><i class="icon-social-dribbble"></i></a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Team Detail -->
-                            <div class="team-names">
-                                <h6>natasha singh</h6>
-                                <p>DEVELOPER</p>
-                            </div>
-                        </article>
-                    </li>
-
-                    <!-- Member -->
-                    <li class="col-md-4 text-center">
-                        <article>
-                            <!-- abatar -->
-                            <div class="avatar"> <img class="img-circle" src="images/team-4.jpg" alt="" >
-                                <!-- Team hover -->
-                                <div class="team-hover">
-                                    <div class="position-center-center">
-                                        <div class="social-icons"> <a href="#."><i class="icon-social-facebook"></i></a> <a href="#."><i class="icon-social-twitter"></i></a> <a href="#."><i class="icon-social-dribbble"></i></a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Team Detail -->
-                            <div class="team-names">
-                                <h6>Jahn Mark</h6>
-                                <p>Product Designer</p>
-                            </div>
-                        </article>
-                    </li>
-
-                    <!-- Member -->
-                    <li class="col-md-4 text-center">
-                        <article>
-                            <!-- abatar -->
-                            <div class="avatar"> <img class="img-circle" src="images/team-5.jpg" alt="" >
-                                <!-- Team hover -->
-                                <div class="team-hover">
-                                    <div class="position-center-center">
-                                        <div class="social-icons"> <a href="#."><i class="icon-social-facebook"></i></a> <a href="#."><i class="icon-social-twitter"></i></a> <a href="#."><i class="icon-social-dribbble"></i></a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Team Detail -->
-                            <div class="team-names">
-                                <h6>jennifer rod</h6>
-                                <p>Quality Head</p>
-                            </div>
-                        </article>
-                    </li>
-
-                    <!-- Member -->
-                    <li class="col-md-4 text-center">
-                        <article>
-                            <!-- abatar -->
-                            <div class="avatar"> <img class="img-circle" src="images/team-6.jpg" alt="" >
-                                <!-- Team hover -->
-                                <div class="team-hover">
-                                    <div class="position-center-center">
-                                        <div class="social-icons"> <a href="#."><i class="icon-social-facebook"></i></a> <a href="#."><i class="icon-social-twitter"></i></a> <a href="#."><i class="icon-social-dribbble"></i></a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Team Detail -->
-                            <div class="team-names">
-                                <h6>natasha singh</h6>
-                                <p>DEVELOPER</p>
-                            </div>
-                        </article>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Client Img  -->
-        <section class="fun-facts padding-top-100 padding-bottom-80">
-            <div class="container">
-
-                <!-- HEADING -->
-                <div class="heading text-center">
-                    <h4>Few Facts About SandHShop</h4>
-                    <hr>
-                </div>
-
-                <!-- FUN FACTS -->
-                <ul class="row">
-
-                    <!-- SALES -->
-                    <li class="col-sm-4"> <span>457</span>
-                        <h5>Sales</h5>
-                    </li>
-
-                    <!-- Products -->
-                    <li class="col-sm-4"> <span>571</span>
-                        <h5>Items</h5>
-                    </li>
-
-                    <!-- Clients -->
-                    <li class="col-sm-4"> <span>289</span>
-                        <h5>Clients Worldwide</h5>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- TWEET -->
-        <section class="tweet padding-top-100 padding-bottom-100">
-            <div class="container">
-                <div class="col-md-8 center-block"> <i class="icon-social-twitter"></i>
-                    <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien lacus, eu posuere
-                        eros vel fermentum consectetur, risus purus tempc, et iaculis odio dolor in ex. </p>
-                    <span><span>@johnsmith</span> 4 hours ago via Twitter</span> </div>
-            </div>
-        </section>
-
-
-    </div>
-
 
 @endsection

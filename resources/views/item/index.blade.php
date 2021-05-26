@@ -1,126 +1,928 @@
 @extends('layouts.app')
 @section('content')
+ <section>
+     <div class="col-12">
+         <!-- Shop Top Area Start -->
+         <div class="shop-top-bar d-flex">
+             <!-- Left Side start -->
+             <p><span>12</span> Product Found of <span>30</span></p>
+             <!-- Left Side End -->
+             <div class="shop-tab nav">
+                 <a class="active" href="#shop-grid" data-bs-toggle="tab">
+                     <i class="fa fa-th" aria-hidden="true"></i>
+                 </a>
+                 <a href="#shop-list" data-bs-toggle="tab">
+                     <i class="fa fa-list" aria-hidden="true"></i>
+                 </a>
+             </div>
+             <!-- Right Side Start -->
+             <div class="select-shoing-wrap d-flex align-items-center">
+                 <div class="shot-product">
+                     <p>Sort By:</p>
+                 </div>
+                 <div class="shop-select">
+                     <select class="shop-sort" style="display: none;">
+                         <option data-display="Relevance">Relevance</option>
+                         <option value="1"> Name, A to Z</option>
+                         <option value="2"> Name, Z to A</option>
+                         <option value="3"> Price, low to high</option>
+                         <option value="4"> Price, high to low</option>
+                     </select><div class="nice-select shop-sort" tabindex="0"><span class="current">Relevance</span><ul class="list"><li data-value="Relevance" data-display="Relevance" class="option selected">Relevance</li><li data-value="1" class="option"> Name, A to Z</li><li data-value="2" class="option"> Name, Z to A</li><li data-value="3" class="option"> Price, low to high</li><li data-value="4" class="option"> Price, high to low</li></ul></div>
 
-    <!-- Content -->
-    <div id="content">
+                 </div>
+             </div>
+             <!-- Right Side End -->
+         </div>
+         <!-- Shop Top Area End -->
 
-        <!-- Popular Products -->
-        <section class="shop-page padding-top-100 padding-bottom-100">
-            <div class="container-full">
-                <div class="item-fltr">
-                    <!-- short-by -->
-                    <div class="short-by"> Showing 1–10 of 20 results </div>
-                    <!-- List and Grid Style -->
-                    <div class="lst-grd"> <a href="#" id="list"><i class="flaticon-interface"></i></a> <a href="#" id="grid"><i class="icon-grid"></i></a>
-                        <!-- Select -->
-                        <select>
-                            <option>Short By: New</option>
-                            <option>Short By: New</option>
-                            <option>Short By: New</option>
-                            <option>Short By: New</option>
-                            <option>Short By: New</option>
-                        </select>
-                    </div>
-                </div>
+         <!-- Shop Bottom Area Start -->
+         <div class="shop-bottom-area">
 
-                <!-- Item -->
-                <div id="products" class="arrival-block col-item-4 list-group">
-                    <div class="row">
-                        @foreach($items as $item)
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="img-ser">
-                                <!-- Sale -->
-                                <div class="on-sale"> {{$item->badge}} </div>
-                                <!-- Images -->
-                                <div class="thumb">
-                                    <img class="img-1" src="{{$item->thumb}}" alt="{{$item->name}}">
-                                    <img class="img-2" src="{{$item->photo}}" alt="{{$item->name}}">
-                                    <!-- Overlay  -->
-                                    <div class="overlay">
-                                        <div class="position-center-center">
-                                            <a class="popup-with-move-anim" href="#qck-view-shop">
-                                                <i class="icon-eye"></i></a>
-                                        </div>
-                                        <div class="add-crt">
-                                            <a href="/addtocart/{{$item->id}}"><i class="icon-basket margin-right-10"></i> Add To Cart</a>
-                                        </div>
-                                    </div>
-                                </div>
+             <!-- Tab Content Area Start -->
+             <div class="row">
+                 <div class="col">
+                     <div class="tab-content">
+                         <div class="tab-pane fade show active" id="shop-grid">
+                             <div class="row mb-n-30px">
+                                 <div class="col-md-4 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up" data-aos-delay="200">
+                                     <!-- Single Prodect -->
+                                     <div class="product">
+                                         <div class="thumb">
+                                             <a href="single-product.html" class="image">
+                                                 <img src="assets/images/product-image/1.jpg" alt="Product">
+                                                 <img class="hover-image" src="assets/images/product-image/1.jpg" alt="Product">
+                                             </a>
+                                             <span class="badges">
+                                                            <span class="new">New</span>
+                                                        </span>
+                                             <div class="actions">
+                                                 <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                 <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                 <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                             </div>
+                                             <button title="Add To Cart" class=" add-to-cart">Add
+                                                 To Cart</button>
+                                         </div>
+                                         <div class="content">
+                                                        <span class="ratings">
+                                                            <span class="rating-wrap">
+                                                                <span class="star" style="width: 100%"></span>
+                                                            </span>
+                                                            <span class="rating-num">( 5 Review )</span>
+                                                        </span>
+                                             <h5 class="title"><a href="single-product.html">Women's
+                                                     Elizabeth Coat
+                                                 </a>
+                                             </h5>
+                                             <span class="price">
+                                                            <span class="new">$38.50</span>
+                                                        </span>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-4 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up" data-aos-delay="400">
+                                     <!-- Single Prodect -->
+                                     <div class="product">
+                                         <div class="thumb">
+                                             <a href="single-product.html" class="image">
+                                                 <img src="assets/images/product-image/2.jpg" alt="Product">
+                                                 <img class="hover-image" src="assets/images/product-image/2.jpg" alt="Product">
+                                             </a>
+                                             <span class="badges">
+                                                            <span class="sale">-10%</span>
+                                                            <span class="new">New</span>
+                                                        </span>
+                                             <div class="actions">
+                                                 <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                 <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                 <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                             </div>
+                                             <button title="Add To Cart" class=" add-to-cart">Add
+                                                 To Cart</button>
+                                         </div>
+                                         <div class="content">
+                                                        <span class="ratings">
+                                                            <span class="rating-wrap">
+                                                                <span class="star" style="width: 80%"></span>
+                                                            </span>
+                                                            <span class="rating-num">( 4 Review )</span>
+                                                        </span>
+                                             <h5 class="title"><a href="single-product.html">Ardene
+                                                     Microfiber
+                                                     Tights</a>
+                                             </h5>
+                                             <span class="price">
+                                                            <span class="new">$38.50</span>
+                                                            <span class="old">$48.50</span>
+                                                        </span>
+                                         </div>
+                                     </div>
+                                     <!-- Single Prodect -->
+                                 </div>
+                                 <div class="col-md-4 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up" data-aos-delay="600">
+                                     <!-- Single Prodect -->
+                                     <div class="product">
+                                         <div class="thumb">
+                                             <a href="single-product.html" class="image">
+                                                 <img src="assets/images/product-image/3.jpg" alt="Product">
+                                                 <img class="hover-image" src="assets/images/product-image/3.jpg" alt="Product">
+                                             </a>
+                                             <span class="badges">
+                                                            <span class="sale">-7%</span>
+                                                        </span>
+                                             <div class="actions">
+                                                 <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                 <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                 <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                             </div>
+                                             <button title="Add To Cart" class=" add-to-cart">Add
+                                                 To Cart</button>
+                                         </div>
+                                         <div class="content">
+                                                        <span class="ratings">
+                                                            <span class="rating-wrap">
+                                                                <span class="star" style="width: 0%"></span>
+                                                            </span>
+                                                            <span class="rating-num">( 0 Review )</span>
+                                                        </span>
+                                             <h5 class="title"><a href="single-product.html">Women's Long
+                                                     Sleeve
+                                                     Shirts</a></h5>
+                                             <span class="price">
+                                                            <span class="new">$30.50</span>
+                                                            <span class="old">$38.00</span>
+                                                        </span>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-4 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up" data-aos-delay="800">
+                                     <!-- Single Prodect -->
+                                     <div class="product">
+                                         <div class="thumb">
+                                             <a href="single-product.html" class="image">
+                                                 <img src="assets/images/product-image/4.jpg" alt="Product">
+                                                 <img class="hover-image" src="assets/images/product-image/4.jpg" alt="Product">
+                                             </a>
+                                             <span class="badges">
+                                                            <span class="new">Sale</span>
+                                                        </span>
+                                             <div class="actions">
+                                                 <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                 <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                 <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                             </div>
+                                             <button title="Add To Cart" class=" add-to-cart">Add
+                                                 To Cart</button>
+                                         </div>
+                                         <div class="content">
+                                                        <span class="ratings">
+                                                            <span class="rating-wrap">
+                                                                <span class="star" style="width: 70%"></span>
+                                                            </span>
+                                                            <span class="rating-num">( 3.5 Review )</span>
+                                                        </span>
+                                             <h5 class="title"><a href="single-product.html">Parrera
+                                                     Sunglasses -
+                                                     Lomashop</a></h5>
+                                             <span class="price">
+                                                            <span class="new">$38.50</span>
+                                                        </span>
+                                         </div>
+                                     </div>
+                                     <!-- Single Prodect -->
+                                 </div>
+                                 <div class="col-md-4 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up" data-aos-delay="200">
+                                     <!-- Single Prodect -->
+                                     <div class="product">
+                                         <div class="thumb">
+                                             <a href="single-product.html" class="image">
+                                                 <img src="assets/images/product-image/5.jpg" alt="Product">
+                                                 <img class="hover-image" src="assets/images/product-image/5.jpg" alt="Product">
+                                             </a>
+                                             <span class="badges">
+                                                            <span class="sale">-5%</span>
+                                                            <span class="new">New</span>
+                                                        </span>
+                                             <div class="actions">
+                                                 <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                 <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                 <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                             </div>
+                                             <button title="Add To Cart" class=" add-to-cart">Add
+                                                 To Cart</button>
+                                         </div>
+                                         <div class="content">
+                                                        <span class="ratings">
+                                                            <span class="rating-wrap">
+                                                                <span class="star" style="width: 100%"></span>
+                                                            </span>
+                                                            <span class="rating-num">( 5 Review )</span>
+                                                        </span>
+                                             <h5 class="title"><a href="single-product.html">Cool Man
+                                                     Wearing
+                                                     Leather</a></h5>
+                                             <span class="price">
+                                                            <span class="new">$38.50</span>
+                                                            <span class="old">$40.50</span>
+                                                        </span>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-4 col-sm-6 col-xs-6  mb-30px" data-aos="fade-up" data-aos-delay="400">
+                                     <!-- Single Prodect -->
+                                     <div class="product">
+                                         <div class="thumb">
+                                             <a href="single-product.html" class="image">
+                                                 <img src="assets/images/product-image/6.jpg" alt="Product">
+                                                 <img class="hover-image" src="assets/images/product-image/6.jpg" alt="Product">
+                                             </a>
+                                             <span class="badges">
+                                                        </span>
+                                             <div class="actions">
+                                                 <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                 <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                 <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                             </div>
+                                             <button title="Add To Cart" class=" add-to-cart">Add
+                                                 To Cart</button>
+                                         </div>
+                                         <div class="content">
+                                                        <span class="ratings">
+                                                            <span class="rating-wrap">
+                                                                <span class="star" style="width: 100%"></span>
+                                                            </span>
+                                                            <span class="rating-num">( 5 Review )</span>
+                                                        </span>
+                                             <h5 class="title"><a href="single-product.html">Portrait Of A
+                                                     Young
+                                                     Stylish</a>
+                                             </h5>
+                                             <span class="price">
+                                                            <span class="new">$38.50</span>
+                                                        </span>
+                                         </div>
+                                     </div>
+                                     <!-- Single Prodect -->
+                                 </div>
+                                 <div class="col-md-4 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up" data-aos-delay="600">
+                                     <!-- Single Prodect -->
+                                     <div class="product">
+                                         <div class="thumb">
+                                             <a href="single-product.html" class="image">
+                                                 <img src="assets/images/product-image/7.jpg" alt="Product">
+                                                 <img class="hover-image" src="assets/images/product-image/7.jpg" alt="Product">
+                                             </a>
+                                             <span class="badges">
+                                                        </span>
+                                             <div class="actions">
+                                                 <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                 <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                 <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                             </div>
+                                             <button title="Add To Cart" class=" add-to-cart">Add
+                                                 To Cart</button>
+                                         </div>
+                                         <div class="content">
+                                                        <span class="ratings">
+                                                            <span class="rating-wrap">
+                                                                <span class="star" style="width: 80%"></span>
+                                                            </span>
+                                                            <span class="rating-num">( 4 Review )</span>
+                                                        </span>
+                                             <h5 class="title"><a href="single-product.html">Men's Fashion
+                                                     Leather
+                                                     Bag</a></h5>
+                                             <span class="price">
+                                                            <span class="new">$30.50</span>
+                                                        </span>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-4 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up" data-aos-delay="800">
+                                     <!-- Single Prodect -->
+                                     <div class="product">
+                                         <div class="thumb">
+                                             <a href="single-product.html" class="image">
+                                                 <img src="assets/images/product-image/8.jpg" alt="Product">
+                                                 <img class="hover-image" src="assets/images/product-image/8.jpg" alt="Product">
+                                             </a>
+                                             <span class="badges">
+                                                            <span class="new">Sale</span>
+                                                        </span>
+                                             <div class="actions">
+                                                 <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                 <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                 <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                             </div>
+                                             <button title="Add To Cart" class=" add-to-cart">Add
+                                                 To Cart</button>
+                                         </div>
+                                         <div class="content">
+                                                        <span class="ratings">
+                                                            <span class="rating-wrap">
+                                                                <span class="star" style="width: 60%"></span>
+                                                            </span>
+                                                            <span class="rating-num">( 3 Review )</span>
+                                                        </span>
+                                             <h5 class="title"><a href="single-product.html">Long sleeve
+                                                     knee
+                                                     length</a></h5>
+                                             <span class="price">
+                                                            <span class="new">$38.50</span>
+                                                        </span>
+                                         </div>
+                                     </div>
+                                     <!-- Single Prodect -->
+                                 </div>
+                                 <div class="col-md-4 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up" data-aos-delay="800">
+                                     <!-- Single Prodect -->
+                                     <div class="product">
+                                         <div class="thumb">
+                                             <a href="single-product.html" class="image">
+                                                 <img src="assets/images/product-image/9.jpg" alt="Product">
+                                                 <img class="hover-image" src="assets/images/product-image/9.jpg" alt="Product">
+                                             </a>
+                                             <span class="badges">
+                                                            <span class="new">Sale</span>
+                                                        </span>
+                                             <div class="actions">
+                                                 <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                 <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                 <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                             </div>
+                                             <button title="Add To Cart" class=" add-to-cart">Add
+                                                 To Cart</button>
+                                         </div>
+                                         <div class="content">
+                                                        <span class="ratings">
+                                                            <span class="rating-wrap">
+                                                                <span class="star" style="width: 60%"></span>
+                                                            </span>
+                                                            <span class="rating-num">( 3 Review )</span>
+                                                        </span>
+                                             <h5 class="title"><a href="single-product.html">Long sleeve
+                                                     knee
+                                                     length</a></h5>
+                                             <span class="price">
+                                                            <span class="new">$38.50</span>
+                                                        </span>
+                                         </div>
+                                     </div>
+                                     <!-- Single Prodect -->
+                                 </div>
 
-                                <!-- Item Name -->
-                                <div class="item-name fr-grd"> <a href="/item/{{$item->slug}}" class="i-tittle"> {{$item->name}}</a>
-                                    <span class="price"><small>$</small><span class="line-through">{{$item->prices}}</span> <small>$USD</small>{{$item->price}}</span>
-                                    <a class="deta animated fadeInRight" href="/item/{{$item->slug}}">View Detail</a> </div>
-                                <!-- Item Details -->
-                                <div class="cap-text">
-                                    <div class="item-name"> <a href="/item/{{$item->slug}}" class="i-tittle">{{$item->name}}</a>
-                                        <span class="price"><small>$USD </small><span class="line-through">{{$item->price}}</span> <small>$ETB</small>{{$item->price}}</span>
-                                        <!-- Stars -->
-                                        <div class="stras">
-                                            <i class="fa fa-star"></i> <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i> <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-half-o"></i>
+                                 <div class="col-md-4 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up" data-aos-delay="200">
+                                     <!-- Single Prodect -->
+                                     <div class="product">
+                                         <div class="thumb">
+                                             <a href="single-product.html" class="image">
+                                                 <img src="assets/images/product-image/1.jpg" alt="Product">
+                                                 <img class="hover-image" src="assets/images/product-image/1.jpg" alt="Product">
+                                             </a>
+                                             <span class="badges">
+                                                            <span class="new">New</span>
+                                                        </span>
+                                             <div class="actions">
+                                                 <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                 <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                 <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                             </div>
+                                             <button title="Add To Cart" class=" add-to-cart">Add
+                                                 To Cart</button>
+                                         </div>
+                                         <div class="content">
+                                                        <span class="ratings">
+                                                            <span class="rating-wrap">
+                                                                <span class="star" style="width: 100%"></span>
+                                                            </span>
+                                                            <span class="rating-num">( 5 Review )</span>
+                                                        </span>
+                                             <h5 class="title"><a href="single-product.html">Women's
+                                                     Elizabeth Coat
+                                                 </a>
+                                             </h5>
+                                             <span class="price">
+                                                            <span class="new">$38.50</span>
+                                                        </span>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-4 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up" data-aos-delay="400">
+                                     <!-- Single Prodect -->
+                                     <div class="product">
+                                         <div class="thumb">
+                                             <a href="single-product.html" class="image">
+                                                 <img src="assets/images/product-image/2.jpg" alt="Product">
+                                                 <img class="hover-image" src="assets/images/product-image/2.jpg" alt="Product">
+                                             </a>
+                                             <span class="badges">
+                                                            <span class="sale">-10%</span>
+                                                            <span class="new">New</span>
+                                                        </span>
+                                             <div class="actions">
+                                                 <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                 <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                 <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                             </div>
+                                             <button title="Add To Cart" class=" add-to-cart">Add
+                                                 To Cart</button>
+                                         </div>
+                                         <div class="content">
+                                                        <span class="ratings">
+                                                            <span class="rating-wrap">
+                                                                <span class="star" style="width: 80%"></span>
+                                                            </span>
+                                                            <span class="rating-num">( 4 Review )</span>
+                                                        </span>
+                                             <h5 class="title"><a href="single-product.html">Ardene
+                                                     Microfiber
+                                                     Tights</a>
+                                             </h5>
+                                             <span class="price">
+                                                            <span class="new">$38.50</span>
+                                                            <span class="old">$48.50</span>
+                                                        </span>
+                                         </div>
+                                     </div>
+                                     <!-- Single Prodect -->
+                                 </div>
+                                 <div class="col-md-4 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up" data-aos-delay="600">
+                                     <!-- Single Prodect -->
+                                     <div class="product">
+                                         <div class="thumb">
+                                             <a href="single-product.html" class="image">
+                                                 <img src="assets/images/product-image/3.jpg" alt="Product">
+                                                 <img class="hover-image" src="assets/images/product-image/3.jpg" alt="Product">
+                                             </a>
+                                             <span class="badges">
+                                                            <span class="sale">-7%</span>
+                                                        </span>
+                                             <div class="actions">
+                                                 <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                 <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                 <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                             </div>
+                                             <button title="Add To Cart" class=" add-to-cart">Add
+                                                 To Cart</button>
+                                         </div>
+                                         <div class="content">
+                                                        <span class="ratings">
+                                                            <span class="rating-wrap">
+                                                                <span class="star" style="width: 0%"></span>
+                                                            </span>
+                                                            <span class="rating-num">( 0 Review )</span>
+                                                        </span>
+                                             <h5 class="title"><a href="single-product.html">Women's Long
+                                                     Sleeve
+                                                     Shirts</a></h5>
+                                             <span class="price">
+                                                            <span class="new">$30.50</span>
+                                                            <span class="old">$38.00</span>
+                                                        </span>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="tab-pane fade" id="shop-list">
+                             <div class="shop-list-wrapper">
+                                 <div class="row">
+                                     <div class="col-md-5 col-lg-5 col-xl-4">
+                                         <div class="product">
+                                             <div class="thumb">
+                                                 <a href="single-product.html" class="image">
+                                                     <img src="assets/images/product-image/1.jpg" alt="Product">
+                                                     <img class="hover-image" src="assets/images/product-image/1.jpg" alt="Product">
+                                                 </a>
+                                                 <span class="badges">
+                                                                <span class="new">New</span>
+                                                            </span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="col-md-7 col-lg-7 col-xl-8">
+                                         <div class="content-desc-wrap">
+                                             <div class="content">
+                                                            <span class="ratings">
+                                                                <span class="rating-wrap">
+                                                                    <span class="star" style="width: 100%"></span>
+                                                                </span>
+                                                                <span class="rating-num">( 5 Review )</span>
+                                                            </span>
+                                                 <h5 class="title"><a href="single-product.html">Women's
+                                                         Elizabeth Coat</a></h5>
+                                                 <p>More room to move.With 80GB or 160GB of storage and up to
+                                                     40 hours of battery life, the new iPod classic lets you
+                                                     enjoy up to 40,000 songs or..</p>
+                                             </div>
+                                             <div class="box-inner">
+                                                            <span class="price">
+                                                                <span class="new">$38.50</span>
+                                                            </span>
+                                                 <div class="actions">
+                                                     <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                     <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                     <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                 </div>
+                                                 <button title="Add To Cart" class=" add-to-cart">Add
+                                                     To Cart</button>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="shop-list-wrapper">
+                                 <div class="row">
+                                     <div class="col-md-5 col-lg-5 col-xl-4">
+                                         <div class="product">
+                                             <div class="thumb">
+                                                 <a href="single-product.html" class="image">
+                                                     <img src="assets/images/product-image/2.jpg" alt="Product">
+                                                     <img class="hover-image" src="assets/images/product-image/2.jpg" alt="Product">
+                                                 </a>
+                                                 <span class="badges">
+                                                                <span class="sale">-10%</span>
+                                                                <span class="new">New</span>
+                                                            </span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="col-md-7 col-lg-7 col-xl-8">
+                                         <div class="content-desc-wrap">
+                                             <div class="content">
+                                                            <span class="ratings">
+                                                                <span class="rating-wrap">
+                                                                    <span class="star" style="width: 80%"></span>
+                                                                </span>
+                                                                <span class="rating-num">( 4 Review )</span>
+                                                            </span>
+                                                 <h5 class="title"><a href="single-product.html">Ardene
+                                                         Microfiber
+                                                         Tights</a>
+                                                 </h5>
+                                                 <p>More room to move.With 80GB or 160GB of storage and up to
+                                                     40 hours of battery life, the new iPod classic lets you
+                                                     enjoy up to 40,000 songs or..</p>
+                                             </div>
+                                             <div class="box-inner">
+                                                            <span class="price">
+                                                                <span class="new">$38.50</span>
+                                                                <span class="old">$48.50</span>
+                                                            </span>
+                                                 <div class="actions">
+                                                     <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                     <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                     <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                 </div>
+                                                 <button title="Add To Cart" class=" add-to-cart">Add
+                                                     To Cart</button>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="shop-list-wrapper">
+                                 <div class="row">
+                                     <div class="col-md-5 col-lg-5 col-xl-4">
+                                         <div class="product">
+                                             <div class="thumb">
+                                                 <a href="single-product.html" class="image">
+                                                     <img src="assets/images/product-image/3.jpg" alt="Product">
+                                                     <img class="hover-image" src="assets/images/product-image/3.jpg" alt="Product">
+                                                 </a>
+                                                 <span class="badges">
+                                                                <span class="sale">-7%</span>
+                                                            </span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="col-md-7 col-lg-7 col-xl-8">
+                                         <div class="content-desc-wrap">
+                                             <div class="content">
+                                                            <span class="ratings">
+                                                                <span class="rating-wrap">
+                                                                    <span class="star" style="width: 0%"></span>
+                                                                </span>
+                                                                <span class="rating-num">( 0 Review )</span>
+                                                            </span>
+                                                 <h5 class="title"><a href="single-product.html">Women's Long
+                                                         Sleeve
+                                                         Shirts</a></h5>
+                                                 <p>More room to move.With 80GB or 160GB of storage and up to
+                                                     40 hours of battery life, the new iPod classic lets you
+                                                     enjoy up to 40,000 songs or..</p>
+                                             </div>
+                                             <div class="box-inner">
+                                                            <span class="price">
+                                                                <span class="new">$38.50</span>
+                                                                <span class="old">$45.00</span>
+                                                            </span>
+                                                 <div class="actions">
+                                                     <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                     <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                     <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                 </div>
+                                                 <button title="Add To Cart" class=" add-to-cart">Add
+                                                     To Cart</button>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="shop-list-wrapper">
+                                 <div class="row">
+                                     <div class="col-md-5 col-lg-5 col-xl-4">
+                                         <div class="product">
+                                             <div class="thumb">
+                                                 <a href="single-product.html" class="image">
+                                                     <img src="assets/images/product-image/4.jpg" alt="Product">
+                                                     <img class="hover-image" src="assets/images/product-image/4.jpg" alt="Product">
+                                                 </a>
+                                                 <span class="badges">
+                                                                <span class="new">Sale</span>
+                                                            </span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="col-md-7 col-lg-7 col-xl-8">
+                                         <div class="content-desc-wrap">
+                                             <div class="content">
+                                                            <span class="ratings">
+                                                                <span class="rating-wrap">
+                                                                    <span class="star" style="width: 70%"></span>
+                                                                </span>
+                                                                <span class="rating-num">( 3.5 Review )</span>
+                                                            </span>
+                                                 <h5 class="title"><a href="single-product.html">Parrera
+                                                         Sunglasses -
+                                                         Lomashop</a></h5>
+                                                 <p>More room to move.With 80GB or 160GB of storage and up to
+                                                     40 hours of battery life, the new iPod classic lets you
+                                                     enjoy up to 40,000 songs or..</p>
+                                             </div>
+                                             <div class="box-inner">
+                                                            <span class="price">
+                                                                <span class="new">$38.50</span>
+                                                            </span>
+                                                 <div class="actions">
+                                                     <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                     <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                     <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                 </div>
+                                                 <button title="Add To Cart" class=" add-to-cart">Add
+                                                     To Cart</button>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="shop-list-wrapper">
+                                 <div class="row">
+                                     <div class="col-md-5 col-lg-5 col-xl-4">
+                                         <div class="product">
+                                             <div class="thumb">
+                                                 <a href="single-product.html" class="image">
+                                                     <img src="assets/images/product-image/5.jpg" alt="Product">
+                                                     <img class="hover-image" src="assets/images/product-image/5.jpg" alt="Product">
+                                                 </a>
+                                                 <span class="badges">
+                                                                <span class="sale">-5%</span>
+                                                                <span class="new">New</span>
+                                                            </span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="col-md-7 col-lg-7 col-xl-8">
+                                         <div class="content-desc-wrap">
+                                             <div class="content">
+                                                            <span class="ratings">
+                                                                <span class="rating-wrap">
+                                                                    <span class="star" style="width: 100%"></span>
+                                                                </span>
+                                                                <span class="rating-num">( 5 Review )</span>
+                                                            </span>
+                                                 <h5 class="title"><a href="single-product.html">Cool Man
+                                                         Wearing
+                                                         Leather</a></h5>
+                                                 <p>More room to move.With 80GB or 160GB of storage and up to
+                                                     40 hours of battery life, the new iPod classic lets you
+                                                     enjoy up to 40,000 songs or..</p>
+                                             </div>
+                                             <div class="box-inner">
+                                                            <span class="price">
+                                                                <span class="new">$38.50</span>
+                                                                <span class="old">$45.50</span>
+                                                            </span>
+                                                 <div class="actions">
+                                                     <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                     <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                     <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                 </div>
+                                                 <button title="Add To Cart" class=" add-to-cart">Add
+                                                     To Cart</button>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="shop-list-wrapper">
+                                 <div class="row">
+                                     <div class="col-md-5 col-lg-5 col-xl-4">
+                                         <div class="product">
+                                             <div class="thumb">
+                                                 <a href="single-product.html" class="image">
+                                                     <img src="assets/images/product-image/6.jpg" alt="Product">
+                                                     <img class="hover-image" src="assets/images/product-image/6.jpg" alt="Product">
+                                                 </a>
+                                                 <span class="badges">
+                                                            </span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="col-md-7 col-lg-7 col-xl-8">
+                                         <div class="content-desc-wrap">
+                                             <div class="content">
+                                                            <span class="ratings">
+                                                                <span class="rating-wrap">
+                                                                    <span class="star" style="width: 100%"></span>
+                                                                </span>
+                                                                <span class="rating-num">( 5 Review )</span>
+                                                            </span>
+                                                 <h5 class="title"><a href="single-product.html">Portrait Of A
+                                                         Young
+                                                         Stylish</a>
+                                                     <p>More room to move.With 80GB or 160GB of storage and up to
+                                                         40 hours of battery life, the new iPod classic lets you
+                                                         enjoy up to 40,000 songs or..</p>
+                                                 </h5></div>
+                                             <div class="box-inner">
+                                                            <span class="price">
+                                                                <span class="new">$38.50</span>
+                                                            </span>
+                                                 <div class="actions">
+                                                     <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                     <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                     <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                 </div>
+                                                 <button title="Add To Cart" class=" add-to-cart">Add
+                                                     To Cart</button>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="shop-list-wrapper">
+                                 <div class="row">
+                                     <div class="col-md-5 col-lg-5 col-xl-4">
+                                         <div class="product">
+                                             <div class="thumb">
+                                                 <a href="single-product.html" class="image">
+                                                     <img src="assets/images/product-image/7.jpg" alt="Product">
+                                                     <img class="hover-image" src="assets/images/product-image/7.jpg" alt="Product">
+                                                 </a>
+                                                 <span class="badges">
+                                                            </span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="col-md-7 col-lg-7 col-xl-8">
+                                         <div class="content-desc-wrap">
+                                             <div class="content">
+                                                            <span class="ratings">
+                                                                <span class="rating-wrap">
+                                                                    <span class="star" style="width: 80%"></span>
+                                                                </span>
+                                                                <span class="rating-num">( 4 Review )</span>
+                                                            </span>
+                                                 <h5 class="title"><a href="single-product.html">Men's Fashion
+                                                         Leather
+                                                         Bag</a></h5>
+                                                 <p>More room to move.With 80GB or 160GB of storage and up to
+                                                     40 hours of battery life, the new iPod classic lets you
+                                                     enjoy up to 40,000 songs or..</p>
+                                             </div>
+                                             <div class="box-inner">
+                                                            <span class="price">
+                                                                <span class="new">$38.50</span>
+                                                            </span>
+                                                 <div class="actions">
+                                                     <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                     <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                     <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                 </div>
+                                                 <button title="Add To Cart" class=" add-to-cart">Add
+                                                     To Cart</button>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="shop-list-wrapper">
+                                 <div class="row">
+                                     <div class="col-md-5 col-lg-5 col-xl-4">
+                                         <div class="product">
+                                             <div class="thumb">
+                                                 <a href="single-product.html" class="image">
+                                                     <img src="assets/images/product-image/8.jpg" alt="Product">
+                                                     <img class="hover-image" src="assets/images/product-image/8.jpg" alt="Product">
+                                                 </a>
+                                                 <span class="badges">
+                                                                <span class="new">Sale</span>
+                                                            </span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="col-md-7 col-lg-7 col-xl-8">
+                                         <div class="content-desc-wrap">
+                                             <div class="content">
+                                                            <span class="ratings">
+                                                                <span class="rating-wrap">
+                                                                    <span class="star" style="width: 60%"></span>
+                                                                </span>
+                                                                <span class="rating-num">( 3 Review )</span>
+                                                            </span>
+                                                 <h5 class="title"><a href="single-product.html">Long sleeve
+                                                         knee
+                                                         length</a></h5>
+                                                 <p>More room to move.With 80GB or 160GB of storage and up to
+                                                     40 hours of battery life, the new iPod classic lets you
+                                                     enjoy up to 40,000 songs or..</p>
+                                             </div>
+                                             <div class="box-inner">
+                                                            <span class="price">
+                                                                <span class="new">$38.50</span>
+                                                            </span>
+                                                 <div class="actions">
+                                                     <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                     <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                     <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                 </div>
+                                                 <button title="Add To Cart" class=" add-to-cart">Add
+                                                     To Cart</button>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="shop-list-wrapper">
+                                 <div class="row">
+                                     <div class="col-md-5 col-lg-5 col-xl-4">
+                                         <div class="product">
+                                             <div class="thumb">
+                                                 <a href="single-product.html" class="image">
+                                                     <img src="assets/images/product-image/9.jpg" alt="Product">
+                                                     <img class="hover-image" src="assets/images/product-image/9.jpg" alt="Product">
+                                                 </a>
+                                                 <span class="badges">
+                                                                <span class="new">Sale</span>
+                                                            </span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="col-md-7 col-lg-7 col-xl-8">
+                                         <div class="content-desc-wrap">
+                                             <div class="content">
+                                                            <span class="ratings">
+                                                                <span class="rating-wrap">
+                                                                    <span class="star" style="width: 60%"></span>
+                                                                </span>
+                                                                <span class="rating-num">( 3 Review )</span>
+                                                            </span>
+                                                 <h5 class="title"><a href="single-product.html">Ardene Microfiber
+                                                         Tights</a></h5>
+                                                 <p>More room to move.With 80GB or 160GB of storage and up to
+                                                     40 hours of battery life, the new iPod classic lets you
+                                                     enjoy up to 40,000 songs or..</p>
+                                             </div>
+                                             <div class="box-inner">
+                                                            <span class="price">
+                                                                <span class="new">$38.50</span>
+                                                            </span>
+                                                 <div class="actions">
+                                                     <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                     <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
+                                                     <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                 </div>
+                                                 <button title="Add To Cart" class=" add-to-cart">Add
+                                                     To Cart</button>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <!-- Tab Content Area End -->
 
-                                            <a href="#." class="wsh-list"><i class="icon-heart"></i> ADD TO WISHLIST</a> </div>
-                                        <!-- Details -->
-                                        <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-
-                                        <!-- List Style -->
-                                        <ul class="list-style">
-                                            <li> Best Shop Products </li>
-                                            <li> Color Option </li>
-                                            <li> All Sizes </li>
-                                            <li> Discounted Prices </li>
-                                            <li> Refund Poloicy </li>
-                                            <li> New Arrival </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            @endforeach
-
-                    </div>
-                </div>
-
-                <!-- View All Items -->
-                <div class="text-center margin-top-30"> <a href="#." class="btn margin-right-20">View ALl Shop Items</a> </div>
-
-                <!-- Quick View -->
-                <div id="qck-view-shop" class="zoom-anim-dialog qck-inside mfp-hide">
-                    <div class="row">
-                        <div class="col-md-6">
-
-                            <!-- Images Slider -->
-                            <div class="images-slider">
-                                <ul class="slides">
-                                    <li data-thumb="images/item-img-1-1.jpg"> <img src="images/item-img-1-1.jpg" alt=""> </li>
-                                    <li data-thumb="images/item-img-1-1-1.jpg"> <img src="images/item-img-1-1-1.jpg" alt=""> </li>
-                                    <li data-thumb="images/item-img-1-1.jpg"> <img src="images/item-img-1-1.jpg" alt=""> </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Content Info -->
-                        <div class="col-md-6">
-                            <div class="contnt-info">
-                                <h3>Mid Rise Skinny Jeans</h3>
-                                <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. <br>
-                                    <br>
-                                    These words are here to provide the reader with a basic impression of how actual text will appear in its final presentation. </p>
-
-                                <!-- Btn  -->
-                                <div class="add-info">
-                                    <div class="quantity">
-                                        <input type="number" min="1" max="100" step="1" value="1" class="form-control qty">
-                                    </div>
-                                    <a href="#." class="btn btn-inverse"><i class="icon-heart"></i></a>
-                                    <a href="/addtocart/{{$item->id}}" class="btn">ADD TO CART </a> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+             <!--  Pagination Area Start -->
+             <div class="load-more-items text-center mt-30px0px" data-aos="fade-up">
+                 <a href="#" class="btn btn-lg btn-primary btn-hover-dark m-auto"> Load More <i class="fa fa-refresh ml-15px" aria-hidden="true"></i></a>
+             </div>
+             <!--  Pagination Area End -->
+         </div>
+         <!-- Shop Bottom Area End -->
+     </div>
+ </section>
 @endsection

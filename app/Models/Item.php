@@ -45,4 +45,15 @@ class Item extends Model
         return Item::orderBy('visit', 'desc')->take($n)->get();
     }
 
+    public static function universalN($n){
+        return Item::orderBy('id','desc')->where('item_category_id','LIKE','3')->take($n)->get();
+    }
+
+ public static function womensN($n){
+        return Item::orderBy('id','desc')->where('item_category_id','LIKE','1')->take($n)->get();
+    }
+    public static function mensN($n){
+        return Item::orderBy('id','desc')->where('item_category_id','LIKE','2')->take($n)->get();
+    }
+
 }
