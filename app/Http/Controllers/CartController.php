@@ -34,7 +34,7 @@ class CartController extends Controller
             ];
 
             session()->put('cart', $cart);
-        return 'Cart Updated Succussfully';
+        return count(session()->get('cart'));
             //return redirect()->back()->with('success', 'Product added to cart successfully!');
         }
 
@@ -46,7 +46,7 @@ class CartController extends Controller
             session()->put('cart', $cart);
 
            // return redirect()->back()->with('success', 'Product added to cart successfully!');
-            return 'Cart Updated Succesfully';
+            return count(session()->get('cart'));
 
         }
 
@@ -61,7 +61,7 @@ class CartController extends Controller
         ];
 
         session()->put('cart', $cart);
-        return 'Cart Updated Succesfully';
+        return count(session()->get('cart'));
     //    return redirect()->back()->with('success', 'Product added to cart successfully!');
     }
 

@@ -3480,10 +3480,11 @@
 <script src="/assets/js/main.js"></script>
 <script>
     $( ".add-to-cart" ).click(function() {
+
 var itemid=$(this).attr("itemid")
-        $.get("/addtocart/"+$itemid, function(data){
+        $.get("/addtocart/"+itemid, function(data){
             // Display the returned data in browser
-                alert(data);
+             $('#cartCount').html(data);
         });
     });
 </script>
