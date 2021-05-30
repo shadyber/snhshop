@@ -1,1 +1,2 @@
-index
+
+@section('title','Contact Us')
