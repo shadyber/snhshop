@@ -1,68 +1,51 @@
 @extends('layouts.app')
+@section('title','Blog')
 @section('content')
-    <section class="sub-bnr" data-stellar-background-ratio="0.5" style="background-position: 0% -46.5px;">
-        <div class="position-center-center">
-            <div class="container">
-                <h4>Blog List</h4>
-                <ol class="breadcrumb">
-                    <li><a href="/">Home</a></li>
-                    <li class="active"><a href="/blog">BLOG</a></li>
-                </ol>
-            </div>
-        </div>
-    </section>
 
-
-    <div id="content">
-
-        <!-- Blog List -->
-        <section class="blog-list blog-list-3 padding-top-100 padding-bottom-100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-9">
-                    @foreach($blogs as $blog)
-                        <!-- Article -->
-                        <article>
-                            <div class="row">
-                                <div class="col-sm-5">
-                                    <!-- Post Img -->
-                                    <img class="img-responsive" src="{{$blog->thumb}}" alt="{{$blog->title}}"> </div>
-                                <div class="col-sm-7">
-                                    <!-- Tittle -->
-                                    <div class="post-tittle left"> <a href="/blog/{{$blog->slug}}" class="tittle">{{$blog->title}}</a>
-                                        <!-- Post Info -->
-                                        <span><i class="primary-color icon-user"></i> by {{$blog->user->name}}</span>
-                                        <span><i class="primary-color icon-calendar"></i>{{$blog->created_at->diffForHumans()}}</span>
-                                        <span><i class="primary-color icon-bubble"></i> 05</span>
-                                        <span><i class="primary-color icon-tag"></i> Fashion</span>
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="text-left">
-                                        <p> {{\Illuminate\Support\Str::substr($blog->detail,0,400)}}</p>
-                                        <a href="/blog/{{$blog->slug}}" class="red-more">READ MORE</a> </div>
-                                </div>
+    <div class="blog-grid pb-100px  main-blog-page single-blog-page">
+        <div class="container">
+            <div class="row">
+            @foreach($blogs as $blog)
+                <div class="col-lg-6 col-md-6 col-xl-4 mb-50px">
+                    <div class="single-blog">
+                        <div class="blog-image">
+                            <a href="/blog/{{$blog->slug}}"><img src="{{$blog->thumb}}" class="img-responsive w-100" alt=""></a>
+                        </div>
+                        <div class="blog-text">
+                            <div class="blog-athor-date">
+                                <a class="blog-date height-shape" href="#"><i class="fa fa-calendar" aria-hidden="true"></i> 24 Aug, 2021</a>
+                                <a class="blog-mosion" href="#"><i class="fa fa-commenting" aria-hidden="true"></i> 1.5
+                                    K</a>
                             </div>
-                        </article>
+                            <h5 class="blog-heading"><a class="blog-heading-link" href="blog-single-left-sidebar.html">There are many variations of
+                                    passages of Lorem</a></h5>
 
-                        @endforeach
-                        <!-- Article -->
+                            <p>Lorem ipsum dolor, sit amet cons adipisicing elit. Cumque, quam aperiam alias modi sed
+                                totam possimus illo.</p>
 
-
-                        <!-- Pagination -->
-                        <ul class="pagination in-center">
-                            <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                        </ul>
+                            <a href="blog-single-left-sidebar.html" class="btn btn-primary blog-btn"> Read More<i class="fa fa-arrow-right ml-5px" aria-hidden="true"></i></a>
+                        </div>
                     </div>
+                </div>
+                <!-- End single blog -->
+                @endforeach
+            </div>
 
-                    @include('components.blogSidebar')
+            <!--  Pagination Area Start -->
+            <div class="pro-pagination-style text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="pages">
+
+                    <ul>
+                        <li class="li"><a class="page-link" href="?page=prev"><i class="fa fa-angle-left"></i></a></li>
+                        <li class="li"><a class="page-link active" href="?page=1">1</a></li>
+                        <li class="li"><a class="page-link" href="?page=2">2</a></li>
+                        <li class="li"><a class="page-link" href="?page=next"><i class="fa fa-angle-right"></i></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </section>
+            <!--  Pagination Area End -->
+        </div>
     </div>
-
 
 @endsection

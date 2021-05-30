@@ -2,8 +2,9 @@
 
 @section('title','Contact Us')
 @section('content')
-<section>
-    <div class="contact-area pt-100px pb-100px">
+
+    <section>
+    <div class="contact-area pb-100px">
         <div class="container">
             <div class="contact-wrapper">
                 <div class="row">

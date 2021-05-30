@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
 use App\Models\Address;
 use Illuminate\Support\Facades\Route;
 
@@ -51,4 +52,8 @@ Route::get('/contact', function(){
 });
 
 Route::get('/addtocart/{id}',[CartController::class,'addToCart'])->name('addtocart');
+
 Route::get('/mycart',[CartController::class,'myCart'])->name('mycart');
+
+Route::get('/checkout',[CheckoutController::class,'index'])->name('checkout');
+

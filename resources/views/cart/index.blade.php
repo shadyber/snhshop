@@ -126,7 +126,8 @@
                                 <div class="title-wrap">
                                     <h4 class="cart-bottom-title section-bg-gary-cart">Cart Total</h4>
                                 </div>
-                                <h5>Total products <span>$260.00</span></h5>
+
+                                <h5>Total products <span> ${{\App\Models\Cart::totalCart()}} </span></h5>
                                 <div class="total-shipping">
                                     <h5>Total shipping</h5>
                                     <ul>
