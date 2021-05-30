@@ -24,7 +24,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/gallery', [App\Http\Controllers\GalleryController::class, 'index'])->name('gallery');
+Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
+
 
 Route::resource('/item',App\Http\Controllers\ItemController::class);
 Route::resource('/items',App\Http\Controllers\AdminItemController::class);

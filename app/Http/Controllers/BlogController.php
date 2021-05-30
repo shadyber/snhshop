@@ -35,7 +35,7 @@ class BlogController extends Controller
     public function create()
     {
         //
-        return view('blog.create');
+        return view('admin.blog.create');
     }
 
     /**
@@ -107,7 +107,7 @@ class BlogController extends Controller
     public function edit(String $slug)
     {
         //
-        return view('blog.edit')->with('blog',Blog::where('slug',$slug));
+        return view('admin.blog.edit')->with('blog',Blog::where('slug',$slug));
     }
 
     /**

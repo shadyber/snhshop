@@ -1,4 +1,5 @@
 @extends('layouts.admin')
+@section('title','Blog edit')
 @section('content')
     <div class="card shadow mb-10">
         <!-- Card Header - Dropdown -->
@@ -34,8 +35,8 @@
                 <div class="form-group">
                     <select class="form-control form-control" name="blog_category_id" placeholder="Post Category' required>
                         @foreach(\App\Models\BlogCategory::allCategories() as $category)
-                            <option value="{{$category->id}}">{{$category->title}}</option>
-                        @endforeach
+                        <option value="{{$category->id}}">{{$category->title}}</option>
+                    @endforeach
                     </select>
                 </div>
 

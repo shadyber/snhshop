@@ -15,7 +15,7 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        //
+    return view('gallery.index')->with(['photos',Gallery::all()]);
     }
 
     /**
@@ -26,6 +26,7 @@ class GalleryController extends Controller
     public function create()
     {
         //
+       return view('admin.gallery.create');
     }
 
     /**
@@ -59,6 +60,8 @@ class GalleryController extends Controller
     public function edit(Gallery $gallery)
     {
         //
+
+        return  view('admin.gallery.edit')->with('gallery',$gallery);
     }
 
     /**
