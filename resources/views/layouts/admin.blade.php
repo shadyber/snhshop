@@ -45,7 +45,7 @@
 
 
                 @if(session()->has('message'))
-                    <div class="w-full bg-green-200 text-gray-300"> {{session()->get('message')}}</div>
+                    <div class="w-full bg-green-200 text-gray-300 border-2 border-gray-300"> {{session()->get('message')}}</div>
                 @endif
                 @if($errors)
 

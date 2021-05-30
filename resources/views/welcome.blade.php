@@ -598,7 +598,7 @@
                         <div class="deal-timing">
                             <div data-countdown="2021/05/15"></div>
                         </div>
-                        <a href="shop-left-sidebar.html" class="btn btn-lg btn-primary btn-hover-dark m-auto"> Shop
+                        <a href="/item" class="btn btn-lg btn-primary btn-hover-dark m-auto"> Shop
                             Now <i class="fa fa-shopping-basket ml-15px" aria-hidden="true"></i></a>
                     </div>
                     <div class="deal-image">
@@ -618,7 +618,7 @@
             <div class="col-md-12">
                 <div class="section-title text-center mb-30px0px">
                     <h2 class="title">#blog</h2>
-                    <p class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing eiusmod.
+                    <p class="sub-title">share our knoledge.
                     </p>
                 </div>
             </div>
@@ -626,11 +626,12 @@
         <!-- section title start -->
 
         <div class="row">
+            @foreach(\App\Models\Blog::lastN(3) as $blog)
             <div class="col-lg-4 mb-md-30px mb-lm-30px">
                 <div class="single-blog">
                     <div class="blog-image">
-                        <a href="blog-single-left-sidebar.html"><img src="/assets/images/blog-image/1.jpg"
-                                                                     class="img-responsive w-100" alt=""></a>
+                        <a href="/blog/{{$blog->slug}}"><img src="{{$blog->thumb}}"
+                                                                     class="img-responsive w-100" alt="{{$blog->thumb}}"></a>
                     </div>
                     <div class="blog-text">
                         <div class="blog-athor-date">
@@ -640,62 +641,15 @@
                                 K</a>
                         </div>
                         <h5 class="blog-heading"><a class="blog-heading-link"
-                                                    href="blog-single-left-sidebar.html">There are many variations of
-                                passages of Lorem</a></h5>
+                                                    href="/blog/{{$blog->slug}}">{{$blog->title}}</a></h5>
 
-                        <a href="blog-single-left-sidebar.html" class="btn btn-primary blog-btn"> Read More<i
+                        <a href="/blog/{{$blog->slug}}" class="btn btn-primary blog-btn"> Read More<i
                                 class="fa fa-arrow-right ml-5px" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
             <!-- End single blog -->
-            <div class="col-lg-4 mb-md-30px mb-lm-30px">
-                <div class="single-blog ">
-                    <div class="blog-image">
-                        <a href="blog-single-left-sidebar.html"><img src="/assets/images/blog-image/2.jpg"
-                                                                     class="img-responsive w-100" alt=""></a>
-                    </div>
-                    <div class="blog-text">
-                        <div class="blog-athor-date">
-                            <a class="blog-date height-shape" href="#"><i class="fa fa-calendar"
-                                                                          aria-hidden="true"></i> 24 Aug, 2021</a>
-                            <a class="blog-mosion" href="#"><i class="fa fa-commenting" aria-hidden="true"></i> 1.5
-                                K</a>
-                        </div>
-                        <h5 class="blog-heading"><a class="blog-heading-link"
-                                                    href="blog-single-left-sidebar.html">It is a long established factoi
-                                ader will be distracted</a></h5>
-
-                        <a href="blog-single-left-sidebar.html" class="btn btn-primary blog-btn"> Read More<i
-                                class="fa fa-arrow-right ml-5px" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- End single blog -->
-            <div class="col-lg-4">
-                <div class="single-blog">
-                    <div class="blog-image">
-                        <a href="blog-single-left-sidebar.html"><img src="/assets/images/blog-image/3.jpg"
-                                                                     class="img-responsive w-100" alt=""></a>
-                    </div>
-                    <div class="blog-text">
-                        <div class="blog-athor-date">
-                            <a class="blog-date height-shape" href="#"><i class="fa fa-calendar"
-                                                                          aria-hidden="true"></i> 24 Aug, 2021</a>
-                            <a class="blog-mosion" href="#"><i class="fa fa-commenting" aria-hidden="true"></i> 1.5
-                                K</a>
-                        </div>
-                        <h5 class="blog-heading"><a class="blog-heading-link"
-                                                    href="blog-single-left-sidebar.html">Contrary to popular belieflo
-                                lorem Ipsum is not</a></h5>
-
-
-                        <a href="blog-single-left-sidebar.html" class="btn btn-primary blog-btn"> Read More<i
-                                class="fa fa-arrow-right ml-5px" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- End single blog -->
+            @endforeach
         </div>
     </div>
 </div>
@@ -731,8 +685,17 @@
     $( ".add-to-cart" ).click(function() {
 
 var itemid=$(this).attr("itemid")
+        var cbtn=$(this);
         $.get("/addtocart/"+itemid, function(data){
             // Display the returned data in browser
+           cbtn.animate({
+                opacity: 0.25,
+                left: "+=5000",
+                top: "-=5000",
+                height: "toggle"
+            }, 50, function() {
+                // Animation complete.
+            });
              $('#cartCount').html(data);
         });
     });

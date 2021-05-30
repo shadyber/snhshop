@@ -101,6 +101,25 @@
 
 <!-- Main Js -->
 <script src="/assets/js/main.js"></script>
+<script>
+    $( ".add-to-cart" ).click(function() {
+
+        var itemid=$(this).attr("itemid")
+        var cbtn=$(this);
+        $.get("/addtocart/"+itemid, function(data){
+            // Display the returned data in browser
+            cbtn.animate({
+                opacity: 0.25,
+                left: "+=5000",
+                top: "-=5000",
+                height: "toggle"
+            }, 50, function() {
+                // Animation complete.
+            });
+            $('#cartCount').html(data);
+        });
+    });
+</script>
 </body>
 
 </html>
