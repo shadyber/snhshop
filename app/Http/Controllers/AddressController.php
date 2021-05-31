@@ -90,8 +90,12 @@ class AddressController extends Controller
      */
     public function edit(Address $address)
     {
-        //
-        return view('admin.address.edit')->with('address',$address);
+         if(Address::all()->last()){
+
+                   return view('admin.address.edit')->with(['address'=>Address::all()->last()]);
+             }else{
+                  return view('admin.address.create');
+              }
     }
 
     /**

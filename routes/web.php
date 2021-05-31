@@ -44,8 +44,8 @@ Route::get('/about/create',[AboutController::class,'create']);
 Route::get('/about/edit',[AboutController::class,'create']);
 Route::post('/about',[AboutController::class,'store']);
 
-Route::post('/address',[AddressController::class,'store']);
-Route::get('/address',[AddressController::class,'create']);
+Route::resource('/address',AddressController::class);
+
 
 Route::get('/contact', function(){
     return view('contact')->with('address', Address::all()->last());

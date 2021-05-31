@@ -162,9 +162,11 @@
                     <div class="login-content">
                         <h2>Log in</h2>
                         <h3>Log in your account</h3>
-                        <form action="#">
-                            <input type="text" placeholder="Username">
-                            <input type="password" placeholder="Password">
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
+
+                            <input type="email" name="email" placeholder="Email Address">
+                            <input type="password" name="password" placeholder="Password">
                             <div class="remember-forget-wrap">
                                 <div class="remember-wrap">
                                     <input type="checkbox">
@@ -172,12 +174,16 @@
                                     <span class="checkmark"></span>
                                 </div>
                                 <div class="forget-wrap">
-                                    <a href="#">Forgot your password?</a>
+                                    @if (Route::has('password.request'))
+                                        <a class="" href="{{ route('password.request') }}">
+                                            {{ __('Forgot Your Password?') }}
+                                        </a>
+                                    @endif
                                 </div>
                             </div>
-                            <button type="button">Log in</button>
+                            <button type="submit">Log in</button>
                             <div class="member-register">
-                                <p> Not a member? <a href="login.html"> Register now</a></p>
+                                <p> Not a member? <a href="/register"> Register now</a></p>
                             </div>
                         </form>
                     </div>
