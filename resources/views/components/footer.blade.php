@@ -81,13 +81,13 @@
                             <div class="footer-links">
                                 <div class="footer-row">
                                     <ul class="align-items-center">
-                                        <li class="li"><a class="single-link" href="index.html">Jesco</a>
+                                        <li class="li"><a class="single-link" href="/">Jesco</a>
                                         </li>
-                                        <li class="li"><a class="single-link" href="shop-left-sidebar.html">Shop</a>
+                                        <li class="li"><a class="single-link" href="/shop">Shop</a>
                                         </li>
                                         <li class="li"><a class="single-link" href="contact.html">Contact us</a>
                                         </li>
-                                        <li class="li"><a class="single-link" href="login.html">Log in</a></li>
+                                        <li class="li"><a class="single-link" href="/login">Log in</a></li>
                                         <li class="li"><a class="single-link" href="#">Help</a></li>
                                     </ul>
                                 </div>
