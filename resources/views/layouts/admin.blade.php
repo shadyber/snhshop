@@ -43,19 +43,8 @@
             <div class="container-fluid">
 
 
-
-                @if(session()->has('message'))
-                    <div class="w-full bg-green-200 text-gray-300 border-2 border-gray-300"> {{session()->get('message')}}</div>
-                @endif
-                @if($errors)
-
-                    <ul>
-                        @foreach($errors->all() as $error)
-                            <li>{{$error}}</li>
-                        @endforeach
-                    </ul>
-                @endif
-@yield('content')
+                @include('components.flash_message')
+                @yield('content')
             </div>
             <!-- /.container-fluid -->
 

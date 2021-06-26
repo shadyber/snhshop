@@ -20,15 +20,20 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            UserSeeder::class,
             AddressSeeder::class,
             CategorySeeder::class,
+            AdminSeeder::class,
+            RoleSeeder::class,
+            PermisionSeeder::class,
+            RolePermisionSeeder::class,
+            UserRoleSeeder::class,
+
           ]);
 
-          User::factory(10)->create();
-       ItemCategory::factory(10)->create();
-       Item::factory(50)->create();
-       BlogCategory::factory(10)->create();
-       Blog::factory(10)->create();
+        User::factory(10)->create();
+        ItemCategory::factory(10)->create();
+        Item::factory(50)->create();
+        BlogCategory::factory(10)->create();
+        Blog::factory(10)->create();
     }
 }

@@ -35,6 +35,10 @@ class ItemController extends Controller
      */
     public function create()
     {
+        if(!Auth::user()->hasRole('admin')){
+            return redirect()->back()->with('error','You Don\'t Have This Permission');
+        }
+
         //
         return view('admin.item.create');
     }
@@ -47,6 +51,9 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
+        if(!Auth::user()->hasRole('admin')){
+            return redirect()->back()->with('error','You Don\'t Have This Permission');
+        }
 
         $request->validate([
             'name'=>'required',
@@ -116,7 +123,11 @@ class ItemController extends Controller
     public function edit(Item $item)
     {
         //
-        return view('admin.item.edit')->with('item.edit')->with('item',$item);
+        if(!Auth::user()->hasRole('admin')){
+            return redirect()->back()->with('error','You Don\'t Have This Permission');
+        }
+
+        return view('admin.item.edit')->with('item',$item);
     }
 
     /**
@@ -139,7 +150,11 @@ class ItemController extends Controller
      */
     public function destroy(Item $item)
     {
-        //
+        if(!Auth::user()->hasRole('admin')){
+            return redirect()->back()->with('error','You Don\t Have This Permission');
+        }
+        $item->delete();
+        return redirect()->back()->with('success','Item removed');
     }
     /**
      * Create a thumbnail of specified size
@@ -153,6 +168,7 @@ class ItemController extends Controller
         $img = Image::make($path)->resize($width, $height, function ($constraint) {
             $constraint->aspectRatio();
         });
+
         $img->save($path);
     }
 }

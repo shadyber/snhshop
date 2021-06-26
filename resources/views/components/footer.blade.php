@@ -9,7 +9,7 @@
                     <div class="col-md-6 col-lg-3 mb-md-30px mb-lm-30px">
                         <div class="single-wedge">
                             <div class="footer-logo">
-                                <a href="index.html"><img src="/assets/images/logo/logo-white.png" alt=""></a>
+                                <a href="/"><img src="/assets/images/logo/logo-white.png" alt=""></a>
                             </div>
                             <p class="about-text">Lorem ipsum dolor sit amet consectet adipisicing elit, sed do
                                 eiusmod templ incididunt ut labore et dolore magnaol aliqua Ut enim ad minim.
@@ -162,7 +162,7 @@
                     <div class="login-content">
                         <h2>Log in</h2>
                         <h3>Log in your account</h3>
-                        <form method="POST" action="{{ route('login') }}">
+                        <form method="POST" action="{{ route('login') }}" >
                             @csrf
 
                             <input type="email" name="email" placeholder="Email Address">
@@ -315,3 +315,9 @@
 </div>
 <!-- Modal end -->
 @endforeach
+
+<script type="text/javascript">
+    @if (count($errors) > 0)
+    $('#loginActive').modal('show');
+    @endif
+</script>
