@@ -139,9 +139,9 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <h2>Search Your Product</h2>
-                    <form class="navbar-form position-relative" role="search">
+                    <form class="navbar-form position-relative" role="search" action="/search" method="get">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search here...">
+                            <input type="text" class="form-control" name="key" placeholder="Search here...">
                         </div>
                         <button type="submit" class="submit-btn"><i class="pe-7s-search"></i></button>
                     </form>

@@ -70,7 +70,7 @@
 
 
 
-                <div class="form-group row">
+                <div class="form-group row" style="display: none">
                     <div class="col-sm-4 mb-3 mb-sm-0">
                         <input type="number" class="form-control form-control" name="height" placeholder="Height"  >
                     </div>

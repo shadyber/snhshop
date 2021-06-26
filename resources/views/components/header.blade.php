@@ -95,8 +95,15 @@
                 <!-- Header Action Start -->
                 <div class="col col-lg-auto align-self-center pl-0">
                     <div class="header-actions">
-                        <a href="/login" class="header-action-btn login-btn" data-bs-toggle="modal"
-                           data-bs-target="#loginActive">Sign In</a>
+                       @auth
+                            <a href="/login" class="header-action-btn login-btn" data-bs-toggle="modal"
+                               data-bs-target="#loginActive">{{\Illuminate\Support\Facades\Auth::user()->name}}</a>
+
+                        @endauth
+                        @guest
+                        <a href="/profile" class="header-action-btn">Sign In</a>
+                       @endguest
+
                         <!-- Single Wedge Start -->
                         <a href="#" class="header-action-btn" data-bs-toggle="modal" data-bs-target="#searchActive">
                             <i class="pe-7s-search"></i>

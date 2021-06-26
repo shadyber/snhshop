@@ -20,9 +20,9 @@ class CreateItemsTable extends Migration
             $table->longText('detail');
             $table->string('photo');
             $table->string('thumb');
-            $table->string('color');
+            $table->string('color')->nullable();
             $table->double('price');
-            $table->string('measurement');
+            $table->string('measurement')->nullable();
             $table->string('weight');
 
             $table->unsignedBigInteger('item_category_id');
