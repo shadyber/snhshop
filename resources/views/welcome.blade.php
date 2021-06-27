@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="robots" content="index, follow" />
     <title>SandHShop | Welcome @yield ('title') </title>
-    <meta name="description" content="Jesco - Fashoin eCommerce HTML Template" />
+    <meta name="description" content="SANDHSHOP - HANDMADE PRODUCTS" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Add site Favicon -->
