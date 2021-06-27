@@ -7,6 +7,7 @@ use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
 
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 use Image;
 
 class ItemController extends Controller
