@@ -105,7 +105,7 @@
                                 <p class="address">2005 Your Address Goes Here. <br>
                                     896, Address 10010, HGJ</p>
                                 <p class="phone">Phone/Fax:<a href="tel:0123456789">0123456789</a></p>
-                                <p class="mail">Email:<a href="mailto:demo@example.com">demo@example.com</a></p>
+                                <p class="mail">Email:<a href="mailto:admin@sanhshop.com">admin@sanhshop.com</a></p>
                                 <img src="/assets/images/icons/payment.png" alt="" class="payment-img img-fulid">
 
                                 <!-- News letter area  End -->

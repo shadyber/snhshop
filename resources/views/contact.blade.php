@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="info-box">
                                     <h5 class="title">Email:</h5>
-                                    <p><a href="mailto:demo@example.com">demo@example.com</a></p>
+                                    <p><a href="mailto:admin@sanhshop.com">admin@sanhshop.com</a></p>
                                 </div>
                             </div>
                             <div class="single-contact">
