@@ -30,7 +30,7 @@ class ItemFactory extends Factory
        'color'=>$this->faker->colorName,
        'measurement'=>$this->faker->word,
        'weight'=>$this->faker->word,
-       'price'=>$this->faker->numberBetween(20,4000),
+       'price'=>180,
        'item_category_id'=>$this->faker->numberBetween(1,3),
        'user_id'=>$this->faker->numberBetween(1,2),
        'visit'=>$this->faker->numberBetween(1,300),
