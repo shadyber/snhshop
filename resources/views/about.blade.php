@@ -9,12 +9,11 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
                         <div class="about-intro-content">
-                            <h2 class="title">About Us</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius modjior tem incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniamyl quinol exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat. Duisau irure dolor in reprehenderit in
-                                voluptate velit esse cillum dolore euhti fugiat nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim</p>
+                            <h2 class="title">“Processing Time” and “Shipping Time”  </h2>
+                            <p>we are set to guarantee our customers satisfaction. That means, the item can be delivered to you earlier than the specified time. However, we set the maximum amount of time’s the product will take to get to your hand to eliminate any disappointment. Because we always need to make sure that our customers are happy all the time.
+                                Please if you need your order to be delivered earlier please Email us so that we can discuss on some arrangements.
+                            </p>
+
                         </div>
                     </div>
                 </div>
@@ -40,10 +39,8 @@
                     <div class="col-md-6 d-flex justify-content-center">
                         <div class="service-right-content align-self-center align-items-center">
                             <span class="sami-title">100% Guaranteed Pure Cotton</span>
-                            <h2 class="title">Best Products Here
-                                Every Day</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius modjior tem incididunt
-                                ut labore et dolore magna aliqua.</p>
+                            <h2 class="title">International Customers</h2>
+                            <p> Every country has its own import tax rules, and Sands shop cannot be held liable for any charges or taxes imposed by your government. Thank you for understanding.</p>
                             <a href="shop-left-sidebar.html" class="btn btn-primary service-btn"> Shop Now <i class="fa fa-shopping-basket ml-10px" aria-hidden="true"></i></a>
                         </div>
                     </div>
