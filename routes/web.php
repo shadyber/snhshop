@@ -59,3 +59,4 @@ Route::get('/checkout',[CheckoutController::class,'index'])->name('checkout');
 
 
 Route::get('/search',[\App\Http\Controllers\SearchController::class,'search'])->name('search');
+

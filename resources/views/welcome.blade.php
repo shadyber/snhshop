@@ -333,7 +333,7 @@
                     <!-- 4th tab end -->
 
                 </div>
-                <a href="/item" class="btn btn-lg btn-primary btn-hover-dark m-auto"> Load More <i
+                <a href="/item" class="btn btn-lg btn-primary btn-hover-dark "> Load More <i
                         class="fa fa-arrow-right ml-15px" aria-hidden="true"></i></a>
             </div>
         </div>

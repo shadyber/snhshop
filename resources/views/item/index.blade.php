@@ -168,7 +168,8 @@
 
                 <!--  Pagination Area Start -->
                 <div class="load-more-items text-center mt-30px0px" data-aos="fade-up">
-                    <a href="#" class="btn btn-lg btn-primary btn-hover-dark m-auto"> Load More <i
+                    {{ $items->links('vendor.pagination.bootstrap-4') }}
+                    <a href="/" class="btn btn-lg btn-primary btn-hover-dark m-auto"> Load More <i
                             class="fa fa-refresh ml-15px" aria-hidden="true"></i></a>
                 </div>
                 <!--  Pagination Area End -->

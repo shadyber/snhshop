@@ -26,4 +26,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function countries()
+
+    {
+
+        $countries = Countries::all();
+
+        return view('countries',compact('countries'));
+
+    }
 }

@@ -26,7 +26,7 @@ class ItemController extends Controller
 
     public function index()
     {
-        $items=Item::all();
+        $items=Item::Paginate(15);
      return view('item.index')->with(['items'=>$items]);
     }
 
