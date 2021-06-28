@@ -22,7 +22,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-        <a class="nav-link" href="/item/create">
+        <a class="nav-link" href="/items/create">
             <i class="fas fa-fw fa-shopping-bag"></i>
             <span>Add Items</span></a>
 

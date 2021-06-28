@@ -20,21 +20,37 @@
         <!-- Card Body -->
         <div class="card-body">
 
-            <form action="/item" method="post" enctype="multipart/form-data">
+            <form action="/items" method="post" enctype="multipart/form-data">
 @csrf
                 <div class="form-group">
                     <input type="text" class="form-control form-control" name="name" placeholder="Item Name" required>
+                    @error('name')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                    @enderror
+
                 </div>
 
 
 
                 <div class="form-group">
                     <input type="file" class="form-control form-control" name="photo" placeholder="Item Photo" required>
+                    @error('photo')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                    @enderror
                 </div>
 
                 <div class="form-group">
-                    <textarea class="form-control form-control" name="detail" placeholder="Item Photo" required>
+                    <textarea class="form-control form-control" name="detail" placeholder="Detail Information about the product" required>
                     </textarea>
+                    @error('detail')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                    @enderror
                 </div>
 
 
@@ -45,25 +61,54 @@
                         <option value="2">Female</option>
                         <option value="3">Universal</option>
                     </select>
+                    @error('item_category_id')
+                    <span class="invalid-feedback" role="alert">
+                     <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
 
 
                 <div class="form-group row">
+
                     <div class="col-sm-6 mb-3 mb-sm-0">
                         <input type="number" class="form-control form-control" name="price" placeholder="Item Price" required>
+                        @error('price')
+                        <span class="invalid-feedback" role="alert">
+                     <strong>{{ $message }}</strong>
+                    </span>
+                        @enderror
                     </div>
                     <div class="col-sm-6">
                         <input type="text" class="form-control form-control-user" name="weight" placeholder="Item Weight">
+                        @error('weight')
+                        <span class="invalid-feedback" role="alert">
+                     <strong>{{ $message }}</strong>
+                    </span>
+                        @enderror
                     </div>
+
+
                 </div>
 
 
                 <div class="form-group row">
                     <div class="col-sm-6 mb-3 mb-sm-0">
                         <input type="color" class="form-control form-control" name="color" placeholder="Item Color" value="black">
+                        @error('color')
+                        <span class="invalid-feedback" role="alert">
+                     <strong>{{ $message }}</strong>
+                    </span>
+                        @enderror
                     </div>
                     <div class="col-sm-6">
                         <input type="number" class="form-control form-control" name="init_qnt" placeholder="Stock Balance">
+
+                        @error('init_qnt')
+                        <span class="invalid-feedback" role="alert">
+                     <strong>{{ $message }}</strong>
+                    </span>
+                        @enderror
                     </div>
                 </div>
 

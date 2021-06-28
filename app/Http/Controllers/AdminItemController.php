@@ -52,21 +52,26 @@ class AdminItemController extends Controller
      */
     public function store(Request $request)
     {
+
         if(!Auth::user()->hasRole('admin')){
             return redirect()->back()->with('error','You Don\'t Have This Permission');
         }
+
 
         $request->validate([
             'name'=>'required',
             'detail'=>'required',
             'price'=>'required',
             'init_qnt'=>'required',
+            'item_category_id'=>'required',
             'photo'=>'required|mimes:jpg,png,jpeg|max:5048',
         ]);
 
+
+
         if($request->hasFile('photo')) {
 
-            $newImageName=uniqid().'_'. $request->title.'.'.$request->photo->extension();
+            $newImageName=uniqid().'_'. $request->_token.'.'.$request->photo->extension();
 
 
             $file = $request->file('photo');
@@ -99,7 +104,7 @@ class AdminItemController extends Controller
             ]
         );
 
-        return redirect()->back()->with('message','Item Created Succusfully!');
+        return redirect()->back()->with('success','Item Created Succusfully!');
 
 
     }
@@ -151,9 +156,8 @@ class AdminItemController extends Controller
         $input = $request->except('photo');
         $item->fill($input)->save();
 
-        Session::flash('message', 'Task successfully Updated!');
 
-        return redirect()->back();
+        return redirect()->back()->with('success','Item Updated Succesfully.');
 
     }
 
@@ -175,7 +179,7 @@ class AdminItemController extends Controller
 
         if($request->hasFile('photo')) {
 
-            $newImageName=uniqid().'_'. $request->title.'.'.$request->photo->extension();
+            $newImageName=uniqid().'_'. $request->_token.'.'.$request->photo->extension();
 
 
             $file = $request->file('photo');
@@ -191,9 +195,8 @@ class AdminItemController extends Controller
                 $item->photo='/images/items/'.$newImageName;
                 $item->thumb='/images/items/thumbnile/'.$newImageName;
                 $item->save();
-        Session::flash('message', 'Task successfully Updated!');
 
-        return redirect()->back();
+        return redirect()->back()->with('success','Item Photo added.');
 
     }
 
