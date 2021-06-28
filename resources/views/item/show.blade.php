@@ -25,9 +25,9 @@
                                 <div class="swiper-slide zoom-image-hover swiper-slide-next" role="group"
                                      aria-label="2 / 4" style="width: 456px; position: relative; overflow: hidden;">
                                     <img class="img-responsive m-auto"
-                                         src="/assets/images/product-image/zoom-image/2.jpg" alt="">
+                                         src="{{$photo->thumb}}" alt="">
                                     <img role="presentation" alt=""
-                                         src="http://localhost/fashions/assets/images/product-image/zoom-image/2.jpg"
+                                         src="{{$photo->photo}}"
                                          class="zoomImg"
                                          style="position: absolute; top: 0px; left: 0px; opacity: 0; width: 560px; height: 694px; border: none; max-width: none; max-height: none;">
                                 </div>
