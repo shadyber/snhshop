@@ -7,6 +7,7 @@ use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
 
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
@@ -51,6 +52,9 @@ class AdminItemController extends Controller
      */
     public function store(Request $request)
     {
+        if(!Auth::user()->hasRole('admin')){
+            return redirect()->back()->with('error','You Don\'t Have This Permission');
+        }
 
         $request->validate([
             'name'=>'required',
@@ -67,23 +71,21 @@ class AdminItemController extends Controller
 
             $file = $request->file('photo');
             $file_name =$newImageName;
-            $destinationPath = 'images/items/thumbnile/';
-            $new_img = Image::make($file->getRealPath())->resize(530, 694);
+            $destinationPath = 'images/items/';
+            $new_img = Image::make($file->getRealPath())->resize(true, true);
 
 // save file with medium quality
-            $new_img->save($destinationPath . $file_name, 80);
+            $new_img->save($destinationPath . $file_name, 100);
+            $new_img->save($destinationPath.'thumbnile/' . $file_name, 15);
+
             $request->photo->move(public_path('images/items'),$newImageName);
 
         }
-        $measurement=[
-            'w'=>$request->input('width'),
-            'h'=>$request->input('height'),
-            'd'=>$request->input('diameter'),
-        ];
+
         Item::create([
                 'name'=>$request->input('name'),
                 'detail'=>$request->input('detail'),
-                'slug'=>SlugService::createSlug(Item::class,'slug',$request->name),
+                'slug'=>SlugService::createSlug(Item::class,'slug',$request->title.$request->_token),
                 'photo'=>'/images/items/'.$newImageName,
                 'thumb'=>'/images/items/thumbnile/'.$newImageName,
                 'tags'=>$request->input('tags'),
@@ -93,7 +95,6 @@ class AdminItemController extends Controller
                 'init_qnt'=>$request->input('init_qnt'),
                 'badge'=>$request->input('badge'),
                 'user_id'=>auth()->user()->id,
-                'measurement'=>json_encode($measurement),
                 'item_category_id'=>$request->input('item_category_id'),
             ]
         );
@@ -143,6 +144,9 @@ class AdminItemController extends Controller
             'detail' => 'required',
             'price' => 'required'
         ]);
+
+
+
 
         $input = $request->except('photo');
         $item->fill($input)->save();
