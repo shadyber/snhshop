@@ -102,9 +102,9 @@
                             <h4 class="footer-herading">Store Information.</h4>
                             <div class="footer-links">
                                 <!-- News letter area -->
-                                <p class="address">2005 Your Address Goes Here. <br>
-                                    896, Address 10010, HGJ</p>
-                                <p class="phone">Phone/Fax:<a href="tel:0123456789">0123456789</a></p>
+                                <p class="address">Chicago , JO  USA<br>
+                                    812  Oakmound Road</p>
+                                <p class="phone">Phone/Fax:<a href="tel:0123456789">773-266-8212</a></p>
                                 <p class="mail">Email:<a href="mailto:admin@sanhshop.com">admin@sanhshop.com</a></p>
                                 <img src="/assets/images/icons/payment.png" alt="" class="payment-img img-fulid">
 
@@ -120,9 +120,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <p class="copy-text"> © 2021 <strong>Jesco</strong> Made With <i class="fa fa-heart"
-                                                                                         aria-hidden="true"></i> By <a class="company-name" href="https://hasthemes.com/">
-                                <strong> HasThemes</strong></a>.</p>
+                        <p class="copy-text"> © 2021 <strong>sandhstore</strong> Made With <i class="fa fa-heart"
+                                                                                         aria-hidden="true"></i> By <a class="company-name" href="https://rootsystem.info/">
+                                <strong> root system</strong></a>.</p>
                     </div>
                 </div>
             </div>
