@@ -62,13 +62,13 @@ class ItemPhotosController extends Controller
 
 // save file with medium quality
                 $new_img->save($destinationPath . $file_name, 80);
-                $file->move(public_path('images/items'), $request->_token);
+                $file->move(public_path('images/items'), $file_name);
 
                 $items_photo=new ItemPhotos;
 
                 $items_photo->item_id=$request->input('id');
-                $items_photo->photo='/images/items/'. $request->_token;
-                $items_photo->thumb='/images/items/thumbnile/'. $request->_token;
+                $items_photo->photo='/images/items/'.$newImageName;
+                $items_photo->thumb='/images/items/thumbnile/'.$newImageName;
                 $items_photo->title=$request->input('title');
                 $items_photo->save();
 
