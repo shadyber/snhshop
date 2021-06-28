@@ -17,7 +17,7 @@
                                     <img class="img-responsive m-auto"
                                          src="{{$item->thumb}}" alt="">
                                     <img role="presentation" alt=""
-                                         src="{{$item->photo}}"
+                                         src="{{$item->thumb}}"
                                          class="zoomImg"
                                          style="position: absolute; top: -100.128px; left: -27.8246px; opacity: 1; width: 560px; height: 694px; border: none; max-width: none; max-height: none;">
                                 </div>
@@ -50,7 +50,7 @@
                                  <div class="swiper-slide swiper-slide-visible swiper-slide-next" role="group"
                                      aria-label="2 / 4" style="width: 101px; margin-right: 10px;">
                                     <img class="img-responsive m-auto"
-                                         src="{{$photo->thumb}}" alt="">
+                                         src="{{$photo->photo}}" alt="">
                                 </div>
 
                                 @endforeach
