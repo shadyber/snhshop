@@ -107,20 +107,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 mb-lm-30px">
-                            <div class="discount-code-wrapper">
-                                <div class="title-wrap">
-                                    <h4 class="cart-bottom-title section-bg-gray">Use Coupon Code</h4>
-                                </div>
-                                <div class="discount-code">
-                                    <p>Enter your coupon code if you have one.</p>
-                                    <form>
-                                        <input type="text" required="" name="name" />
-                                        <button class="cart-btn-2" type="submit">Apply Coupon</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="col-lg-4 col-md-12 mt-md-30px">
                             <div class="grand-totall">
                                 <div class="title-wrap">
@@ -131,11 +118,10 @@
                                 <div class="total-shipping">
                                     <h5>Total shipping</h5>
                                     <ul>
-                                        <li><input type="checkbox" /> Standard <span>$20.00</span></li>
-                                        <li><input type="checkbox" /> Express <span>$30.00</span></li>
+                                        <li><input type="checkbox" required /> Standard <span>$20.00</span></li>
                                     </ul>
                                 </div>
-                                <h4 class="grand-totall-title">Grand Total <span>$260.00</span></h4>
+                                <h4 class="grand-totall-title">Grand Total <span>${{\App\Models\Cart::totalCart()+20}}</span></h4>
                                 <a href="/checkout">Proceed to Checkout</a>
                             </div>
                         </div>

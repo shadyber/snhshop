@@ -18,10 +18,10 @@ class AddressSeeder extends Seeder
         //
 
         DB::table('addresses')->insert([
-            'tel' => '00000000',
+            'tel' => '',
             'tel2' =>' 0911......',
-            'email' => 'admin@sandhshop.com',
-            'email2' =>'info@sandhshop.com',
+            'email' => 'admin@sandhstore.com',
+            'email2' =>'info@sandhstore.com',
             'address1' => 'Addis ababab , ',
             'address2' => 'Ethiopia',
         ]);

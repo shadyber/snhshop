@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-auto align-self-center">
                     <div class="header-logo">
-                        <a href="/"><img src="/assets/images/logo/logo.png" alt="SandHshop logo" /></a>
+                        <a href="/"><img src="/assets/images/logo/logo.png" alt="sandhstore logo" /></a>
                     </div>
                 </div>
                 <div class="col align-self-center d-none d-lg-block">
@@ -21,27 +21,27 @@
                                     <li class="d-flex">
                                         <ul class="d-block">
 
-                                            <li class="title"><a href="#">Womens Collection</a></li>
+                                            <li class="title"><a href="/cat/1">Womens Collection</a></li>
                                             @foreach(\App\Models\Item::womensN(7) as $item)
                                                 <li><a href="/item/{{$item->slug}}">{{$item->name}}</a></li>
 
                                             @endforeach
                                         </ul>
                                         <ul class="d-block">
-                                            <li class="title"><a href="#">Mens Collection</a></li>
+                                            <li class="title"><a href="/cat/2">Mens Collection</a></li>
                                             @foreach(\App\Models\Item::mensN(7) as $item)
                                                 <li><a href="/item/{{$item->slug}}">{{$item->name}}</a></li>
 
                                             @endforeach        </ul>
                                         <ul class="d-block">
-                                            <li class="title"><a href="#">Universal Collection</a></li>
+                                            <li class="title"><a href="/cat/3">Universal Collection</a></li>
                                             @foreach(\App\Models\Item::universalN(5) as $item)
                                             <li><a href="/item/{{$item->slug}}">{{$item->name}}</a></li>
 
                                             @endforeach
                                         </ul>
                                         <ul class="d-block">
-                                            <li class="title"><a href="#">Latest Products</a></li>
+                                            <li class="title"><a href="/item">Latest Products</a></li>
                                            @foreach(\App\Models\Item::lastN(7) as $item)
                                             <li><a href="/item/{{$item->slug}}">{{$item->name}}</a></li>
                                          @endforeach
@@ -59,7 +59,7 @@
 
                                         <ul class="menu-banner w-100">
                                             <li>
-                                                <a class="p-0" href="shop-left-sidebar.html"><img
+                                                <a class="p-0" href="/item"><img
                                                         class="img-responsive w-100"
                                                         src="/assets/images/banner/7.jpg" alt=""></a>
                                             </li>
@@ -86,7 +86,6 @@
 
                                 </ul>
                             </li>
-                            <li><a href="/gallery">Gallery</a></li>
                             <li><a href="/about">About us</a></li>
                             <li><a href="/contact">Contact us</a></li>
                         </ul>
@@ -96,13 +95,12 @@
                 <div class="col col-lg-auto align-self-center pl-0">
                     <div class="header-actions">
                        @auth
-                            <a href="/profile" class="header-action-btn login-btn">{{\Illuminate\Support\Facades\Auth::user()->name}}</a>
+                            <a href="/home" class="header-action-btn login-btn">{{\Illuminate\Support\Facades\Auth::user()->name}}</a>
 
                         @endauth
 
                         @guest
-                               <a href="#" class="header-action-btn login-btn" data-bs-toggle="modal"
-                                  data-bs-target="#loginActive">Sign In</a>
+                               <a href="/home" class="header-action-btn login-btn" >Sign In</a>
                        @endguest
 
                         <!-- Single Wedge Start -->
