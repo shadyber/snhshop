@@ -50,7 +50,7 @@
                                  <div class="swiper-slide swiper-slide-visible swiper-slide-next" role="group"
                                      aria-label="2 / 4" style="width: 101px; margin-right: 10px;">
                                     <img class="img-responsive m-auto"
-                                         src="/assets/images/product-image/small-image/2.jpg" alt="">
+                                         src="{{$photo->thumb}}" alt="">
                                 </div>
 
                                 @endforeach

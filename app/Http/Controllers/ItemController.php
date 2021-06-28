@@ -113,7 +113,12 @@ class ItemController extends Controller
      */
     public function show($slug)
     {
-        return view('item.show')->with('item',Item::where('slug',$slug)->first());
+      $item=Item::where('slug',$slug)->first();
+      if($item){
+          return view('item.show')->with('item',$item);
+      }else{
+          return redirect()->back()->with('error','item not found here');
+      }
     }
 
     /**
