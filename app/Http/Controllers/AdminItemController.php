@@ -173,7 +173,7 @@ class AdminItemController extends Controller
         $request->validate([
 
             'id'=>'required',
-            'photo'=>'required|mimes:jpg,png,jpeg|max:5048',
+            'photo'=>'required|mimes:jpg,png,jpeg,JPG|max:5048',
         ]);
         $item = Item::findOrFail($request->input('id'));
 

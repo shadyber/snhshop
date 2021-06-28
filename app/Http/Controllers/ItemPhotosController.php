@@ -46,14 +46,14 @@ class ItemPhotosController extends Controller
         $request->validate([
 
             'id'=>'required',
-            'photo.*'=>'required|mimes:jpg,png,jpeg|max:5048',
+            'photo.*'=>'required|mimes:jpg,png,jpeg,JPG|max:5048',
         ]);
         // check if there is photo
         if($request->has('photo')){
             foreach($request->file('photo')   as $file)
             {
 
-                $newImageName=uniqid().'_'. $request->title.'.'.$file->extension();
+                $newImageName=uniqid().'_'. $request->_token.'.'.$file->extension();
 
 
                 $file_name =$newImageName;
@@ -61,7 +61,7 @@ class ItemPhotosController extends Controller
                 $new_img = Image::make($file->getRealPath())->resize(true, true);
 
 // save file with medium quality
-                $new_img->save($destinationPath . $request->_token, 80);
+                $new_img->save($destinationPath . $file_name, 80);
                 $file->move(public_path('images/items'), $request->_token);
 
                 $items_photo=new ItemPhotos;
@@ -72,14 +72,14 @@ class ItemPhotosController extends Controller
                 $items_photo->title=$request->input('title');
                 $items_photo->save();
 
-                \Illuminate\Support\Facades\Session::flash('message', 'Alt Image successfully Updated!');
+                \Illuminate\Support\Facades\Session::flash('success', 'Alt Image successfully Updated!');
 
 
             }
 
 
     }
-        return redirect()->back();  //loop through photo
+        return redirect()->back()->with('success','all photo updated succesfully.');  //loop through photo
         // create thumb and save to db
 
     }
