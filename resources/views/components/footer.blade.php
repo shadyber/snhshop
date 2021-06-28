@@ -11,8 +11,7 @@
                             <div class="footer-logo">
                                 <a href="/"><img src="/assets/images/logo/logo-white.png" alt=""></a>
                             </div>
-                            <p class="about-text">Lorem ipsum dolor sit amet consectet adipisicing elit, sed do
-                                eiusmod templ incididunt ut labore et dolore magnaol aliqua Ut enim ad minim.
+                            <p class="about-text">Every country has its own import tax rules, and Sands shop cannot be held liable for any charges or taxes imposed by your government. Thank you for understanding.
                             </p>
                             <ul class="link-follow">
                                 <li>
@@ -81,7 +80,7 @@
                             <div class="footer-links">
                                 <div class="footer-row">
                                     <ul class="align-items-center">
-                                        <li class="li"><a class="single-link" href="/">Jesco</a>
+                                        <li class="li"><a class="single-link" href="/">SandH Store</a>
                                         </li>
                                         <li class="li"><a class="single-link" href="/shop">Shop</a>
                                         </li>
