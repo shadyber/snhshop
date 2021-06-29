@@ -86,7 +86,7 @@
                                         </li>
                                         <li class="li"><a class="single-link" href="/contact">Contact us</a>
                                         </li>
-                                        <li class="li"><a class="single-link" href="/login">Log in</a></li> 
+                                        <li class="li"><a class="single-link" href="/login">Log in</a></li>
                                     </ul>
                                 </div>
                             </div>

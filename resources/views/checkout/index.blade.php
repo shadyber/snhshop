@@ -246,8 +246,19 @@
                             </div>
                         </div>
                         <div class="Place-order mt-25">
+
                             <a class="btn-hover" href="#">Place Order</a>
                         </div>
+
+
+
+                        <form action="{{ url('charge') }}" method="post">
+                            <input type="text" name="amount" />
+                            {{ csrf_field() }}
+                            <input type="submit" name="submit" value="Pay Now">
+                        </form>
+
+                    </div>
                     </div>
                 </div>
             </div>

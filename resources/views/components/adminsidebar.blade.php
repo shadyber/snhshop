@@ -19,7 +19,9 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
-
+    <div class="sidebar-heading" title="ማስገቢያ">
+        Catalog
+    </div>
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
         <a class="nav-link" href="/items/create">
@@ -30,9 +32,58 @@
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
         <a class="nav-link" href="/items">
-            <i class="fas fa-fw fa-shopping-bag"></i>
+            <i class="fas fa-fw fa-list-alt"></i>
             <span>List Items</span></a>
     </li>
+
+    <div class="sidebar-heading" title="ማስገቢያ">
+    Sales
+    </div>
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item">
+        <a class="nav-link" href="/order">
+            <i class="fas fa-fw fa-cart-arrow-down"></i>
+            <span>Orders</span></a>
+    </li>
+
+
+   <!-- Nav Item - Dashboard -->
+    <li class="nav-item">
+        <a class="nav-link" href="/shipments">
+            <i class="fas fa-fw fa-truck"></i>
+            <span>Shipments</span></a>
+    </li>
+
+
+ <!-- Nav Item - Dashboard -->
+    <li class="nav-item">
+        <a class="nav-link" href="/invoices">
+            <i class="fas fa-fw fa-receipt"></i>
+            <span>Invoices</span></a>
+    </li>
+
+
+ <!-- Nav Item - Dashboard -->
+    <li class="nav-item">
+        <a class="nav-link" href="/refund">
+            <i class="fas fa-fw fa-shopping-bag"></i>
+            <span>Refund</span></a>
+    </li>
+
+    <div class="sidebar-heading" title="ማስገቢያ">
+        Customers
+    </div>
+
+    <li class="nav-item">
+        <a class="nav-link" href="/users">
+            <i class="fas fa-fw fa-shopping-bag"></i>
+            <span>Customers List</span></a>
+    </li>
+
+
+
+
     <!-- Divider -->
     <hr class="sidebar-divider">
     <!-- Heading -->

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\CartController;
@@ -69,6 +70,14 @@ Route::get('/search',[\App\Http\Controllers\SearchController::class,'search'])->
 
 Route::get('stripe',  [\App\Http\Controllers\StripePaymentController::class,'stripe'])->name('stripe');
 Route::post('stripe',  [\App\Http\Controllers\StripePaymentController::class,'stripePost'])->name('stripe.post');
+
+
+
+Route::get('payment',[\App\Http\Controllers\PaymentController::class,'index']);
+Route::post('charge', [\App\Http\Controllers\PaymentController::class,'charge']);
+Route::get('paymentsuccess',[\App\Http\Controllers\PaymentController::class,'payment_success']);
+Route::get('paymenterror', [\App\Http\Controllers\PaymentController::class,'payment_error']);
+
 
 
 Route::get('/newapp', function (){
