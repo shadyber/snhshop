@@ -65,7 +65,9 @@
                     </form>
                     <div class="row">
 
+                        <div class="col-lg-8 col-md-6 mt-md-30px"></div>
                         <div class="col-lg-4 col-md-12 mt-md-30px">
+                            <form method="get" action="/checkout">
                             <div class="grand-totall">
                                 <div class="title-wrap">
                                     <h4 class="cart-bottom-title section-bg-gary-cart">Cart Total</h4>
@@ -75,12 +77,14 @@
                                 <div class="total-shipping">
                                     <h5>Total shipping</h5>
                                     <ul>
-                                        <li><input type="checkbox" required /> Standard <span>$20.00</span></li>
+                                        <li><input type="checkbox" name="shipping_type" required readonly checked /> Standard <span>$20.00</span></li>
                                     </ul>
                                 </div>
                                 <h4 class="grand-totall-title">Grand Total <span>${{\App\Models\Cart::totalCart()+20}}</span></h4>
-                                <a href="/checkout">Proceed to Checkout</a>
+                                <button type="submit" class="btn-block btn-primary">Proceed to Checkout</button>
+
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>

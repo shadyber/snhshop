@@ -184,51 +184,61 @@
                                 </div>
                                 <div class="your-order-middle">
                                     <ul>
-                                        <li><span class="order-middle-left">Product Name X 1</span> <span class="order-price">$100 </span></li>
-                                        <li><span class="order-middle-left">Product Name X 1</span> <span class="order-price">$100 </span></li>
+                                        @foreach(\App\Models\Cart::myCart() as $cart)
+                                        <li><span class="order-middle-left"> {{$cart['quantity']}} X {{$cart['name']}} </span> <span class="order-price">${{$cart['price'] * $cart['quantity']}} </span></li>
+                                        @endforeach
+                                            <hr>
+                                            <li><span class="order-middle-left">Product total</span> <span class="order-price order-total"><b>${{\App\Models\Cart::totalCart()}}</b></span></li>
+
                                     </ul>
                                 </div>
                                 <div class="your-order-bottom">
                                     <ul>
                                         <li class="your-order-shipping">Shipping</li>
-                                        <li>Free shipping</li>
+                                        <li>Starndard Shipping  $20</li>
                                     </ul>
                                 </div>
                                 <div class="your-order-total">
                                     <ul>
                                         <li class="order-total">Total</li>
-                                        <li>$100</li>
+                                        <li>${{\App\Models\Cart::totalCart()+20}}</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="payment-method">
                                 <div class="payment-accordion element-mrg">
                                     <div id="faq" class="panel-group">
+
+
                                         <div class="panel panel-default single-my-account m-0">
                                             <div class="panel-heading my-account-title">
-                                                <h4 class="panel-title"><a data-bs-toggle="collapse" href="#my-account-1" class="collapsed" aria-expanded="true">Direct bank transfer</a>
+                                                <h4 class="panel-title"><a data-bs-toggle="collapse" href="#my-account-1" class="collapsed" aria-expanded="true">PayPal</a>
                                                 </h4>
                                             </div>
                                             <div id="my-account-1" class="panel-collapse collapse show" data-bs-parent="#faq">
 
                                                 <div class="panel-body">
-                                                    <p>Please send a check to Store Name, Store Street, Store Town,
-                                                        Store State / County, Store Postcode.</p>
+                                                    <form action="{{ url('charge') }}" method="post">
+                                                        <input type="hidden" name="amount" required value="{{\App\Models\Cart::totalCart()+20}}" />
+                                                        {{ csrf_field() }}
+
+                                                        <input type="submit" name="submit" value="Place Order" class="btn-primary btn-block ">
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="panel panel-default single-my-account m-0">
                                             <div class="panel-heading my-account-title">
-                                                <h4 class="panel-title"><a data-bs-toggle="collapse" href="#my-account-2" aria-expanded="false" class="collapsed">Check payments</a></h4>
+                                                <h4 class="panel-title"><a data-bs-toggle="collapse" href="#my-account-2" aria-expanded="false" class="collapsed">Card payments (Stripe)</a></h4>
                                             </div>
                                             <div id="my-account-2" class="panel-collapse collapse" data-bs-parent="#faq">
 
                                                 <div class="panel-body">
-                                                    <p>Please send a check to Store Name, Store Street, Store Town,
-                                                        Store State / County, Store Postcode.</p>
+form goes here
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="panel panel-default single-my-account m-0">
                                             <div class="panel-heading my-account-title">
                                                 <h4 class="panel-title"><a data-bs-toggle="collapse" href="#my-account-3">Cash on delivery</a></h4>
@@ -241,17 +251,16 @@
                                                 </div>
                                             </div>
                                         </div>
+
+
+
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="Place-order mt-25">
-                            <form action="{{ url('charge') }}" method="post" class="Place-order mt-25">
-                                <input type="text" name="amount" required value="{{\App\Models\Cart::totalCart()+20}}" />
-                                {{ csrf_field() }}
 
-                                <input type="submit" name="submit" value="Place Order" class="btn btn-hover">
-                            </form>
                         </div>
 
 
