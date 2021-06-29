@@ -246,17 +246,17 @@
                             </div>
                         </div>
                         <div class="Place-order mt-25">
+                            <form action="{{ url('charge') }}" method="post" class="Place-order mt-25">
+                                <input type="text" name="amount" required value="{{\App\Models\Cart::totalCart()+20}}" />
+                                {{ csrf_field() }}
 
-                            <a class="btn-hover" href="#">Place Order</a>
+                                <input type="submit" name="submit" value="Place Order" class="btn btn-hover">
+                            </form>
                         </div>
 
 
 
-                        <form action="{{ url('charge') }}" method="post">
-                            <input type="text" name="amount" />
-                            {{ csrf_field() }}
-                            <input type="submit" name="submit" value="Pay Now">
-                        </form>
+
 
                     </div>
                     </div>

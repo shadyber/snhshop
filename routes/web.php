@@ -66,6 +66,7 @@ Route::get('/checkout',[CheckoutController::class,'index'])->name('checkout');
 
 
 Route::get('/search',[\App\Http\Controllers\SearchController::class,'search'])->name('search');
+Route::get('/payments',[\App\Http\Controllers\PaymentController::class,'index'])->name('search');
 
 
 Route::get('stripe',  [\App\Http\Controllers\StripePaymentController::class,'stripe'])->name('stripe');

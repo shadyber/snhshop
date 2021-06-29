@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Omnipay\Omnipay;
 use App\Models\Payment;
+use function MongoDB\BSON\toJSON;
 
 class PaymentController extends Controller
 {
@@ -22,15 +25,30 @@ class PaymentController extends Controller
 
     public function index()
     {
-        return view('payment');
+        if(!Auth::user()){
+            return redirect()->back()->with('error','You Don\'t Have This Permission');
+        }
+
+        $payments=Payment::all();
+        return view('admin.payment.index')->with('payments',$payments);
     }
 
     public function charge(Request $request)
     {
+        $mycart = json_encode(Session::get('cart'));
         if ($request->input('submit')) {
             try {
-                $response = $this->gateway->purchase(array(
+                $response =$this->gateway->purchase(array(
                     'amount' => $request->input('amount'),
+
+                    'items' => array(
+                        array(
+                            'name' => 'Purchase For',
+                            'price' => $request->input('amount'),
+                            'description' => 'purchase for a cart json'.$mycart,
+                            'quantity' => 1
+                        ),
+                    ),
                     'currency' => env('PAYPAL_CURRENCY'),
                     'returnUrl' => url('paymentsuccess'),
                     'cancelUrl' => url('paymenterror'),
@@ -74,22 +92,24 @@ class PaymentController extends Controller
                     $payment->currency = env('PAYPAL_CURRENCY');
                     $payment->payment_status = $arr_body['state'];
                     $payment->save();
+                    Session::remove('cart');
                 }
 
-                dd($arr_body);
-                return "Payment is successful. Your transaction id is: " . $arr_body['id'];
+                return view('payment.success')->with('success',"Payment is successful. Your transaction id is: " . $arr_body['id']);
 
                 // save payment id to database.
             } else {
-                return $response->getMessage();
+                return view('payment.failure')->with('error',$response->getMessage());
             }
         } else {
-            return 'Transaction is declined';
+            return view('payment.failure')->with('error','Transaction is declined');
+
         }
     }
 
     public function payment_error()
     {
-        return 'User is canceled the payment.';
+        return view('payment.failure')->with('error','User Cancel The payment');
+
     }
 }
