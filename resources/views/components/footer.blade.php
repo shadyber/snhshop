@@ -61,12 +61,12 @@
                             <div class="footer-links">
                                 <div class="footer-row">
                                     <ul class="align-items-center">
-                                        <li class="li"><a class="single-link" href="about.html"> About </a>
+                                        <li class="li"><a class="single-link" href="/about"> About </a>
                                         </li>
-                                        <li class="li"><a class="single-link" href="blog-grid.html">Blog</a></li>
-                                        <li class="li"><a class="single-link" href="#">Speakers</a></li>
-                                        <li class="li"><a class="single-link" href="contact.html">Contact</a></li>
-                                        <li class="li"><a class="single-link" href="#">Tricket</a></li>
+                                        <li class="li"><a class="single-link" href="/blog">Blog</a></li>
+                                        <li class="li"><a class="single-link" href="/terms">Terms and conditions</a></li>
+                                        <li class="li"><a class="single-link" href="/contact">Contact</a></li>
+                                        <li class="li"><a class="single-link" href="/privacy">Privacy policy</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -82,12 +82,11 @@
                                     <ul class="align-items-center">
                                         <li class="li"><a class="single-link" href="/">SandH Store</a>
                                         </li>
-                                        <li class="li"><a class="single-link" href="/shop">Shop</a>
+                                        <li class="li"><a class="single-link" href="/item">Shop</a>
                                         </li>
-                                        <li class="li"><a class="single-link" href="contact.html">Contact us</a>
+                                        <li class="li"><a class="single-link" href="/contact">Contact us</a>
                                         </li>
-                                        <li class="li"><a class="single-link" href="/login">Log in</a></li>
-                                        <li class="li"><a class="single-link" href="#">Help</a></li>
+                                        <li class="li"><a class="single-link" href="/login">Log in</a></li> 
                                     </ul>
                                 </div>
                             </div>

@@ -11,7 +11,8 @@
 
     <!-- Add site Favicon -->
     <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" type="image/png">
-
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- vendor css (Icon Font) -->
     <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css"/>
@@ -32,6 +33,7 @@
 
     <!-- Main Style -->
     <link rel="stylesheet" href="/assets/css/style.css"/>
+    @yield('css')
 
 </head>
 
@@ -101,6 +103,7 @@
 
 <!-- Main Js -->
 <script src="/assets/js/main.js"></script>
+@yield('js')
 <script>
     $( ".add-to-cart" ).click(function() {
 

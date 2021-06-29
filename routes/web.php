@@ -40,6 +40,12 @@ Route::resource('/blog',App\Http\Controllers\BlogController::class);
 Route::get('/about', function(){
    return view('about');
 });
+Route::get('/terms', function(){
+    return view('terms');
+});
+Route::get('/privacy', function(){
+    return view('privacy');
+});
 Route::get('/about/create',[AboutController::class,'create']);
 Route::get('/about/edit',[AboutController::class,'create']);
 Route::post('/about',[AboutController::class,'store']);
