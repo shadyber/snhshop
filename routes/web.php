@@ -31,6 +31,7 @@ Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
 
 Route::resource('/item',App\Http\Controllers\ItemController::class);
 Route::resource('/items',App\Http\Controllers\AdminItemController::class);
+Route::resource('/shipping',App\Http\Controllers\ShippingInfoController::class);
 Route::resource('/itemsphoto',App\Http\Controllers\ItemPhotosController::class);
 
 Route::post('/photoupdate', [App\Http\Controllers\AdminItemController::class, 'photoupdate'])->name('photoupdate');

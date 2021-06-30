@@ -29,7 +29,7 @@ class HomeController extends Controller
 
             return view('home');
         }
-        return view('profile');
+        return view('profile')->with(['user'=>Auth::user()]);
     }
 
     public function countries()
