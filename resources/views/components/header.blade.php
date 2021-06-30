@@ -96,6 +96,7 @@
                     <div class="header-actions">
                        @auth
                             <a href="/home" class="header-action-btn login-btn">{{\Illuminate\Support\Facades\Auth::user()->name}}</a>
+                            <a  href="#" class="header-action-btn" data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="fa fa-power-off"></i></a>
 
                         @endauth
 
