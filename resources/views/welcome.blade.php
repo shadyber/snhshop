@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="robots" content="index, follow" />
-    <title>sandhstore | Welcome @yield ('title') </title>
+    <title>SandHstore | Welcome @yield ('title') </title>
     <meta name="description" content="sandhstore - HANDMADE PRODUCTS" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 

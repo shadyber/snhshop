@@ -103,7 +103,7 @@
                                 <p class="address">Chicago , JO  USA<br>
                                     812  Oakmound Road</p>
                                 <p class="phone">Phone/Fax:<a href="tel:0123456789">773-266-8212</a></p>
-                                <p class="mail">Email:<a href="mailto:admin@sanhshop.com">admin@sanhshop.com</a></p>
+                                <p class="mail">Email:<a href="mailto:admin@sandhstore.com">admin@sandhstore.com</a></p>
                                 <img src="/assets/images/icons/payment.png" alt="" class="payment-img img-fulid">
 
                                 <!-- News letter area  End -->

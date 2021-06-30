@@ -80,7 +80,7 @@
                         @enderror
                     </div>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control form-control-user" name="weight" placeholder="Item Weight">
+                        <input type="text" class="form-control form-control-user" name="weight" placeholder="Item Weight" required>
                         @error('weight')
                         <span class="invalid-feedback" role="alert">
                      <strong>{{ $message }}</strong>
@@ -94,7 +94,7 @@
 
                 <div class="form-group row">
                     <div class="col-sm-6 mb-3 mb-sm-0">
-                        <input type="color" class="form-control form-control" name="color" placeholder="Item Color" value="black">
+                        <input type="text" class="form-control form-control" name="color" placeholder="Item Color" value="black">
                         @error('color')
                         <span class="invalid-feedback" role="alert">
                      <strong>{{ $message }}</strong>

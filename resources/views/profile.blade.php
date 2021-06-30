@@ -1,9 +1,9 @@
 @extends('layouts.app')
-
+@section('title','Customer Profile')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">{{ __('Profile') }}</div>
 
@@ -14,15 +14,16 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
 
 
 
 
                 </div>   <div class="card-body row">
-                    <div class="col-lg-7">
+                    <div class="col-lg-10">
                         <div class="billing-info-wrap">
-                            <h3>Billing Details</h3>
+                            <h3>Shipping Details</h3>
+                            <form action="/shipping" method="post">
+                                @csrf
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="billing-info mb-4">
@@ -102,17 +103,7 @@
                                 <input placeholder="Password" type="password">
                                 <button class="btn-hover checkout-btn" type="submit">register</button>
                             </div>
-                            <div class="additional-info-wrap">
-                                <h4>Additional information</h4>
-                                <div class="additional-info">
-                                    <label>Order notes</label>
-                                    <textarea placeholder="Notes about your order, e.g. special notes for delivery. " name="message"></textarea>
-                                </div>
-                            </div>
-                            <div class="checkout-account mt-25">
-                                <input class="checkout-toggle w-auto h-auto" type="checkbox">
-                                <label>Ship to a different address?</label>
-                            </div>
+
                             <div class="different-address open-toggle mt-30px">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
@@ -185,6 +176,11 @@
                                     </div>
                                 </div>
                             </div>
+
+                                <div class="row">
+                                    <button class="btn btn-block btn-primary" type="submit">Save Bailling Information</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
 

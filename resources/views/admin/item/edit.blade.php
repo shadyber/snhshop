@@ -1,4 +1,5 @@
 @extends('layouts.admin')
+@section('title','Edite '.$item->name)
 @section('content')
 
         <div class="row">
@@ -20,7 +21,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Edit Item</h4>
                         <h6 class="card-subtitle mb-2">
-{{$item->name}}
+                    {{$item->name}}
                         </h6>
 
                         <div class="tab-content mt-3">
@@ -50,7 +51,7 @@
 
                                         @csrf
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control" name="name" value="{{$item->name}}" placeholder="Item Name">
+                                            <input type="text" class="form-control form-control" name="name" value="{{$item->name}}" placeholder="Item Name" required>
                                         </div>
 
 
@@ -77,14 +78,14 @@
                                                 <input type="number" class="form-control form-control" name="price"  value="{{$item->price}}"  placeholder="Item Price" required>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="text" class="form-control form-control-user" name="weight"  value="{{$item->weight}}"  placeholder="Item Weight">
+                                                <input type="text" class="form-control form-control-user" name="weight"  value="{{$item->weight}}"  placeholder="Item Weight" required>
                                             </div>
                                         </div>
 
 
                                         <div class="form-group row">
                                             <div class="col-sm-6 mb-3 mb-sm-0">
-                                                <input type="color" class="form-control form-control" name="color"  value="{{$item->color}}"  placeholder="Item Color" value="black">
+                                                <input type="text" class="form-control form-control" name="color"  value="{{$item->color}}"  placeholder="Item Color" value="black">
                                             </div>
                                             <div class="col-sm-6">
                                                 <input type="number" class="form-control form-control" name="init_qnt"  value="{{$item->init_qnt}}"  placeholder="Stock Balance">

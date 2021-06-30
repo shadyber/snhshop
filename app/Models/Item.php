@@ -50,10 +50,10 @@ class Item extends Model
     }
 
  public static function womensN($n){
-        return Item::orderBy('id','desc')->where('item_category_id','LIKE','1')->take($n)->get();
+        return Item::orderBy('id','desc')->where('item_category_id','LIKE','2')->take($n)->get();
     }
     public static function mensN($n){
-        return Item::orderBy('id','desc')->where('item_category_id','LIKE','2')->take($n)->get();
+        return Item::orderBy('id','desc')->where('item_category_id','LIKE','1')->take($n)->get();
     }
 
 }
