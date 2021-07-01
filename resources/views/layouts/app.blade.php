@@ -29,7 +29,7 @@
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
     <!-- <link rel="stylesheet" href="/assets/css/vendor/vendor.min.css" />
     <link rel="stylesheet" href="/assets/css/plugins/plugins.min.css" />
-    <link rel="stylesheet" href="/assets/css/style.min.css"> -->
+    <link rel="stylesheet" href="/assets/css/oldstyle.min.css"> -->
 
     <!-- Main Style -->
     <link rel="stylesheet" href="/assets/css/style.css"/>
@@ -79,6 +79,7 @@
 @include('components.footer')
 <!-- Global Vendor, plugins JS -->
 
+
 <!-- Vendor JS -->
 <!-- Vendor JS -->
 <script src="/assets/js/vendor/jquery-3.5.1.min.js"></script>
@@ -98,8 +99,8 @@
 <script src="/assets/js/plugins/ajax-mail.js"></script>
 
 <!-- Use the minified version files listed below for better performance and remove the files listed above -->
-<!-- <script src="/assets/js/vendor/vendor.min.js"></script>
-<script src="/assets/js/plugins/plugins.min.js"></script> -->
+<!-- <script src="assets/js/vendor/vendor.min.js"></script>
+<script src="assets/js/plugins/plugins.min.js"></script> -->
 
 <!-- Main Js -->
 <script src="/assets/js/main.js"></script>

@@ -1162,7 +1162,7 @@ body.offcanvas-open {
 }
 
 .bg-color2 {
-  background-color: #cebdb5;
+  background-color: #e3f3ff;
 }
 
 .hero-slide-item-2 {
@@ -5362,6 +5362,7 @@ Pages - My Account
   top: 0;
   left: 0;
   opacity: 0;
+    -webkit-filter: grayscale(1);
 }
 .product .thumb .badges {
   position: absolute;
@@ -6793,15 +6794,15 @@ Pages - My Account
 }
 
 /*===================================
-    - Breadvrumb  
+    - Breadvrumb
 =================================*/
 .breadcrumb-area {
-  background-color: #fcf6f6;
+  background-color: #e9e9e9;
   background-repeat: no-repeat;
   background-position: center center;
   border-bottom-width: 0px;
-  padding-top: 110px;
-  padding-bottom: 117px;
+  padding-top: 50px;
+  padding-bottom: 10px;
   background-size: cover;
   line-height: 1;
 }

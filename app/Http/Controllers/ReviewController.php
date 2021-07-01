@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ShippingInfo;
+use App\Models\Review;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class ShippingInfoController extends Controller
+class ReviewController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,6 @@ class ShippingInfoController extends Controller
     public function index()
     {
         //
-        $shippings=ShippingInfo::all();
-        return view('admin.shipping.index')->with('shippings',$shippings);
     }
 
     /**
@@ -28,7 +25,6 @@ class ShippingInfoController extends Controller
     public function create()
     {
         //
-        return view('shipping.create');
     }
 
     /**
@@ -39,37 +35,16 @@ class ShippingInfoController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-        'first_name'=>'required',
-        'last_name'=>'required',
-        'country'=>'required',
-        'city'=>'required',
-        'photo'=>'required',
-        'address1'=>'required',
-        'zipcode'=>'required',
-    ]);
-
         //
-if(Auth::user()->shippinginfo){
-    return 'updated';
-}else{
-
-
-
-
-
-
-
-}
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\ShippingInfo  $shippingInfo
+     * @param  \App\Models\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function show(ShippingInfo $shippingInfo)
+    public function show(Review $review)
     {
         //
     }
@@ -77,10 +52,10 @@ if(Auth::user()->shippinginfo){
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\ShippingInfo  $shippingInfo
+     * @param  \App\Models\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function edit(ShippingInfo $shippingInfo)
+    public function edit(Review $review)
     {
         //
     }
@@ -89,10 +64,10 @@ if(Auth::user()->shippinginfo){
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\ShippingInfo  $shippingInfo
+     * @param  \App\Models\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ShippingInfo $shippingInfo)
+    public function update(Request $request, Review $review)
     {
         //
     }
@@ -100,10 +75,10 @@ if(Auth::user()->shippinginfo){
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\ShippingInfo  $shippingInfo
+     * @param  \App\Models\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ShippingInfo $shippingInfo)
+    public function destroy(Review $review)
     {
         //
     }

@@ -22,7 +22,7 @@ class Item extends Model
 
 
     public function Category(){
-        return $this->belongsTo(ItemCategory::class);
+        return $this->belongsTo(ItemCategory::class,'item_category_id');
     }
 
     public function itemPhotos(){
