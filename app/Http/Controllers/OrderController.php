@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +21,7 @@ class OrderController extends Controller
     public function index()
     {
         //
-        $orders=Order::all();
+        $orders=Order::orderBy('id','desc')->paginate(20);
 
         return view('admin.order.index')->with(['orders'=>$orders]);
     }
@@ -73,6 +79,7 @@ class OrderController extends Controller
     public function update(Request $request, Order $order)
     {
         //
+
     }
 
     /**

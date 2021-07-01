@@ -10,6 +10,6 @@ class Order extends Model
     use HasFactory;
 
     public function address(){
-        return $this->hasOne(ShippingInfo::class);
+        return $this->hasOne(ShippingInfo::class,'id');
     }
 }

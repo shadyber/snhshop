@@ -84,7 +84,6 @@ $address->user_id=Auth::user()->id;
 $address->first_name=$shippingInfo['first_name'];
 $address->last_name=$shippingInfo['last_name'];
 $address->payer_id=$shippingInfo['payer_id'];
-$address->business_name=$shippingInfo['business_name'];
 $address->country_code=$shippingInfo['country_code'];
 $address->city=$shippingInfo['shipping_address']["city"];
 $address->recipient_name=$shippingInfo['shipping_address']["recipient_name"];
