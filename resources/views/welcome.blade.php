@@ -374,7 +374,7 @@
                 <div class="item-disc">
                     <h4 class="title">Best Collection <br>
                         For Women</h4>
-                    <a href="shop-left-sidebar.html" class="shop-link btn btn-primary ">Shop Now <i
+                    <a href="/cat/2" class="shop-link btn btn-primary ">Shop Now <i
                             class="fa fa-shopping-basket ml-5px" aria-hidden="true"></i></a>
                 </div>
             </div>
@@ -385,7 +385,7 @@
                 <div class="item-disc">
                     <h4 class="title">Best Collection <br>
                         For Men</h4>
-                    <a href="shop-left-sidebar.html" class="shop-link btn btn-primary">Shop Now <i
+                    <a href="/cat/1" class="shop-link btn btn-primary">Shop Now <i
                             class="fa fa-shopping-basket ml-5px" aria-hidden="true"></i></a>
                 </div>
             </div>
@@ -395,8 +395,8 @@
                 <img src="/assets/images/banner/6.jpg" alt="">
                 <div class="item-disc">
                     <h4 class="title">New Collection <br>
-                        For Kids</h4>
-                    <a href="shop-left-sidebar.html" class="shop-link btn btn-primary">Shop Now <i
+                        </h4>
+                    <a href="cat/1" class="shop-link btn btn-primary">Shop Now <i
                             class="fa fa-shopping-basket ml-5px" aria-hidden="true"></i></a>
                 </div>
             </div>
