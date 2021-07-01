@@ -18,8 +18,9 @@
 
 
 
-                </div>   <div class="card-body row">
-                    <div class="col-lg-10">
+                </div>
+                <div class="card-body row">
+                <div class="col-lg-10">
                         <div class="billing-info-wrap">
                             <h3>Shipping Details</h3>
                             <form action="/shipping" method="post">

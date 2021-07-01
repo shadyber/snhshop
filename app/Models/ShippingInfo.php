@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ShippingInfo extends Model
 {
     use HasFactory;
-xzx
+ 
     public function user() {
          return $this->belongsTo(User::class,'id');
     }

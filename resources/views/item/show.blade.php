@@ -41,13 +41,39 @@
                         </div>
                         <div class="mt-5"> <span class="fw-bold">Color</span>
                             <div class="colors">
-                                {{$item->color}}
+
+                                <div class="pro-details-color-info d-flex align-items-center">
+
+                                    <div class="pro-details-color">
+                                        <ul>
+
+    @foreach(explode(',', $item->color) as $color)
+
+        <li class="bg-{{$color}}"><a class="{{$color}}" href="#"></a></li>
+
+
+    @endforeach
+
+
+
+
+                                        </ul>
+                                        <hr>
+                                        <span>Size</span>
+                                        <ul>
+                                         {{$item->size}}
+                                        </ul>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
-                        <button title="Add To Cart" class="btn btn-lg btn-primary btn-hover-dark add-to-cart" itemid="{{$item->id}}">Add
-                            To Cart</button>
+
+
                     </div>
+                    <button title="Add To Cart" class="btn btn-lg btn-primary btn-hover-dark add-to-cart" itemid="{{$item->id}}">Add
+                        To Cart</button>
                 </div>
             </div>
         </div>
