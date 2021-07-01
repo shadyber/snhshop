@@ -430,7 +430,8 @@
 
                                                 <div class="panel-body">
                                                     <form action="{{ url('charge') }}" method="post">
-                                                        <input type="hidden" name="amount" required value="{{\App\Models\Cart::totalCart()+20}}" />
+                                                        <input type="hidden" name="amount" required value="{{\App\Models\Cart::totalCart()}}" />
+                                                        <input type="hidden" name="'hippingAmount" required value="20" />
                                                         {{ csrf_field() }}
 
                                                         <input type="submit" name="submit" value="Place Order" class="btn-primary btn-block ">

@@ -25,20 +25,35 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
+
+
+Route::group(['middleware' => 'role:admin'], function() {
+    Route::resource('/items',App\Http\Controllers\AdminItemController::class);
+    Route::resource('/order',App\Http\Controllers\OrderController::class);
+    Route::post('/photoupdate', [App\Http\Controllers\AdminItemController::class, 'photoupdate'])->name('photoupdate');
+    Route::resource('/itemsphoto',App\Http\Controllers\ItemPhotosController::class);
+    Route::get('/about/create',[AboutController::class,'create']);
+    Route::get('/about/edit',[AboutController::class,'create']);
+    Route::post('/about',[AboutController::class,'store']);
+});
+
+
+
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
 
 
 Route::resource('/item',App\Http\Controllers\ItemController::class);
-Route::resource('/items',App\Http\Controllers\AdminItemController::class);
 Route::resource('/shipping',App\Http\Controllers\ShippingInfoController::class);
-Route::resource('/itemsphoto',App\Http\Controllers\ItemPhotosController::class);
 
-Route::post('/photoupdate', [App\Http\Controllers\AdminItemController::class, 'photoupdate'])->name('photoupdate');
 
 Route::resource('/cat',App\Http\Controllers\ItemCategoryController::class);
 
 Route::resource('/blog',App\Http\Controllers\BlogController::class);
+
 Route::get('/about', function(){
    return view('about');
 });
@@ -48,9 +63,6 @@ Route::get('/terms', function(){
 Route::get('/privacy', function(){
     return view('privacy');
 });
-Route::get('/about/create',[AboutController::class,'create']);
-Route::get('/about/edit',[AboutController::class,'create']);
-Route::post('/about',[AboutController::class,'store']);
 
 Route::resource('/address',AddressController::class);
 
@@ -67,7 +79,8 @@ Route::get('/checkout',[CheckoutController::class,'index'])->name('checkout');
 
 
 Route::get('/search',[\App\Http\Controllers\SearchController::class,'search'])->name('search');
-Route::get('/payments',[\App\Http\Controllers\PaymentController::class,'index'])->name('search');
+
+Route::get('/payments',[\App\Http\Controllers\PaymentController::class,'index'])->name('payments');
 
 
 Route::get('stripe',  [\App\Http\Controllers\StripePaymentController::class,'stripe'])->name('stripe');

@@ -30,10 +30,10 @@ class DatabaseSeeder extends Seeder
 
           ]);
 
-        User::factory(10)->create();
-         ItemCategory::factory(3)->create();
-       Item::factory(30)->create();
-        BlogCategory::factory(10)->create();
-        Blog::factory(10)->create();
+     //   User::factory(10)->create();
+      //   ItemCategory::factory(3)->create();
+      // Item::factory(30)->create();
+      //  BlogCategory::factory(10)->create();
+      //  Blog::factory(10)->create();
     }
 }
