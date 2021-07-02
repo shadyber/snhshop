@@ -61,9 +61,9 @@
                             <div class="footer-links">
                                 <div class="footer-row">
                                     <ul class="align-items-center">
-                                        <li class="li"><a class="single-link" href="/about"> About </a>
-                                        </li>
-                                        <li class="li"><a class="single-link" href="/blog">Blog</a></li>
+                                        <li class="li"><a class="single-link" href="/about"> About </a> </li>
+                                        <li class="li"><a class="single-link" href="/waranty"> Our Warranty process </a> </li>
+                                        <li class="li"><a class="single-link" href="/delivery">Delivery</a></li>
                                         <li class="li"><a class="single-link" href="/terms">Terms and conditions</a></li>
                                         <li class="li"><a class="single-link" href="/contact">Contact</a></li>
                                         <li class="li"><a class="single-link" href="/privacy">Privacy policy</a></li>

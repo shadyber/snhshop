@@ -66,6 +66,11 @@ Route::get('/terms', function(){
 Route::get('/privacy', function(){
     return view('privacy');
 });
+Route::get('/delivery', function(){
+    return view('delivery');
+});Route::get('/waranty', function(){
+    return view('waranty');
+});
 
 Route::resource('/address',AddressController::class);
 
