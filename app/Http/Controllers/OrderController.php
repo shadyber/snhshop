@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -11,6 +12,20 @@ class OrderController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+    }
+
+    public function myorders(){
+        $orders=Order::where('user_id','LIKE',Auth::user()->id);
+        return view('myorder')->with(['orders'=>$orders]);
+
+    }
+
+    public function updateStatus(Request  $request){
+
+        $order=Order::findOrFail($request->order_id);
+        $order->status=$request->input('status');
+        $order->save();
+        return redirect()->back()->with(['success'=>'Order Status Updated']);
     }
 
     /**

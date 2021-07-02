@@ -31,6 +31,7 @@ Auth::routes();
 Route::group(['middleware' => 'role:admin'], function() {
     Route::resource('/items',App\Http\Controllers\AdminItemController::class);
     Route::resource('/order',App\Http\Controllers\OrderController::class);
+    Route::post('/orderstatus',[Controllers\OrderController::class,'updateStatus'])->name('order.status');
     Route::post('/photoupdate', [App\Http\Controllers\AdminItemController::class, 'photoupdate'])->name('photoupdate');
     Route::resource('/itemsphoto',App\Http\Controllers\ItemPhotosController::class);
     Route::get('/about/create',[AboutController::class,'create']);
@@ -47,7 +48,9 @@ Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
 
 
 Route::resource('/item',App\Http\Controllers\ItemController::class);
+
 Route::resource('/shipping',App\Http\Controllers\ShippingInfoController::class);
+Route::get('/myorders',[App\Http\Controllers\OrderController::class,'myorders'])->name('myorders');
 
 
 Route::resource('/cat',App\Http\Controllers\ItemCategoryController::class);
@@ -72,6 +75,7 @@ Route::get('/contact', function(){
 });
 
 Route::get('/addtocart/{id}',[CartController::class,'addToCart'])->name('addtocart');
+Route::get('/multipleaddtocart/{id}/{qnt}',[CartController::class,'addMultipleToCart'])->name('addmultipletocart');
 
 Route::get('/mycart',[CartController::class,'myCart'])->name('mycart');
 

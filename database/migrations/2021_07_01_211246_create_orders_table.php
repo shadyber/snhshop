@@ -17,6 +17,7 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->json('cart');
             $table->bigInteger('shipping_address_id');
+            $table->bigInteger('payment_id');
             $table->string('status')->default('created');
             $table->timestamps();
         });

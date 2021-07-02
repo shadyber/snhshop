@@ -56,10 +56,10 @@
 
                 <div class="form-group">
                     <select class="form-control form-control" name="item_category_id" placeholder="Item Category" required>
-
-                        <option value="1">Male</option>
-                        <option value="2">Female</option>
-                        <option value="3">Universal</option>
+                        @foreach(\App\Models\ItemCategory::all() as $category)
+                            <option value="{{$category->id}}">{{$category->title}}</option>
+                        @endforeach
+                    </select>
                     </select>
                     @error('item_category_id')
                     <span class="invalid-feedback" role="alert">

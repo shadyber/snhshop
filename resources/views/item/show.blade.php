@@ -61,11 +61,11 @@
                             {{$item->detail}}
                         </p>
                         <div class="pro-details-quality">
-                            <div class="cart-plus-minus">
-                                <input class="cart-plus-minus-box" type="text" name="qtybutton" value="1" />
+                            <div class="cart-plus-minus" onclick="getqnt()">
+                                <input class="cart-plus-minus-box" type="text" name="qtybutton" id="qtybutton" value="1" itemid="{{$item->id}}" />
                             </div>
                             <div class="pro-details-cart">
-                                <button class="add-cart  add-to-cart" href="#"  itemid="{{$item->id}}"> Add To
+                                <button class="add-cart  add-to-cart" href="#"  itemid="{{$item->id}}" qnt="1"> Add To
                                     Cart</button>
                             </div>
 
@@ -231,7 +231,7 @@
                                     <div class="actions">
 
                                     </div>
-                                    <button title="Add To Cart" class=" add-to-cart">Add
+                                    <button title="Add To Cart" class=" add-to-cart" itemid="{{$item->id}}" qnt="1">Add
                                         To Cart</button>
                                 </div>
                                 <div class="content">
@@ -262,3 +262,6 @@
     </div>
     <!-- Related product Area End -->
 @endsection
+@section('js')
+
+    @endsection

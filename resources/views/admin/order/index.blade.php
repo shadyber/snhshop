@@ -11,7 +11,7 @@
                         <td>Cart</td>
                         <td>Address</td>
                         <td>Status</td>
-                        <td>Action</td>
+
                     </tr>
                 </th>
                 </thead>
@@ -20,7 +20,8 @@
                 @foreach($orders as $order)
                     <tr role="row" class="odd">
                         <td>
-                            {{$order->id}}
+                            <a href="/order/{{$order->id}}">   {{$order->id}}</a>
+
                         </td>
                         <td class="sorting_1">
                             <ul>
@@ -47,15 +48,20 @@
                                  <li>Email: <span class="btn btn-outline-primary pull-right"> {{$order->address->email}} </span>  </li>
                              </ul>
                         </td>
+
                         <td>
-                          <strong> {{$order->status}} </strong>
-                            created at {{$order->created_at->diffForHumans()}}
-                        </td>
-                        <td>
-                            <a href="#"> Processoing</a>
-                            <a href="#"> Pending</a>
-                            <a href="#"> Sent</a>
-                            <a href="#"> Completed</a>
+                            {{$order->status}}
+                            <form action="{{route('order.status')}}" method="post">
+                                @csrf
+                                <input type="hidden" name="order_id" value="{{$order->id}}">
+                                <select name="status" id="status" class="form-control">
+                                    <option value="created">Created</option>
+                                    <option value="sent">Sent</option>
+                                    <option value="deliver">Deliverd / Completed</option>
+                                </select>
+                                <button class="form-control btn-primary"> Update</button>
+
+                            </form>
                         </td>
                     </tr>
                 @endforeach

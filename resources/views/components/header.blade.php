@@ -77,15 +77,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="dropdown "><a href="#">Blogs <i class="pe-7s-angle-down"></i></a>
-                                <ul class="sub-menu">
-                                    <li><a href="/blog">All Bbogs</a></li>
-                                    @foreach(\App\Models\Blog::lastN(8) as $blog)
-                                        <li><a href="/blog/{{$blog->slug}}">{{$blog->title}}</a></li>
-                                        @endforeach
 
-                                </ul>
-                            </li>
                             <li><a href="/about">About us</a></li>
                             <li><a href="/contact">Contact us</a></li>
                         </ul>

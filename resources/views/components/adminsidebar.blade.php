@@ -57,24 +57,13 @@
 
 
    <!-- Nav Item - Dashboard -->
-    <li class="nav-item">
-        <a class="nav-link" href="/shipments">
-            <i class="fas fa-fw fa-truck"></i>
-            <span>Shipments</span></a>
-    </li>
+
+
 
 
  <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-        <a class="nav-link" href="/invoices">
-            <i class="fas fa-fw fa-receipt"></i>
-            <span>Invoices</span></a>
-    </li>
-
-
- <!-- Nav Item - Dashboard -->
-    <li class="nav-item">
-        <a class="nav-link" href="/refund">
+        <a class="nav-link" href="#">
             <i class="fas fa-fw fa-shopping-bag"></i>
             <span>Refund</span></a>
     </li>

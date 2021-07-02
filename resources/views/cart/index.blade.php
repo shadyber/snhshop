@@ -35,7 +35,7 @@
                                     <td class="product-price-cart"><span class="amount">${{$cart['price']}}</span></td>
                                     <td class="product-quantity">
                                         <div class="cart-plus-minus">
-                                            <input class="cart-plus-minus-box" type="text" name="qtybutton"
+                                            <input class="cart-plus-minus-box" type="text" name="qtybutton" id="qtybutton"
                                                    value="{{$cart['quantity']}}" />
                                         </div>
                                     </td>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cart;
 use App\Models\Order;
 use App\Models\ShippingInfo;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
@@ -75,30 +76,6 @@ class PaymentController extends Controller
                 // The customer has successfully paid.
                 $arr_body = $response->getData();
 
-                $shippingInfo=$arr_body['payer']['payer_info'];
-
-$address=new ShippingInfo;
-
-$address->user_id=Auth::user()->id;
-
-$address->first_name=$shippingInfo['first_name'];
-$address->last_name=$shippingInfo['last_name'];
-$address->payer_id=$shippingInfo['payer_id'];
-$address->country_code=$shippingInfo['country_code'];
-$address->city=$shippingInfo['shipping_address']["city"];
-$address->recipient_name=$shippingInfo['shipping_address']["recipient_name"];
-$address->line1=$shippingInfo['shipping_address']["line1"];
-$address->state=$shippingInfo['shipping_address']["state"];
-$address->postal_code=$shippingInfo['shipping_address']["postal_code"];
-$address->email=$shippingInfo["email"];
-$address->save();
-
-$lastaddress=$address->id;
-
-$order=new Order;
-$order->cart=json_encode(Cart::myCart());
-$order->shipping_address_id=$lastaddress;
-$order->save();
 
 
                 // Insert transaction data into the database
@@ -113,13 +90,39 @@ $order->save();
                     $payment->currency = env('PAYPAL_CURRENCY');
                     $payment->payment_status = $arr_body['state'];
                     $payment->save();
-                    Session::remove('cart');
+                    $lastpayment=$payment->id;
 
 
 
 
                 }
 
+                $shippingInfo=$arr_body['payer']['payer_info'];
+
+                $address=new ShippingInfo;
+
+                $address->user_id=Auth::user()->id;
+
+                $address->first_name=$shippingInfo['first_name'];
+                $address->last_name=$shippingInfo['last_name'];
+                $address->payer_id=$shippingInfo['payer_id'];
+                $address->country_code=$shippingInfo['country_code'];
+                $address->city=$shippingInfo['shipping_address']["city"];
+                $address->recipient_name=$shippingInfo['shipping_address']["recipient_name"];
+                $address->line1=$shippingInfo['shipping_address']["line1"];
+                $address->state=$shippingInfo['shipping_address']["state"];
+                $address->postal_code=$shippingInfo['shipping_address']["postal_code"];
+                $address->email=$shippingInfo["email"];
+                $address->save();
+
+                $lastaddress=$address->id;
+
+                $order=new Order;
+                $order->cart=json_encode(Cart::myCart());
+                $order->shipping_address_id=$lastaddress;
+                $order->payment_id=$lastpayment;
+                $order->save();
+                Session::remove('cart');
 
                 # Send Confirm Mail
 
