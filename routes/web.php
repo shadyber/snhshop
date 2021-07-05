@@ -34,6 +34,7 @@ Route::group(['middleware' => 'role:admin'], function() {
     Route::post('/orderstatus',[Controllers\OrderController::class,'updateStatus'])->name('order.status');
     Route::post('/photoupdate', [App\Http\Controllers\AdminItemController::class, 'photoupdate'])->name('photoupdate');
     Route::resource('/itemsphoto',App\Http\Controllers\ItemPhotosController::class);
+    Route::resource('/users',App\Http\Controllers\CustomerController::class);
     Route::get('/about/create',[AboutController::class,'create']);
     Route::get('/about/edit',[AboutController::class,'create']);
     Route::post('/about',[AboutController::class,'store']);

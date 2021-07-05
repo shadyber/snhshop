@@ -45,6 +45,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    
+    public function address (){
+        return $this->belongsTo(shippinginfo::class);
+    }
+
+
     public function blog (){
         return $this->hasMany(Blog::class);
     }
