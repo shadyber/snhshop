@@ -220,7 +220,7 @@
                             <!-- Single Prodect -->
                             <div class="product">
                                 <div class="thumb">
-                                    <a href="/item{{$item->slug}}" class="image">
+                                    <a href="/item/{{$item->slug}}" class="image">
                                         <img src="{{$item->thumb}}" alt="Product" />
                                         <img class="hover-image" src="{{$item->thumb}}"
                                              alt="{{$item->names}}" />
