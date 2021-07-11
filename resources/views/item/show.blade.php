@@ -9,6 +9,7 @@
                     <!-- Swiper -->
                     <div class="swiper-container zoom-top">
                         <div class="swiper-wrapper">
+                          
                             <div class="swiper-slide zoom-image-hover">
                                 <img class="img-responsive m-auto" src="{{$item->photo}}"
                                      alt="">
@@ -26,14 +27,18 @@
                     <div class="swiper-container zoom-thumbs mt-3 mb-3">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
+                              
                                 <img class="img-responsive m-auto" src="{{$item->thumb}}"
                                      alt="">
+
                             </div>
                             @foreach($item->itemPhotos as $photo)
-                                <div class="swiper-slide">
-                                    <img class="img-responsive m-auto" src="{{$photo->thumb}}"
-                                         alt="">
-                                </div>
+                            <div class="swiper-slide">
+                              
+                                <img class="img-responsive m-auto" src="{{$photo->thumb}}"
+                                     alt="{{$photo->thumb}}">
+
+                            </div>
                             @endforeach
 
                         </div>
@@ -220,11 +225,13 @@
                             <!-- Single Prodect -->
                             <div class="product">
                                 <div class="thumb">
+                               
                                     <a href="/item/{{$item->slug}}" class="image">
                                         <img src="{{$item->thumb}}" alt="Product" />
                                         <img class="hover-image" src="{{$item->thumb}}"
                                              alt="{{$item->names}}" />
                                     </a>
+
                                     <span class="badges">
                                     <span class="new">{{$item->badge}}</span>
                                 </span>

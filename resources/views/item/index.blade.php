@@ -7,7 +7,7 @@
             <!-- Shop Top Area Start -->
             <div class="shop-top-bar d-flex">
                 <!-- Left Side start -->
-                <p><span>12</span> Product Found of <span>30</span></p>
+                <p><span>15</span> Product Found of <span>{{count(\App\Models\Item::all())}}</span></p>
                 <!-- Left Side End -->
                 <div class="shop-tab nav">
                     <a class="active" href="#shop-grid" data-bs-toggle="tab">

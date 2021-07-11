@@ -5355,6 +5355,7 @@ Pages - My Account
   max-width: 100%;
   transition: all 0.3s ease 0s;
   width: 100%;
+    background-color: #e9e9e9;
 }
 .product .thumb .image img.hover-image {
   position: absolute;
@@ -5362,6 +5363,8 @@ Pages - My Account
   top: 0;
   left: 0;
   opacity: 0;
+    box-shadow: black;
+
 }
 .product .thumb .badges {
   position: absolute;
@@ -6793,7 +6796,7 @@ Pages - My Account
 }
 
 /*===================================
-    - Breadvrumb  
+    - Breadvrumb
 =================================*/
 .breadcrumb-area {
   background-color: #fcf6f6;
