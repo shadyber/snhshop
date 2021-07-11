@@ -21,14 +21,14 @@
                                     <li class="d-flex">
                                         <ul class="d-block">
 
-                                            <li class="title"><a href="/cat/1">Womens Collection</a></li>
+                                            <li class="title"><a href="/cat/2">Womens Collection</a></li>
                                             @foreach(\App\Models\Item::womensN(7) as $item)
                                                 <li><a href="/item/{{$item->slug}}">{{$item->name}}</a></li>
 
                                             @endforeach
                                         </ul>
                                         <ul class="d-block">
-                                            <li class="title"><a href="/cat/2">Mens Collection</a></li>
+                                            <li class="title"><a href="/cat/1">Mens Collection</a></li>
                                             @foreach(\App\Models\Item::mensN(7) as $item)
                                                 <li><a href="/item/{{$item->slug}}">{{$item->name}}</a></li>
 
@@ -166,7 +166,7 @@
         </div>
         <div class="foot">
             <div class="buttons">
-                <a href="wishlist.html" class="btn btn-dark btn-hover-primary mt-30px">view wishlist</a>
+                <a href="#" class="btn btn-dark btn-hover-primary mt-30px">view wishlist</a>
             </div>
         </div>
     </div>

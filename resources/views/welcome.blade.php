@@ -95,7 +95,7 @@
             </div>
 
             <!-- Single slider item -->
-            <div class="hero-slide-item-2 slider-height swiper-slide d-flex bg-color2">
+            <div class="hero-slide-item-2 slider-height swiper-slide d-flex bg-color3">
                 <div class="container align-self-center">
                     <div class="row">
                         <div class="col-xl-6 col-lg-5 col-md-5 col-sm-5 align-self-center sm-center-view">
@@ -110,7 +110,7 @@
                             class="col-xl-6 col-lg-7 col-md-7 col-sm-7 d-flex justify-content-center position-relative">
                             <div class="show-case">
                                 <div class="hero-slide-image">
-                                    <img src="/assets/images/slider-image/slider-2-3.png" alt="" />
+                                    <img src="/assets/images/slider-image/slider-1.png" alt="" />
                                 </div>
                             </div>
                         </div>
@@ -370,7 +370,7 @@
     <div class="row m-0">
         <div class="col-12 col-lg-4 mb-md-30px mb-lm-30px">
             <div class="single-banner-2">
-                <img src="/assets/images/banner/4.jpg" alt="">
+                <img src="/assets/images/banner/1.jpg" alt="">
                 <div class="item-disc">
                     <h4 class="title">Best Collection <br>
                         For Women</h4>
@@ -381,18 +381,18 @@
         </div>
         <div class="col-12 col-lg-4 center-col mb-md-30px mb-lm-30px">
             <div class="single-banner-2">
-                <img src="/assets/images/banner/5.jpg" alt="">
+                <img src="/assets/images/banner/3.jpg" alt="">
                 <div class="item-disc">
                     <h4 class="title">Best Collection <br>
                         For Men</h4>
-                    <a href="/cat/1" class="shop-link btn btn-primary">Shop Now <i
+                    <a href="/cat/3" class="shop-link btn btn-primary">Shop Now <i
                             class="fa fa-shopping-basket ml-5px" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
         <div class="col-12 col-lg-4">
             <div class="single-banner-2">
-                <img src="/assets/images/banner/6.jpg" alt="">
+                <img src="/assets/images/banner/2.jpg" alt="">
                 <div class="item-disc">
                     <h4 class="title">New Collection <br>
                         </h4>
