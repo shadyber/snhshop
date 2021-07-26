@@ -2,19 +2,17 @@
 
 namespace App\Models;
 
+use App\Permissions\HasPermissionsTrait;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-use App\Permissions\HasPermissionsTrait;
-
-class User extends Authenticatable
+class  User extends Authenticatable implements MustVerifyEmail
 {
+
     use HasFactory, Notifiable;
-
     use HasPermissionsTrait; //Import The Trait
-
     /**
      * The attributes that are mass assignable.
      *
@@ -24,6 +22,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'photo',
+        'tel'
     ];
 
     /**
@@ -45,16 +45,24 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    
-    public function address (){
-        return $this->belongsTo(shippinginfo::class);
+
+    public function comments()
+    {
+        return $this->hasMany(BlogComment::class);
     }
 
 
-    public function blog (){
+    public function blogs()
+    {
         return $this->hasMany(Blog::class);
     }
-    public function shippinginfo (){
-        return $this->hasOne(ShippingInfo::class);
+
+    public function videos()
+    {
+        return $this->hasMany(Videos::class);
+    }
+
+    public function role(){
+        return $this->belongsTo(Role::class);
     }
 }

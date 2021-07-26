@@ -29,7 +29,7 @@
                                                                     </span>
 
                                                                 </span>
-                            <h5 class="title"><a href="single-product.html">{{$item->name}}</a></h5>
+                            <h5 class="title"><a href="/item/{{$item->slug}}">{{$item->name}}</a></h5>
                             <p>{{$item->detail}}</p>
                         </div>
                         <div class="box-inner">
@@ -37,11 +37,9 @@
                                                                     <span class="new">{{$item->price}}</span>
                                                                 </span>
                             <div class="actions">
-                                <a href="wishlist.html" class="action wishlist" title="Wishlist"><i class="pe-7s-like"></i></a>
-                                <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-search"></i></a>
-                                <a href="compare.html" class="action compare" title="Compare"><i class="pe-7s-refresh-2"></i></a>
-                            </div>
-                            <button title="Add To Cart" class=" add-to-cart">Add
+
+                             </div>
+                            <button title="Add To Cart" class=" add-to-cart" itemid="{{$item->id}}">Add
                                 To Cart
                             </button>
                         </div>

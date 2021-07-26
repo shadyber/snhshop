@@ -22,8 +22,8 @@ class BlogFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->word,
-            'slug' => $this->faker->word,
+            'title' => $this->faker->sentence,
+            'slug' => $this->faker->words(3,true),
             'tags' => $this->faker->words(3,true),
             'detail' => $this->faker->sentence(5,true),
             'photo' => $this->faker->imageUrl('1024','768'),

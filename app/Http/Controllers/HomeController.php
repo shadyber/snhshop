@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,24 +20,13 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return Renderable
+     * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
     {
-        if(Auth::user()->hasRole('admin')){
-
-            return view('home');
+        if(!Auth::user()->hasRole('admin')){
+            return view('profile');
         }
-        return view('profile')->with(['user'=>Auth::user()]);
-    }
-
-    public function countries()
-
-    {
-
-        $countries = Countries::all();
-
-        return view('countries',compact('countries'));
-
+        return view('home');
     }
 }

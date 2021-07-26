@@ -4,14 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\BlogComment;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 class BlogCommentController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return Response
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
@@ -21,7 +20,7 @@ class BlogCommentController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return Response
+     * @return \Illuminate\Http\Response
      */
     public function create()
     {
@@ -31,21 +30,39 @@ class BlogCommentController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param Request $request
-     * @return Response
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            'comment'=>'required',
+
+        ]);
+
+
+
+
+
+        BlogComment::create([
+                'comment'=>$request->input('comment'),
+                'user_id'=>auth()->user()->id,
+                'blog_id'=>$request->input('blog_id'),
+
+            ]
+        );
+
+        return redirect()->back()->with('message','Commenyt Posted Succusfully!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param BlogComment $blogComment
-     * @return Response
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
      */
-    public function show(BlogComment $blogComment)
+    public function show($id)
     {
         //
     }
@@ -53,10 +70,10 @@ class BlogCommentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param BlogComment $blogComment
-     * @return Response
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
      */
-    public function edit(BlogComment $blogComment)
+    public function edit($id)
     {
         //
     }
@@ -64,11 +81,11 @@ class BlogCommentController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param Request $request
-     * @param BlogComment $blogComment
-     * @return Response
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, BlogComment $blogComment)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,10 +93,10 @@ class BlogCommentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param BlogComment $blogComment
-     * @return Response
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
      */
-    public function destroy(BlogComment $blogComment)
+    public function destroy($id)
     {
         //
     }

@@ -7,12 +7,25 @@ use Illuminate\Database\Eloquent\Model;
 
 class BlogComment extends Model
 {
+
     use HasFactory;
-    public function blog(){
+
+    protected $fillable = [
+        'comment',
+        'blog_id',
+        'user_id',
+
+    ];
+
+
+
+    public function blog()
+    {
         return $this->belongsTo(Blog::class);
     }
 
-    public static function getComment($id){
-        return BlogComment::where('blog_id',$id);
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }

@@ -27,7 +27,7 @@
              data-aos-delay="200">
 <ul>
     @foreach($orders as $order)
-        
+        <li>{{$order}}</li>
     @endforeach
 </ul>
 

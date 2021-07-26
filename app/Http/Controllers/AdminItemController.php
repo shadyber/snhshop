@@ -208,7 +208,11 @@ class AdminItemController extends Controller
      */
     public function destroy(Item $item)
     {
-        //
+        if(!Auth::user()->hasRole('admin')){
+            return redirect()->back()->with('error','You Don\t Have This Permission');
+        }
+        $item->delete();
+        return redirect()->back()->with('success','Item removed');
     }
     /**
      * Create a thumbnail of specified size

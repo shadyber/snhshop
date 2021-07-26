@@ -16,15 +16,17 @@ class CreateBlogsTable extends Migration
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('slug');
-            $table->string('tags');
-            $table->longText('detail');
             $table->string('photo');
-            $table->string('thumb')->nullable()->default('/images/blogs/thumbnile/placeholder.png');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedBigInteger('blog_category_id');
-            $table->foreign('blog_category_id')->references('id')->on('blog_categories');
+            $table->string('thumb');
+            $table->longText('detail');
+            $table->bigInteger('blog_category_id')->unsigned();
+            $table->foreign('blog_category_id')->on('blog_categories')->references('id');
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->on('users')->references('id');
+            $table->string('slug', 255)->unique();
+            $table->string('tags')->nullable();
+            $table->integer('visit')->default(0);
+            $table->softDeletes();
             $table->timestamps();
         });
     }
