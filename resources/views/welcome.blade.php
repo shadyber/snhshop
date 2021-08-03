@@ -78,7 +78,7 @@
                             <div class="hero-slide-content hero-slide-content-2 slider-animated-1">
                                 <span class="category">Sale 45% Off</span>
                                 <h2 class="title-1">Exclusive New<br> Offer 2021</h2>
-                                <a href="shop-left-sidebar.html" class="btn btn-lg btn-primary btn-hover-dark"> Shop
+                                <a href="/item" class="btn btn-lg btn-primary btn-hover-dark"> Shop
                                     Now <i class="fa fa-shopping-basket ml-15px" aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -176,194 +176,7 @@
 </div>
 <!-- Feature Area End -->
 
-<!-- Product Area Start -->
-<div class="product-area pt-100px pb-100px">
-    <div class="container">
-        <!-- Section Title & Tab Start -->
-        <div class="row">
-            <!-- Section Title Start -->
-            <div class="col-12">
-                <div class="section-title text-center mb-0">
-                    <h2 class="title">#products</h2>
-                    <!-- Tab Start -->
-                    <div class="nav-center">
-                        <ul class="product-tab-nav nav align-items-center justify-content-center">
-                            <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab"
-                                                    href="#tab-product--all">Universal</a></li>
 
-                            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab"
-                                                    href="#tab-product-men">Men</a></li>
-                            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab"
-                                                    href="#tab-product-women">Women</a></li>
-
-                        </ul>
-                    </div>
-                    <!-- Tab End -->
-                </div>
-            </div>
-            <!-- Section Title End -->
-        </div>
-        <!-- Section Title & Tab End -->
-
-        <div class="row">
-            <div class="col">
-                <div class="tab-content mb-30px0px">
-                    <!-- 1st tab start -->
-                    <div class="tab-pane fade show active" id="tab-product--all">
-                        <div class="row">
-                          @foreach(\App\Models\Item::universalN(8) as $item)
-                            <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up"
-                                 data-aos-delay="200">
-                                <!-- Single Prodect -->
-                                <div class="product">
-                                    <div class="thumb">
-                                        <a href="/item/{{$item->slug}}" class="image">
-                                            <img src="{{$item->thumb}}" alt="{{$item->name}}" />
-                                            <img class="hover-image" src="{{$item->thumb}}"
-                                                 alt="{{$item->name}}" />
-                                        </a>
-                                        <span class="badges">
-                                                <span class="new">{{$item->badge}}</span>
-                                            </span>
-                                        <div class="actions">
-                                            <a href="#" class="action wishlist" title="Wishlist"><i
-                                                    class="pe-7s-like"></i></a>
-                                            <a href="#" class="action quickview" data-link-action="quickview{{$item->id}}"
-                                               title="Quick view" data-bs-toggle="modal"
-                                               data-bs-target="#quickModal{{$item->id}}"><i class="pe-7s-search"></i></a>
-
-                                        </div>
-
-                                        <button type="submit" title="Add To Cart" class=" add-to-cart" itemid="{{$item->id}}">Add
-                                            To Cart</button>
-                                    </div>
-                                    <div class="content">
-                                            <span class="ratings">
-                                                <span class="rating-wrap">
-                                                    <span class="star" style="width: 100%"></span>
-                                                </span>
-                                                <span class="rating-num">( 5 Review )</span>
-                                            </span>
-                                        <h5 class="title"><a href="/item/{{$item->slug}}">{{$item->name}}
-                                            </a>
-                                        </h5>
-                                        <span class="price">
-                                                <span class="new">$ {{$item->price}}</span>
-                                            </span>
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach
-
-                        </div>
-                    </div>
-                    <!-- 1st tab end -->
-
-                    <!-- 3rd tab start -->
-                    <div class="tab-pane fade" id="tab-product-men">
-                        <div class="row">
-                            @foreach(\App\Models\Item::mensN(8) as $item)
-                            <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up"
-                                 data-aos-delay="200">
-                                <!-- Single Prodect -->
-                                <div class="product">
-                                    <div class="thumb">
-                                        <a href="/item/{{$item->slug}}" class="{{$item->name}} image">
-                                            <img src="{{$item->thumb}}" alt="{{$item->name}}" />
-                                            <img class="hover-image" src="{{$item->thumb}}"
-                                                 alt="Product" />
-                                        </a>
-                                        <span class="badges">
-                                                <span class="new">{{$item->badge}}</span>
-                                            </span>
-                                        <div class="actions">
-                                            <a href="#" class="action wishlist" title="Wishlist"><i
-                                                    class="pe-7s-like"></i></a>
-                                            <a href="#" class="action quickview" data-link-action="quickview{{$item->id}}"
-                                               title="Quick view" data-bs-toggle="modal"
-                                               data-bs-target="#quickModal{{$item->id}}"><i class="pe-7s-search"></i></a>
-
-                                        </div>
-                                        <button title="Add To Cart" class=" add-to-cart" itemid="{{$item->id}}">Add
-                                            To Cart</button>
-                                    </div>
-                                    <div class="content">
-                                            <span class="ratings">
-                                                <span class="rating-wrap">
-                                                    <span class="star" style="width: 100%"></span>
-                                                </span>
-                                                <span class="rating-num">( 5 Review )</span>
-                                            </span>
-                                        <h5 class="title"><a href="/item/{{$item->slug}}">{{$item->name}}
-                                            </a>
-                                        </h5>
-                                        <span class="price">
-                                                <span class="new">$ {{$item->price}}</span>
-                                            </span>
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach
-                        </div>
-                    </div>
-                    <!-- 3rd tab end -->
-                    <!-- 4th tab start -->
-                    <div class="tab-pane fade" id="tab-product-women">
-                        <div class="row">
-                        @foreach(\App\Models\Item::womensN(8) as $item)
-                            <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up"
-                                 data-aos-delay="200">
-                                <!-- Single Prodect -->
-                                <div class="product">
-                                    <div class="thumb">
-                                        <a href="/item/{{$item->slug}}" class="{{$item->name}} image">
-                                            <img src="{{$item->thumb}}" alt="{{$item->name}}" />
-                                            <img class="hover-image" src="{{$item->thumb}}"
-                                                 alt="{{$item->name}}" />
-                                        </a>
-                                        <span class="badges">
-                                                <span class="new">{{$item->badge}}</span>
-                                            </span>
-                                        <div class="actions">
-                                            <a href="#" class="action wishlist" title="Wishlist"><i
-                                                    class="pe-7s-like"></i></a>
-                                            <a href="#" class="action quickview" data-link-action="quickview{{$item->id}}"
-                                               title="Quick view" data-bs-toggle="modal"
-                                               data-bs-target="#quickModal{{$item->id}}"><i class="pe-7s-search"></i></a>
-
-                                        </div>
-                                        <button title="Add To Cart" class=" add-to-cart" itemid="{{$item->id}}">Add
-                                            To Cart</button>
-                                    </div>
-                                    <div class="content">
-                                            <span class="ratings">
-                                                <span class="rating-wrap">
-                                                    <span class="star" style="width: 100%"></span>
-                                                </span>
-                                                <span class="rating-num">( 5 Review )</span>
-                                            </span>
-                                        <h5 class="title"><a href="/item/{{$item->slug}}">{{$item->name}}
-                                            </a>
-                                        </h5>
-                                        <span class="price">
-                                                <span class="new">$ {{$item->price}}</span>
-                                            </span>
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach
-                        </div>
-                    </div>
-                    <!-- 4th tab end -->
-
-                </div>
-                <a href="/item" class="btn btn-lg btn-primary btn-hover-dark "> Load More <i
-                        class="fa fa-arrow-right ml-15px" aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Product Area End -->
 
 <!-- Banner Area Start -->
 <div class="banner-area pt-100px pb-100px plr-15px">
@@ -634,6 +447,47 @@
     </div>
 </div>
 <!-- Deal Area End -->
+
+<!-- Banner Area Start -->
+<div class="banner-area pt-100px pb-100px plr-15px">
+    <div class="row m-0">
+        <div class="col-12 col-lg-4 mb-md-30px mb-lm-30px">
+            <div class="single-banner-2">
+                <img src="/assets/images/banner/1.jpg" alt="">
+                <div class="item-disc">
+                    <h4 class="title">Best Collection <br>
+                        For Women</h4>
+                    <a href="/cat/2" class="shop-link btn btn-primary ">Shop Now <i
+                            class="fa fa-shopping-basket ml-5px" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4 center-col mb-md-30px mb-lm-30px">
+            <div class="single-banner-2">
+                <img src="/assets/images/banner/3.jpg" alt="">
+                <div class="item-disc">
+                    <h4 class="title">Best Collection <br>
+                        For Men</h4>
+                    <a href="/cat/3" class="shop-link btn btn-primary">Shop Now <i
+                            class="fa fa-shopping-basket ml-5px" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <div class="single-banner-2">
+                <img src="/assets/images/banner/2.jpg" alt="">
+                <div class="item-disc">
+                    <h4 class="title">New Collection <br>
+                    </h4>
+                    <a href="cat/1" class="shop-link btn btn-primary">Shop Now <i
+                            class="fa fa-shopping-basket ml-5px" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner Area End -->
+
 <!--  Blog area Start -->
 <div class="main-blog-area pb-100px pt-100px">
     <div class="container">
