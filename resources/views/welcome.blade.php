@@ -55,7 +55,7 @@
                             <div class="hero-slide-content hero-slide-content-2 slider-animated-1">
                                 <span class="category">Sale 45% Off</span>
                                 <h2 class="title-1">Exclusive New<br> Offer 2021</h2>
-                                <a href="shop-left-sidebar.html" class="btn btn-lg btn-primary btn-hover-dark"> Shop
+                                <a href="#" class="btn btn-lg btn-primary btn-hover-dark"> Shop
                                     Now <i class="fa fa-shopping-basket ml-15px" aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -95,7 +95,7 @@
             </div>
 
             <!-- Single slider item -->
-            <div class="hero-slide-item-2 slider-height swiper-slide d-flex">
+            <div class="hero-slide-item-2 slider-height swiper-slide d-flex ">
                 <div class="container align-self-center">
                     <div class="row">
                         <div class="col-xl-6 col-lg-5 col-md-5 col-sm-5 align-self-center sm-center-view">
@@ -131,7 +131,7 @@
 <!-- Hero/Intro Slider End -->
 
 <!-- Feature Area Srart -->
-<div class="feature-area  mt-n-65px">
+<div class="feature-area  mt-n-65px pb-1">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-6">
@@ -424,7 +424,7 @@
 <!-- Product Area End -->
 
 <!-- Deal Area Start -->
-<div class="deal-area deal-bg deal-bg-2" data-bg-image="assets/images/deal-img/deal-bg-2.jpg">
+<div class="deal-area deal-bg deal-bg-2 pb-40px" data-bg-image="assets/images/deal-img/deal-bg-2.jpg">
     <div class="container ">
         <div class="row">
             <div class="col-12">
@@ -452,14 +452,13 @@
 
 
 <!-- Banner Area Start -->
-<div class="banner-area pt-100px pb-100px plr-15px">
+<div class="banner-area pt-100px pb-100px plr-15px pt-4">
     <div class="row m-0">
         <div class="col-12 col-lg-4 mb-md-30px mb-lm-30px">
             <div class="single-banner-2">
                 <img src="/assets/images/banner/6.jpg" alt="">
                 <div class="item-disc">
-                    <h4 class="title">Best Collection <br>
-                        For Women</h4>
+                    <h4 class="title">Shop Now</h4>
                     <a href="/cat/2" class="shop-link btn btn-primary ">Shop Now <i
                             class="fa fa-shopping-basket ml-5px" aria-hidden="true"></i></a>
                 </div>
@@ -469,8 +468,7 @@
             <div class="single-banner-2">
                 <img src="/assets/images/banner/4.jpg" alt="">
                 <div class="item-disc">
-                    <h4 class="title">Best Collection <br>
-                        For Men</h4>
+                    <h4 class="title">Shop Now</h4>
                     <a href="/cat/3" class="shop-link btn btn-primary">Shop Now <i
                             class="fa fa-shopping-basket ml-5px" aria-hidden="true"></i></a>
                 </div>
@@ -481,6 +479,7 @@
                 <img src="/assets/images/banner/5.jpg" alt="">
                 <div class="item-disc">
                     <h4 class="title">New Collection <br>
+                        shop now
                     </h4>
                     <a href="cat/1" class="shop-link btn btn-primary">Shop Now <i
                             class="fa fa-shopping-basket ml-5px" aria-hidden="true"></i></a>

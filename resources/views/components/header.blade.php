@@ -22,14 +22,14 @@
                                         <ul class="d-block">
 
                                             <li class="title"><a href="/cat/2">Womens Collection</a></li>
-                                            @foreach(\App\Models\Item::womensN(7) as $item)
+                                            @foreach(\App\Models\Item::womensN(5) as $item)
                                                 <li><a href="/item/{{$item->slug}}">{{$item->name}}</a></li>
 
                                             @endforeach
                                         </ul>
                                         <ul class="d-block">
                                             <li class="title"><a href="/cat/1">Mens Collection</a></li>
-                                            @foreach(\App\Models\Item::mensN(7) as $item)
+                                            @foreach(\App\Models\Item::mensN(5) as $item)
                                                 <li><a href="/item/{{$item->slug}}">{{$item->name}}</a></li>
 
                                             @endforeach        </ul>
@@ -42,7 +42,7 @@
                                         </ul>
                                         <ul class="d-block">
                                             <li class="title"><a href="/item">Latest Products</a></li>
-                                           @foreach(\App\Models\Item::lastN(7) as $item)
+                                           @foreach(\App\Models\Item::lastN(4) as $item)
                                             <li><a href="/item/{{$item->slug}}">{{$item->name}}</a></li>
                                          @endforeach
 
@@ -64,12 +64,12 @@
                                                         src="/assets/images/banner/7.jpg" alt=""></a>
                                             </li>
                                             <li>
-                                                <a class="p-0" href="shop-left-sidebar.html"><img
+                                                <a class="p-0" href="/item"><img
                                                         class="img-responsive w-100"
                                                         src="/assets/images/banner/8.jpg" alt=""></a>
                                             </li>
                                             <li>
-                                                <a class="p-0" href="shop-left-sidebar.html"><img
+                                                <a class="p-0" href="/item"><img
                                                         class="img-responsive w-100"
                                                         src="/assets/images/banner/9.jpg" alt=""></a>
                                             </li>

@@ -21,9 +21,9 @@ class PaymentController extends Controller
     public function __construct()
     {
         $this->gateway = Omnipay::create('PayPal_Rest');
-        $this->gateway->setClientId(env('PAYPAL_CLIENT_ID'));
-        $this->gateway->setSecret(env('PAYPAL_CLIENT_SECRET'));
-        $this->gateway->setTestMode(env('PAYPAL_TEST_MODE')); //set it to 'false' when go live
+        $this->gateway->setClientId('Adtn9s4dZ4uPV7yjzlweC1zZhy5BwHeVE-5NRRvNbPqtj3fXWseAdD6JccVYoAhoZdQch-YrZHWo0Pdi');
+        $this->gateway->setSecret('ENqQy0q2o5kTtiJ_6FD6yTK_wUD6yr4iJJJ0gWog_jsBE2r4PCv-Lt1Ei2tdvB6HcT_hfY_MLK4YnvkE');
+        $this->gateway->setTestMode(false); //set it to 'false' when go live
         //$this->gateway->setHeaderImageUrl(url('https://sandhstore/assets/images/logo/logo.png'));
     }
 
@@ -45,7 +45,7 @@ class PaymentController extends Controller
                     'amount' => $request->input('amount'),
                     'shipping_amount' =>"19.00",
                     'items' => Cart::myCart(),
-                    'currency' => env('PAYPAL_CURRENCY'),
+                    'currency' => 'USD',
                     'returnUrl' => url('paymentsuccess'),
                     'cancelUrl' => url('paymenterror'),
                 ))->send();
