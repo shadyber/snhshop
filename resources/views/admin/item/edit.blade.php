@@ -14,6 +14,9 @@
                                 <a class="nav-link"  href="#history" role="tab" aria-controls="history" aria-selected="false">Photo</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="#variety" role="tab" aria-controls="variety" aria-selected="false">Color Varity</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="#deals" role="tab" aria-controls="deals" aria-selected="false">More Photo</a>
                             </li>
                         </ul>
@@ -31,18 +34,7 @@
                                     <!-- Card Header - Dropdown -->
                                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                         <h6 class="m-0 font-weight-bold text-primary">Edit Product </h6>
-                                        <div class="dropdown no-arrow">
-                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                                                <div class="dropdown-header">Dropdown Header:</div>
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="#">Something else here</a>
-                                            </div>
-                                        </div>
+
                                     </div>
                                     <!-- Card Body -->
                                     <div class="card-body">
@@ -111,7 +103,7 @@
 
                                         <div class="form-group">
                                             <select class="form-control form-control" name="badge" placeholder="Item Badge" >
-                                                <option value="">Select Category</option>
+                                                <option value="">Select Badge</option>
                                                 <option value="">NEW</option>
                                                 <option value="">HOT</option>
                                                 <option value="">SALE</option>
@@ -159,6 +151,36 @@
 
 
                             </div>
+                            <div class="tab-pane" id="variety" role="tabpanel" aria-labelledby="varity-tab">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                       list
+                                        img
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        {{ Form::model($item, array('route' => array('photoupdate'), 'method' => 'POST','enctype'=>'multipart/form-data')) }}
+
+                                        @csrf
+                                        <input type="hidden" value="{{$item->id}}" name="id">
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control" name="name" placeholder="Varity Texture Name"   required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="file" class="form-control form-control" name="photo" placeholder="Varity Texture Photo"   required>
+                                        </div>
+                                        <button class="btn btn-primary btn-user btn-block" type="submit">
+                                          Add Variety
+                                        </button>
+                                        {{Form::close()}}
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
 
                             <div class="tab-pane" id="deals" role="tabpanel" aria-labelledby="deals-tab">
                              <div class="row">
@@ -184,18 +206,20 @@
                                             </button>
                                             {{Form::close()}}
                                     </div>
-                                 <div class="row">
-                                     <div class="col-sm-3">
-                                        @foreach($item->itemPhotos as $photo)
-                                             <img src="{{$photo->thumb}}" alt="{{$photo->title}}">
-                                            @endforeach
+                                    <div class="container">
+                                        <div class="col-md-3">
+                                            @foreach($item->itemPhotos as $photo)
+                                                <img src="{{$photo->thumb}}" alt="{{$photo->title}}" class="img-fluid img-thumbnail" width="100%" >
 
-                                     </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+
                                  </div>
 
                              </div>
 
-                            </div>
+
                         </div>
                     </div>
                 </div>

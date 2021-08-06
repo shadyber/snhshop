@@ -24,7 +24,6 @@ class CreateItemsTable extends Migration
             $table->double('price');
             $table->string('measurement')->nullable();
             $table->string('weight');
-
             $table->unsignedBigInteger('item_category_id');
             $table->foreign('item_category_id')->references('id')->on('item_categories');
 

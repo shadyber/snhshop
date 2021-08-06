@@ -44,11 +44,11 @@
 @include('components.header')
 <!-- Hero/Intro Slider Start -->
 <div class="section ">
-    <div class="hero-slider swiper-container slider-nav-style-1 slider-dot-style-1">
+    <div class="hero-slider swiper-container slider-nav-style-2 slider-dot-style-1">
         <!-- Hero slider Active -->
         <div class="swiper-wrapper">
             <!-- Single slider item -->
-            <div class="hero-slide-item-2 slider-height swiper-slide d-flex bg-color1">
+            <div class="hero-slide-item-2 slider-height swiper-slide d-flex">
                 <div class="container align-self-center">
                     <div class="row">
                         <div class="col-xl-6 col-lg-5 col-md-5 col-sm-5 align-self-center sm-center-view">
@@ -71,7 +71,7 @@
                 </div>
             </div>
             <!-- Single slider item -->
-            <div class="hero-slide-item-2 slider-height swiper-slide d-flex bg-color2">
+            <div class="hero-slide-item-2 slider-height swiper-slide d-flex  ">
                 <div class="container align-self-center">
                     <div class="row">
                         <div class="col-xl-6 col-lg-5 col-md-5 col-sm-5 align-self-center sm-center-view">
@@ -95,7 +95,7 @@
             </div>
 
             <!-- Single slider item -->
-            <div class="hero-slide-item-2 slider-height swiper-slide d-flex bg-color3">
+            <div class="hero-slide-item-2 slider-height swiper-slide d-flex">
                 <div class="container align-self-center">
                     <div class="row">
                         <div class="col-xl-6 col-lg-5 col-md-5 col-sm-5 align-self-center sm-center-view">
@@ -290,7 +290,7 @@
                                                 </a>
                                             </h5>
                                             <span class="price">
-                                                    <span class="new">$ {{$item->price}}</span>
+
                                                 </span>
                                         </div>
                                     </div>
@@ -346,7 +346,7 @@
                                                 </a>
                                             </h5>
                                             <span class="price">
-                                                    <span class="new">$ {{$item->price}}</span>
+
                                                 </span>
                                         </div>
                                     </div>
@@ -400,7 +400,7 @@
                                                     </a>
                                                 </h5>
                                                 <span class="price">
-                                                    <span class="new">$ {{$item->price}}</span>
+
                                                 </span>
                                             </div>
                                         </div>
@@ -448,12 +448,15 @@
 </div>
 <!-- Deal Area End -->
 
+
+
+
 <!-- Banner Area Start -->
 <div class="banner-area pt-100px pb-100px plr-15px">
     <div class="row m-0">
         <div class="col-12 col-lg-4 mb-md-30px mb-lm-30px">
             <div class="single-banner-2">
-                <img src="/assets/images/banner/1.jpg" alt="">
+                <img src="/assets/images/banner/6.jpg" alt="">
                 <div class="item-disc">
                     <h4 class="title">Best Collection <br>
                         For Women</h4>
@@ -464,7 +467,7 @@
         </div>
         <div class="col-12 col-lg-4 center-col mb-md-30px mb-lm-30px">
             <div class="single-banner-2">
-                <img src="/assets/images/banner/3.jpg" alt="">
+                <img src="/assets/images/banner/4.jpg" alt="">
                 <div class="item-disc">
                     <h4 class="title">Best Collection <br>
                         For Men</h4>
@@ -475,7 +478,7 @@
         </div>
         <div class="col-12 col-lg-4">
             <div class="single-banner-2">
-                <img src="/assets/images/banner/2.jpg" alt="">
+                <img src="/assets/images/banner/5.jpg" alt="">
                 <div class="item-disc">
                     <h4 class="title">New Collection <br>
                     </h4>
@@ -487,6 +490,7 @@
     </div>
 </div>
 <!-- Banner Area End -->
+
 
 <!--  Blog area Start -->
 <div class="main-blog-area pb-100px pt-100px">

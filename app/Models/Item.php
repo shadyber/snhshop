@@ -20,6 +20,10 @@ class Item extends Model
         return $this->belongsTo(User::class);
     }
 
+   public function variety(){
+        return $this->hasMany(Verity::class);
+    }
+
 
     public function Category(){
         return $this->belongsTo(ItemCategory::class,'item_category_id');
