@@ -91,6 +91,12 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
+        <a class="nav-link" href="/gallery/create">
+            <i class="fas fa-fw fa-image"></i>
+            <span>Create Photo in gallery</span></a>
+    </li>
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item">
         <a class="nav-link" href="/blog/create">
             <i class="fas fa-fw fa-sticky-note"></i>
             <span>Create Blog</span></a>

@@ -46,27 +46,28 @@ class GalleryController extends Controller
 
         if($request->hasFile('photo')) {
 
-            $newImageName=uniqid().'_'. $request->title.'.'.$request->photo->extension();
+            $newImageName=uniqid().'_'. $request->_token.'.'.$request->photo->extension();
 
 
             $file = $request->file('photo');
             $file_name =$newImageName;
-            $destinationPath = 'images/thumbnile/';
-            $new_img = Image::make($file->getRealPath())->resize(530, 694);
+            $destinationPath = 'images/gallery/';
+            $new_img = Image::make($file->getRealPath())->resize(true, true);
 
 // save file with medium quality
-            $new_img->save($destinationPath . $file_name, 80);
-            $request->photo->move(public_path('images/'),$newImageName);
+            $new_img->save($destinationPath . $file_name, 100);
+            $new_img->save($destinationPath.'thumbnile/' . $file_name, 15);
+
+            $request->photo->move(public_path('images/gallery'),$newImageName);
 
         }
-
 
         Gallery::create([
             'title'=>$request->input('title'),
             'items'=>$request->input('items'),
             'tags'=>$request->input('tags'),
-            'photo'=>'/images/'.$newImageName,
-            'thumb'=>'/images/thumbnile/'.$newImageName
+            'photo'=>'/images/gallery/'.$newImageName,
+            'thumb'=>'/images/gallery/thumbnile/'.$newImageName,
 ]);
 
         return redirect()->back()->with('message','Gallery Photo succuessfuly Created !');

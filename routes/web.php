@@ -45,7 +45,8 @@ Route::group(['middleware' => 'role:admin'], function() {
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
+
+Route::resource('/gallery', App\Http\Controllers\GalleryController::class);01
 
 
 Route::resource('/item',App\Http\Controllers\ItemController::class);
