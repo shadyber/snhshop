@@ -11,7 +11,7 @@
                             <div class="footer-logo">
                                 <a href="/"><img src="/assets/images/logo/logo-white.png" alt=""></a>
                             </div>
-                            <p class="about-text">Every country has its own import tax rules, and Sands shop cannot be held liable for any charges or taxes imposed by your government. Thank you for understanding.
+                            <p class="about-text">Every country has its own import tax rules, and SandHshop cannot be held liable for any charges or taxes imposed by your government. Thank you for understanding.
                             </p>
                             <ul class="link-follow">
                                 <li>

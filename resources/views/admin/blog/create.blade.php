@@ -43,7 +43,7 @@
 
 
                 <div class="form-group">
-                    <textarea class="form-control form-control" name="detail" placeholder="Post Detail" required   rows="5">
+                    <textarea class="form-control form-control ckeditor" name="detail" placeholder="Post Detail" required   rows="5">
                     </textarea>
                 </div>
 
@@ -65,4 +65,15 @@
 
         </div>
     </div>
+@endsection
+
+@section('js')
+    <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('.ckeditor').ckeditor();
+        });
+
+    </script>
 @endsection

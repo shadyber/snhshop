@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Item;
+use App\Models\Verity;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
 
@@ -87,7 +88,7 @@ class AdminItemController extends Controller
 
         }
 
-        Item::create([
+       $item= Item::create([
                 'name'=>$request->input('name'),
                 'detail'=>$request->input('detail'),
                 'slug'=>SlugService::createSlug(Item::class,'slug',$request->title.$request->_token),
@@ -104,6 +105,12 @@ class AdminItemController extends Controller
             ]
         );
 
+        $default_verity=new Verity;
+        $default_verity->title='default';
+        $default_verity->item_id=$item->id;
+        $default_verity->thumb='/images/items/thumbnile/'.$newImageName;
+        $default_verity->photo='/images/items/'.$newImageName;
+$default_verity->save();
         return redirect()->back()->with('success','Item Created Succusfully!');
 
 

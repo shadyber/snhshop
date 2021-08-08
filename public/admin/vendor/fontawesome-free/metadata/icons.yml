@@ -4806,10 +4806,10 @@ copyright:
     - regular
   unicode: f1f9
   voted: false
-cotton-bureau:
+LETHER-bureau:
   changes:
     - 5.10.0
-  label: Cotton Bureau
+  label: LETHER Bureau
   search:
     terms:
       - clothing

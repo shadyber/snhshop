@@ -159,18 +159,18 @@
                                     </div>
                                     <div class="col-md-6">
 
-                                        {{ Form::model($item, array('route' => array('photoupdate'), 'method' => 'POST','enctype'=>'multipart/form-data')) }}
-
+                                       <form action="/verity" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <input type="hidden" value="{{$item->id}}" name="id">
 
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control" name="name" placeholder="Varity Texture Name"   required>
+                                            <input type="text" class="form-control form-control" name="title" placeholder="Varity Texture Title"   required>
                                         </div>
-                                        <div class="form-group">
-                                            <input type="file" class="form-control form-control" name="photo" placeholder="Varity Texture Photo"   required>
-                                        </div>
-                                        <button class="btn btn-primary btn-user btn-block" type="submit">
+                                           <div class="form-group">
+                                               <input type="file" class="form-control form-control" name="photo[]" placeholder="More Photo" multiple required>
+                                           </div>
+
+                                           <button class="btn btn-primary btn-user btn-block" type="submit">
                                           Add Variety
                                         </button>
                                         {{Form::close()}}
@@ -192,6 +192,16 @@
 
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control" name="title" placeholder="Photo Title">
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <select class="form-control form-control" name="title" placeholder="Verity Color" required>
+                                                    <option value="">Select Verity</option>
+                                                    @foreach($item->variety as $verity)
+                                                        <option value="{{$verity->id}}">{{$verity->title}}</option>
+                                                        @endforeach
+                                                </select>
                                             </div>
 
 
@@ -227,6 +237,11 @@
         </div>
 
 
+@endsection
+@section('css')
+    <style>
+
+    </style>
 @endsection
 @section('js')
     <script>

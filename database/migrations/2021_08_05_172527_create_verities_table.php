@@ -17,7 +17,8 @@ class CreateVeritiesTable extends Migration
             $table->id();
             $table->bigInteger('item_id')->unsigned();
             $table->foreign('item_id')->references('id')->on('items');
-            $table->string('name');
+            $table->string('title');
+            $table->string('thumb');
             $table->string('photo');
             $table->timestamps();
         });

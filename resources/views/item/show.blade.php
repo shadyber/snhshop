@@ -91,7 +91,13 @@
                                 </li>
 
                             </ul>
-                        </div>
+                            <br>
+                            <hr>
+                        </div>  @foreach($item->variety as $verity)
+
+                            <a href="#"> <img src="{{$verity->thumb}}" alt="{{$verity->title}}" width="32" height="32" class="img-profile img-thumbnail rounded-circle"></a>
+
+                        @endforeach
                         <div class="pro-details-social-info pro-details-same-style d-flex">
                             <span>Share: </span>
                             <ul class="d-flex">

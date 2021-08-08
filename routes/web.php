@@ -34,6 +34,7 @@ Route::group(['middleware' => 'role:admin'], function() {
     Route::post('/orderstatus',[Controllers\OrderController::class,'updateStatus'])->name('order.status');
     Route::post('/photoupdate', [App\Http\Controllers\AdminItemController::class, 'photoupdate'])->name('photoupdate');
     Route::resource('/itemsphoto',App\Http\Controllers\ItemPhotosController::class);
+    Route::resource('/verity',App\Http\Controllers\VerityController::class);
     Route::resource('/users',App\Http\Controllers\CustomerController::class);
     Route::get('/about/create',[AboutController::class,'create']);
     Route::get('/about/edit',[AboutController::class,'create']);
@@ -46,7 +47,7 @@ Route::group(['middleware' => 'role:admin'], function() {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('/gallery', App\Http\Controllers\GalleryController::class);01
+Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
 
 
 Route::resource('/item',App\Http\Controllers\ItemController::class);
@@ -58,6 +59,7 @@ Route::get('/myorders',[App\Http\Controllers\OrderController::class,'myorders'])
 Route::resource('/cat',App\Http\Controllers\ItemCategoryController::class);
 
 Route::resource('/blog',App\Http\Controllers\BlogController::class);
+Route::resource('/blogcategory',App\Http\Controllers\BlogCategoryController::class);
 
 Route::get('/about', function(){
    return view('about');

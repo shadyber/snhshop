@@ -22,6 +22,7 @@ class CreateItemPhotosTable extends Migration
             $table->string('thumb');
 
             $table->string('title')->default('item photo');
+            $table->bigInteger('verity_id')->default(0);
 
 
             $table->timestamps();

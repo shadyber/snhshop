@@ -38,9 +38,9 @@
                     </div>
                     <div class="col-md-6 d-flex justify-content-center">
                         <div class="service-right-content align-self-center align-items-center">
-                            <span class="sami-title">100% Guaranteed Pure Cotton</span>
+                            <span class="sami-title">100% Guaranteed Pure LETHER</span>
                             <h2 class="title">International Customers</h2>
-                            <p> Every country has its own import tax rules, and Sands shop cannot be held liable for any charges or taxes imposed by your government. Thank you for understanding.</p>
+                            <p> Every country has its own import tax rules, and SandHshop cannot be held liable for any charges or taxes imposed by your government. Thank you for understanding.</p>
                             <a href="shop-left-sidebar.html" class="btn btn-primary service-btn"> Shop Now <i class="fa fa-shopping-basket ml-10px" aria-hidden="true"></i></a>
                         </div>
                     </div>
