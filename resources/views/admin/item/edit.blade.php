@@ -196,7 +196,7 @@
 
 
                                             <div class="form-group">
-                                                <select class="form-control form-control" name="title" placeholder="Verity Color" required>
+                                                <select class="form-control form-control" name="verity_id" placeholder="Verity Color" required>
                                                     <option value="">Select Verity</option>
                                                     @foreach($item->variety as $verity)
                                                         <option value="{{$verity->id}}">{{$verity->title}}</option>
@@ -220,7 +220,7 @@
                                         <div class="col-md-3">
                                             @foreach($item->itemPhotos as $photo)
                                                 <img src="{{$photo->thumb}}" alt="{{$photo->title}}" class="img-fluid img-thumbnail" width="100%" >
-
+                                                {{$photo->verity->title}}
                                             @endforeach
                                         </div>
                                     </div>

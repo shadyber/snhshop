@@ -1,5 +1,21 @@
 @extends('layouts.app')
 @section('title',$item->name.' Detail')
+
+@section('js')
+    @foreach($item->variety as $verity)
+        <script>
+            $( "#verity{{$verity->id}}" ).click(function(e) {
+                e.preventDefault();
+                $('.slidephotos').addClass('hidden');
+                $('.group{{$verity->id}}').removeClass('hidden');
+
+            });
+
+        </script>
+
+    @endforeach
+@endsection
+
 @section('content')
     <!-- Product Details Area Start -->
     <div class="product-details-area pt-100px pb-100px">
@@ -10,14 +26,9 @@
                     <div class="swiper-container zoom-top">
                         <div class="swiper-wrapper">
 
-                            <div class="swiper-slide zoom-image-hover">
-                                <img class="img-responsive m-auto bg-gray shadow-lg" src="{{$item->photo}}"
-                                     alt="">
-                            </div>
-
                             @foreach($item->itemPhotos as $photo)
-                                <div class="swiper-slide zoom-image-hover">
-                                    <img class="img-responsive m-auto bg-gray shadow-lg" src="{{$photo->thumb}}"
+                                <div class="swiper-slide zoom-image-hoverslidephotos group{{$photo->verity_id}}">
+                                    <img class="img-responsive m-auto bg-gray shadow-sm" src="{{$photo->thumb}}"
                                          alt="{{$item->name}}">
                                 </div>
 
@@ -25,17 +36,12 @@
                         </div>
                     </div>
                     <div class="swiper-container zoom-thumbs mt-3 mb-3">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                        <div class="swiper-wrapper slider">
 
-                                <img class="img-responsive m-auto bg-gray shadow-lg" src="{{$item->thumb}}"
-                                     alt="">
-
-                            </div>
                             @foreach($item->itemPhotos as $photo)
-                            <div class="swiper-slide">
+                            <div class="swiper-slide slidephotos group{{$photo->verity_id}}">
 
-                                <img class="img-responsive m-auto bg-gray shadow-lg" src="{{$photo->thumb}}"
+                                <img class="img-responsive m-auto bg-gray shadow-lg " src="{{$photo->thumb}}"
                                      alt="{{$photo->name}}">
 
                             </div>
@@ -93,9 +99,10 @@
                             </ul>
                             <br>
                             <hr>
-                        </div>  @foreach($item->variety as $verity)
+                        </div>
+                        @foreach($item->variety as $verity)
 
-                            <a href="#"> <img src="{{$verity->thumb}}" alt="{{$verity->title}}" width="32" height="32" class="img-profile img-thumbnail rounded-circle"></a>
+                            <a href="#" id="verity{{$verity->id}}"> <img src="{{$verity->thumb}}" alt="{{$verity->title}}" width="32" height="32" class="img-profile img-thumbnail rounded-circle"></a>
 
                         @endforeach
                         <div class="pro-details-social-info pro-details-same-style d-flex">
@@ -274,7 +281,7 @@
         </div>
     </div>
     <!-- Related product Area End -->
-@endsection
-@section('js')
 
-    @endsection
+
+@endsection
+

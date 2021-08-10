@@ -12,4 +12,7 @@ class ItemPhotos extends Model
     public function item(){
         return $this->belongsTo(Item::class);
     }
+    public function verity(){
+        return $this->belongsTo(Verity::class);
+    }
 }

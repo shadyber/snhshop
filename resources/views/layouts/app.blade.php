@@ -104,7 +104,7 @@
 
 <!-- Main Js -->
 <script src="/assets/js/main.js"></script>
-@yield('js')
+
 <script>
     var qnt=1;
 
@@ -136,6 +136,7 @@
         });
     });
 </script>
+@yield('js')
 </body>
 
 </html>

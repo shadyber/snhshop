@@ -70,6 +70,7 @@ class ItemPhotosController extends Controller
                 $items_photo->photo='/images/items/'.$newImageName;
                 $items_photo->thumb='/images/items/thumbnile/'.$newImageName;
                 $items_photo->title=$request->input('title');
+                $items_photo->verity_id=$request->input('verity_id');
                 $items_photo->save();
 
                 \Illuminate\Support\Facades\Session::flash('success', 'Alt Image successfully Updated!');
