@@ -6,7 +6,7 @@
     <div class="product-details-area pt-100px pb-100px">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-sm-12 col-xs-12 mb-lm-30px mb-md-30px mb-sm-30px flex">
+                <div class="col-lg-6 col-sm-12 col-xs-12 mb-lm-30px mb-md-30px mb-sm-30px">
                  <div class="d-flex align-items-center">
            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
               @foreach($item->variety as $variety)
@@ -31,18 +31,18 @@
                                @foreach(\App\Models\Verity::photos($variety->id) as $photo)
 
                                <div class="carousel-item {{$loop->first ? 'active' : ''}}">
-                                   <img src="{{$photo->photo}}" class="d-block w-100" alt="{{$photo->title}}">
+                                   <img src="{{$photo->thumb}}" class="d-block w-100" alt="{{$photo->title}}">
                                </div>
                                @endforeach
 
 
                            </div>
                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                               <span class="carousel-control-prev-icon red" aria-hidden="true"></span>
                                <span class="visually-hidden">Previous</span>
                            </button>
                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                               <span class="carousel-control-next-icon red" aria-hidden="true"></span>
                                <span class="visually-hidden">Next</span>
                            </button>
                        </div>

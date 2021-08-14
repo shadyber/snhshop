@@ -85,6 +85,8 @@ Route::get('/contact', function(){
 
 Route::get('/addtocart/{id}',[CartController::class,'addToCart'])->name('addtocart');
 Route::get('/multipleaddtocart/{id}/{qnt}',[CartController::class,'addMultipleToCart'])->name('addmultipletocart');
+Route::get('/removecart/{id}/',[CartController::class,'removeCart'])->name('removeCart');
+Route::get('/destroyCart',[CartController::class,'destroyCart'])->name('destroyCartm');
 
 Route::get('/mycart',[CartController::class,'myCart'])->name('mycart');
 

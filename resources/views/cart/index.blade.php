@@ -42,7 +42,7 @@
                                     <td class="product-subtotal">${{$cart['price'] * $cart['quantity']}}</td>
                                     <td class="product-remove">
                                         <a href="#"><i class="fa fa-pencil"></i></a>
-                                        <a href="#"><i class="fa fa-times"></i></a>
+                                        <a href="/removecart/{{$cart['id']}}"><i class="fa fa-times"></i></a>
                                     </td>
                                 </tr>
                            @endforeach
@@ -57,7 +57,7 @@
                                     </div>
                                     <div class="cart-clear">
                                         <button>Update Shopping Cart</button>
-                                        <a href="#">Clear Shopping Cart</a>
+                                        <a href="/destroyCart">Clear Shopping Cart</a>
                                     </div>
                                 </div>
                             </div>
