@@ -15,4 +15,9 @@ class ItemPhotos extends Model
     public function verity(){
         return $this->belongsTo(Verity::class);
     }
+
+
+    public static function varityPhoto($n){
+        return ItemPhotos::orderBy('id', 'desc')->where('item_category_id','LIKE','3')->take($n)->get();
+    }
 }

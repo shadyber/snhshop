@@ -11,6 +11,8 @@ class Verity extends Model
     public function item(){
         return $this->belongsTo(Item::class);
     }
-
+    public static function photos($vid){
+        return ItemPhotos::orderBy('id','desc')->where('verity_id','LIKE',$vid)->get();
+    }
 
 }

@@ -1,57 +1,58 @@
 @extends('layouts.app')
 @section('title',$item->name.' Detail')
 
-@section('js')
-    @foreach($item->variety as $verity)
-        <script>
-            $( "#verity{{$verity->id}}" ).click(function(e) {
-                e.preventDefault();
-                $('.slidephotos').addClass('hidden');
-                $('.group{{$verity->id}}').removeClass('hidden');
-
-            });
-
-        </script>
-
-    @endforeach
-@endsection
-
 @section('content')
     <!-- Product Details Area Start -->
     <div class="product-details-area pt-100px pb-100px">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-sm-12 col-xs-12 mb-lm-30px mb-md-30px mb-sm-30px">
-                    <!-- Swiper -->
-                    <div class="swiper-container zoom-top">
-                        <div class="swiper-wrapper">
+                <div class="col-lg-6 col-sm-12 col-xs-12 mb-lm-30px mb-md-30px mb-sm-30px flex">
+                 <div class="d-flex align-items-center">
+           <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              @foreach($item->variety as $variety)
+               <a href="#" class="  {{$loop->first ? 'active' : '' }}" id="v-pills-{{$variety->id}}-tab" data-bs-toggle="pill" data-bs-target="#v-pills-{{$variety->id}}"   role="tab" aria-controls="v-pills-{{$variety->id}}" >
+                   <img src="{{$variety->thumb}}" width="32px" height="32px" class="  rounded-circle" alt="">
+               </a>
+               @endforeach
 
-                            @foreach($item->itemPhotos as $photo)
-                                <div class="swiper-slide zoom-image-hoverslidephotos group{{$photo->verity_id}}">
-                                    <img class="img-responsive m-auto bg-gray shadow-sm" src="{{$photo->thumb}}"
-                                         alt="{{$item->name}}">
-                                </div>
+               </div>
+           <div class="tab-content" id="v-pills-tabContent">
+               @foreach($item->variety as $variety)
+               <div class="tab-pane fade show {{$loop->first ? 'active' : '' }}" id="v-pills-{{$variety->id}}" role="tabpanel" aria-labelledby="v-pills-{{$variety->id}}-tab">
 
-                            @endforeach
-                        </div>
-                    </div>
-                    <div class="swiper-container zoom-thumbs mt-3 mb-3">
-                        <div class="swiper-wrapper slider">
+                     <div id="carouselExampleIndicators{{$variety->id}}" class="carousel slide" data-bs-ride="carousel">
+                           <div class="carousel-indicators">
+                               @foreach(\App\Models\Verity::photos($variety->id) as $photo)
 
-                            @foreach($item->itemPhotos as $photo)
-                            <div class="swiper-slide slidephotos group{{$photo->verity_id}}">
-
-                                <img class="img-responsive m-auto bg-gray shadow-lg " src="{{$photo->thumb}}"
-                                     alt="{{$photo->name}}">
-
+                               <button type="button" data-bs-target="#carouselExampleIndicators{{$variety->id}}" data-bs-slide-to="{{$photo->id}}" class=" {{$loop->first ? 'active' : ''}}" aria-current="true" aria-label="{{$photo->title}}"></button>
+                               @endforeach
                             </div>
-                            @endforeach
+                           <div class="carousel-inner bg-gradient-light">
+                               @foreach(\App\Models\Verity::photos($variety->id) as $photo)
 
-                        </div>
-                    </div>
+                               <div class="carousel-item {{$loop->first ? 'active' : ''}}">
+                                   <img src="{{$photo->photo}}" class="d-block w-100" alt="{{$photo->title}}">
+                               </div>
+                               @endforeach
+
+
+                           </div>
+                           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                               <span class="visually-hidden">Previous</span>
+                           </button>
+                           <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                               <span class="visually-hidden">Next</span>
+                           </button>
+                       </div>
+               </div>
+               @endforeach
+              </div>
+       </div>
                 </div>
                 <div class="col-lg-6 col-sm-12 col-xs-12" data-aos="fade-up" data-aos-delay="200">
-                    <div class="product-details-content quickview-content">
+                    <div class="product-details-content quickview-content right-column">
                         <h2>{{$item->name}}</h2>
                         <div class="pricing-meta">
                             <ul>
@@ -100,11 +101,17 @@
                             <br>
                             <hr>
                         </div>
-                        @foreach($item->variety as $verity)
+                        <!-- Product Configuration -->
+                        <div class="product-configuration">
+                            @foreach($item->variety as $verity)
 
-                            <a href="#" id="verity{{$verity->id}}"> <img src="{{$verity->thumb}}" alt="{{$verity->title}}" width="32" height="32" class="img-profile img-thumbnail rounded-circle"></a>
+                                <a href="#" id="verity{{$verity->id}}"> <img src="{{$verity->thumb}}" alt="{{$verity->title}}" width="32" height="32" class="img-profile img-thumbnail rounded-circle"></a>
 
-                        @endforeach
+                            @endforeach
+                        </div>
+
+
+
                         <div class="pro-details-social-info pro-details-same-style d-flex">
                             <span>Share: </span>
                             <ul class="d-flex">
@@ -207,7 +214,7 @@
                                         @endauth
 
                                         @guest
-                                                <a href="/login"> Login for Comment </a> | or | <a href="/register"> Register for comment</a>
+                                            <a href="/login"> Login for Comment </a> | or | <a href="/register"> Register for comment</a>
                                         @endguest
                                     </div>
                                 </div>
