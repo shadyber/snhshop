@@ -66,12 +66,16 @@
                                     <td>{{$item->price}}</td>
                                     <td>{{$item->init_qnt}}</td>
                                     <td>
-                                        <a href="/items/{{$item->slug}}/edit" class="btn btn-default"><i class="fa fa-pen"></i></a>
-                                        <a href="/items/{{$item->slug}}" class="btn btn-primary"><i class="fa fa-eye"></i></a>
-                                        <form action="/item" method="delete" class="form-inline">
-                                            @csrf
-                                            @method('delete')
-                                            <button type="submit" class="btn btn-dnager"><i class="fa fa-trash"></i></button>
+                                         <form method="POST" action="/items/{{$item->id}}" class="form-inline ">
+                                            {{ csrf_field() }}
+                                            {{ method_field('DELETE') }}
+
+                                            <div class="form-group">
+                                                <a href="/items/{{$item->slug}}/edit" class="btn btn-default"><i class="fa fa-pen"></i></a>
+                                                <a href="/items/{{$item->slug}}" class="btn btn-primary"><i class="fa fa-eye"></i></a>
+
+                                                <button type="submit" class="btn btn-danger delete-item"> <i class="fa fa-trash"></i></button>
+                                            </div>
                                         </form>
 
                                     </td>
@@ -96,3 +100,14 @@
         </div>
     </div>
 @endsection
+@section('js')
+    <script>
+        $('.delete-item').click(function(e){
+            e.preventDefault() // Don't post the form, unless confirmed
+            if (confirm('Are you sure?')) {
+                // Post the form
+                $(e.target).closest('form').submit() // Post the surrounding form
+            }
+        });
+    </script>
+    @endsection

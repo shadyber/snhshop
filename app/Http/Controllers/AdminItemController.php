@@ -88,6 +88,11 @@ class AdminItemController extends Controller
 
         }
 
+        $mesurments=json_encode(array(
+            $request->input('height'),
+            $request->input('width'),
+            $request->input('diameter')
+        ));
        $item= Item::create([
                 'name'=>$request->input('name'),
                 'detail'=>$request->input('detail'),
@@ -100,6 +105,7 @@ class AdminItemController extends Controller
                 'weight'=>$request->input('weight'),
                 'init_qnt'=>$request->input('init_qnt'),
                 'badge'=>$request->input('badge'),
+                'measurement'=>$mesurments,
                 'user_id'=>auth()->user()->id,
                 'item_category_id'=>$request->input('item_category_id'),
             ]
@@ -159,9 +165,15 @@ $default_verity->save();
 
 
 
+        $mesurments=json_encode(array(
+            $request->input('height'),
+            $request->input('width'),
+            $request->input('diameter')
+        ));
 
         $input = $request->except('photo');
         $item->fill($input)->save();
+        $item->measurment=$mesurments;
 
 
         return redirect()->back()->with('success','Item Updated Succesfully.');
@@ -198,7 +210,8 @@ $default_verity->save();
             $new_img->save($destinationPath . $file_name, 80);
             $request->photo->move(public_path('images/items'),$newImageName);
 
-        }
+                    }
+
                 $item->photo='/images/items/'.$newImageName;
                 $item->thumb='/images/items/thumbnile/'.$newImageName;
                 $item->save();

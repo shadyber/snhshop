@@ -96,7 +96,7 @@
                                             </div>
 
                                             <div class="col-sm-4">
-                                                <input type="number" class="form-control form-control" name="Diameter" placeholder="Diameter">
+                                                <input type="number" class="form-control form-control" name="diameter" placeholder="Diameter">
                                             </div>
                                         </div>
 
@@ -154,8 +154,9 @@
                             <div class="tab-pane" id="variety" role="tabpanel" aria-labelledby="varity-tab">
                                 <div class="row">
                                     <div class="col-md-3">
-                                       list
-                                        img
+                                     @foreach($item->variety as $variety)
+                                            <img src="{{$variety->thumb}}" alt="{{$variety->title}}" width="128px" class="rounded-circle thumb-image">
+                                        @endforeach
                                     </div>
                                     <div class="col-md-6">
 
@@ -219,8 +220,18 @@
                                     <div class="container">
                                         <div class="col-md-3">
                                             @foreach($item->itemPhotos as $photo)
-                                                <img src="{{$photo->thumb}}" alt="{{$photo->title}}" class="img-fluid img-thumbnail" width="100%" >
-                                                {{$photo->verity->title}}
+                                                 <img src="{{$photo->thumb}}" alt="{{$photo->title}}" class="img-fluid img-thumbnail" width="100%" >
+                                                 {{$photo->verity->title}}
+                                                <form method="POST" action="/itemsphoto/{{$photo->id}}" class="form-inline ">
+                                                    {{ csrf_field() }}
+                                                    {{ method_field('DELETE') }}
+
+                                                    <div class="form-group">
+
+                                                        <button type="submit" class="btn btn-danger delete-photo"> <i class="fa fa-trash"></i></button>
+                                                    </div>
+                                                </form>
+
                                             @endforeach
                                         </div>
                                     </div>
@@ -249,6 +260,13 @@
             e.preventDefault()
             $(this).tab('show')
         }) ;
+        $('.delete-photo').click(function(e){
+            e.preventDefault() // Don't post the form, unless confirmed
+            if (confirm('Are you sure?')) {
+                // Post the form
+                $(e.target).closest('form').submit() // Post the surrounding form
+            }
+        });
     </script>
 
 @endsection

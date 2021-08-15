@@ -26,6 +26,7 @@ class CreateItemPhotosTable extends Migration
 
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

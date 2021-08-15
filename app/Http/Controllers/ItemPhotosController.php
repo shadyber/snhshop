@@ -6,6 +6,7 @@ use App\Models\Item;
 use App\Models\ItemPhotos;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 use Image;
 use MongoDB\Driver\Session;
 
@@ -127,6 +128,10 @@ class ItemPhotosController extends Controller
      */
     public function destroy(ItemPhotos $itemPhotos)
     {
-        //
+        if(!Auth::user()->hasRole('admin')){
+            return redirect()->back()->with('error','You Don\t Have This Permission');
+        }
+        $itemPhotos->delete();
+        return redirect()->back()->with('success','Item Photo removed');
     }
 }

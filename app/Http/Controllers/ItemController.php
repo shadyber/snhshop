@@ -156,10 +156,9 @@ class ItemController extends Controller
      * @return Response
      */
     public function destroy(Item $item)
-    {
-        if(!Auth::user()->hasRole('admin')){
-            return redirect()->back()->with('error','You Don\t Have This Permission');
-        }
+    {   if(!Auth::user()->hasRole('admin')){
+        return redirect()->back()->with('error','You Don\t Have This Permission');
+    }
         $item->delete();
         return redirect()->back()->with('success','Item removed');
     }
