@@ -130,4 +130,7 @@ Route::get('/restart-server',function (){
     $exitCode3 = Artisan::call('cache:clear');
 
     echo  $exitCode3;
+    $exitCode3 = Artisan::call('config:cache');
+
+    echo  $exitCode3;
 });
