@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\Item;
-use Illuminate\Http\Request;
-use MongoDB\Driver\Session;
-use function Clue\StreamFilter\remove;
 
 class CartController extends Controller
 {
@@ -128,14 +126,20 @@ class CartController extends Controller
         return count(session()->get('cart'));
     //    return redirect()->back()->with('success', 'Product added to cart successfully!');
     }
-public function removeCart($id){
-    $carts = session()->get('cart');
-    foreach($carts as $cart){
-        if($cart['id']==$id){
-        print('removed');
-        }
-    }
+public function removeCart($id)
+{
+
+  $cart=session()->get('cart');
+if(!$cart){
     return redirect()->back();
+}else if(!$cart[$id]){
+        return redirect()->back();
+    }
+  if($cart[$id]){
+      unset($cart[$id]);
+  }
+  session()->put('cart',$cart);
+  return redirect()->back();
 }
 public function destroyCart(){
         Session()->remove('cart');
