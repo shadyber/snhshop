@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Item;
+use App\Models\ItemPhotos;
 use App\Models\Verity;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
@@ -117,6 +118,14 @@ class AdminItemController extends Controller
         $default_verity->thumb='/images/items/thumbnile/'.$newImageName;
         $default_verity->photo='/images/items/'.$newImageName;
 $default_verity->save();
+
+$default_photo = new ItemPhotos;
+$default_photo->item_id=$item->id;
+$default_photo->photo='/images/items/'.$newImageName;
+$default_photo->thumb='/images/items/thumbnile/'.$newImageName;
+$default_photo->title='default photo';
+$default_photo->verity_id=$default_verity->id;
+$default_photo->save();
         return redirect()->back()->with('success','Item Created Succusfully!');
 
 

@@ -6,50 +6,51 @@
     <div class="product-details-area pt-100px pb-100px">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-sm-12 col-xs-12 mb-lm-30px mb-md-30px mb-sm-30px">
-                 <div class="d-flex align-items-center">
-           <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              @foreach($item->variety as $variety)
-               <a href="#" class="  {{$loop->first ? 'active' : '' }}" id="v-pills-{{$variety->id}}-tab" data-bs-toggle="pill" data-bs-target="#v-pills-{{$variety->id}}"   role="tab" aria-controls="v-pills-{{$variety->id}}" >
-                   <img src="{{$variety->thumb}}" width="32px" height="32px" class="  rounded-circle" alt="">
-               </a>
-               @endforeach
+                <div class="col-md-6 sm-12">
+                    <div class="bg-color-red">
+                        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            @foreach($item->variety as $variety)
+                                <a href="#" class="  {{$loop->first ? 'active' : '' }}" id="v-pills-{{$variety->id}}-tab" data-bs-toggle="pill" data-bs-target="#v-pills-{{$variety->id}}"   role="tab" aria-controls="v-pills-{{$variety->id}}" >
+                                    <img src="{{$variety->thumb}}" width="32px" height="32px" class="  rounded-circle" alt="">
+                                </a>
+                            @endforeach
 
-               </div>
-           <div class="tab-content" id="v-pills-tabContent">
-               @foreach($item->variety as $variety)
-               <div class="tab-pane fade show {{$loop->first ? 'active' : '' }}" id="v-pills-{{$variety->id}}" role="tabpanel" aria-labelledby="v-pills-{{$variety->id}}-tab">
+                        </div>
+                        <div class="tab-content" style="min-height:400px;z-index:99999;" id="v-pills-tabContent">
+                            @foreach($item->variety as $variety)
+                                <div class="tab-pane fade show {{$loop->first ? 'active' : '' }}" id="v-pills-{{$variety->id}}" role="tabpanel" aria-labelledby="v-pills-{{$variety->id}}-tab">
 
-                     <div id="carouselExampleIndicators{{$variety->id}}" class="carousel slide" data-bs-ride="carousel">
-                           <div class="carousel-indicators">
-                               @foreach(\App\Models\Verity::photos($variety->id) as $photo)
+                                    <div id="carouselExampleIndicators{{$variety->id}}" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                            @foreach(\App\Models\Verity::photos($variety->id) as $photo)
 
-                               <button type="button" data-bs-target="#carouselExampleIndicators{{$variety->id}}" data-bs-slide-to="{{$photo->id}}" class=" {{$loop->first ? 'active' : ''}}" aria-current="true" aria-label="{{$photo->title}}"></button>
-                               @endforeach
-                            </div>
-                           <div class="carousel-inner bg-gradient-light">
-                               @foreach(\App\Models\Verity::photos($variety->id) as $photo)
-
-                               <div class="carousel-item {{$loop->first ? 'active' : ''}}">
-                                   <img src="{{$photo->thumb}}" class="d-block w-100" alt="{{$photo->title}}">
-                               </div>
-                               @endforeach
+                                                <button type="button" data-bs-target="#carouselExampleIndicators{{$variety->id}}" data-bs-slide-to="{{$photo->id}}" class=" {{$loop->first ? 'active' : ''}}" aria-current="true" aria-label="{{$photo->title}}"></button>
+                                            @endforeach
+                                        </div>
+                                        <div class="carousel-inner bg-gradient-light">
+                                            @foreach(\App\Models\Verity::photos($variety->id) as $ph)
 
 
-                           </div>
-                           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                               <span class="carousel-control-prev-icon red" aria-hidden="true"></span>
-                               <span class="visually-hidden">Previous</span>
-                           </button>
-                           <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                               <span class="carousel-control-next-icon red" aria-hidden="true"></span>
-                               <span class="visually-hidden">Next</span>
-                           </button>
-                       </div>
-               </div>
-               @endforeach
-              </div>
-       </div>
+                                                <div class="carousel-item {{$loop->first ? 'active' : ''}}">
+                                                    <img src="{{$ph->thumb}}" class="d-block w-100" alt="{{$ph->title}}">
+                                                </div>
+                                            @endforeach
+
+
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon color-red" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon color-red" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-6 col-sm-12 col-xs-12" data-aos="fade-up" data-aos-delay="200">
                     <div class="product-details-content quickview-content right-column">

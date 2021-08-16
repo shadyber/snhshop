@@ -57,7 +57,7 @@
 
                                         <div class="form-group">
                                             <select class="form-control form-control" name="item_category_id"  placeholder="Item Category" required>
-
+                                                <option value="{{$item->category_id}}" selected> {{$item->category->title}}</option>
                                              @foreach(\App\Models\ItemCategory::all() as $category)
                                                     <option value="{{$category->id}}">{{$category->title}}</option>
                                                  @endforeach

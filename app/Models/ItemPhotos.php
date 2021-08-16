@@ -18,6 +18,6 @@ class ItemPhotos extends Model
 
 
     public static function varityPhoto($n){
-        return ItemPhotos::orderBy('id', 'desc')->where('item_category_id','LIKE','3')->take($n)->get();
+        return ItemPhotos::orderBy('id', 'desc')->where('verity_id','LIKE','3')->take($n)->get();
     }
 }
