@@ -9,6 +9,7 @@
                 <div class="col-lg-6 col-sm-12 col-xs-12 mb-lm-30px mb-md-30px mb-sm-30px">
                  <div class="d-flex align-items-center">
            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
               @foreach($item->variety as $variety)
                <a href="#" class="  {{$loop->first ? 'active' : '' }}" id="v-pills-{{$variety->id}}-tab" data-bs-toggle="pill" data-bs-target="#v-pills-{{$variety->id}}"   role="tab" aria-controls="v-pills-{{$variety->id}}" >
                    <img src="{{$variety->thumb}}" width="32px" height="32px" class="  rounded-circle" alt="">
@@ -21,7 +22,7 @@
                <div class="tab-pane fade show {{$loop->first ? 'active' : '' }}" id="v-pills-{{$variety->id}}" role="tabpanel" aria-labelledby="v-pills-{{$variety->id}}-tab">
 
                      <div id="carouselExampleIndicators{{$variety->id}}" class="carousel slide" data-bs-ride="carousel">
-                           <div class="carousel-indicators">
+                           <div class="carousel-indicators{{$variety->id}}">
                                @foreach(\App\Models\Verity::photos($variety->id) as $photo)
 
                                <button type="button" data-bs-target="#carouselExampleIndicators{{$variety->id}}" data-bs-slide-to="{{$photo->id}}" class=" {{$loop->first ? 'active' : ''}}" aria-current="true" aria-label="{{$photo->title}}"></button>
@@ -37,11 +38,11 @@
 
 
                            </div>
-                           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators{{$variety->id}}" data-bs-slide="prev">
                                <span class="carousel-control-prev-icon red" aria-hidden="true"></span>
                                <span class="visually-hidden">Previous</span>
                            </button>
-                           <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                           <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators{{$variety->id}}" data-bs-slide="next">
                                <span class="carousel-control-next-icon red" aria-hidden="true"></span>
                                <span class="visually-hidden">Next</span>
                            </button>
@@ -103,11 +104,14 @@
                         </div>
                         <!-- Product Configuration -->
                         <div class="product-configuration">
+                            <form action="#">
+                                <select class="form-control">
+                                    <option value="">Select Color Varietys</option>
                             @foreach($item->variety as $verity)
-
-                                <a href="#" id="verity{{$verity->id}}"> <img src="{{$verity->thumb}}" alt="{{$verity->title}}" width="32" height="32" class="img-profile img-thumbnail rounded-circle"></a>
-
+                                    <option value="{{$verity->id}}">{{$verity->title}}</option>
                             @endforeach
+                                </select>
+                            </form>
                         </div>
 
 
@@ -292,3 +296,8 @@
 
 @endsection
 
+@section('js')
+    <script>
+        $('.carousel').carousel()
+    </script>
+@endsection

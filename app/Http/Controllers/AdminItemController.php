@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 use Image;
 use Symfony\Component\Console\Input\Input;
+use function MongoDB\BSON\toJSON;
 
 class AdminItemController extends Controller
 {
@@ -88,12 +89,14 @@ class AdminItemController extends Controller
             $request->photo->move(public_path('images/items'),$newImageName);
 
         }
+        $mesurments = json_encode(
+            array(
 
-        $mesurments=json_encode(array(
-            $request->input('height'),
-            $request->input('width'),
-            $request->input('diameter')
-        ));
+                'height' => $request->input('height'),
+                'width' => $request->input('width'),
+                'diameter' => $request->input('diameter'),
+
+            ));
        $item= Item::create([
                 'name'=>$request->input('name'),
                 'detail'=>$request->input('detail'),
@@ -173,12 +176,14 @@ $default_photo->save();
         ]);
 
 
+        $mesurments = json_encode(
+            array(
 
-        $mesurments=json_encode(array(
-            $request->input('height'),
-            $request->input('width'),
-            $request->input('diameter')
-        ));
+                'height' => $request->input('height'),
+                'width' => $request->input('width'),
+                'diameter' => $request->input('diameter'),
+
+            ));
 
         $input = $request->except('photo');
         $item->fill($input)->save();
