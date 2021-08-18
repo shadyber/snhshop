@@ -9,6 +9,7 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Image;
 use MongoDB\Driver\Session;
+use Ramsey\Uuid\Type\Integer;
 
 class ItemPhotosController extends Controller
 {
@@ -123,15 +124,17 @@ class ItemPhotosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param ItemPhotos $itemPhotos
+     * @param Integer $i
      * @return Response
      */
-    public function destroy(ItemPhotos $itemPhotos)
+    public function destroy($i)
     {
         if(!Auth::user()->hasRole('admin')){
             return redirect()->back()->with('error','You Don\t Have This Permission');
         }
-        $itemPhotos->delete();
+     $photo=ItemPhotos::find($i);
+       // dd($photo);
+        $photo->delete();
         return redirect()->back()->with('success','Item Photo removed');
     }
 }
