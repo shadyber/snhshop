@@ -26,6 +26,8 @@
     },
     "dependencies": {
         "country-flag-icons": "^1.2.10",
-        "tailwindcss": "^2.2.4"
+        "tailwindcss": "^2.2.4",
+        "xzoom": "^1.0.15",
+        "zoomify-img": "^0.2.5"
     }
 }

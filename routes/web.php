@@ -23,6 +23,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/makeslider/{id}', [App\Http\Controllers\XzoomController::class, 'makeSlider'])->name('makeSlider');
+
 Auth::routes(['verify' => true]);
 
 
