@@ -116,7 +116,7 @@ class AdminItemController extends Controller
         );
 
         $default_verity=new Verity;
-        $default_verity->title='default';
+        $default_verity->title=$request->input('color');
         $default_verity->item_id=$item->id;
         $default_verity->thumb='/images/items/thumbnile/'.$newImageName;
         $default_verity->photo='/images/items/'.$newImageName;
@@ -126,7 +126,7 @@ $default_photo = new ItemPhotos;
 $default_photo->item_id=$item->id;
 $default_photo->photo='/images/items/'.$newImageName;
 $default_photo->thumb='/images/items/thumbnile/'.$newImageName;
-$default_photo->title='default photo';
+$default_photo->title=$request->input('color');
 $default_photo->verity_id=$default_verity->id;
 $default_photo->save();
         return redirect()->back()->with('success','Item Created Succusfully!');
