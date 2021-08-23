@@ -46,7 +46,7 @@
 <!-- Top Bar -->
 @include('components.header')
 <!-- breadcrumb-area start -->
-<div class="breadcrumb-area">
+<div class="breadcrumb-area mb-n-30px">
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-12 text-center">
@@ -65,7 +65,7 @@
 <!-- breadcrumb-area end -->
 
 <!-- Shop Page Start  -->
-<div class="shop-category-area pt-100px pb-100px">
+<div class="shop-category-area mt-n-65px  pb-100px">
     <div class="container">
         <div class="row">
             <div class="col-12">
