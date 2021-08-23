@@ -44,94 +44,50 @@
 @include('components.header')
 <!-- Hero/Intro Slider Start -->
 <div class="section ">
-    <div class="hero-slider swiper-container slider-nav-style-2 slider-dot-style-1">
-        <!-- Hero slider Active -->
-        <div class="swiper-wrapper">
-            <!-- Single slider item -->
-            <div class="hero-slide-item-2 slider-height swiper-slide d-flex">
-                <div class="container align-self-center">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-5 col-md-5 col-sm-5 align-self-center sm-center-view">
-                            <div class="hero-slide-content hero-slide-content-2 slider-animated-1">
-                                <span class="category">Sale 45% Off</span>
-                                <h2 class="title-1">Exclusive New<br> Offer 2021</h2>
-                                <a href="#" class="btn btn-lg btn-primary btn-hover-dark"> Shop
-                                    Now <i class="fa fa-shopping-basket ml-15px" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div
-                            class="col-xl-6 col-lg-7 col-md-7 col-sm-7 d-flex justify-content-center position-relative">
-                            <div class="show-case">
-                                <div class="hero-slide-image">
-                                    <img src="/assets/images/slider-image/slider-2-1.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="http://sandhstore.test/assets/images/banner/14.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
                     </div>
-                </div>
             </div>
-            <!-- Single slider item -->
-            <div class="hero-slide-item-2 slider-height swiper-slide d-flex  ">
-                <div class="container align-self-center">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-5 col-md-5 col-sm-5 align-self-center sm-center-view">
-                            <div class="hero-slide-content hero-slide-content-2 slider-animated-1">
-                                <span class="category">Sale 45% Off</span>
-                                <h2 class="title-1">Exclusive New<br> Offer 2021</h2>
-                                <a href="/item" class="btn btn-lg btn-primary btn-hover-dark"> Shop
-                                    Now <i class="fa fa-shopping-basket ml-15px" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div
-                            class="col-xl-6 col-lg-7 col-md-7 col-sm-7 d-flex justify-content-center position-relative">
-                            <div class="show-case">
-                                <div class="hero-slide-image">
-                                    <img src="/assets/images/slider-image/slider-2-2.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="http://sandhstore.test/assets/images/banner/12.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
                     </div>
-                </div>
             </div>
-
-            <!-- Single slider item -->
-            <div class="hero-slide-item-2 slider-height swiper-slide d-flex ">
-                <div class="container align-self-center">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-5 col-md-5 col-sm-5 align-self-center sm-center-view">
-                            <div class="hero-slide-content hero-slide-content-2 slider-animated-1">
-                                <span class="category">Sale 45% Off</span>
-                                <h2 class="title-1">Exclusive New<br> Offer 2021</h2>
-                                <a href="" class="btn btn-lg btn-primary btn-hover-dark"> Shop
-                                    Now <i class="fa fa-shopping-basket ml-15px" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div
-                            class="col-xl-6 col-lg-7 col-md-7 col-sm-7 d-flex justify-content-center position-relative">
-                            <div class="show-case">
-                                <div class="hero-slide-image">
-                                    <img src="/assets/images/slider-image/slider-1.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="carousel-item">
+                <img src="http://sandhstore.test/assets/images/banner/13.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                     </div>
+            </div>
+            <div class="carousel-item">
+                <img src="http://sandhstore.test/assets/images/banner/15.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                      </div>
             </div>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination swiper-pagination-white"></div>
-        <!-- Add Arrows -->
-        <div class="swiper-buttons">
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </div>
 
 <!-- Hero/Intro Slider End -->
 
 <!-- Feature Area Srart -->
-<div class="feature-area  mt-n-65px pb-1">
+<div class="feature-area pb-1">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-6">
