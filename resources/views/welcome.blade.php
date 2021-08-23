@@ -53,22 +53,38 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
-                <img src="http://sandhstore.test/assets/images/banner/14.jpg" class="d-block w-100" alt="...">
+                <img src="/assets/images/banner/14.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="http://sandhstore.test/assets/images/banner/12.jpg" class="d-block w-100" alt="...">
+                <img src="/assets/images/banner/12.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     </div>
             </div>
             <div class="carousel-item">
-                <img src="http://sandhstore.test/assets/images/banner/13.jpg" class="d-block w-100" alt="...">
+                <img src="/assets/images/banner/13.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                      </div>
             </div>
             <div class="carousel-item">
-                <img src="http://sandhstore.test/assets/images/banner/15.jpg" class="d-block w-100" alt="...">
+                <img src="/assets/images/banner/15.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                      </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="/assets/images/banner/16.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                      </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/assets/images/banner/17.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                      </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/assets/images/banner/18.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                       </div>
             </div>
