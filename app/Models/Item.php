@@ -13,7 +13,7 @@ class Item extends Model
     use Sluggable;
     use SoftDeletes;
 
-    protected $fillable=['name','slug','detail','item_category_id','thumb', 'photo','color','price','user_id','tags','measurement','weight','init_qnt','status','badge'];
+    protected $fillable=['name','slug','detail','item_category_id','thumb', 'photo','color','price','user_id','tags','width','height','diameter','weight','init_qnt','status','badge'];
     protected $dates = [ 'deleted_at' ];
 
     public function user(){

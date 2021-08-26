@@ -6,7 +6,7 @@
     <meta name="robots" content="index, follow"/>
     <title>sandhstore | ipsa Detail</title>
     <meta name="description" content="sandhstore"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes"/>
 
     <!-- Add site Favicon -->
     <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" type="image/png">
@@ -42,7 +42,7 @@
                         @foreach($photos as $photo)
 
                         <div class="swiper-slide zoom-image-hover">
-                            <img class="img-responsive m-auto" src="{{$photo->photo}}"
+                            <img class="img-responsive m-auto" src="{{$photo->thumb}}"
                                  alt="">
                         </div>
                         @endforeach

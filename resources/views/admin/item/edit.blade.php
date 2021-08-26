@@ -89,24 +89,24 @@
 
                                         <div class="form-group row">
                                             <div class="col-sm-4 mb-3 mb-sm-0">
-                                                <input type="number" class="form-control form-control" name="height" placeholder="Height"  >
+                                                <input type="number" class="form-control form-control" name="height" value="{{$item->height}}"  placeholder="Height"  >
                                             </div>
                                             <div class="col-sm-4">
-                                                <input type="number" class="form-control form-control" name="width" placeholder="Width">
+                                                <input type="number" class="form-control form-control" name="width" value="{{$item->width}}"  placeholder="Width">
                                             </div>
 
                                             <div class="col-sm-4">
-                                                <input type="number" class="form-control form-control" name="diameter" placeholder="Diameter">
+                                                <input type="number" class="form-control form-control" name="diameter" value="{{$item->diameter}}" placeholder="Diameter">
                                             </div>
                                         </div>
 
 
                                         <div class="form-group">
                                             <select class="form-control form-control" name="badge" placeholder="Item Badge" >
-                                                <option value="">Select Badge</option>
-                                                <option value="">NEW</option>
-                                                <option value="">HOT</option>
-                                                <option value="">SALE</option>
+                                                <option value="{{$item->badge}}">{{$item->badge}}</option>
+                                                <option value="NEW">NEW</option>
+                                                <option value="HOT">HOT</option>
+                                                <option value="SALE">SALE</option>
                                             </select>
                                         </div>
 

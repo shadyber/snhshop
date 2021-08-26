@@ -22,7 +22,9 @@ class CreateItemsTable extends Migration
             $table->string('thumb');
             $table->string('color')->nullable();
             $table->double('price');
-            $table->string('measurement')->nullable();
+            $table->string('width')->nullable();
+            $table->string('height')->nullable();
+            $table->string('diameter')->nullable();
             $table->string('weight');
             $table->unsignedBigInteger('item_category_id');
             $table->foreign('item_category_id')->references('id')->on('item_categories');

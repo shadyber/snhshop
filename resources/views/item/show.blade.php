@@ -7,15 +7,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-sm-12 col-xs-12 mb-lm-30px mb-md-30px mb-sm-30px">
-                    <div class="nav flex-row nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="horizontal">
-
-                        @foreach($item->variety as $variety)
-                            <a href="#" class="  {{$loop->first ? 'active' : '' }}" id="v-pills-{{$variety->id}}-tab" data-bs-toggle="pill" data-bs-target="#v-pills-{{$variety->id}}"   role="tab" aria-controls="v-pills-{{$variety->id}}" >
-                                <img src="{{$variety->thumb}}" width="32px" height="32px" class="  rounded-circle" alt="">
-                            </a>
-                        @endforeach
-
-                    </div>
 
                     <div class="tab-content" id="v-pills-tabContent">
 
@@ -27,6 +18,17 @@
                             </div>
                         @endforeach
                     </div>
+                    <div class="nav flex-col nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="horizontal">
+
+                        @foreach($item->variety as $variety)
+                            <a href="#" class="  {{$loop->first ? 'active' : '' }}" id="v-pills-{{$variety->id}}-tab" data-bs-toggle="pill" data-bs-target="#v-pills-{{$variety->id}}"   role="tab" aria-controls="v-pills-{{$variety->id}}" >
+                                <img src="{{$variety->thumb}}" width="32px" height="32px" class="  rounded-circle" alt="">
+                            </a>
+                        @endforeach
+
+                    </div>
+
+
                 </div>
                 <div class="col-lg-6 col-sm-12 col-xs-12" data-aos="fade-up" data-aos-delay="200">
                     <div class="product-details-content quickview-content right-column">
@@ -133,8 +135,9 @@
                         <div class="product-anotherinfo-wrapper text-start">
                             <ul>
                                 <li><span>Weight</span> {{$item->weght}}</li>
-                                <li><span>Dimensions</span>{{$item->size}}</li>
-                                <li><span>Materials</span> N/A</li>
+                                <li><span>Diameter</span>{{$item->diameter}}</li>
+                                <li><span>Height</span> {{$item->height}}</li>
+                                <li><span>Width</span> {{$item->width}}</li>
                                 <li><span>Other Info</span> N/A</li>
                             </ul>
                         </div>

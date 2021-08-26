@@ -83,20 +83,13 @@ class AdminItemController extends Controller
             $new_img = Image::make($file->getRealPath())->resize(true, true);
 
 // save file with medium quality
-            $new_img->save($destinationPath . $file_name, 100);
+            $new_img->save($destinationPath . $file_name, 90);
             $new_img->save($destinationPath.'thumbnile/' . $file_name, 15);
 
             $request->photo->move(public_path('images/items'),$newImageName);
 
         }
-        $mesurments = json_encode(
-            array(
 
-                'height' => $request->input('height'),
-                'width' => $request->input('width'),
-                'diameter' => $request->input('diameter'),
-
-            ));
        $item= Item::create([
                 'name'=>$request->input('name'),
                 'detail'=>$request->input('detail'),
@@ -109,7 +102,9 @@ class AdminItemController extends Controller
                 'weight'=>$request->input('weight'),
                 'init_qnt'=>$request->input('init_qnt'),
                 'badge'=>$request->input('badge'),
-                'measurement'=>$mesurments,
+                'width'=>$request->input('width'),
+                'height'=>$request->input('height'),
+                'diameter'=>$request->input('diameter'),
                 'user_id'=>auth()->user()->id,
                 'item_category_id'=>$request->input('item_category_id'),
             ]
@@ -176,21 +171,12 @@ $default_photo->save();
         ]);
 
 
-        $mesurments = json_encode(
-            array(
-
-                'height' => $request->input('height'),
-                'width' => $request->input('width'),
-                'diameter' => $request->input('diameter'),
-
-            ));
 
         $input = $request->except('photo');
         $item->fill($input)->save();
-        $item->measurment=$mesurments;
 
 
-        return redirect()->back()->with('success','Item Updated Succesfully.');
+        return redirect()->back()->with('success','Item Updated Successfully.');
 
     }
 
