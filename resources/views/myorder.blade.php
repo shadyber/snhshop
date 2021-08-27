@@ -12,10 +12,10 @@
                     <h3 class="sidebar-title">Usre Menu</h3>
                     <div class="category-post">
                         <ul>
-                            <li><a href="/profile" class="selected">Shipping Address</a></li>
+                            <li><a href="/home" class="selected">Shipping Address</a></li>
                             <li><a href="/myorders" class=""> My Orders </a></li>
                             <li><a href="#" class="">My Wishlist<span>(5)</span> </a></li>
-                            <li><a href="/myaccount" class=""> Account Settings </a></li>
+
 
                         </ul>
                     </div>
