@@ -241,7 +241,7 @@
                                     <div class="actions">
 
                                     </div>
-                                    <button title="Add To Cart" class=" add-to-cart" itemid="{{$item->id}}" qnt="1">Add
+                                    <button title="Add To Cart" class=" add-to-cart" itemid="{{$item->id}}" qnt="getquantity()">Add
                                         To Cart</button>
                                 </div>
                                 <div class="content">

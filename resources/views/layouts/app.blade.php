@@ -114,6 +114,10 @@
 
     }
 
+    function getquantity(){
+        return qnt;
+    }
+
     $( ".add-to-cart" ).click(function() {
 
         var itemid=$(this).attr("itemid");

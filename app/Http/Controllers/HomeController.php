@@ -25,7 +25,9 @@ class HomeController extends Controller
     public function index()
     {
         if(!Auth::user()->hasRole('admin')){
-            return view('profile');
+
+            $user=Auth::user();
+            return view('profile')->with(['user'=>$user]);
         }
         return view('home');
     }
