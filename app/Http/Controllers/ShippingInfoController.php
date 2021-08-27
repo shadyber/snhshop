@@ -47,7 +47,7 @@ class ShippingInfoController extends Controller
         $request->validate([
         'first_name'=>'required',
         'last_name'=>'required',
-        'country'=>'required',
+        'country_code'=>'required',
         'city'=>'required',
         'photo'=>'required',
         'address1'=>'required',
@@ -56,12 +56,35 @@ class ShippingInfoController extends Controller
 
         //
 if(Auth::user()->shippinginfo){
-    return 'updated';
+
+
+    $shipingifno=Auth::user()->shippinginfo;
+    $shipingifno->first_name=$request->input('first_name');
+    $shipingifno->last_name=$request->input('last_name');
+    $shipingifno->country=$request->input('country');
+    $shipingifno->city=$request->input('city');
+    $shipingifno->address1=$request->input('address1');
+    $shipingifno->address2=$request->input('address2');
+    $shipingifno->zipcode=$request->input('zipcode');
+
+    $shipingifno->save();
+
+    return redirect()->back()->with('sucuss','Shipping Address Updated Succusfully.');
 }else{
+    $shipingifno=new ShippingInfo;
+    $shipingifno->first_name=$request->input('first_name');
+    $shipingifno->last_name=$request->input('last_name');
+    $shipingifno->country=$request->input('country');
+    $shipingifno->city=$request->input('city');
+    $shipingifno->address1=$request->input('address1');
+    $shipingifno->address2=$request->input('address2');
+    $shipingifno->zipcode=$request->input('zipcode');
+    $shipingifno->user_id=Auth::user()->id;
+
+    $shipingifno->save();
 
 
-
-
+    return redirect()->back()->with('sucuss','Shipping Address Created Succusfully.');
 
 
 

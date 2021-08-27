@@ -69,6 +69,8 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
+
+                @include('components.flash_message')
                 @yield('content')
 
             </div>
