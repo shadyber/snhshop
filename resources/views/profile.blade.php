@@ -54,9 +54,9 @@
                     </div>
                     <div class="col-lg-12">
                         <div class="billing-info mb-4">
-                            <label>Company Name</label>
-                            <input type="text" name="company_name"  required value="{{$user->shippinginfo ? $user->shippinginfo->company_name : ''  }}">
-                            @error('company_name')
+                            <label>Business Name</label>
+                            <input type="text" name="business_name"   value="{{$user->shippinginfo ? $user->shippinginfo->business_name : ''  }}">
+                            @error('business_name')
                             <span class="invalid-feedback" role="alert">
                                                  <strong>{{ $message }}</strong>
                                             </span>
@@ -66,7 +66,8 @@
                     <div class="col-lg-12">
                         <div class="billing-select mb-4">
                             <label>Country</label>
-                            <select name="country"  required value="{{$user->shippinginfo ? $user->shippinginfo->country : ''  }}">
+                            <select name="country_code"  required >
+                                <option value="{{$user->shippinginfo ? $user->shippinginfo->country_code : ''  }}">{{$user->shippinginfo ? $user->shippinginfo->country_code : ''  }}</option>
                                 <option>Select a country</option>
                                 <option value="Afganistan">Afghanistan</option>
                                 <option value="Albania">Albania</option>
@@ -334,6 +335,19 @@
                             @enderror
                         </div>
                     </div>
+
+                    <div class="col-lg-12">
+                        <div class="billing-info mb-4">
+                            <label>Street Address</label>
+                            <input class="billing-address" name="line1" placeholder="Line 1" type="text"  value="{{$user->shippinginfo ? $user->shippinginfo->line1 : ''  }}">
+                            <input placeholder="address line 1." type="text">
+                            @error('line1')
+                            <span class="invalid-feedback" role="alert">
+                                                 <strong>{{ $message }}</strong>
+                                            </span>
+                            @enderror
+                        </div>
+                    </div>
                     <div class="col-lg-12">
                         <div class="billing-info mb-4">
                             <label>Town / City</label>
@@ -359,8 +373,8 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="billing-info mb-4">
                             <label>Postcode / ZIP</label>
-                            <input type="text" name="zipcode"  required value="{{$user->shippinginfo ? $user->shippinginfo->zipcode : ''  }}">
-                            @error('zipcode')
+                            <input type="text" name="postal_code"  required value="{{$user->shippinginfo ? $user->shippinginfo->postal_code : ''  }}">
+                            @error('postal_code')
                             <span class="invalid-feedback" role="alert">
                                                  <strong>{{ $message }}</strong>
                                             </span>

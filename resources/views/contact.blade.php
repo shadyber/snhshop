@@ -43,8 +43,7 @@
                         <div class="contact-form">
                             <div class="contact-title mb-30">
                                 <h2 class="title" data-aos="fade-up" data-aos-delay="200">Leave a Message</h2>
-                                <p>There are many variations of passages of Lorem Ipsum available but the
-                                    suffered alteration in some form.</p>
+                                <p>fell free to contact us</p>
                             </div>
                             <form class="contact-form-style" id="contact-form" action="assets/php/mail.php" method="post">
                                 <div class="row">

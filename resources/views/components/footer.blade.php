@@ -100,11 +100,22 @@
                             <h4 class="footer-herading">Store Information.</h4>
                             <div class="footer-links">
                                 <!-- News letter area -->
-                                <p class="address">Chicago , JO  USA<br>
+                                <p class="address">Chicago , IL  USA<br>
                                     812  Oakmound Road</p>
                                 <p class="phone">Phone/Fax:<a href="tel:0123456789">773-266-8212</a></p>
-                                <p class="mail">Email:<a href="mailto:admin@sandhstore.com">admin@sandhstore.com</a></p>
+                                <p class="mail">Email:<a href="mailto:info@sandhstore.com">info@sandhstore.com</a></p>
+
+  <!-- News letter area -->
+                                <p class="address"> Addis Ababa<br>
+                                  Ethiopia</p>
+                                <p class="phone">Phone/Fax:<a href="tel:+251976766666">  ETH +251 976 766 666</a></p>
+                                <p class="phone">P.O.box<a href="">   18468</a></p>
+                                <p class="mail">Email:<a href="mailto:info@sandhstore.com">info@sandhstore.com</a></p>
                                 <img src="/assets/images/icons/payment.png" alt="" class="payment-img img-fulid">
+
+
+
+
 
                                 <!-- News letter area  End -->
                             </div>

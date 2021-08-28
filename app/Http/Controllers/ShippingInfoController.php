@@ -44,41 +44,26 @@ class ShippingInfoController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-        'first_name'=>'required',
-        'last_name'=>'required',
-        'country_code'=>'required',
-        'city'=>'required',
-        'photo'=>'required',
-        'address1'=>'required',
-        'zipcode'=>'required',
-    ]);
-
-        //
-if(Auth::user()->shippinginfo){
 
 
-    $shipingifno=Auth::user()->shippinginfo;
-    $shipingifno->first_name=$request->input('first_name');
-    $shipingifno->last_name=$request->input('last_name');
-    $shipingifno->country=$request->input('country');
-    $shipingifno->city=$request->input('city');
-    $shipingifno->address1=$request->input('address1');
-    $shipingifno->address2=$request->input('address2');
-    $shipingifno->zipcode=$request->input('zipcode');
 
-    $shipingifno->save();
+        $shipingifno=ShippingInfo::where('user_id',Auth::user()->id)->get()->last();
 
-    return redirect()->back()->with('sucuss','Shipping Address Updated Succusfully.');
-}else{
+if($shipingifno==null){
     $shipingifno=new ShippingInfo;
+
+}
+
     $shipingifno->first_name=$request->input('first_name');
     $shipingifno->last_name=$request->input('last_name');
-    $shipingifno->country=$request->input('country');
+    $shipingifno->country_code=$request->input('country_code');
     $shipingifno->city=$request->input('city');
-    $shipingifno->address1=$request->input('address1');
-    $shipingifno->address2=$request->input('address2');
-    $shipingifno->zipcode=$request->input('zipcode');
+    $shipingifno->street_address=$request->input('street_address');
+    $shipingifno->line1=$request->input('line1');
+    $shipingifno->postal_code=$request->input('postal_code');
+    $shipingifno->business_name=$request->input('business_name');
+    $shipingifno->phone=$request->input('phone');
+    $shipingifno->email=$request->input('email');
     $shipingifno->user_id=Auth::user()->id;
 
     $shipingifno->save();
@@ -88,7 +73,6 @@ if(Auth::user()->shippinginfo){
 
 
 
-}
     }
 
     /**

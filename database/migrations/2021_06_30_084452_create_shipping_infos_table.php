@@ -15,8 +15,11 @@ class CreateShippingInfosTable extends Migration
     {
         Schema::create('shipping_infos', function (Blueprint $table) {
             $table->id();
+
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')->on('users')->references('id');
+
+
             $table->string('first_name');
             $table->string('last_name');
             $table->string('payer_id')->nullable();
@@ -24,7 +27,7 @@ class CreateShippingInfosTable extends Migration
             $table->string('country_code');
             $table->string('city');
             $table->string('recipient_name')->nullable();
-            $table->string('line1');
+            $table->string('line1')->nullable();
             $table->string('state')->nullable();
             $table->string('street_address')->nullable();
             $table->string('apartment_number')->nullable();
