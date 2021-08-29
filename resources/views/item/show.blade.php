@@ -53,7 +53,7 @@
                         </p>
                         <div class="pro-details-quality">
                             <div class="cart-plus-minus" onclick="getqnt()">
-                                <input class="cart-plus-minus-box" type="text" name="qtybutton" id="qtybutton" value="1" itemid="{{$item->id}}" />
+                                <input class="cart-plus-minus-box" type="number" max="{{$item->init_qnt}}" name="qtybutton" id="qtybutton" value="1" itemid="{{$item->id}}" />
                             </div>
                             <div class="pro-details-cart">
                                 <button class="add-cart  add-to-cart" href="#"  itemid="{{$item->id}}" qnt="1"> Add To

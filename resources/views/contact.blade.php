@@ -16,7 +16,8 @@
                                 </div>
                                 <div class="info-box">
                                     <h5 class="title">Phone:</h5>
-                                    <p><a href="tel:0123456789">012 345 67 89</a></p>
+                                    <p><a href="tel:0123456789">USA +773 920 1936</a></p>
+                                    <p><a href="tel:0123456789">ETH +251 976 766 666</a></p>
                                 </div>
                             </div>
                             <div class="single-contact">
@@ -30,11 +31,17 @@
                             </div>
                             <div class="single-contact">
                                 <div class="icon-box">
-                                    <img src="assets/images/icons/6.png" alt="">
+                                    <img src="/assets/images/icons/6.png" alt="">
                                 </div>
                                 <div class="info-box">
                                     <h5 class="title">Address:</h5>
-                                    <p>Your address goes here</p>
+                                    <p>
+                                        Chicago, IL USA
+                                    </p>
+                                    <p>
+                                        P.O.box 18468
+                                        Addis Ababa, Ethiopia<br>
+                                        Email:info@sandhstore.com</p>
                                 </div>
                             </div>
                         </div>

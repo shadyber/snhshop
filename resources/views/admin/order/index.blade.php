@@ -28,7 +28,7 @@
 
                                 @foreach($cart_item=json_decode($order->cart) as $cart)
 
-                                <li><a href="/item/{{$cart->slug}}" class="list-inline-item">{{$cart->name}}</a>  X {{$cart->quantity}}  </li>
+                                <li class="btn btn-outline-primary pull-right"><a href="/item/{{$cart->slug}}" class="list-inline-item">{{$cart->name}}</a>  X {{$cart->quantity}}  </li>
                                 @endforeach
 
                             </ul>
@@ -55,9 +55,11 @@
                                 @csrf
                                 <input type="hidden" name="order_id" value="{{$order->id}}">
                                 <select name="status" id="status" class="form-control">
-                                    <option value="created">Created</option>
-                                    <option value="sent">Sent</option>
-                                    <option value="deliver">Deliverd / Completed</option>
+                                    <option value="created" {{ ($order->status) == 'created' ? 'selected' : '' }} >Created</option>
+                                    <option value="created" {{ ($order->status) == 'created' ? 'selected' : '' }} >Created</option>
+                                    <option value="sent" {{ ($order->status) == 'sent' ? 'selected' : '' }} >Sent</option>
+                                    <option value="deliver" {{ ($order->status) == 'deliver' ? 'selected' : '' }} >Deliverd / Completed</option>
+                                     
                                 </select>
                                 <button class="form-control btn-primary"> Update</button>
 
