@@ -59,7 +59,7 @@
                                     <option value="created" {{ ($order->status) == 'created' ? 'selected' : '' }} >Created</option>
                                     <option value="sent" {{ ($order->status) == 'sent' ? 'selected' : '' }} >Sent</option>
                                     <option value="deliver" {{ ($order->status) == 'deliver' ? 'selected' : '' }} >Deliverd / Completed</option>
-                                     
+
                                 </select>
                                 <button class="form-control btn-primary"> Update</button>
 

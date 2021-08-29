@@ -32,9 +32,21 @@
 
     <!-- Main Style -->
     <link rel="stylesheet" href="/assets/css/style.css"/>
+    <style>
+        .cont{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body>
+<div class="cont col-md-12 col-sm-12">
+
+
 
             <div class="swiper-container zoom-top">
                     <div class="swiper-wrapper">
@@ -59,6 +71,7 @@
                         @endforeach
                     </div>
                 </div>
+</div>
 
 
 <!-- Vendor JS -->
