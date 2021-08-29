@@ -87,7 +87,7 @@ class PaymentController extends Controller
                     $payment->payer_id = $arr_body['payer']['payer_info']['payer_id'];
                     $payment->payer_email = $arr_body['payer']['payer_info']['email'];
                     $payment->amount = $arr_body['transactions'][0]['amount']['total'];
-                    $payment->currency = env('PAYPAL_CURRENCY');
+                    $payment->currency = 'USD';
                     $payment->payment_status = $arr_body['state'];
                     $payment->save();
                     $lastpayment=$payment->id;
@@ -126,7 +126,7 @@ class PaymentController extends Controller
 
                 # Send Confirm Mail
 
-                return view('payment.success')->with('success',"Payment is successful. Your transaction id is: " . $arr_body['id']);
+                return view('payment.success')->with(['success'=>"Payment is successful. Your transaction id is: " . $arr_body['id'],'order'=>$order]);
 
                 // save payment id to database.
             } else {

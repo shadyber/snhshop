@@ -4,4 +4,7 @@
 @section('content')
     <h1> Payment Placed Successfully </h1>
     <p>{{$success}}</p>
+
+    <a href="/item">Back to Shop</a>
+
 @endsection
