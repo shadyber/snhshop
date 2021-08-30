@@ -13,8 +13,8 @@ class Order extends Model
         return $this->hasOne(ShippingInfo::class,'id');
     }
 
-    
+
     public function user(){
-        return $this->hasOne(User::class,'id');
+        return $this->belongsTo(User::class,'id');
     }
 }

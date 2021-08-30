@@ -33,6 +33,7 @@
 
     <!-- Main Style -->
     <link rel="stylesheet" href="/assets/css/style.css"/>
+    <link rel="canonical" href="https://sandhstore.com/" />
     @yield('css')
 
 </head>

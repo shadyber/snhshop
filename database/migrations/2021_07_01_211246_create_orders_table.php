@@ -19,6 +19,12 @@ class CreateOrdersTable extends Migration
             $table->bigInteger('shipping_address_id');
             $table->bigInteger('payment_id');
             $table->string('status')->default('created');
+            $table->bigInteger('user_id')->unsigned();
+
+            //FOREIGN KEY CONSTRAINTS
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
+
             $table->timestamps();
         });
     }

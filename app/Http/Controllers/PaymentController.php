@@ -122,6 +122,7 @@ class PaymentController extends Controller
                 $order->cart=json_encode(Cart::myCart());
                 $order->shipping_address_id=$lastaddress;
                 $order->payment_id=$lastpayment;
+                $order->user_id=Auth::user()->id;
                 $order->save();
                 Session::remove('cart');
 

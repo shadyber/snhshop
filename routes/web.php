@@ -117,6 +117,9 @@ Route::get('/newapp', function (){
     echo 'initialized';
 });
 
+Route::get('/posts',[Controllers\Site\SiteController::class, 'SiteController@posts']);
+Route::get('/{slug}',[Controllers\Site\SiteController::class, 'SiteController@postDetails']);
+
 
 Route::get('/restart-server',function (){
 
