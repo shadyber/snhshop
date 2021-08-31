@@ -21,6 +21,10 @@ class CreatePaymentsTable extends Migration
             $table->float('amount', 10, 2);
             $table->string('currency')->default('usd');
             $table->string('payment_status');
+            $table->bigInteger('user_id')->unsigned();
+            //FOREIGN KEY CONSTRAINTS
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

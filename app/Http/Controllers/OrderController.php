@@ -15,8 +15,8 @@ class OrderController extends Controller
     }
 
     public function myorders(){
-        $orders=Order::where('user_id','LIKE',Auth::user()->id);
-        return view('myorder')->with(['orders'=>$orders]);
+       $orders=Auth::user()->orders;
+       return view('myorder')->with(['orders'=>$orders]);
 
     }
 

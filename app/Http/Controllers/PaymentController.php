@@ -27,7 +27,18 @@ class PaymentController extends Controller
 
         //$this->gateway->setHeaderImageUrl(url('https://sandhstore/assets/images/logo/logo.png'));
     }
+/*
 
+    public function __construct()
+    {
+        $this->gateway = Omnipay::create('PayPal_Rest');
+        $this->gateway->setClientId('AWXDFioumP8FGBtvkfT51iidxncqDySzWH2onc0DrMVLh3h8PxC3X5MuWz7S_CmkDUi1HgVgIbrZ_Eys');
+        $this->gateway->setSecret('EJoeijyJjeAQtIO_sgsv7ssZn6zW6LqJ6X5JAOAf4OawWrjx6ykTL7erKJK_DFDljvkL1XgowwMSnqNb');
+        $this->gateway->setTestMode(true); //set it to 'false' when go live
+
+        //$this->gateway->setHeaderImageUrl(url('https://sandhstore/assets/images/logo/logo.png'));
+    }
+*/
     public function index()
     {
         if(!Auth::user()){
@@ -90,6 +101,7 @@ class PaymentController extends Controller
                     $payment->amount = $arr_body['transactions'][0]['amount']['total'];
                     $payment->currency = 'USD';
                     $payment->payment_status = $arr_body['state'];
+                    $payment->user_id = Auth::user()->id;
                     $payment->save();
                     $lastpayment=$payment->id;
 

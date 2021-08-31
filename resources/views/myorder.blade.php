@@ -28,10 +28,10 @@
 <ul>
     @foreach($orders as $order)
 
-        {{dd($order)}}
+
         <div class="card" style="width: 18rem;">
-            <img src="#" class="card-img-top" alt="...">
-            <div class="card-body {{$order->status == 'sent' ? 'bg-info' : 'bg-succuss'}}">
+            <img src="/assets/images/icons/{{$order->status}}.png" class="card-img-top" alt="...">
+            <div class="card-body {{($order->status == 'sent') ? 'bg-info' : 'bg-succuss'}}">
                 <h5 class="card-title">Order {{$order->created_at}}</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
