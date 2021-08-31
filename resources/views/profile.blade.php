@@ -13,8 +13,7 @@
                 <div class="category-post">
                     <ul>
                         <li><a href="/home" class="selected">Shipping Address</a></li>
-                        <li><a href="/myorders" class=""> My Orders </a></li>
-                        <li><a href="#" class="">My Wishlist<span>(5)</span> </a></li>
+                        <li><a href="/myorders" class=""> My Orders ()</a></li>
 
 
                     </ul>

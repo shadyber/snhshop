@@ -406,7 +406,7 @@
                                 <div class="your-order-bottom">
                                     <ul>
                                         <li class="your-order-shipping">Shipping</li>
-                                        <li>Starndard Shipping  $20</li>
+                                        <li>Starndard Shipping  $35</li>
                                     </ul>
                                 </div>
                                 <div class="your-order-total">
@@ -431,7 +431,7 @@
                                                 <div class="panel-body">
                                                     <form action="{{ url('charge') }}" method="post">
                                                         <input type="hidden" name="amount" required value="{{\App\Models\Cart::totalCart()}}" />
-                                                        <input type="hidden" name="'hippingAmount" required value="20" />
+                                                        <input type="hidden" name="'hippingAmount" required value="35" />
                                                         {{ csrf_field() }}
 
                                                         <input type="submit" name="submit" value="Place Order" class="btn-primary btn-block ">

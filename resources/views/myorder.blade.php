@@ -14,7 +14,6 @@
                         <ul>
                             <li><a href="/home" class="selected">Shipping Address</a></li>
                             <li><a href="/myorders" class=""> My Orders </a></li>
-                            <li><a href="#" class="">My Wishlist<span>(5)</span> </a></li>
 
 
                         </ul>
@@ -25,33 +24,35 @@
         </div>
         <div class="col-lg-8 order-lg-first col-md-8 order-md-last mt-md-50px mt-lm-50px" data-aos="fade-up"
              data-aos-delay="200">
-<ul>
+<div class="row">
+
     @foreach($orders as $order)
 
 
-        <div class="card" style="width: 18rem;">
+        <div class="card col-md-4 offset-1" >
             <img src="/assets/images/icons/{{$order->status}}.png" class="card-img-top" alt="...">
             <div class="card-body {{($order->status == 'sent') ? 'bg-info' : 'bg-succuss'}}">
-                <h5 class="card-title">Order {{$order->created_at}}</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="card-title">Order_{{$order->id}} </h5>
+
+                <p class="card-text">Payment: <span class="label badge-info"><b>  {{$order->payment->payment_status}}</b></span> </p>
             </div>
             <ul class="list-group list-group-flush">
 
                 @foreach($cart_item=json_decode($order->cart) as $cart)
 
-                    <li class="btn btn-outline-primary pull-right">
-                        <a href="/item/{{$cart->slug}}" class="list-inline-item">{{$cart->name}}</a>  X {{$cart->quantity}}
+                    <li class="">
+                        <a href="/item/{{$cart->slug}}" class="">{{$cart->name}}</a>  X {{$cart->quantity}}
                     </li>
                 @endforeach
 
             </ul>
             <div class="card-body">
-
+                {{$order->created_at->diffForHumans()}}
             </div>
         </div>
 
     @endforeach
-</ul>
+</div>
 
 
         </div>
