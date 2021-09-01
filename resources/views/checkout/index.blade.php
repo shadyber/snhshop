@@ -446,8 +446,8 @@
                                             <div id="my-account-2" class="panel-collapse collapse" data-bs-parent="#faq">
 
                                                 <div class="panel-body">
-form goes here
-                                                </div>
+Not Available Now.
+                                              </div>
                                             </div>
                                         </div>
 

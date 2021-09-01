@@ -8,10 +8,8 @@
     <title>sandhstore | @yield('title')</title>
     <meta name="description" content="sandhstore"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-
-    <!-- Add site Favicon -->
-    <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" type="image/png">
-    <!-- Styles -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">    <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- vendor css (Icon Font) -->
