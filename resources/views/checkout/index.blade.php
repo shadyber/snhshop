@@ -412,7 +412,7 @@
                                 <div class="your-order-total">
                                     <ul>
                                         <li class="order-total">Total</li>
-                                        <li>${{\App\Models\Cart::totalCart()+20}}</li>
+                                        <li>${{\App\Models\Cart::totalCart()+35}}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -458,8 +458,9 @@ Not Available Now.
                                             <div id="my-account-3" class="panel-collapse collapse" data-bs-parent="#faq">
 
                                                 <div class="panel-body">
-                                                    <p>Please send a check to Store Name, Store Street, Store Town,
-                                                        Store State / County, Store Postcode.</p>
+                                                    <p>
+
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
