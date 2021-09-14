@@ -12,7 +12,7 @@
                                 <img class="img-fluid h-auto" src="{{$blog->photo}}" alt="blog">
                             </div>
                             <div class="blog-post-content-inner mt-30px" data-aos="fade-up" data-aos-delay="400">
-                                <div class="blog-athor-date">
+                                <div class="blog-author-date">
                                     <a class="blog-date height-shape" href="#"><i class="fa fa-calendar" aria-hidden="true"></i>
                                         {{$blog->created_at->diffForHumans()}}</a>
                                     <a class="blog-mosion" href="#"><i class="fa fa-commenting" aria-hidden="true"></i>
@@ -23,7 +23,7 @@
                             </div>
                             <div class="single-post-content">
 
-                             {{$blog->detail}}
+                                {!!$blog->detail!!}
 
                             </div>
                         </div>

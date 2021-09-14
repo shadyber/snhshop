@@ -55,7 +55,7 @@
 
                         <div class="swiper-slide zoom-image-hover">
                             <img class="img-responsive m-auto" src="{{$photo->thumb}}"
-                                 alt="">
+                                 alt="{{$photo->title}}">
                         </div>
                         @endforeach
 
@@ -64,9 +64,8 @@
                 <div class="swiper-container zoom-thumbs mt-3 mb-3">
                     <div class="swiper-wrapper">
                         @foreach($photos as $photo)
-                        <div class="swiper-slide">
-                            <img class="img-responsive m-auto" src="{{$photo->thumb}}"
-                                 alt="">
+                        <div class="swiper-slide  w-25 ml-2 mr-2 pl-2 pr-2">
+                            <input type="radio" name="selection" class="input-group-sm">
                         </div>
                         @endforeach
                     </div>

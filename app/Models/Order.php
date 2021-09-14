@@ -21,4 +21,13 @@ class Order extends Model
     public function payment(){
         return $this->hasOne(Payment::class,'id','payment_id');
     }
+
+    public static function pendingOrders(){
+        return Order::where('status','LIKE','created')->get();
+}
+    public static function ordersByDate($start , $end){
+        return Order::where('created_at','>=',$start)
+            ->where('created_at','<=',$end)
+            ->get();
+    }
 }
