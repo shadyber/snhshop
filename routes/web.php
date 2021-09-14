@@ -47,6 +47,7 @@ Route::group(['middleware' => 'role:admin'], function() {
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/profile', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
 
@@ -117,8 +118,6 @@ Route::get('/newapp', function (){
     echo 'initialized';
 });
 
-Route::get('/posts',[Controllers\Site\SiteController::class, 'SiteController@posts']);
-Route::get('/{slug}',[Controllers\Site\SiteController::class, 'SiteController@postDetails']);
 
 
 Route::get('/restart-server',function (){
