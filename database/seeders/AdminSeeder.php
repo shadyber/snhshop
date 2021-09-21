@@ -19,6 +19,7 @@ class AdminSeeder extends Seeder
             'email' => 'admin@sandhstore.com',
 
             'password' => bcrypt('password'),
+            'email_verified_at' =>'2021-11-11 11:11:11',
 
         ]);
     }

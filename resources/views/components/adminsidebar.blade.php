@@ -97,7 +97,12 @@
     </li>
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-        <a class="nav-link" href="/blog/create">
+        <a class="nav-link" href="/blogs">
+            <i class="fas fa-fw fa-sticky-note"></i>
+            <span>List Blog</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/blogs/create">
             <i class="fas fa-fw fa-sticky-note"></i>
             <span>Create Blog</span></a>
     </li>

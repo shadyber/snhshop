@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
@@ -40,6 +40,13 @@
             width: 100%;
             height: 100%;
         }
+
+        .swiper-wrapper{
+            width:40px;
+            align-content: center;
+            justify-content: center;
+
+        }
     </style>
 </head>
 
@@ -61,11 +68,11 @@
 
                     </div>
                 </div>
-                <div class="swiper-container zoom-thumbs mt-3 mb-3">
+                <div class="swiper-container zoom-thumbs">
                     <div class="swiper-wrapper">
                         @foreach($photos as $photo)
-                        <div class="swiper-slide  w-25 ml-2 mr-2 pl-2 pr-2">
-                            <input type="radio" name="selection" class="input-group-sm">
+                        <div class="swiper-slide flex" width="20px">
+                            <input type="radio" name="selection" class="compact" width="10px">
                         </div>
                         @endforeach
                     </div>
@@ -97,6 +104,7 @@
 
 <!-- Main Js -->
 <script src="/assets/js/main.js"></script>
+
 </body>
 
 </html>

@@ -61,6 +61,7 @@ Route::get('/myorders',[App\Http\Controllers\OrderController::class,'myorders'])
 Route::resource('/cat',App\Http\Controllers\ItemCategoryController::class);
 
 Route::resource('/blog',App\Http\Controllers\BlogController::class);
+Route::resource('/blogs',App\Http\Controllers\AdminBlogController::class);
 Route::resource('/blogcategory',App\Http\Controllers\BlogCategoryController::class);
 
 Route::get('/about', function(){
