@@ -49,7 +49,7 @@
                             <span class="read-review"><a class="reviews" href="#">( Customer Review )</a></span>
                         </div>
                         <p class="mt-30px mb-0">
-                            {{$item->detail}}
+                            {{substr($item->detail,0,200)}}...
                         </p>
                         <div class="pro-details-quality">
                             <div class="cart-plus-minus" onclick="getqnt()">
