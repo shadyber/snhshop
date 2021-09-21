@@ -410,7 +410,7 @@
                         <div class="deal-timing">
                             <div data-countdown="2021/05/15"></div>
                         </div>
-                        <a href="/item" class="btn btn-lg btn-primary btn-hover-dark m-auto"> Shop
+                        <a href="/item/yn4qoorgtntwuoeduugrhxs0p6docnjk4plo8ojr" class="btn btn-lg btn-primary btn-hover-dark m-auto"> Shop
                             Now <i class="fa fa-shopping-basket ml-15px" aria-hidden="true"></i></a>
                     </div>
                     <div class="deal-image">
@@ -434,7 +434,7 @@
                 <img src="/assets/images/banner/6.jpg" alt="">
                 <div class="item-disc">
                     <h4 class="title">Shop Now</h4>
-                    <a href="/cat/2" class="shop-link btn btn-primary ">Shop Now <i
+                    <a href="/item/llbxwcrzbecopspzu4iiyqz9ozt9qz0lrnwbck52-19" class="shop-link btn btn-primary ">Shop Now <i
                             class="fa fa-shopping-basket ml-5px" aria-hidden="true"></i></a>
                 </div>
             </div>
@@ -444,7 +444,7 @@
                 <img src="/assets/images/banner/4.jpg" alt="">
                 <div class="item-disc">
                     <h4 class="title">Shop Now</h4>
-                    <a href="/cat/3" class="shop-link btn btn-primary">Shop Now <i
+                    <a href="/item/llbxwcrzbecopspzu4iiyqz9ozt9qz0lrnwbck52-17" class="shop-link btn btn-primary">Shop Now <i
                             class="fa fa-shopping-basket ml-5px" aria-hidden="true"></i></a>
                 </div>
             </div>
@@ -456,7 +456,7 @@
                     <h4 class="title">New Collection <br>
                         shop now
                     </h4>
-                    <a href="cat/1" class="shop-link btn btn-primary">Shop Now <i
+                    <a href="/item/38zufnrwywbttysoia1qxbckqcodx7zyv5jowhjl" class="shop-link btn btn-primary">Shop Now <i
                             class="fa fa-shopping-basket ml-5px" aria-hidden="true"></i></a>
                 </div>
             </div>
