@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Item;
 use App\Models\Verity;
 use Illuminate\Http\Request;
 use Image;
@@ -98,6 +99,8 @@ class VerityController extends Controller
     public function edit(Verity $verity)
     {
         //
+
+        return view('admin.verity.edit')->with(['verity'=>$verity]);
     }
 
     /**
@@ -110,6 +113,50 @@ class VerityController extends Controller
     public function update(Request $request, Verity $verity)
     {
         //
+
+
+        $verity = Verity::findOrFail($verity->id);
+
+        $request->validate([
+
+            'title'=>'required',
+            'photo.*'=>'required|mimes:jpg,png,jpeg,JPG|max:5048',
+        ]);
+
+
+
+        $input = $request->except('photo');
+        $verity->fill($input)->save();
+
+
+
+        if($request->hasFile('photo')) {
+
+            $newImageName=uniqid().'_'. $request->_token.'.'.$request->photo->extension();
+
+
+            $file = $request->file('photo');
+            $file_name =$newImageName;
+            $destinationPath = 'images/items/thumbnile/';
+            $new_img = Image::make($file->getRealPath())->resize(530, 694);
+
+// save file with medium quality
+            $new_img->save($destinationPath . $file_name, 80);
+            $request->photo->move(public_path('images/items'),$newImageName);
+
+        }
+
+
+            $verity->photo = '/images/items/' . $newImageName;
+            $verity->thumb = '/images/items/thumbnile/' . $newImageName;
+
+            $verity->save();
+
+
+
+
+        return redirect()->back()->with('success','Item Updated Successfully.');
+
     }
 
     /**

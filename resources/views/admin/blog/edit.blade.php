@@ -21,7 +21,10 @@
         <!-- Card Body -->
         <div class="card-body">
 
-            <form action="/blog" method="post" enctype="multipart/form-data">
+            <form action="{{ $blog->id }} " method="POST">
+                @isset($blog->id)
+                    {{ method_field('PATCH')}}
+                @endisset
                 @csrf
                 <div class="form-group">
                     <input type="text" class="form-control form-control" name="title" placeholder="Post Title" required>

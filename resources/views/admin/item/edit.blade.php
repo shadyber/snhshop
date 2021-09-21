@@ -153,9 +153,10 @@
                             </div>
                             <div class="tab-pane" id="variety" role="tabpanel" aria-labelledby="varity-tab">
                                 <div class="row">
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 flex">
                                      @foreach($item->variety as $variety)
                                             <img src="{{$variety->thumb}}" alt="{{$variety->title}}" width="128px" class="rounded-circle thumb-image">
+                                            <a href="/verity/{{$variety->id}}/edit"> Edit</a>
                                         @endforeach
                                     </div>
                                     <div class="col-md-6">

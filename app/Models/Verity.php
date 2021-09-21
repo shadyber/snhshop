@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Verity extends Model
 {
     use HasFactory;
+    protected $fillable=['title','thumn','photo'];
+
     public function item(){
         return $this->belongsTo(Item::class);
     }
