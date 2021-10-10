@@ -72,7 +72,7 @@
                     <div class="swiper-wrapper">
                         @foreach($photos as $photo)
                         <div class="swiper-slide flex" width="20px">
-                            <input type="radio" name="selection" class="compact" width="10px">
+                            <img src="{{$photo->thumb}}"   class="rounded-circle" width="32px" >
                         </div>
                         @endforeach
                     </div>
