@@ -35,7 +35,24 @@ class ReviewController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'item_id'=>'required',
+            'user_id'=>'required', 
+            'stars'=>'required',
+            'comment'=>'required',
+            
+        ]);
+
+
+        $review= Review::create([
+            'stars'=>$request->input('stars'),
+            'comment'=>$request->input('comment'),
+            'user_id'=>auth()->user()->id,
+            'item_id'=>$request->input('item_id'),
+        ]
+    );
+    return redirect()->back()->with('succuss','Review Submited');
+
     }
 
     /**

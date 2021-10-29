@@ -5,7 +5,10 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\ReviewController;
+
 use App\Models\Address;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -53,6 +56,8 @@ Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
 
 
 Route::resource('/item',App\Http\Controllers\ItemController::class);
+Route::resource('/review',App\Http\Controllers\ReviewController::class);
+
 
 Route::resource('/shipping',App\Http\Controllers\ShippingInfoController::class);
 Route::get('/myorders',[App\Http\Controllers\OrderController::class,'myorders'])->name('myorders');

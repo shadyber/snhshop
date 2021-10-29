@@ -3,6 +3,7 @@
 @section('content')
 <div class="row">
     <div class="col-sm-12">
+
         <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
             <thead>
             <th>
@@ -38,6 +39,22 @@
             @endforeach
             </tbody>
         </table>
+
+
     </div>
+
+
+        <div class="col-sm-12 col-md-5">
+            <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">Showing
+                {{ $users->firstItem()}} to {{$users->lastItem() }} of  {{$users->total()}} entries</div>
+        </div>
+        <div class="col-sm-12 col-md-7">
+            <div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
+
+                {{ $users->links('vendor.pagination.bootstrap-4') }}
+
+            </div>
+        </div>
+
 </div>
 @endsection

@@ -33,6 +33,10 @@ class Item extends Model
         return $this->hasMany(ItemPhotos::class);
     }
 
+
+public function reviews(){
+    return $this->hasMany(Review::class);
+}
     public function sluggable(): array
     {
         // TODO: Implement sluggable() method.

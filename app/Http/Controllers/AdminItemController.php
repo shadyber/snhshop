@@ -32,7 +32,7 @@ class AdminItemController extends Controller
 
     public function index()
     {
-        $items=Item::all();
+        $items=Item::orderBy('id','desc')->paginate(10);
         return view('admin.item.index')->with(['items'=>$items]);
     }
 
