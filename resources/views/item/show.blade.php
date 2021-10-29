@@ -45,7 +45,10 @@
                                     <i class="lni lni-user"></i>
                                 </a>
                             </li>
-
+                            <li><a href="/item">Shop</a></li>
+                            <li><a href="/gallery">Photo</a></li>
+                            <li><a href="/about">About us</a></li>
+                            <li><a href="/contact">Contact us</a></li>
                             <li>
                                 <a href="#" onclick="openCart()">
                                     <i class="lni lni-shopping-basket"></i><span class="dn-counter">{{\Illuminate\Support\Facades\Session::get('cart')? count(\Illuminate\Support\Facades\Session::get('cart')) : '0'}}</span>
@@ -61,15 +64,43 @@
 
                         </li>
 
-                        <li><a href="/item">Shop</a>
+                        <li><a href="javascript:void(0);">Shop</a>
+                            <ul class="nav-dropdown nav-submenu">
+                                <li><a href="javascript:void(0);">Womens Collection</a>
+                                    <ul class="nav-dropdown nav-submenu">
+                                        @foreach(\App\Models\Item::womensN(15) as $item)
+                                            <li><a href="/item/{{$item->slug}}">{{$item->name}}</a></li>
 
+                                        @endforeach
+                                    </ul>
+                                </li>
+
+                                <li><a href="javascript:void(0);">Mens Collection</a>
+                                    <ul class="nav-dropdown nav-submenu">
+                                        @foreach(\App\Models\Item::mensN(15) as $item)
+                                            <li><a href="/item/{{$item->slug}}">{{$item->name}}</a></li>
+
+                                        @endforeach
+                                    </ul>
+                                </li>
+                                 <li><a href="javascript:void(0);">Universal Collection</a>
+                                    <ul class="nav-dropdown nav-submenu">
+                                        @foreach(\App\Models\Item::universalN(15) as $item)
+                                            <li><a href="/item/{{$item->slug}}">{{$item->name}}</a></li>
+
+                                        @endforeach
+                                    </ul>
+                                </li>
+
+
+                            </ul>
                         </li>
 
 
 
-
-                        <li><a href="/contact">Contact Us</a></li>
-                        <li><a href="/contact">About Us</a></li>
+                        <li><a href="/gallery">Photo</a></li>
+                        <li><a href="/about">About us</a></li>
+                        <li><a href="/contact">Contact us</a></li>
 
                     </ul>
 
