@@ -197,7 +197,7 @@
                                 @foreach($verities as $verity)
 
                                 <div class="form-check form-option form-check-inline mb-1">
-                                    <input class="form-check-input" type="radio" name="verity_selection" id="verity{{$verity->id}}" value="{{$verity->name}}" onchange="loadPage({{$verity->id}})">
+                                    <input class="form-check-input" type="radio" name="verity_selection" id="verity{{$verity->id}}" value="{{$verity->name}}" onchange="page_refresh({{$verity->id}},{{$verity->item->slug}});">
                                     <label class="form-option-label rounded-circle" for="verity{{$verity->id}}" >
                                         <span class="form-option-color rounded-circle" style=" background: url({{$verity->thumb}}) no-repeat; ">
                                           </span>
@@ -677,9 +677,7 @@
     function closeCart() {
         document.getElementById("Cart").style.display = "none";
     }
-</script>
 
-<script>
     function openSearch() {
         document.getElementById("Search").style.display = "block";
     }
@@ -687,8 +685,9 @@
         document.getElementById("Search").style.display = "none";
     }
 
-    function loadPage(_vid){
-        document.location='/item/{{$item->slug}}?verity_id='+_vid;
+    function page_refresh(vid,slug){
+       // alert('/item/'+slug+'?verity_id='+vid);
+        document.location='/item/'+slug+'?verity_id='+vid;
     }
 
     var qnt=1;
