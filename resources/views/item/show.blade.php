@@ -1,280 +1,699 @@
-@extends('layouts.app')
-@section('title',$item->name.' Detail')
 
-@section('content')
-    <!-- Product Details Area Start -->
-    <div class="product-details-area pt-100px pb-100px">
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Root System" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SandH Store : Item Detail</title>
+
+    <!-- Custom CSS -->
+    <link href="/assets/css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ============================================================== -->
+<!-- Preloader - style you can find in spinners.css -->
+<!-- ============================================================== -->
+<div class="preloader"></div>
+
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div id="main-wrapper">
+
+    <!-- ============================================================== -->
+    <!-- Top header  -->
+    <!-- ============================================================== -->
+    <!-- Start Navigation -->
+    <div class="header header-light dark-text">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-sm-12 col-xs-12 mb-lm-30px mb-md-30px mb-sm-30px">
+            <nav id="navigation" class="navigation navigation-landscape">
+                <div class="nav-header">
+                    <a class="nav-brand" href="#">
+                        <img src="/assets/img/logo.png" class="logo" alt="" />
+                    </a>
+                    <div class="nav-toggle"></div>
+                    <div class="mobile_nav">
+                        <ul>
 
-                    <div class="tab-content" id="v-pills-tabContent">
+                            <li>
+                                <a href="/home">
+                                    <i class="lni lni-user"></i>
+                                </a>
+                            </li>
 
-                        @foreach($item->variety as $variety)
-                            <div class="tab-pane fade show {{$loop->first ? 'active' : '' }}" id="v-pills-{{$variety->id}}" role="tabpanel" aria-labelledby="v-pills-{{$variety->id}}-tab">
-
-                                <iframe src="/makeslider/{{$variety->id}}" frameborder="0"  scrolling="yes"  style="width: 100%; height: 100%; min-height: 600px; min-width: 100%;" class="col-lg-6 col-sm-12 col-xs-12 mb-lm-30px mb-md-30px mb-sm-30px"></iframe>
-
-                            </div>
-                        @endforeach
+                            <li>
+                                <a href="#" onclick="openCart()">
+                                    <i class="lni lni-shopping-basket"></i><span class="dn-counter">{{\Illuminate\Support\Facades\Session::get('cart')? count(\Illuminate\Support\Facades\Session::get('cart')) : '0'}}</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="nav flex-col nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="horizontal">
+                </div>
+                <div class="nav-menus-wrapper" style="transition-property: none;">
+                    <ul class="nav-menu">
 
-                        @foreach($item->variety as $variety)
-                            <a href="#" class="  {{$loop->first ? 'active' : '' }}" id="v-pills-{{$variety->id}}-tab" data-bs-toggle="pill" data-bs-target="#v-pills-{{$variety->id}}"   role="tab" aria-controls="v-pills-{{$variety->id}}" >
-                                <img src="{{$variety->thumb}}" width="32px" height="32px" class="  rounded-circle" alt="">
+                        <li><a href="/">Home</a>
+
+                        </li>
+
+                        <li><a href="/item">Shop</a>
+
+                        </li>
+
+
+
+
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="/contact">About Us</a></li>
+
+                    </ul>
+
+                    <ul class="nav-menu nav-menu-social align-to-right">
+                        <li>
+                            <a href="#" onclick="openSearch()">
+                                <i class="lni lni-search-alt"></i>
                             </a>
+                        </li>
+                        <li>
+                            <a href="/home">
+                                <i class="lni lni-user"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" onclick="openCart()">
+                                <i class="lni lni-shopping-basket"></i><span class="dn-counter">{{\Illuminate\Support\Facades\Session::get('cart')? count(\Illuminate\Support\Facades\Session::get('cart')) : '0'}}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- End Navigation -->
+    <div class="clearfix"></div>
+    <!-- ============================================================== -->
+    <!-- Top header  -->
+    <!-- ============================================================== -->
+
+    <!-- ======================= Top Breadcrubms ======================== -->
+    <div class="gray py-3">
+        <div class="container">
+            <div class="row">
+                <div class="colxl-12 col-lg-12 col-md-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/item">Shops</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Detail</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ======================= Top Breadcrubms ======================== -->
+
+    <!-- ======================= Product Detail ======================== -->
+    <section class="middle">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="sp-loading"><img src="{{$item->thumb}}" alt=""><br>LOADING IMAGES</div>
+                    <div class="sp-wrap">
+
+                        @foreach(\App\Models\ItemPhotos::varityPhoto($verities->first() ? $verities->first()->id: ( app('request')->input('verity_id') ?  app('request')->input('verity_id') : 0  )) as $photo)
+                        <a href="{{$photo->thumb}}"><img src="{{$photo->thumb}}" alt="{{$photo->name}}"></a>
                         @endforeach
 
                     </div>
-
-
                 </div>
-                <div class="col-lg-6 col-sm-12 col-xs-12" data-aos="fade-up" data-aos-delay="200">
-                    <div class="product-details-content quickview-content right-column">
-                        <h2>{{$item->name}}</h2>
-                        <div class="pricing-meta">
-                            <ul>
-                                <li class="old-price not-cut">${{$item->price}}</li>
-                            </ul>
-                        </div>
-                        <div class="pro-details-rating-wrap">
-                            <div class="rating-product">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
+
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="prd_details">
+
+                        <div class="prt_01 mb-1"><span class="text-purple bg-light-purple rounded py-1">{{$item->Category->title}}</span></div>
+                        <div class="prt_02 mb-3">
+                            <h2 class="ft-bold mb-1">{{$item->name}}</h2>
+                            <div class="text-left">
+                                <div class="star-rating align-items-center d-flex justify-content-left mb-1 p-0">
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="small">(412 Reviews)</span>
+                                </div>
+                                <div class="elis_rty"> <span class="ft-bold theme-cl fs-lg mr-2">$ {{$item->price}} USD</span><span class="ft-regular text-light bg-success py-1 px-2 fs-sm">In Stock</span></div>
                             </div>
-                            <span class="read-review"><a class="reviews" href="#">( Customer Review )</a></span>
                         </div>
-                        <p class="mt-30px mb-0">
-                            {{substr($item->detail,0,200)}}...
-                        </p>
-                        <div class="pro-details-quality">
-                            <div class="cart-plus-minus" onclick="getqnt()">
-                                <input class="cart-plus-minus-box" type="number" max="{{$item->init_qnt}}" name="qtybutton" id="qtybutton" value="1" itemid="{{$item->id}}" />
+
+                        <div class="prt_03 mb-4">
+                           {{$item->detail}}
+
+                        </div>
+
+                        <div class="prt_04 mb-2">
+                            <p class="d-flex align-items-center mb-0 text-dark ft-medium">Color:</p>
+
+                            <div class="text-left">
+                                @foreach($verities as $verity)
+
+                                <div class="form-check form-option form-check-inline mb-1">
+                                    <input class="form-check-input" type="radio" name="verity_selection" id="verity{{$verity->id}}" value="{{$verity->name}}" onchange="loadPage({{$verity->id}})">
+                                    <label class="form-option-label rounded-circle" for="verity{{$verity->id}}" >
+                                        <span class="form-option-color rounded-circle" style=" background: url({{$verity->thumb}}) no-repeat; ">
+                                          </span>
+                                    </label>
+                                </div>
+
+                                    @endforeach
+
+
                             </div>
-                            <div class="pro-details-cart">
-                                <button class="add-cart  add-to-cart" href="#"  itemid="{{$item->id}}" qnt="1"> Add To
-                                    Cart</button>
+
+                        </div>
+
+                        <div class="prt_04 mb-4">
+                            <p class="d-flex align-items-center mb-0 text-dark ft-medium">Size:</p>
+                            <div class="text-left pb-0 pt-2">
+                                <div class="form-check size-option form-option form-check-inline mb-2">
+                                    <input class="form-check-input" type="radio" name="size" id="{{$item->diameter}}" checked="">
+                                    <label class="form-option-label" for="28">{{$item->diameter}}d</label>
+                                </div>
+
+                                <div class="form-check size-option form-option form-check-inline mb-2">
+                                    <input class="form-check-input" type="radio" name="size" id="{{$item->width}}" checked="">
+                                    <label class="form-option-label" for="28">{{$item->width}} w</label>
+                                </div>
+
+                                <div class="form-check size-option form-option form-check-inline mb-2">
+                                    <input class="form-check-input" type="radio" name="size" id="{{$item->height}}" checked="">
+                                    <label class="form-option-label" for="28">{{$item->height}} h</label>
+                                </div>
+
+
                             </div>
-
-                        </div>
-                        <div class="pro-details-sku-info pro-details-same-style  d-flex">
-                            <span>SKU: </span>
-                            <ul class="d-flex">
-                                <li>
-                                    <a href="/item/{{$item->slug}}">ITEM0000{{$item->id}}</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pro-details-categories-info pro-details-same-style d-flex">
-                            <span>Categories: </span>
-                            <ul class="d-flex">
-                                <li>
-                                    <a href="/cat/{{$item->Category->id}}">{{$item->Category->title}}.</a>
-                                </li>
-
-                            </ul>
-                            <br>
-                            <hr>
-                        </div>
-                        <!-- Product Configuration -->
-                        <div class="product-configuration">
-                            <form action="#">
-                                <select class="form-control">
-                                    <option value="">Select Color Varietys</option>
-                            @foreach($item->variety as $verity)
-                                    <option value="{{$verity->id}}">{{$verity->title}}</option>
-                            @endforeach
-                                </select>
-                            </form>
                         </div>
 
-
-
-                        <div class="pro-details-social-info pro-details-same-style d-flex">
-                            <span>Share: </span>
-                            <ul class="d-flex">
-                                <li>
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-google"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-youtube"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                </li>
-                            </ul>
+                        <div class="prt_05 mb-4">
+                            <div class="form-row mb-7">
+                                <div class="col-12 col-lg-auto">
+                                    <!-- Quantity -->
+                                    <select class="mb-2 custom-select">
+                                        <option value="1" selected="">1</option>
+                                       @for($i=2;$i<$item->init_qnt;$i++)
+                                        <option value="{{$i}}">{{$i}}</option>
+                                        @endfor
+                                    </select>
+                                </div>
+                                <div class="col-12 col-lg">
+                                    <!-- Submit -->
+                                    <button type="submit" class="btn btn-block custom-height bg-dark mb-2  add-to-cart" itemid="{{$item->id}}" qnt="getquantity()">
+                                        <i class="lni lni-shopping-basket mr-2"></i>Add to Cart
+                                    </button>
+                                </div>
+                                <div class="col-12 col-lg-auto">
+                                    <!-- Wishlist -->
+                                    <button class="btn custom-height btn-default btn-block mb-2 text-dark" data-toggle="button">
+                                        <i class="lni lni-heart mr-2"></i>Wishlist
+                                    </button>
+                                </div>
+                            </div>
                         </div>
+
+                        <div class="prt_06">
+                            <p class="mb-0 d-flex align-items-center">
+                                <span class="mr-4">Share:</span>
+                                <a class="d-inline-flex align-items-center justify-content-center p-3 gray circle fs-sm text-muted mr-2" href="#!">
+                                    <i class="fab fa-twitter position-absolute"></i>
+                                </a>
+                                <a class="d-inline-flex align-items-center justify-content-center p-3 gray circle fs-sm text-muted mr-2" href="#!">
+                                    <i class="fab fa-facebook-f position-absolute"></i>
+                                </a>
+                                <a class="d-inline-flex align-items-center justify-content-center p-3 gray circle fs-sm text-muted" href="#!">
+                                    <i class="fab fa-pinterest-p position-absolute"></i>
+                                </a>
+                            </p>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!-- ======================= Product Detail End ======================== -->
 
-
-    <!-- product details description area start -->
-    <div class="description-review-area pb-100px" data-aos="fade-up" data-aos-delay="200">
+    <!-- ======================= Product Description ======================= -->
+    <section class="middle">
         <div class="container">
-            <div class="description-review-wrapper">
-                <div class="description-review-topbar nav">
-                    <a data-bs-toggle="tab" href="#des-details2">Information</a>
-                    <a class="active" data-bs-toggle="tab" href="#des-details1">Description</a>
-                    <a data-bs-toggle="tab" href="#des-details3">Reviews (0)</a>
-                </div>
-                <div class="tab-content description-review-bottom">
-                    <div id="des-details2" class="tab-pane">
-                        <div class="product-anotherinfo-wrapper text-start">
-                            <ul>
-                                <li><span>Weight</span> {{$item->weght}}</li>
-                                <li><span>Diameter</span>{{$item->diameter}}</li>
-                                <li><span>Height</span> {{$item->height}}</li>
-                                <li><span>Width</span> {{$item->width}}</li>
-                                <li><span>Other Info</span> N/A</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div id="des-details1" class="tab-pane active">
-                        <div class="product-description-wrapper">
-                            {{$item->detail}}
-                        </div>
-                    </div>
-                    <div id="des-details3" class="tab-pane">
-                        <div class="row">
-                            <div class="col-lg-7">
-                                <div class="review-wrapper">
-                                    item review
+            <div class="row align-items-center justify-content-center">
+                <div class="col-xl-11 col-lg-12 col-md-12 col-sm-12">
+                    <ul class="nav nav-tabs b-0 d-flex align-items-center justify-content-center simple_tab_links mb-4" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="description-tab" href="#description" data-toggle="tab" role="tab" aria-controls="description" aria-selected="true">Description</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="#information" id="information-tab" data-toggle="tab" role="tab" aria-controls="information" aria-selected="false">Additional information</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="#reviews" id="reviews-tab" data-toggle="tab" role="tab" aria-controls="reviews" aria-selected="false">Reviews</a>
+                        </li>
+                    </ul>
 
-                                </div>
+                    <div class="tab-content" id="myTabContent">
+
+                        <!-- Description Content -->
+                        <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                            <div class="description_info">
+
+                                {{$item->detail}}
                             </div>
-                            <div class="col-lg-5">
-                                <div class="ratting-form-wrapper pl-50">
+                        </div>
 
+                        <!-- Additional Content -->
+                        <div class="tab-pane fade" id="information" role="tabpanel" aria-labelledby="information-tab">
+                            <div class="additionals">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <th class="ft-medium text-dark">ID</th>
+                                        <td>#1253458</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ft-medium text-dark">SKU</th>
+                                        <td>KUM125896</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ft-medium text-dark">Color</th>
+                                        <td>Sky Blue</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ft-medium text-dark">Size</th>
+                                        <td>Xl, 42</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ft-medium text-dark">Weight</th>
+                                        <td>450 Gr</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
 
-                                    <h3>Add a Review</h3>
-                                    <div class="ratting-form">
-                                        @auth
-                                            <form action="#">
-                                                <div class="star-box">
-                                                    <span>Your rating:</span>
-                                                    <div class="rating-product">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="rating-form-style">
-                                                            <input placeholder="Name" type="text" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="rating-form-style">
-                                                            <input placeholder="Email" type="email" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <div class="rating-form-style form-submit">
-                                                            <textarea name="Your Review" placeholder="Message"></textarea>
-                                                            <button class="btn btn-primary btn-hover-color-primary "
-                                                                    type="submit" value="Submit">Submit</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-
-                                        @endauth
-
-                                        @guest
-                                            <a href="/login"> Login for Comment </a> | or | <a href="/register"> Register for comment</a>
-                                        @endguest
+                        <!-- Reviews Content -->
+                        <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                            <div class="reviews_info">
+                                <div class="single_rev d-flex align-items-start br-bottom py-3">
+                                    <div class="single_rev_thumb"><img src="/assets/img/team-1.jpg" class="img-fluid circle" width="90" alt="" /></div>
+                                    <div class="single_rev_caption d-flex align-items-start pl-3">
+                                        <div class="single_capt_left">
+                                            <h5 class="mb-0 fs-md ft-medium lh-1">Daniel Rajdesh</h5>
+                                            <span class="small">30 jul 2021</span>
+                                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum</p>
+                                        </div>
+                                        <div class="single_capt_right">
+                                            <div class="star-rating align-items-center d-flex justify-content-left mb-1 p-0">
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <!-- Single Review -->
+                                <div class="single_rev d-flex align-items-start br-bottom py-3">
+                                    <div class="single_rev_thumb"><img src="/assets/img/team-2.jpg" class="img-fluid circle" width="90" alt="" /></div>
+                                    <div class="single_rev_caption d-flex align-items-start pl-3">
+                                        <div class="single_capt_left">
+                                            <h5 class="mb-0 fs-md ft-medium lh-1">Seema Gupta</h5>
+                                            <span class="small">30 Aug 2021</span>
+                                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum</p>
+                                        </div>
+                                        <div class="single_capt_right">
+                                            <div class="star-rating align-items-center d-flex justify-content-left mb-1 p-0">
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Single Review -->
+                                <div class="single_rev d-flex align-items-start br-bottom py-3">
+                                    <div class="single_rev_thumb"><img src="/assets/img/team-3.jpg" class="img-fluid circle" width="90" alt="" /></div>
+                                    <div class="single_rev_caption d-flex align-items-start pl-3">
+                                        <div class="single_capt_left">
+                                            <h5 class="mb-0 fs-md ft-medium lh-1">Mark Jugermi</h5>
+                                            <span class="small">10 Oct 2021</span>
+                                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum</p>
+                                        </div>
+                                        <div class="single_capt_right">
+                                            <div class="star-rating align-items-center d-flex justify-content-left mb-1 p-0">
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Single Review -->
+                                <div class="single_rev d-flex align-items-start py-3">
+                                    <div class="single_rev_thumb"><img src="/assets/img/team-4.jpg" class="img-fluid circle" width="90" alt="" /></div>
+                                    <div class="single_rev_caption d-flex align-items-start pl-3">
+                                        <div class="single_capt_left">
+                                            <h5 class="mb-0 fs-md ft-medium lh-1">Meena Rajpoot</h5>
+                                            <span class="small">17 Dec 2021</span>
+                                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum</p>
+                                        </div>
+                                        <div class="single_capt_right">
+                                            <div class="star-rating align-items-center d-flex justify-content-left mb-1 p-0">
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
+
+                            <div class="reviews_rate">
+                                <form class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <h4>Submit Rating</h4>
+                                    </div>
+
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="revie_stars d-flex align-items-center justify-content-between px-2 py-2 gray rounded mb-2 mt-1">
+                                            <div class="srt_013">
+                                                <div class="submit-rating">
+                                                    <input id="star-5" type="radio" name="rating" value="star-5" />
+                                                    <label for="star-5" title="5 stars">
+                                                        <i class="active fa fa-star" aria-hidden="true"></i>
+                                                    </label>
+                                                    <input id="star-4" type="radio" name="rating" value="star-4" />
+                                                    <label for="star-4" title="4 stars">
+                                                        <i class="active fa fa-star" aria-hidden="true"></i>
+                                                    </label>
+                                                    <input id="star-3" type="radio" name="rating" value="star-3" />
+                                                    <label for="star-3" title="3 stars">
+                                                        <i class="active fa fa-star" aria-hidden="true"></i>
+                                                    </label>
+                                                    <input id="star-2" type="radio" name="rating" value="star-2" />
+                                                    <label for="star-2" title="2 stars">
+                                                        <i class="active fa fa-star" aria-hidden="true"></i>
+                                                    </label>
+                                                    <input id="star-1" type="radio" name="rating" value="star-1" />
+                                                    <label for="star-1" title="1 star">
+                                                        <i class="active fa fa-star" aria-hidden="true"></i>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="srt_014">
+                                                <h6 class="mb-0">4 Star</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label class="medium text-dark ft-medium">Full Name</label>
+                                            <input type="text" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label class="medium text-dark ft-medium">Email Address</label>
+                                            <input type="email" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label class="medium text-dark ft-medium">Description</label>
+                                            <textarea class="form-control"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="form-group m-0">
+                                            <a class="btn btn-white stretched-link hover-black">Submit Review <i class="lni lni-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- product details description area end -->
+    </section>
+    <!-- ======================= Product Description End ==================== -->
 
-    <!-- Related product Area Start -->
-    <div class="related-product-area pb-100px">
+    <!-- ======================= Similar Products Start ============================ -->
+    <section class="middle pt-0">
         <div class="container">
+
+            <div class="row justify-content-center">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="sec_title position-relative text-center">
+                        <h2 class="off_title">Similar Products</h2>
+                        <h3 class="ft-bold pt-3">Matching Products</h3>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
-                <div class="col-12">
-                    <div class="section-title text-center mb-30px0px line-height-1">
-                        <h2 class="title m-0">Related Products</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="new-product-slider swiper-container slider-nav-style-1 small-nav">
-                <div class="new-product-wrapper swiper-wrapper">
-
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="slide_items">
                     @foreach($item->Category->items as $item)
-                        <div class="new-product-item swiper-slide">
-                            <!-- Single Prodect -->
-                            <div class="product">
-                                <div class="thumb">
+                        <!-- single Item -->
+                        <div class="single_itesm">
+                            <div class="product_grid card b-0 mb-0">
+                                <div class="badge bg-success text-white position-absolute ft-regular ab-left text-upper">
+                                    {{$item->badge}}</div>
+                                <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button>
+                                <div class="card-body p-0">
+                                    <div class="shop_thumb position-relative">
+                                        <a class="card-img-top d-block overflow-hidden" href="/item/{{$item->slug}}"><img class="card-img-top" src="{{$item->thumb}}" alt="{{$item->name}}"></a>
+                                        <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
+                                            <div class="edlio">
 
-                                    <a href="/item/{{$item->slug}}" class="image">
-                                        <img src="{{$item->thumb}}" alt="Product" />
-                                        <img class="hover-image" src="{{$item->thumb}}"
-                                             alt="{{$item->names}}" />
-                                    </a>
-
-                                    <span class="badges">
-                                    <span class="new">{{$item->badge}}</span>
-                                </span>
-                                    <div class="actions">
-
+                                            </div>
+                                        </div>
                                     </div>
-                                    <button title="Add To Cart" class=" add-to-cart" itemid="{{$item->id}}" qnt="getquantity()">Add
-                                        To Cart</button>
                                 </div>
-                                <div class="content">
-                                <span class="ratings">
-                                    <span class="rating-wrap">
-                                        <span class="star" style="width: 100%"></span>
-                                    </span>
-                                    <span class="rating-num">( 0 Review )</span>
-                                </span>
-                                    <h5 class="title"><a href="/item/{{$item->slug}}">{{$item->name}}
-                                        </a>
-                                    </h5>
-                                    <span class="price">
-                                    <span class="new">${{$item->price}}</span>
-                                </span>
+                                <div class="card-footer b-0 p-3 pb-0 d-flex align-items-start justify-content-center">
+                                    <div class="text-left">
+                                        <div class="text-center">
+                                            <h5 class="fw-bolder fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html">{{$item->name}}</a></h5>
+                                            <div class="elis_rty"><span class="ft-bold fs-md text-dark">${{$item->price}}</span></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        @endforeach
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ======================= Similar Products Start ============================ -->
+@include('components.footer')
+
+
+
+    <!-- Search -->
+    <div class="w3-ch-sideBar w3-bar-block w3-card-2 w3-animate-right" style="display:none;right:0;" id="Search">
+        <div class="rightMenu-scroll">
+            <div class="d-flex align-items-center justify-content-between slide-head py-3 px-3">
+                <h4 class="cart_heading fs-md ft-medium mb-0">Search Products</h4>
+                <button onclick="closeSearch()" class="close_slide"><i class="ti-close"></i></button>
+            </div>
+
+            <div class="cart_action px-3 py-4">
+                <form class="form m-0 p-0" method="get" action="/search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="key" placeholder="Product Keyword.." />
+                    </div>
+
+
+
+                    <div class="form-group mb-0">
+                        <button type="button" class="btn d-block full-width btn-dark">Search Product</button>
+                    </div>
+                </form>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+    <!-- Cart -->
+    <div class="w3-ch-sideBar w3-bar-block w3-card-2 w3-animate-right" style="display:none;right:0;" id="Cart">
+        <div class="rightMenu-scroll">
+            <div class="d-flex align-items-center justify-content-between slide-head py-3 px-3">
+                <h4 class="cart_heading fs-md ft-medium mb-0">Products List</h4>
+                <button onclick="closeCart()" class="close_slide"><i class="ti-close"></i></button>
+            </div>
+            <div class="right-ch-sideBar">
+
+                <div class="cart_select_items py-2">
+                @foreach(\App\Models\Cart::myCart() as $cart)
+                    <!-- Single Item -->
+                    <div class="d-flex align-items-center justify-content-between br-bottom px-3 py-3">
+                        <div class="cart_single d-flex align-items-center">
+                            <div class="cart_selected_single_thumb">
+                                <a href="/item/{{$cart['slug']}}"><img src="{{$cart['thumb']}}" width="60" class="img-fluid" alt="{{$cart['name']}}" /></a>
+                            </div>
+                            <div class="cart_single_caption pl-2">
+                                <h4 class="product_title fs-sm ft-medium mb-0 lh-1">{{$cart['name']}}</h4>
+                                <p class="mb-2"><span class="text-dark ft-medium small">{{$cart['quantity']}}</span>, <span class="text-dark small">verity{{$cart['quantity']}}</span></p>
+                                <h4 class="fs-md ft-medium mb-0 lh-1">${{$cart['price']}}</h4>
+                            </div>
+                        </div>
+                        <div class="fls_last"><button class="close_slide gray"><i class="ti-close"></i></button></div>
+                    </div>
+
                     @endforeach
                 </div>
-                <!-- Add Arrows -->
-                <div class="swiper-buttons">
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+
+                <div class="d-flex align-items-center justify-content-between br-top br-bottom px-3 py-3">
+                    <h6 class="mb-0">Subtotal</h6>
+                    <h3 class="mb-0 ft-medium"> ${{\App\Models\Cart::totalCart()}}</h3>
                 </div>
+
+                <div class="cart_action px-3 py-3">
+                    <div class="form-group">
+                        <button type="button" class="btn d-block full-width btn-dark">Checkout Now</button>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn d-block full-width btn-dark-light">Edit or View</button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-    <!-- Related product Area End -->
+
+    <a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
 
 
-@endsection
+</div>
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->
 
-@section('js')
+<!-- ============================================================== -->
+<!-- All Jquery -->
+<!-- ============================================================== -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/ion.rangeSlider.min.js"></script>
+<script src="/assets/js/slick.js"></script>
+<script src="/assets/js/slider-bg.js"></script>
+<script src="/assets/js/lightbox.js"></script>
+<script src="/assets/js/smoothproducts.js"></script>
+<script src="/assets/js/snackbar.min.js"></script>
+<script src="/assets/js/jQuery.style.switcher.js"></script>
+<script src="/assets/js/custom.js"></script>
+<!-- ============================================================== -->
+<!-- This page plugins -->
+<!-- ============================================================== -->
 
-@endsection
+<script>
+    function openWishlist() {
+        document.getElementById("Wishlist").style.display = "block";
+    }
+    function closeWishlist() {
+        document.getElementById("Wishlist").style.display = "none";
+    }
+</script>
+
+<script>
+    function openCart() {
+        document.getElementById("Cart").style.display = "block";
+    }
+    function closeCart() {
+        document.getElementById("Cart").style.display = "none";
+    }
+</script>
+
+<script>
+    function openSearch() {
+        document.getElementById("Search").style.display = "block";
+    }
+    function closeSearch() {
+        document.getElementById("Search").style.display = "none";
+    }
+
+    function loadPage(_vid){
+        document.location='/item/{{$item->slug}}?verity_id='+_vid;
+    }
+
+    var qnt=1;
+
+    function getqnt(){
+        qnt = document.getElementById("qtybutton").value;
+
+
+    }
+
+    function getquantity(){
+        return qnt;
+    }
+
+    $( ".add-to-cart" ).click(function() {
+
+        var itemid=$(this).attr("itemid");
+        var cbtn=$(this);
+        var itemqnt=$(this).attr('qnt')
+
+
+
+        $.get("/multipleaddtocart/"+itemid+"/"+qnt, function(data){
+            // Display the returned data in browser
+            cbtn.animate({
+                opacity: 0.25,
+                left: "+=5000",
+                top: "-=5000",
+                height: "toggle"
+            }, 50, function() {
+                // Animation complete.
+            });
+            $('#cartCount').html(data);
+        });
+    });
+</script>
+
+</body>
+</html>

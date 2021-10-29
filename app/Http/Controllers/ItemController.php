@@ -114,8 +114,10 @@ class ItemController extends Controller
     public function show($slug)
     {
       $item=Item::where('slug',$slug)->first();
+      $verities=$item->variety;
+     //dd($verities);
       if($item){
-          return view('item.show')->with('item',$item);
+          return view('item.show')->with(['item'=>$item,'verities'=>$verities]);
       }else{
           return redirect()->back()->with('error','item not found here');
       }

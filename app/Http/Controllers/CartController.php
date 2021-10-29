@@ -28,6 +28,7 @@ class CartController extends Controller
                     "slug"=>$product->slug,
                     "name" => $product->name,
                     "quantity" => 1,
+                    "verity" => '0',
                     "price" => $product->price,
                     "photo" => $product->photo,
                     "thumb" => $product->thumb
