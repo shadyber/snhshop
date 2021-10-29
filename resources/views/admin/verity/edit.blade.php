@@ -2,6 +2,7 @@
 @section('title','Edit Verity photo')
 @section('content')
 
+    <a href="/items/{{$verity->Item->slug}}/edit" class="btn btn-info">Back to Item</a>
 
     <div class="content">
         <div class="row">
@@ -26,7 +27,7 @@
          </div>
 
          <button class="btn btn-primary btn-user btn-block" type="submit">
-             Add Variety
+             Updte Variety
          </button>
      {{Form::close()}}
 

@@ -159,7 +159,7 @@
                     <div class="sp-loading"><img src="{{$item->thumb}}" alt=""><br>LOADING IMAGES</div>
                     <div class="sp-wrap">
 
-                        @foreach(\App\Models\ItemPhotos::varityPhoto($verities->first() ? $verities->first()->id: ( app('request')->input('verity_id') ?  app('request')->input('verity_id') : 0  )) as $photo)
+                        @foreach(\App\Models\ItemPhotos::varityPhoto(app('request')->input('verity_id') ?  app('request')->input('verity_id') : $verities->first()->id ) as $photo)
                         <a href="{{$photo->thumb}}"><img src="{{$photo->thumb}}" alt="{{$photo->name}}"></a>
                         @endforeach
 
@@ -197,9 +197,9 @@
                                 @foreach($verities as $verity)
 
                                 <div class="form-check form-option form-check-inline mb-1">
-                                    <input class="form-check-input" type="radio" name="verity_selection" id="verity{{$verity->id}}" value="{{$verity->name}}" onchange="page_refresh({{$verity->id}},{{$verity->item->slug}});">
+                                    <input class="form-check-input" type="radio" name="verity_selection" id="verity{{$verity->id}}" value="{{$verity->name}}" onchange="page_refresh({{$verity->id}},'{{$verity->item->slug}}');">
                                     <label class="form-option-label rounded-circle" for="verity{{$verity->id}}" >
-                                        <span class="form-option-color rounded-circle" style=" background: url({{$verity->thumb}}) no-repeat; ">
+                                        <span class="form-option-color rounded-circle" style=" background: url({{$verity->thumb ? $verity->thumb : $verity->photo}}) no-repeat; ">
                                           </span>
                                     </label>
                                 </div>
