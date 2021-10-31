@@ -9,7 +9,10 @@
         </div>
         <div class="sidebar-brand-text mx-3">SANDSHOP Admin <sup><i class="fas fa-shopping-bag"></i></sup></div>
     </a>
-
+    <li class="nav-item">
+        <a class="nav-link" href="/item" target="_blank">
+    <i class="fas fa-shopping-cart"></i>    <span>Shop Front</span></a>
+    </li>
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
 

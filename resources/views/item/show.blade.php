@@ -381,7 +381,7 @@
                                         <h4>Submit Rating</h4>
                                     </div>
                                     <input type="hidden" name="item_id" value="{{$item->id}}">
-                                    <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+                                    <input type="hidden" name="user_id" value="{{Auth::user() ? Auth::user()->id : 0}}">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                         <div class="revie_stars d-flex align-items-center justify-content-between px-2 py-2 gray rounded mb-2 mt-1">
                                             <div class="srt_013">
@@ -419,7 +419,7 @@
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                         <div class="form-group">
                                             <label class="medium text-dark ft-medium">Full Name</label>
-                                            <input type="text" class="form-control" name="name" value="{{Auth() ? Auth::user()->name: 'Sign In'}}" readonly />
+                                            <input type="text" class="form-control" name="name" value="{{Auth::user() ? Auth::user()->name: 'Sign In'}}" readonly />
                                         </div>
                                     </div>
 
