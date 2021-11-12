@@ -577,10 +577,10 @@
 
                 <div class="cart_action px-3 py-3">
                     <div class="form-group">
-                        <button type="button" class="btn d-block full-width btn-dark">Checkout Now</button>
+                        <a href="/checkout" class="btn d-block full-width btn-dark">Checkout Now</a>
                     </div>
                     <div class="form-group">
-                        <button type="button" class="btn d-block full-width btn-dark-light">Edit or View</button>
+                        <a href="/mycart" class="btn d-block full-width btn-dark-light">My Cart</a>
                     </div>
                 </div>
 
