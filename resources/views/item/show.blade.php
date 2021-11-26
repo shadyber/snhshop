@@ -69,7 +69,7 @@
                                 <li><a href="javascript:void(0);">Womens Collection</a>
                                     <ul class="nav-dropdown nav-submenu">
                                         @foreach(\App\Models\Item::womensN(15) as $it)
-                                            <li><a href="/item/{{$item->slug}}">{{$it->name}}</a></li>
+                                            <li><a href="/item/{{$it->slug}}">{{$it->name}}</a></li>
 
                                         @endforeach
                                     </ul>
@@ -78,7 +78,7 @@
                                 <li><a href="javascript:void(0);">Mens Collection</a>
                                     <ul class="nav-dropdown nav-submenu">
                                         @foreach(\App\Models\Item::mensN(15) as $it)
-                                            <li><a href="/item/{{$item->slug}}">{{$it->name}}</a></li>
+                                            <li><a href="/item/{{$it->slug}}">{{$it->name}}</a></li>
 
                                         @endforeach
                                     </ul>
@@ -86,7 +86,7 @@
                                  <li><a href="javascript:void(0);">Universal Collection</a>
                                     <ul class="nav-dropdown nav-submenu">
                                         @foreach(\App\Models\Item::universalN(15) as $it)
-                                            <li><a href="/item/{{$item->slug}}">{{$it->name}}</a></li>
+                                            <li><a href="/item/{{$it->slug}}">{{$it->name}}</a></li>
 
                                         @endforeach
                                     </ul>
