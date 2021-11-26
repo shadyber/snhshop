@@ -115,6 +115,8 @@ class ItemController extends Controller
     {
       $item=Item::where('slug',$slug)->first();
       $verities=$item->variety;
+      //dd($item);
+
      //dd($verities);
       if($item){
           return view('item.show')->with(['item'=>$item,'verities'=>$verities]);
