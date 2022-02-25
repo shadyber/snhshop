@@ -81,7 +81,7 @@
                                     </ul>
                                 </div>
                                 <h4 class="grand-totall-title">Grand Total <span>${{\App\Models\Cart::totalCart()+20}}</span></h4>
-                                <button type="submit" class="btn-block btn-primary">Proceed to Checkout</button>
+                                <a href="/checkout" class="btn-block btn-primary">Proceed to Checkout</button>
 
                             </div>
                             </form>
